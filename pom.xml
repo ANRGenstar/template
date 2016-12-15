@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>genstar.template</groupId>
+	<artifactId>template</artifactId>
+	<version>1.0</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>genstar.core</groupId>
+			<artifactId>core</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>genstar.spll</groupId>
+			<artifactId>spll</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>genstar.spin</groupId>
+			<artifactId>spin</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>genstar.gospl</groupId>
+			<artifactId>gospl</artifactId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>bintray-anrgenstar-genstar-packages</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/anrgenstar/genstar-packages</url>
+		</repository>
+	</repositories>
+</project>
