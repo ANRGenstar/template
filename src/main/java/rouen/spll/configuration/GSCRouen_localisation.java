@@ -24,7 +24,7 @@ import gospl.entity.attribute.GosplAttributeFactory;
 
 public class GSCRouen_localisation {
 
-	public static String CONF_CLASS_PATH = "src/main/java/rouen/output/";
+	public static String CONF_CLASS_PATH = "src/main/java/rouen/gospl/output/";
 	public static String CONF_EXPORT = "GSC_Rouen_Localisation";
 	
 	public static void main(String[] args) {
@@ -47,6 +47,7 @@ public class GSCRouen_localisation {
 		// What to define in this configuration file
 		GSSurveyWrapper populationInput = new GSSurveyWrapper(absolutePath.resolve("PopExport.csv").toString(), 
 					GSSurveyType.Sample, ',', 1, 1);
+		populationInput.setRelativePath(Paths.get(CONF_CLASS_PATH).iterator().next().toAbsolutePath().getParent());
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
 		

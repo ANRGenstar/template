@@ -1,10 +1,10 @@
 <GosplConfiguration>
   <dataFileList>
     <core.metamodel.pop.io.GSSurveyWrapper>
-      <absoluteFilePath>/Users/kevinchapuis/GenstarGithub/template/src/main/java/rouen/output/PopExport.csv</absoluteFilePath>
+      <relativePath>src/main/java/rouen/gospl/output/PopExport.csv</relativePath>
       <surveyType>Sample</surveyType>
       <sheetNb>0</sheetNb>
-      <csvSeparator>;</csvSeparator>
+      <csvSeparator>,</csvSeparator>
       <firstRowIndex>1</firstRowIndex>
       <firstColumnIndex>1</firstColumnIndex>
     </core.metamodel.pop.io.GSSurveyWrapper>

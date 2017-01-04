@@ -5,45 +5,33 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.geotools.feature.SchemaException;
-import org.geotools.geometry.jts.ReferencedEnvelope;
 import org.opengis.referencing.operation.TransformException;
 
 import core.metamodel.IPopulation;
 import core.metamodel.geo.AGeoEntity;
-import core.metamodel.geo.io.GeoGSFileType;
 import core.metamodel.geo.io.IGSGeofile;
 import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
-import core.util.GSPerformanceUtil;
-import core.util.stats.GSBasicStats;
 import gospl.distribution.GosplDistributionBuilder;
 import gospl.io.exception.InvalidSurveyFormatException;
 import spll.SpllPopulation;
-import spll.algo.ISPLRegressionAlgo;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
-import spll.datamapper.ASPLMapperBuilder;
-import spll.datamapper.SPLAreaMapperBuilder;
-import spll.datamapper.SPLMapper;
 import spll.datamapper.exception.GSMapperException;
-import spll.datamapper.variable.SPLVariable;
 import spll.entity.GeoEntityFactory;
-import spll.io.GeofileFactory;
-import spll.io.RasterFile;
-import spll.io.ShapeFile;
+import spll.io.SPLGeofileFactory;
+import spll.io.SPLRasterFile;
+import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPUniformLocalizer;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
-import spll.util.SpllUtil;
 
 public class Localisation {
 
@@ -54,14 +42,14 @@ public class Localisation {
 	static String stringPathToNestShapefile = "src/main/java/rouen/spll/data/shp/buildings.shp";
 
 	//path to the file that will be used as support for the spatial regression (bring additional spatial data)
-	static String stringPathToLandUseGrid = "src/main/java/rouen/spll/data/shp/CLC12_D076_RGF_S.tif";
+	static String stringPathToLandUseGrid = "src/main/java/rouen/spll/data/raster/CLC12_D076_RGF_S.tif";
 
 	static String stringPathToPopulationShapefile = "src/main/java/rouen/spll/output/spllOutput.shp";
 	
 	//name of the property that contains the id of the census spatial areas in the shapefile
 	static String stringOfCensusIdInShapefile = "CODE_IRIS";
 
-	static String stringPathToGenstarConfiguration = "src/main/java/rouen/output/GSC_Rouen_Localisation.xml";
+	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/output/GSC_Rouen_Localisation.xml";
 	//name of the property that contains the id of the census spatial areas in the csv file (and population)
 	static String stringOfCensusIdInCSVfile = "IRIS";
 	//name of the property that define the number of entities per census spatial areas.
@@ -81,7 +69,7 @@ public class Localisation {
 			e.printStackTrace();
 		} 
 
-		// READ SAMPLE DATA
+		// READ SAMPLE DATA (I.E. THE POPULATION TO LOCALIZE)
 		try {
 			gdb.buildSamples();
 		} catch (final RuntimeException e) {
@@ -100,14 +88,11 @@ public class Localisation {
 
 		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = gdb.getRawSamples().iterator().next();
 		
-		core.util.GSPerformanceUtil gspu = new GSPerformanceUtil("Localisation of people in Rouen based on Iris population");
-		
 		// IMPORT DATA FILES
+		SPLGeofileFactory gf = new SPLGeofileFactory();
 
-		GeofileFactory gf = new GeofileFactory();
-
-		ShapeFile sfAdmin = null;
-		ShapeFile sfBuildings = null;
+		SPLVectorFile sfAdmin = null;
+		SPLVectorFile sfBuildings = null;
 
 		try {
 			//building shapefile
@@ -133,111 +118,26 @@ public class Localisation {
 				e2.printStackTrace();
 			}
 		}
-		gspu.sysoStempPerformance("Input files data import: done\n", "Main");
-
-		// LINK MAIN GEO FILE AND POPULATION
-		SpllPopulation spllPopulation = new SpllPopulation(population, sfBuildings);
 		
-		// SETUP MAIN CLASS FOR REGRESSION
-		// Choice have been made to regress from areal data count
-		ISPLRegressionAlgo<SPLVariable, Double> regressionAlgo = new LMRegressionOLS();
-
-		ASPLMapperBuilder<SPLVariable, Double> spllBuilder = new SPLAreaMapperBuilder(
-				sfAdmin, stringOfNumberProperty, endogeneousVarFile, new ArrayList<>(),
-				regressionAlgo);
-		gspu.sysoStempPerformance("Setup MapperBuilder to proceed regression: done\n", "Main");
-
-		// Setup main regressor class: SPLMapper
-		SPLMapper<SPLVariable,Double> spl = null;
-		boolean syso = false;
-		try {
-			spl = spllBuilder.buildMapper();
-			if(syso){
-				Map<SPLVariable, Double> regMap = spl.getRegression();
-				gspu.sysoStempMessage("Regression parameter: \n"+Arrays.toString(regMap.entrySet().stream().map(e -> e.getKey()+" = "+e.getValue()+"\n").toArray()));
-				gspu.sysoStempMessage("Intersect = "+spl.getIntercept());
-			}
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		} catch (TransformException e1) {
-			e1.printStackTrace();
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
-		} catch (ExecutionException e1) {
-			e1.printStackTrace();
-		} catch (IllegalRegressionException e) {
-			e.printStackTrace();
-		}
-
-		// ---------------------------------
-		// Apply regression function to output
-		// ---------------------------------
-
-		// WARNING: not generic at all - or define 1st ancillary data file to be the one for output format
-		RasterFile outputFormat = (RasterFile) endogeneousVarFile
-				.stream().filter(file -> file.getGeoGSFileType().equals(GeoGSFileType.RASTER))
-				.findFirst().get();
-		spllBuilder.setNormalizer(new SPLUniformNormalizer(0, RasterFile.DEF_NODATA));
-		float[][] pixelOutput = null;
-		try { 
-			pixelOutput = spllBuilder.buildOutput(outputFormat, false, true, (double) population.size());
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (IllegalRegressionException e) {
-			e.printStackTrace();
-		} catch (IndexOutOfBoundsException e1) {
-			e1.printStackTrace();
-		} catch (TransformException e1) {
-			e1.printStackTrace();
-		} catch (GSMapperException e) {
-			e.printStackTrace();
-		}
-
-		List<Double> outList = GSBasicStats.transpose(pixelOutput);
-		GSBasicStats<Double> bs = new GSBasicStats<>(outList, Arrays.asList(RasterFile.DEF_NODATA.doubleValue()));
-		gspu.sysoStempMessage("\nStatistics on output:\n"+bs.getStatReport());
-
-		IGSGeofile<? extends AGeoEntity> outputFile = null;
-		try {
-			ReferencedEnvelope env = new ReferencedEnvelope(endogeneousVarFile.get(0).getEnvelope(),
-					SpllUtil.getCRSfromWKT(outputFormat.getWKTCoordinateReferentSystem()));
-
-			outputFile = gf.createRasterfile(new File("sample/Rouen/result.tif"), pixelOutput, 
-					RasterFile.DEF_NODATA.floatValue(), env);
-		} catch (IllegalArgumentException e1) {
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		} catch (TransformException e1) {
-			e1.printStackTrace();
-		}
-
-
-		///////////////////////
-		// MATCH TO POPULATION
-		///////////////////////
-
-		SPUniformLocalizer localizer = new SPUniformLocalizer(sfBuildings);
-
-		// use of the regression grid
-		localizer.setEntityNbAreas(outputFile, stringOfNumberAttribute);
-
+		// SETUP THE LOCALIZER
+		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
+		
+		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
-		localizer.setMatch(sfAdmin, stringOfCensusIdInCSVfile, stringOfCensusIdInShapefile);
+		localizer.setMatcher(sfAdmin, stringOfCensusIdInCSVfile, stringOfCensusIdInShapefile);
+		
+		// SETUP REGRESSION
+		try {
+			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
+					new LMRegressionOLS(), new SPLUniformNormalizer(0, SPLRasterFile.DEF_NODATA));
+		} catch (IndexOutOfBoundsException | IOException | TransformException | InterruptedException
+				| ExecutionException | IllegalRegressionException | GSMapperException | SchemaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		//localize the population
-		localizer.localisePopulation(population);
-
-		/////////////////////////////////////////
-		// SAVE THE POPULATION INTO A SHAPEFILE
-		////////////////////////////////////////
-
-		try {
-			gf.createShapeFile(new File(stringPathToPopulationShapefile), population, 
-					SpllUtil.getCRSfromWKT(outputFormat.getWKTCoordinateReferentSystem()));
-		} catch (IOException | SchemaException e) {
-			e.printStackTrace();
-		}
+		localizer.localisePopulation();
 
 	}
 

@@ -23,12 +23,19 @@ import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
 import gospl.distribution.matrix.INDimensionalMatrix;
 import gospl.distribution.matrix.coordinate.ACoordinate;
-import gospl.example.GosplIndependantEstimationTemplate;
 import gospl.generator.DistributionBasedGenerator;
 import gospl.generator.ISyntheticGosplPopGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
 
+/**
+ * TODO: describe motives and method
+ * 
+ * IS stand for Independent Sampling
+ * 
+ * @author kevinchapuis
+ *
+ */
 public class IS {
 
 	final static String report = "PopReport.csv";
@@ -57,24 +64,6 @@ public class IS {
 		} catch (final IOException e) {
 			e.printStackTrace();
 		} catch (final InvalidSurveyFormatException e) {
-			e.printStackTrace();
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// TRANSPOSE SAMPLES INTO IPOPULATION
-		// TODO: yet to be tested
-		try {
-			df.buildSamples();
-		} catch (final RuntimeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (final IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (final InvalidSurveyFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
@@ -113,7 +102,7 @@ public class IS {
 		try {
 			population = ispGenerator.generate(targetPopulation);
 			gspu.sysoStempPerformance("End generating synthetic population: elapse time",
-					GosplIndependantEstimationTemplate.class.getName());
+					IS.class.getName());
 		} catch (final NumberFormatException e) {
 			e.printStackTrace();
 		}

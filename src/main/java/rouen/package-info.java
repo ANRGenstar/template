@@ -1,6 +1,7 @@
 package rouen;
 /**
  * This template explore data from the city of Rouen in France
+ * TODO: provide more details about the use case
  * <p>
  * Gospl sub-package details various method to generate the synthetic population of rouen
  * which depends on diverging input data, generation process and so on
