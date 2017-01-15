@@ -19,6 +19,7 @@ import core.metamodel.geo.io.IGSGeofile;
 import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
+import core.util.GSPerformanceUtil;
 import gospl.distribution.GosplDistributionBuilder;
 import gospl.io.exception.InvalidSurveyFormatException;
 import spll.SpllPopulation;
@@ -60,6 +61,8 @@ public class Localisation {
 
 	public static void main(String[] args) {
 
+		GSPerformanceUtil gspu = new GSPerformanceUtil("Localisation de la population de Rouen");
+		
 		// INPUT POPULATION
 		GosplDistributionBuilder gdb = null;
 		try {
@@ -87,6 +90,9 @@ public class Localisation {
 		}
 
 		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = gdb.getRawSamples().iterator().next();
+		
+		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
+				Localisation.class.getSimpleName());
 		
 		// IMPORT DATA FILES
 		SPLGeofileFactory gf = new SPLGeofileFactory();
@@ -118,6 +124,9 @@ public class Localisation {
 				e2.printStackTrace();
 			}
 		}
+		
+		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
+				Localisation.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
 		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
