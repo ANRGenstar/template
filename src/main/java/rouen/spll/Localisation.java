@@ -128,8 +128,11 @@ public class Localisation {
 		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
 				Localisation.class.getSimpleName());
 		
+		//Definition of a SpllPopulation from the GOSPLpopulation in order to localize the entities
+		SpllPopulation spllPopulation = new SpllPopulation(population, sfBuildings);
+		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
+		SPUniformLocalizer localizer = new SPUniformLocalizer(spllPopulation);
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
@@ -147,6 +150,16 @@ public class Localisation {
 
 		//localize the population
 		localizer.localisePopulation();
+		
+		//save the SpllPopulation into a shapefile.
+		try {
+			gf.createShapeFile(new File(stringPathToPopulationShapefile), spllPopulation);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SchemaException e) {
+			e.printStackTrace();
+		}
+		
 
 	}
 
