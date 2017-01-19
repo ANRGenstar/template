@@ -22,8 +22,8 @@ import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
 import gospl.distribution.matrix.INDimensionalMatrix;
 import gospl.distribution.matrix.coordinate.ACoordinate;
-import gospl.generator.DistributionBasedGenerator;
-import gospl.generator.ISyntheticGosplPopGenerator;
+import gospl.algo.generator.DistributionBasedGenerator;
+import gospl.algo.generator.ISyntheticGosplPopGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
 
