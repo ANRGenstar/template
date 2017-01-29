@@ -30,11 +30,11 @@ import gospl.io.exception.InvalidSurveyFormatException;
 public class IPF {
 
 	// Input nb of entity
-	final static int popSize = 110000;
+	static int popSize = -1;
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/rouen/data/IPF_export.csv"); 
 	// Setup configuration file
-	final static Path configurationFile = Paths.get("src/main/java/rouen/data/GSC_Rouen.xml");
+	final static Path configurationFile = Paths.get("src/main/java/rouen/gospl/data/GSC_Rouen_IPF.xml");
 	
 	public static void main(String[] args) {
 
@@ -84,7 +84,7 @@ public class IPF {
 
 		// Input sample
 		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> seed = gdf.getRawSamples().iterator().next();
-
+		
 		// Input control tables (also known as marginals)
 		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> matrix = null;
 		try {
@@ -96,9 +96,12 @@ public class IPF {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		// Eventually, make population size reflect input data (here contingency table)
+		popSize = popSize <= 0 ? matrix.getVal().getValue().intValue() : popSize;
 
 		// Setup IPF with seed, number of maximum fitting iteration, and delta convergence criteria 
-		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new DistributionInferenceIPFAlgo(seed, 100, Math.pow(10, -2));
+		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new DistributionInferenceIPFAlgo(seed, 1000, Math.pow(10, -2));
 
 		// Build a sample from the IPF process
 		ISampler<ACoordinate<APopulationAttribute, APopulationValue>> sampler = null;

@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -29,7 +30,7 @@ import gospl.entity.attribute.GosplAttributeFactory;
 
 public class GSCRouen_IPF {
 
-	public static String CONF_CLASS_PATH = "src/main/java/rouen/data/";
+	public static String CONF_CLASS_PATH = "src/main/java/rouen/gospl/data/";
 	public static String CONF_EXPORT = "GSC_Rouen_IPF";
 
 	public static void main(String[] args) {
@@ -53,18 +54,20 @@ public class GSCRouen_IPF {
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
 
 		// Make file path absolute
-		Path absolutePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
+		Path relativePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
 			// Setup input files' configuration for individual aggregated data
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("Age & Couple-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Couple-Tableau 1.csv").toString(), 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("Age & Sexe & CSP-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe & CSP-Tableau 1.csv").toString(), 
 					GSSurveyType.ContingencyTable, ';', 2, 1));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("Age & Sexe-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe-Tableau 1.csv").toString(), 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("Rouen_sample_IRIS.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Rouen_iris.csv").toString(), 
+					GSSurveyType.ContingencyTable, ',', 1, 1));
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Rouen_sample_iris.csv").toString(), 
 					GSSurveyType.Sample, ',', 1, 1));
 
 			try {
@@ -145,24 +148,29 @@ public class GSCRouen_IPF {
 				// Setup "COUPLE" attribute: INDIVIDUAL
 				// --------------------------
 
+				String vec = "Vivant en couple";
+				String nvpec = "Ne vivant pas en couple";
+				
 				APopulationAttribute attCouple = attf.createAttribute("Couple", GSEnumDataType.String, 
-						Arrays.asList("Vivant en couple", "Ne vivant pas en couple"), 
+						Arrays.asList(vec, nvpec), 
 						GSEnumAttributeType.unique); 
 				inputAttributes.add(attCouple);
 
 				Map<Set<String>, Set<String>> mapperC1 = new HashMap<>();
-				mapperC1.put(Stream.of("Vivant en couple").collect(Collectors.toSet()), 
-						Stream.of("1").collect(Collectors.toSet()));
-				mapperC1.put(Stream.of("Ne vivant pas en couple").collect(Collectors.toSet()), 
-						Stream.of("2").collect(Collectors.toSet()));
+				mapperC1.put(Stream.of("1").collect(Collectors.toSet()),
+						Stream.of(vec).collect(Collectors.toSet()));
+				mapperC1.put(Stream.of("2").collect(Collectors.toSet()),
+						Stream.of(nvpec).collect(Collectors.toSet()));
+				
 				inputAttributes.add(attf.createAttribute("couple", GSEnumDataType.String, 
-						Arrays.asList("1", "2"), GSEnumAttributeType.unique, attCouple, mapperC1));
+						Arrays.asList("1", "2"), Arrays.asList(vec, nvpec), 
+						GSEnumAttributeType.unique, attCouple, mapperC1));
 
 				// --------------------------
 				// Setup "IRIS" attribute: INDIVIDUAL
 				// --------------------------
 
-				inputAttributes.add(attf.createAttribute("iris", GSEnumDataType.String, 
+				APopulationAttribute attIris = attf.createAttribute("iris", GSEnumDataType.String, 
 						Arrays.asList("765400602", "765400104","765400306","765400201",
 								"765400601","765400901","765400302","765400604","765400304",
 								"765400305","765400801","765400301","765401004","765401003",
@@ -172,23 +180,32 @@ public class GSCRouen_IPF {
 								"765401001","765400405","765400501","765400102","765400503",
 								"765400404","765400105","765401002","765400902","765400403",
 								"765400203","765400101","765400205"), 
-						GSEnumAttributeType.unique));
+						GSEnumAttributeType.unique); 
+				
+				APopulationAttribute attIrisRecord = attf.createAttribute("population", GSEnumDataType.Integer, 
+						Arrays.asList("P13_POP"), GSEnumAttributeType.record, attIris, Collections.emptyMap());
+				
+				inputAttributes.add(attIris);
+				inputAttributes.add(attIrisRecord);
 
 				// -------------------------
 				// Setup "SEXE" attribute: INDIVIDUAL
 				// -------------------------
 
+				String h = "Hommes";
+				String f = "Femmes";
+				
 				APopulationAttribute attSexe = attf.createAttribute("Sexe", GSEnumDataType.String,
-						Arrays.asList("Hommes", "Femmes"), GSEnumAttributeType.unique);
+						Arrays.asList(h, f), GSEnumAttributeType.unique);
 				inputAttributes.add(attSexe);
 
 				Map<Set<String>, Set<String>> mapperS1 = new HashMap<>();
-				mapperS1.put(Stream.of("Hommes").collect(Collectors.toSet()), 
-						Stream.of("1").collect(Collectors.toSet()));
-				mapperS1.put(Stream.of("Femmes").collect(Collectors.toSet()), 
-						Stream.of("2").collect(Collectors.toSet()));
+				mapperS1.put(Stream.of("1").collect(Collectors.toSet()),
+						Stream.of(h).collect(Collectors.toSet()));
+				mapperS1.put(Stream.of("2").collect(Collectors.toSet()),
+						Stream.of(f).collect(Collectors.toSet()));
 				inputAttributes.add(attf.createAttribute("sexe", GSEnumDataType.String,
-						Arrays.asList("1", "2"), Arrays.asList("Hommes", "Femmes"), 
+						Arrays.asList("1", "2"), Arrays.asList(h, f), 
 						GSEnumAttributeType.unique, attSexe, mapperS1));
 
 				// -------------------------

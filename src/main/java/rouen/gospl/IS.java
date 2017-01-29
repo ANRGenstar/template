@@ -14,9 +14,9 @@ import core.metamodel.pop.io.GSSurveyType;
 import core.util.GSPerformanceUtil;
 import gospl.GosplPopulation;
 import gospl.algo.ISyntheticReconstructionAlgo;
-import gospl.algo.IndependantHypothesisAlgo;
 import gospl.algo.generator.DistributionBasedGenerator;
 import gospl.algo.generator.ISyntheticGosplPopGenerator;
+import gospl.algo.is.IndependantHypothesisAlgo;
 import gospl.algo.sampler.IDistributionSampler;
 import gospl.algo.sampler.ISampler;
 import gospl.algo.sampler.sr.GosplBasicSampler;
@@ -40,8 +40,9 @@ public class IS {
 
 	final static String report = "PopReport.csv";
 	final static String export = "PopExport.csv";
-	final static int targetPopulation = 110000;
-	final static Path confFile = Paths.get("src/main/java/rouen/data/GSC_Rouen_IS.xml");
+	
+	static int targetPopulation = 110000;
+	final static Path confFile = Paths.get("src/main/java/rouen/gospl/data/GSC_Rouen_IS.xml");
 	
 	public static void main(String[] args) {
 
@@ -92,6 +93,8 @@ public class IS {
 			e1.printStackTrace();
 		}
 
+		targetPopulation = targetPopulation <= 0 ? distribution.getVal().getValue().intValue() : targetPopulation;
+		
 		final GSPerformanceUtil gspu =
 				new GSPerformanceUtil("Start generating synthetic population of size " + targetPopulation);
 
