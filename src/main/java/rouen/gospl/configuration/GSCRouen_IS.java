@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -63,6 +64,8 @@ public class GSCRouen_IS {
 					GSSurveyType.ContingencyTable, ';', 2, 1));
 			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe-Tableau 1.csv").toString(), 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Rouen_iris.csv").toString(), 
+					GSSurveyType.ContingencyTable, ',', 1, 1));
 
 			try {
 
@@ -145,6 +148,27 @@ public class GSCRouen_IS {
 								"Employés", "Ouvriers", "Retraités", "Autres personnes sans activité professionnelle"), 
 						GSEnumAttributeType.unique); 
 				inputAttributes.add(attCSP);
+				
+				// -------------------------
+				// Setup "IRIS" attribute: INDIVIDUAL
+				// -------------------------
+				APopulationAttribute attIris = attf.createAttribute("iris", GSEnumDataType.String, 
+						Arrays.asList("765400602", "765400104","765400306","765400201",
+								"765400601","765400901","765400302","765400604","765400304",
+								"765400305","765400801","765400301","765401004","765401003",
+								"765400402","765400603","765400303","765400103","765400504",
+								"765401006","765400702","765400401","765400202","765400802",
+								"765400502","765400106","765400701","765401005","765400204",
+								"765401001","765400405","765400501","765400102","765400503",
+								"765400404","765400105","765401002","765400902","765400403",
+								"765400203","765400101","765400205"), 
+						GSEnumAttributeType.unique); 
+				
+				APopulationAttribute attIrisRecord = attf.createAttribute("population", GSEnumDataType.Integer, 
+						Arrays.asList("P13_POP"), GSEnumAttributeType.record, attIris, Collections.emptyMap());
+				
+				inputAttributes.add(attIris);
+				inputAttributes.add(attIrisRecord);
 
 			} catch (GSIllegalRangedData e) {
 				// TODO Auto-generated catch block
