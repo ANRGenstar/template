@@ -38,10 +38,10 @@ import spll.popmapper.normalizer.SPLUniformNormalizer;
 public class LocalisationBangkok {
 
 	//path to the main census shapefile - the entities are generated at this level
-	static String stringPathToCensusShapefile = "src/main/java/bangkok/spll/data/overall/kwaeng.shp";
+	static String stringPathToCensusShapefile = "src/main/java/bangkok/spll/data/crop/kwaeng.shp";
 
 	//path to the file that will be used as support for the spatial regression (bring additional spatial data)
-	static String stringPathToLandUseGrid = "src/main/java/bangkok/spll/data/overall/occsol_bma_tif.tif";
+	static String stringPathToLandUseGrid = "src/main/java/bangkok/spll/data/crop/occsol.tif";
 
 	static String stringPathToPopulationShapefile = "src/main/java/bangkok/spll/output/spllOutput.shp";
 	
@@ -88,6 +88,8 @@ public class LocalisationBangkok {
 
 		SPLVectorFile sfAdmin = null;
 		
+		IGSGeofile rasteFile = null;
+		
 		try {
 			sfAdmin = gf.getShapeFile(new File(stringPathToCensusShapefile));
 		} catch (IOException e) {
@@ -105,7 +107,9 @@ public class LocalisationBangkok {
 		List<IGSGeofile<? extends AGeoEntity>> endogeneousVarFile = new ArrayList<>();
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
-				endogeneousVarFile.add(gf.getGeofile(new File(path)));
+				rasteFile = gf.getGeofile(new File(path));
+				System.out.println("");
+				endogeneousVarFile.add(rasteFile);
 			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
 				e2.printStackTrace();
 			}
@@ -115,7 +119,7 @@ public class LocalisationBangkok {
 				LocalisationBangkok.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfAdmin));
+		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, rasteFile));
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
@@ -133,6 +137,7 @@ public class LocalisationBangkok {
 		numberConstr.setIncreaseStep(2);
 		numberConstr.setMaxIncrease(60);
 		localizer.getConstraints().add(numberConstr);*/
+		
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
