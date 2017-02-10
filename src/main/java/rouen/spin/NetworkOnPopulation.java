@@ -11,7 +11,6 @@ import java.util.concurrent.ExecutionException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.geotools.feature.SchemaException;
-import org.graphstream.graph.Graph;
 import org.opengis.referencing.operation.TransformException;
 
 import core.metamodel.IPopulation;
@@ -24,11 +23,12 @@ import core.util.GSPerformanceUtil;
 import gospl.distribution.GosplDistributionBuilder;
 import gospl.io.exception.InvalidSurveyFormatException;
 import rouen.spll.LocalisationRouen;
+import spin.SpinPopulation;
 import spin.algo.factory.GraphStreamFactory;
 import spin.algo.factory.SpinNetworkFactory;
 import spin.algo.factory.StatFactory;
-import spin.interfaces.EGraphStreamNetworkType;
-import spin.interfaces.ENetworkEnumGenerator;
+import spin.interfaces.EGraphStreamNetwork;
+import spin.interfaces.ENetworkGenerator;
 import spin.objects.SpinNetwork;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
@@ -180,52 +180,15 @@ public class NetworkOnPopulation {
 
 		
 		SpinNetwork network = 
-		SpinNetworkFactory.getInstance().generateNetwork(ENetworkEnumGenerator.Regular, localizedPop);
-		
-		GraphStreamFactory.getIntance().generateGraphStreamGraph(network);
-		Graph gsGraph = GraphStreamFactory.getIntance().getGraphStreamGraph(EGraphStreamNetworkType.spinNetwork);
-//		gsGraph.display();
+
+		SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
+		SpinPopulation spinPop = new SpinPopulation(localizedPop, network);
+
 
 		System.out.println("Density " + StatFactory.getInstance().getDensity());
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		
+		GraphStreamFactory.getIntance().getGraphStreamGraph(EGraphStreamNetwork.spinNetwork).display();
+
 	}
 
 }
