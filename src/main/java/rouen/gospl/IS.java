@@ -31,7 +31,7 @@ import gospl.io.exception.InvalidSurveyFormatException;
 /**
  * TODO: describe motives and method
  * 
- * IS stand for Independent Sampling
+ * IS stand for Independent Sampling 
  * 
  * @author kevinchapuis
  *
