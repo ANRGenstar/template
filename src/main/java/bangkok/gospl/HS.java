@@ -33,7 +33,7 @@ public class HS {
 	final static String report = "PopReport.csv";
 	final static String export = "PopExport.csv";
 	
-	static int targetPopulation = 1000;
+	static int targetPopulation = 10;
 	final static String attributeNamePopulation = "population";
 	
 	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok.xml");

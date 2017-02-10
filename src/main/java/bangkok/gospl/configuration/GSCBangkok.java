@@ -59,12 +59,12 @@ public class GSCBangkok {
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
 			// Setup input files' configuration for individual aggregated data
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 DEM-Tableau 1.csv").toString(), 
-					GSSurveyType.ContingencyTable, ';', 1, 4));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 WRK-Tableau 1.csv").toString(), 
-					GSSurveyType.LocalFrequencyTable, ';', 1, 4));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 EDU-Tableau 1.csv").toString(), 
-					GSSurveyType.LocalFrequencyTable, ';', 1, 4));
+			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 DEM-Tableau 1-sans PA.csv").toString(), 
+					GSSurveyType.ContingencyTable, ';', 1, 3));
+			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 WRK-Tableau 1-sans PA.csv").toString(), 
+					GSSurveyType.LocalFrequencyTable, ';', 1, 3));
+			//inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 EDU-Tableau 1.csv").toString(), 
+			//		GSSurveyType.LocalFrequencyTable, ';', 1, 4));
 			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("Districts-Tableau 1.csv").toString(), 
 					GSSurveyType.ContingencyTable, ';', 1, 3));
 
