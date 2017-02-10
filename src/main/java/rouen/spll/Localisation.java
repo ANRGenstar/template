@@ -32,6 +32,7 @@ import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.constraint.SpatialConstraintMaxNumber;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
 public class Localisation {
@@ -52,7 +53,7 @@ public class Localisation {
 
 	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/output/GSC_Rouen_Localisation.xml";
 	//name of the property that contains the id of the census spatial areas in the csv file (and population)
-	static String stringOfCensusIdInCSVfile = "IRIS";
+	static String stringOfCensusIdInCSVfile = "iris";
 	//name of the property that define the number of entities per census spatial areas.
 	static String stringOfNumberProperty = "P13_POP";
 
@@ -61,6 +62,7 @@ public class Localisation {
 	
 	static String stringPathToOutputFile = "src/main/java/rouen/spll/output/RouenSpll.shp";
 
+	
 	public static void main(String[] args) {
 
 		GSPerformanceUtil gspu = new GSPerformanceUtil("Localisation de la population de Rouen");
@@ -137,7 +139,19 @@ public class Localisation {
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
 		localizer.setMatcher(sfAdmin, stringOfCensusIdInCSVfile, stringOfCensusIdInShapefile);
-		
+		localizer.getLocalizationConstraint().setIncreaseStep(100.0);
+		localizer.getLocalizationConstraint().setMaxIncrease(100.0); 
+		/*SpatialConstraintMaxDensity densityConstr = new SpatialConstraintMaxDensity(sfBuildings.getGeoEntity(), 1.0/100.0);
+		densityConstr.setPriority(-1);
+		densityConstr.setIncreaseStep(1.0/100.0);
+		densityConstr.setMaxIncrease(1.0/20.0);
+		localizer.getConstraints().add(densityConstr);
+		*/
+		SpatialConstraintMaxNumber numberConstr = new SpatialConstraintMaxNumber(sfBuildings.getGeoEntity(), 1.0);
+		numberConstr.setPriority(10);
+		numberConstr.setIncreaseStep(2);
+		numberConstr.setMaxIncrease(60);
+		localizer.getConstraints().add(numberConstr);
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
@@ -147,7 +161,7 @@ public class Localisation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 		//localize the population
 		SpllPopulation localizedPop = localizer.localisePopulation();
 		try {
