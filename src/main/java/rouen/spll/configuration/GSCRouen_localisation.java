@@ -46,7 +46,7 @@ public class GSCRouen_localisation {
 		
 		// What to define in this configuration file
 		GSSurveyWrapper populationInput = new GSSurveyWrapper(absolutePath.resolve("PopExport.csv").toString(), 
-					GSSurveyType.Sample, ',', 1, 1);
+					GSSurveyType.Sample, ';', 1, 1);
 		populationInput.setRelativePath(Paths.get(CONF_CLASS_PATH).iterator().next().toAbsolutePath().getParent());
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
@@ -63,7 +63,7 @@ public class GSCRouen_localisation {
 						Arrays.asList("Vivant en couple", "Ne vivant pas en couple"), 
 						GSEnumAttributeType.unique));
 			//IRIS
-			inputAttributes.add(attf.createAttribute("IRIS", GSEnumDataType.String, 
+			inputAttributes.add(attf.createAttribute("iris", GSEnumDataType.String, 
 					Arrays.asList("765400602", "765400104","765400306","765400201",
 							"765400601","765400901","765400302","765400604","765400304",
 							"765400305","765400801","765400301","765401004","765401003",
