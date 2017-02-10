@@ -36,7 +36,7 @@ public class HS {
 	static int targetPopulation = 1000;
 	final static String attributeNamePopulation = "population";
 	
-	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok_IS.xml");
+	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok.xml");
 	
 	public static void main(String[] args) {
 

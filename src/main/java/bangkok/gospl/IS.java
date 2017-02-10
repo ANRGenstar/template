@@ -33,10 +33,10 @@ public class IS {
 	final static String report = "PopReport.csv";
 	final static String export = "PopExport.csv";
 	
-	static int targetPopulation = 1000;
+	static int targetPopulation = 10000;
 	final static String attributeNamePopulation = "population";
 	
-	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok_IS.xml");
+	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok.xml");
 	
 	public static void main(String[] args) {
 

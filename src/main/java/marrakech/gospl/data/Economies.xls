@@ -1,0 +1,858 @@
+<strong>Région : </strong> Marrakech Tensift Al Haouz <strong>Province : </strong>Marrakech
+                            <table id="te" border="1" bordercolor="LightGrey" cellpadding="3" cellspacing="0"
+                                style="z-index: 101; left: 0px; width: 95%; top: 8px; height: 95%">
+                                <colgroup>
+                                    <col align="left">
+                                    <col align="right">
+                                    <col align="right">
+                                </colgroup>
+                                <tr bgcolor="whitesmoke" height="27" style="border-right: LightGrey 0.5pt solid;
+                                    border-top: LightGrey; border-left: LightGrey; border-bottom: LightGrey; background-color: transparent;
+                                    height: 20.25pt">
+                                    <td height="27" style="height: 20.25pt; color: #484848;">
+                                        <font face="tahoma" size="1"><strong>Caractéristiques économiques </strong></font>
+                                    </td>
+                                    <td align="left" class="xl32">
+                                        <font face="tahoma" size="1"><strong>Effectif</strong></font></td>
+                                    <td class="xl33" width="38">
+                                        <font face="tahoma" size="1"><strong>%</strong></font></td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td height="14" style="color: #484848; width: 314pt; height: 10.5pt; background-color: whitesmoke;
+                                        color: #484848;">
+                                        <strong><font color="gray" face="tahoma" size="1">ACTIVITE</font></strong></td>
+                                    <td class="xl30" style="color: #484848; background-color: whitesmoke">
+                                        <font color="gray" face="tahoma" size="1">&nbsp;</font></td>
+                                    <td class="xl31" style="background-color: whitesmoke; color: #484848;">
+                                        <font color="gray" face="tahoma" size="1"><strong>&nbsp;</strong></font></td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td bgcolor="transparent" class="xl34" colspan="1" height="14" rowspan="1" style="width: 314pt;
+                                        background-color: transparent" width="419">
+                                        <strong><font face="tahoma" size="1">Population de 7 ans et plus</font></strong></td>
+                                    <td class="xl35" style="background-color: transparent">
+                                        <font face="tahoma" size="1">
+                                            922 550
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            100
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" style="height: 10.5pt; background-color: transparent"
+                                        width="419">
+                                        <font face="tahoma" size="1">Actifs</font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            400 877
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            43,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp; &nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            103 027
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            11,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl29" height="14" style="background-color: whitesmoke; color: #484848;
+                                        color: #484848">
+                                        <strong><font color="gray" face="tahoma" size="1">SITUATION DANS LA PROFESSION</font></strong></td>
+                                    <td class="xl30" style="background-color: whitesmoke; color: #484848;">
+                                        <font color="gray" face="tahoma" size="1">&nbsp;</font></td>
+                                    <td class="xl31" style="background-color: whitesmoke; color: #484848">
+                                        <font color="gray" face="tahoma" size="1"><strong>&nbsp;</strong></font></td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl24" height="14" width="419">
+                                        <strong><font face="tahoma" size="1">Actifs occupés et chômeurs ayant déjà travaillés</font></strong></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            356 895
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            100
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Employeur</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            8 753
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            2,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            996
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,3
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Indépendant</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            97 162
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            27,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            16 203
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            4,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Salariés publiques</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            47 048
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            13,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            14 390
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Salariés privés</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            179 927
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            50,4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            41 873
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            11,7
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Aide familiale</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            17 883
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            5 044
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            1,4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Apprentie</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            6 122
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            1,7
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25" s="">
+                                        <font face="tahoma" size="1">
+                                            777
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl29" height="14" style="background-color: whitesmoke; color: #484848;">
+                                        <strong><font color="gray" face="tahoma" size="1">GROUPES DE PROFESSION</font></strong></td>
+                                    <td class="xl30" style="background-color: whitesmoke; color: #484848">
+                                        <font color="gray" face="tahoma" size="1">&nbsp;</font></td>
+                                    <td class="xl31" style="background-color: whitesmoke; color: #484848">
+                                        <font color="gray" face="tahoma" size="1"><strong>&nbsp;</strong></font></td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl24" height="14" width="419">
+                                        <strong><font face="tahoma" size="1">Actifs occupés et chômeurs ayant déjà travaillés</font></strong></td>
+                                    <td class="xl25" s="">
+                                        <font face="tahoma" size="1">
+                                            356 895
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            100
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="56" style="height: 42pt">
+                                    <td class="xl36" height="56">
+                                        <font face="tahoma" size="1">Membres des corps législatifs élus locaux, Responsables
+                                            hiérarchiques de la fonction publique, Directeurs<span>&nbsp; </span>et cadres de
+                                            direction d"entreprises, Cadre supérieurs et membres des profession libérales, Cadres
+                                            moyens</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            45 607
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            12,8
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            15 938
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            4,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Employés</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            41 970
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            11,8
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            12 280
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            3,4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Commerçants, intermédiaires commerciaux et financiers</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            40 178
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            11,3
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            3 551
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            1
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="42" style="height: 31.5pt">
+                                    <td class="xl36" height="42" width="419">
+                                        <font face="tahoma" size="1">Exploitants, ouvriers et manoeuvres agricoles, pêcheurs,
+                                            fôrestiers, chasseurs et travailleurs assimilés<span>&nbsp; </span>Ouvriers et manœuvres
+                                            agricoles et de la pêche (y compris ouvrier qualifiés)</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            45 071
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            12,6
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            5 981
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            1,7
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="42" style="height: 31.5pt">
+                                    <td class="xl36" height="42" width="419">
+                                        <font face="tahoma" size="1">Artisans et ouvrier qualifiés des métiers artisanaux (non
+                                            compris ouvrier d"agriculture)<span>&nbsp; </span>Manœuvres non agricoles, manutentionnaires
+                                            et travailleurs des petits métiers</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            168 211
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            47,1
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            41 041
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            11,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="28" style="height: 21pt">
+                                    <td class="xl36" height="28">
+                                        <font face="tahoma" size="1">Conducteurs d'installations et de machines et ouvriers
+                                            de l"assemblage</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            15 551
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            4,4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl27" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl28">
+                                        <font face="tahoma" size="1">
+                                            415
+                                        </font>
+                                    </td>
+                                    <td class="xl28">
+                                        <font face="tahoma" size="1">
+                                            0,1
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl29" height="14" style="background-color: whitesmoke; color: #484848;
+                                        color: #484848;">
+                                        <strong><font color="gray" face="tahoma" size="1">BRANCHES D'ACTIVITES ECONOMIQUES</font></strong></td>
+                                    <td class="xl30" style="background-color: whitesmoke; color: #484848">
+                                        <font color="gray" face="tahoma" size="1">&nbsp;</font></td>
+                                    <td class="xl31" style="background-color: whitesmoke; color: #484848; color: #484848;">
+                                        <font color="gray" face="tahoma" size="1"><strong>&nbsp;</strong></font></td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl24" height="14" width="419">
+                                        <strong><font face="tahoma" size="1">Actifs occupés et chômeurs ayant déja travaillés..</font></strong></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            356 895
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            100
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Agriculture</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            49 418
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            13,8
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            6 759
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            1,9
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Mines</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            1 610
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            0,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            77
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Industrie</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            61 826
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            17,3
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            18 421
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            5,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Eau électricité et énergie</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            1 588
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            0,4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            232
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,1
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">B.T.P</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            37 521
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            10,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            657
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Commerce</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            66 049
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            18,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            8 001
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            2,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Transport et communication</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            21 181
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            5,9
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            1 652
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,5
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Services</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            53 102
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            14,9
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            22 005
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            6,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Administration</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            54 898
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            15,4
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            18 562
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            5,2
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Activité exercée hors du Maroc et N-D</font></td>
+                                    <td class="xl35" s="">
+                                        <font face="tahoma" size="1">
+                                            9 702
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            2,7
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font size="1"><font face="tahoma"><span>&nbsp;&nbsp; </span>Féminin</font></font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            2 917
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,8
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl29" height="14" style="background-color: whitesmoke; color: #484848">
+                                        <strong><font color="gray" face="tahoma" size="1">PAUVRETE</font></strong></td>
+                                    <td class="xl30" style="background-color: whitesmoke; color: #484848">
+                                        <font color="gray" face="tahoma" size="1">&nbsp;</font></td>
+                                    <td class="xl31" style="background-color: whitesmoke; color: #484848">
+                                        <font color="gray" face="tahoma" size="1"><strong>&nbsp;</strong></font></td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl24" height="14" width="419">
+                                        <strong><font size="1"><font face="tahoma"><span>&nbsp;</span>Ménages</font></font></strong></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            213 828
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            100
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Ménages inférieurs au seuil de pauvreté relative</font></td>
+                                    <td class="xl35" s="">
+                                        <font face="tahoma" size="1">
+                                            16 892
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            7,9
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font face="tahoma" size="1">Ménages inférieurs au seuil de la vulnérabilité</font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            34 212
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            16
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl36" height="14" width="419">
+                                        <font face="tahoma" size="1">Indice de la sévérité</font></td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            0,7
+                                        </font>
+                                    </td>
+                                    <td class="xl35">
+                                        <font face="tahoma" size="1">
+                                            (X)
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl26" height="14" width="419">
+                                        <font face="tahoma" size="1">Indice de dévelopement humain</font></td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            0,59
+                                        </font>
+                                    </td>
+                                    <td class="xl25">
+                                        <font face="tahoma" size="1">
+                                            (X)
+                                        </font>
+                                    </td>
+                                </tr>
+                                <tr height="14" style="height: 10.5pt">
+                                    <td class="xl37" height="14" width="419">
+                                        <font face="tahoma" size="1">Indice de dévelopement sociale</font></td>
+                                    <td class="xl38">
+                                        <font face="tahoma" size="1">
+                                            0,66
+                                        </font>
+                                    </td>
+                                    <td class="xl38">
+                                        <font face="tahoma" size="1">
+                                            (X)
+                                        </font>
+                                    </td>
+                                </tr>
+                            </table>
+                        

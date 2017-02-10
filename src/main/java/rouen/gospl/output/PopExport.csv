@@ -1,1001 +1,1001 @@
-Individual;CSP;Age;iris;Sexe;Couple
-1;Retraités;40 à 44 ans;765400101;Femmes;Vivant en couple
-2;Cadres et professions intellectuelles supérieures;45 à 49 ans;765400701;Hommes;Vivant en couple
-3;Professions intermédiaires;45 à 49 ans;765400502;Hommes;Vivant en couple
-4;Professions intermédiaires;20 à 24 ans;765400106;Femmes;Vivant en couple
-5;Retraités;20 à 24 ans;765400201;Hommes;Vivant en couple
-6;Autres personnes sans activité professionnelle;70 à 74 ans;765400405;Femmes;Vivant en couple
-7;Retraités;40 à 44 ans;765400602;Hommes;Ne vivant pas en couple
-8;Cadres et professions intellectuelles supérieures;Moins de 5 ans;765400303;Hommes;Vivant en couple
-9;Ouvriers;40 à 44 ans;765400502;Hommes;Ne vivant pas en couple
-10;Professions intermédiaires;20 à 24 ans;765400304;Femmes;Vivant en couple
-11;Autres personnes sans activité professionnelle;5 à 9 ans;765400106;Femmes;Ne vivant pas en couple
-12;Employés;5 à 9 ans;765400701;Femmes;Vivant en couple
-13;Autres personnes sans activité professionnelle;15 à 19 ans;765400503;Hommes;Ne vivant pas en couple
-14;Professions intermédiaires;20 à 24 ans;765400201;Femmes;Vivant en couple
-15;Retraités;Moins de 5 ans;765400502;Hommes;Vivant en couple
-16;Professions intermédiaires;Moins de 5 ans;765400602;Hommes;Vivant en couple
-17;Retraités;5 à 9 ans;765400201;Femmes;Vivant en couple
-18;Autres personnes sans activité professionnelle;60 à 64 ans;765400102;Hommes;Ne vivant pas en couple
-19;Retraités;20 à 24 ans;765400305;Femmes;Vivant en couple
-20;Retraités;55 à 59 ans;765400305;Hommes;Vivant en couple
-21;Retraités;50 à 54 ans;765400603;Hommes;Ne vivant pas en couple
-22;Retraités;15 à 19 ans;765400601;Femmes;Ne vivant pas en couple
-23;Autres personnes sans activité professionnelle;55 à 59 ans;765400604;Femmes;Ne vivant pas en couple
-24;Cadres et professions intellectuelles supérieures;45 à 49 ans;765401001;Femmes;Vivant en couple
-25;Retraités;35 à 39 ans;765400404;Femmes;Vivant en couple
-26;Ouvriers;20 à 24 ans;765400601;Hommes;Ne vivant pas en couple
-27;Retraités;60 à 64 ans;765400402;Hommes;Ne vivant pas en couple
-28;Retraités;Moins de 5 ans;765400306;Hommes;Ne vivant pas en couple
-29;Professions intermédiaires;5 à 9 ans;765400204;Femmes;Vivant en couple
-30;Employés;10 à 14 ans;765400103;Femmes;Vivant en couple
-31;Artisans. commerçants. chefs d'entreprise;5 à 9 ans;765400501;Hommes;Ne vivant pas en couple
-32;Professions intermédiaires;20 à 24 ans;765400106;Femmes;Ne vivant pas en couple
-33;Cadres et professions intellectuelles supérieures;15 à 19 ans;765400306;Femmes;Vivant en couple
-34;Ouvriers;45 à 49 ans;765400303;Hommes;Ne vivant pas en couple
-35;Autres personnes sans activité professionnelle;45 à 49 ans;765401003;Hommes;Vivant en couple
-36;Employés;75 à 79 ans;765400104;Femmes;Vivant en couple
-37;Autres personnes sans activité professionnelle;20 à 24 ans;765400104;Femmes;Vivant en couple
-38;Autres personnes sans activité professionnelle;25 à 29 ans;765400202;Hommes;Ne vivant pas en couple
-39;Ouvriers;5 à 9 ans;765400201;Hommes;Vivant en couple
-40;Retraités;55 à 59 ans;765401005;Femmes;Ne vivant pas en couple
-41;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400901;Femmes;Vivant en couple
-42;Cadres et professions intellectuelles supérieures;35 à 39 ans;765400201;Hommes;Ne vivant pas en couple
-43;Professions intermédiaires;45 à 49 ans;765400104;Femmes;Ne vivant pas en couple
-44;Retraités;35 à 39 ans;765401003;Femmes;Vivant en couple
-45;Ouvriers;10 à 14 ans;765400404;Hommes;Vivant en couple
-46;Retraités;30 à 34 ans;765400504;Hommes;Vivant en couple
-47;Artisans. commerçants. chefs d'entreprise;30 à 34 ans;765400702;Hommes;Vivant en couple
-48;Retraités;Moins de 5 ans;765400601;Femmes;Vivant en couple
-49;Employés;30 à 34 ans;765400202;Femmes;Ne vivant pas en couple
-50;Autres personnes sans activité professionnelle;35 à 39 ans;765400203;Femmes;Vivant en couple
-51;Employés;10 à 14 ans;765400602;Femmes;Ne vivant pas en couple
-52;Autres personnes sans activité professionnelle;45 à 49 ans;765400202;Hommes;Vivant en couple
-53;Autres personnes sans activité professionnelle;50 à 54 ans;765400404;Hommes;Ne vivant pas en couple
-54;Professions intermédiaires;60 à 64 ans;765400501;Hommes;Ne vivant pas en couple
-55;Retraités;35 à 39 ans;765400304;Femmes;Vivant en couple
-56;Cadres et professions intellectuelles supérieures;15 à 19 ans;765400701;Femmes;Ne vivant pas en couple
-57;Autres personnes sans activité professionnelle;25 à 29 ans;765400305;Hommes;Ne vivant pas en couple
-58;Retraités;55 à 59 ans;765400303;Hommes;Vivant en couple
-59;Autres personnes sans activité professionnelle;35 à 39 ans;765400203;Femmes;Vivant en couple
-60;Professions intermédiaires;15 à 19 ans;765401004;Femmes;Ne vivant pas en couple
-61;Autres personnes sans activité professionnelle;70 à 74 ans;765400501;Femmes;Vivant en couple
-62;Autres personnes sans activité professionnelle;70 à 74 ans;765400204;Femmes;Ne vivant pas en couple
-63;Retraités;65 à 69 ans;765400402;Hommes;Ne vivant pas en couple
-64;Ouvriers;20 à 24 ans;765401005;Hommes;Ne vivant pas en couple
-65;Autres personnes sans activité professionnelle;Moins de 5 ans;765400604;Femmes;Ne vivant pas en couple
-66;Cadres et professions intellectuelles supérieures;5 à 9 ans;765401001;Hommes;Vivant en couple
-67;Retraités;50 à 54 ans;765400303;Hommes;Vivant en couple
-68;Employés;90 à 94 ans;765400601;Femmes;Ne vivant pas en couple
-69;Ouvriers;Moins de 5 ans;765400901;Hommes;Vivant en couple
-70;Autres personnes sans activité professionnelle;45 à 49 ans;765400901;Femmes;Vivant en couple
-71;Retraités;40 à 44 ans;765400304;Femmes;Ne vivant pas en couple
-72;Employés;70 à 74 ans;765400305;Femmes;Vivant en couple
-73;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400105;Femmes;Vivant en couple
-74;Retraités;60 à 64 ans;765400105;Femmes;Vivant en couple
-75;Retraités;70 à 74 ans;765401002;Femmes;Vivant en couple
-76;Retraités;Moins de 5 ans;765400404;Hommes;Ne vivant pas en couple
-77;Retraités;55 à 59 ans;765400403;Hommes;Vivant en couple
-78;Employés;40 à 44 ans;765400101;Hommes;Vivant en couple
-79;Ouvriers;35 à 39 ans;765400203;Femmes;Vivant en couple
-80;Professions intermédiaires;55 à 59 ans;765400102;Femmes;Vivant en couple
-81;Professions intermédiaires;50 à 54 ans;765400203;Hommes;Vivant en couple
-82;Retraités;30 à 34 ans;765400204;Femmes;Ne vivant pas en couple
-83;Professions intermédiaires;30 à 34 ans;765400304;Hommes;Ne vivant pas en couple
-84;Autres personnes sans activité professionnelle;Moins de 5 ans;765400602;Femmes;Vivant en couple
-85;Ouvriers;15 à 19 ans;765400602;Hommes;Ne vivant pas en couple
-86;Employés;Moins de 5 ans;765400201;Femmes;Ne vivant pas en couple
-87;Professions intermédiaires;30 à 34 ans;765401003;Femmes;Ne vivant pas en couple
-88;Autres personnes sans activité professionnelle;50 à 54 ans;765401003;Femmes;Ne vivant pas en couple
-89;Retraités;20 à 24 ans;765400105;Femmes;Vivant en couple
-90;Professions intermédiaires;45 à 49 ans;765400503;Hommes;Vivant en couple
-91;Retraités;45 à 49 ans;765400203;Femmes;Vivant en couple
-92;Employés;45 à 49 ans;765400404;Femmes;Vivant en couple
-93;Employés;30 à 34 ans;765400404;Femmes;Ne vivant pas en couple
-94;Ouvriers;40 à 44 ans;765400202;Hommes;Vivant en couple
-95;Artisans. commerçants. chefs d'entreprise;20 à 24 ans;765400501;Hommes;Ne vivant pas en couple
-96;Autres personnes sans activité professionnelle;10 à 14 ans;765400106;Femmes;Vivant en couple
-97;Ouvriers;Moins de 5 ans;765401003;Hommes;Vivant en couple
-98;Ouvriers;5 à 9 ans;765401005;Hommes;Ne vivant pas en couple
-99;Autres personnes sans activité professionnelle;50 à 54 ans;765400503;Hommes;Ne vivant pas en couple
-100;Cadres et professions intellectuelles supérieures;35 à 39 ans;765401004;Hommes;Vivant en couple
-101;Retraités;25 à 29 ans;765401001;Hommes;Ne vivant pas en couple
-102;Employés;15 à 19 ans;765400106;Femmes;Vivant en couple
-103;Ouvriers;30 à 34 ans;765400602;Femmes;Vivant en couple
-104;Employés;30 à 34 ans;765400201;Femmes;Ne vivant pas en couple
-105;Autres personnes sans activité professionnelle;60 à 64 ans;765400403;Femmes;Ne vivant pas en couple
-106;Autres personnes sans activité professionnelle;60 à 64 ans;765401005;Femmes;Vivant en couple
-107;Retraités;Moins de 5 ans;765400404;Hommes;Ne vivant pas en couple
-108;Retraités;55 à 59 ans;765400105;Femmes;Vivant en couple
-109;Autres personnes sans activité professionnelle;25 à 29 ans;765400304;Femmes;Ne vivant pas en couple
-110;Ouvriers;40 à 44 ans;765400501;Femmes;Vivant en couple
-111;Autres personnes sans activité professionnelle;5 à 9 ans;765400801;Hommes;Vivant en couple
-112;Autres personnes sans activité professionnelle;35 à 39 ans;765400901;Femmes;Vivant en couple
-113;Employés;50 à 54 ans;765400102;Femmes;Ne vivant pas en couple
-114;Cadres et professions intellectuelles supérieures;5 à 9 ans;765400102;Hommes;Ne vivant pas en couple
-115;Cadres et professions intellectuelles supérieures;15 à 19 ans;765400602;Hommes;Vivant en couple
-116;Ouvriers;35 à 39 ans;765400304;Hommes;Ne vivant pas en couple
-117;Professions intermédiaires;60 à 64 ans;765400203;Hommes;Vivant en couple
-118;Cadres et professions intellectuelles supérieures;70 à 74 ans;765400501;Hommes;Vivant en couple
-119;Cadres et professions intellectuelles supérieures;25 à 29 ans;765400501;Femmes;Ne vivant pas en couple
-120;Professions intermédiaires;55 à 59 ans;765400304;Femmes;Vivant en couple
-121;Professions intermédiaires;15 à 19 ans;765400105;Hommes;Vivant en couple
-122;Professions intermédiaires;15 à 19 ans;765400304;Hommes;Vivant en couple
-123;Employés;60 à 64 ans;765400404;Femmes;Vivant en couple
-124;Autres personnes sans activité professionnelle;45 à 49 ans;765401001;Hommes;Vivant en couple
-125;Employés;60 à 64 ans;765400102;Femmes;Vivant en couple
-126;Professions intermédiaires;65 à 69 ans;765400306;Femmes;Vivant en couple
-127;Cadres et professions intellectuelles supérieures;40 à 44 ans;765401003;Hommes;Ne vivant pas en couple
-128;Autres personnes sans activité professionnelle;30 à 34 ans;765400303;Femmes;Vivant en couple
-129;Professions intermédiaires;15 à 19 ans;765400601;Hommes;Ne vivant pas en couple
-130;Cadres et professions intellectuelles supérieures;Moins de 5 ans;765400301;Hommes;Vivant en couple
-131;Autres personnes sans activité professionnelle;5 à 9 ans;765400201;Femmes;Vivant en couple
-132;Ouvriers;60 à 64 ans;765400305;Hommes;Vivant en couple
-133;Employés;45 à 49 ans;765400601;Femmes;Vivant en couple
-134;Autres personnes sans activité professionnelle;40 à 44 ans;765400304;Femmes;Vivant en couple
-135;Autres personnes sans activité professionnelle;75 à 79 ans;765400405;Hommes;Vivant en couple
-136;Autres personnes sans activité professionnelle;10 à 14 ans;765400304;Femmes;Ne vivant pas en couple
-137;Artisans. commerçants. chefs d'entreprise;45 à 49 ans;765400901;Hommes;Vivant en couple
-138;Ouvriers;5 à 9 ans;765400102;Hommes;Ne vivant pas en couple
-139;Autres personnes sans activité professionnelle;50 à 54 ans;765401003;Femmes;Vivant en couple
-140;Autres personnes sans activité professionnelle;Moins de 5 ans;765400405;Femmes;Ne vivant pas en couple
-141;Employés;5 à 9 ans;765400802;Femmes;Ne vivant pas en couple
-142;Autres personnes sans activité professionnelle;5 à 9 ans;765400901;Femmes;Vivant en couple
-143;Retraités;35 à 39 ans;765401001;Hommes;Ne vivant pas en couple
-144;Retraités;75 à 79 ans;765400201;Femmes;Ne vivant pas en couple
-145;Professions intermédiaires;20 à 24 ans;765400404;Femmes;Ne vivant pas en couple
-146;Retraités;60 à 64 ans;765400306;Hommes;Vivant en couple
-147;Employés;5 à 9 ans;765400502;Femmes;Vivant en couple
-148;Retraités;55 à 59 ans;765400301;Femmes;Ne vivant pas en couple
-149;Retraités;25 à 29 ans;765400404;Femmes;Ne vivant pas en couple
-150;Employés;Moins de 5 ans;765400601;Femmes;Vivant en couple
-151;Professions intermédiaires;10 à 14 ans;765400601;Femmes;Ne vivant pas en couple
-152;Ouvriers;60 à 64 ans;765400204;Hommes;Ne vivant pas en couple
-153;Retraités;25 à 29 ans;765400201;Hommes;Ne vivant pas en couple
-154;Employés;25 à 29 ans;765400504;Femmes;Ne vivant pas en couple
-155;Professions intermédiaires;15 à 19 ans;765400502;Hommes;Ne vivant pas en couple
-156;Employés;50 à 54 ans;765400304;Hommes;Vivant en couple
-157;Autres personnes sans activité professionnelle;20 à 24 ans;765400405;Femmes;Vivant en couple
-158;Autres personnes sans activité professionnelle;35 à 39 ans;765400602;Femmes;Ne vivant pas en couple
-159;Professions intermédiaires;30 à 34 ans;765400301;Femmes;Vivant en couple
-160;Ouvriers;65 à 69 ans;765400602;Hommes;Ne vivant pas en couple
-161;Employés;80 à 84 ans;765400502;Femmes;Ne vivant pas en couple
-162;Employés;20 à 24 ans;765400901;Femmes;Vivant en couple
-163;Employés;40 à 44 ans;765400502;Femmes;Vivant en couple
-164;Cadres et professions intellectuelles supérieures;45 à 49 ans;765400601;Femmes;Ne vivant pas en couple
-165;Employés;40 à 44 ans;765400105;Hommes;Vivant en couple
-166;Employés;25 à 29 ans;765400106;Femmes;Vivant en couple
-167;Employés;60 à 64 ans;765400901;Femmes;Ne vivant pas en couple
-168;Retraités;25 à 29 ans;765401005;Hommes;Vivant en couple
-169;Ouvriers;65 à 69 ans;765400104;Hommes;Vivant en couple
-170;Autres personnes sans activité professionnelle;45 à 49 ans;765400203;Hommes;Vivant en couple
-171;Employés;Moins de 5 ans;765400901;Femmes;Vivant en couple
-172;Ouvriers;10 à 14 ans;765400701;Hommes;Ne vivant pas en couple
-173;Autres personnes sans activité professionnelle;25 à 29 ans;765400501;Femmes;Ne vivant pas en couple
-174;Autres personnes sans activité professionnelle;30 à 34 ans;765400103;Femmes;Vivant en couple
-175;Professions intermédiaires;55 à 59 ans;765400104;Hommes;Ne vivant pas en couple
-176;Ouvriers;25 à 29 ans;765400802;Hommes;Ne vivant pas en couple
-177;Ouvriers;35 à 39 ans;765400306;Hommes;Vivant en couple
-178;Professions intermédiaires;55 à 59 ans;765400203;Femmes;Ne vivant pas en couple
-179;Ouvriers;45 à 49 ans;765400601;Hommes;Ne vivant pas en couple
-180;Ouvriers;90 à 94 ans;765400601;Femmes;Ne vivant pas en couple
-181;Employés;60 à 64 ans;765400303;Femmes;Vivant en couple
-182;Ouvriers;20 à 24 ans;765400604;Hommes;Vivant en couple
-183;Employés;55 à 59 ans;765400103;Femmes;Vivant en couple
-184;Professions intermédiaires;30 à 34 ans;765401004;Femmes;Vivant en couple
-185;Retraités;5 à 9 ans;765400104;Hommes;Vivant en couple
-186;Ouvriers;85 à 89 ans;765400902;Hommes;Vivant en couple
-187;Retraités;35 à 39 ans;765400501;Femmes;Ne vivant pas en couple
-188;Professions intermédiaires;75 à 79 ans;765400601;Femmes;Vivant en couple
-189;Autres personnes sans activité professionnelle;65 à 69 ans;765400503;Femmes;Vivant en couple
-190;Retraités;30 à 34 ans;765400305;Femmes;Ne vivant pas en couple
-191;Autres personnes sans activité professionnelle;25 à 29 ans;765401003;Femmes;Vivant en couple
-192;Artisans. commerçants. chefs d'entreprise;40 à 44 ans;765400305;Hommes;Ne vivant pas en couple
-193;Professions intermédiaires;40 à 44 ans;765400504;Hommes;Ne vivant pas en couple
-194;Artisans. commerçants. chefs d'entreprise;65 à 69 ans;765400103;Hommes;Ne vivant pas en couple
-195;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400103;Femmes;Ne vivant pas en couple
-196;Employés;75 à 79 ans;765400403;Femmes;Ne vivant pas en couple
-197;Retraités;35 à 39 ans;765400101;Femmes;Ne vivant pas en couple
-198;Retraités;50 à 54 ans;765400402;Femmes;Vivant en couple
-199;Employés;75 à 79 ans;765401005;Femmes;Vivant en couple
-200;Professions intermédiaires;Moins de 5 ans;765400602;Femmes;Ne vivant pas en couple
-201;Autres personnes sans activité professionnelle;60 à 64 ans;765400405;Hommes;Vivant en couple
-202;Employés;25 à 29 ans;765400901;Femmes;Ne vivant pas en couple
-203;Autres personnes sans activité professionnelle;25 à 29 ans;765400901;Femmes;Ne vivant pas en couple
-204;Autres personnes sans activité professionnelle;5 à 9 ans;765400501;Femmes;Ne vivant pas en couple
-205;Employés;70 à 74 ans;765400104;Femmes;Vivant en couple
-206;Employés;5 à 9 ans;765400104;Hommes;Ne vivant pas en couple
-207;Retraités;60 à 64 ans;765400203;Femmes;Ne vivant pas en couple
-208;Employés;75 à 79 ans;765400402;Femmes;Vivant en couple
-209;Retraités;20 à 24 ans;765400603;Hommes;Vivant en couple
-210;Retraités;55 à 59 ans;765400203;Femmes;Vivant en couple
-211;Ouvriers;50 à 54 ans;765400303;Femmes;Vivant en couple
-212;Autres personnes sans activité professionnelle;65 à 69 ans;765400901;Hommes;Ne vivant pas en couple
-213;Ouvriers;20 à 24 ans;765400801;Hommes;Vivant en couple
-214;Cadres et professions intellectuelles supérieures;25 à 29 ans;765400106;Femmes;Ne vivant pas en couple
-215;Ouvriers;55 à 59 ans;765400202;Hommes;Ne vivant pas en couple
-216;Autres personnes sans activité professionnelle;30 à 34 ans;765401002;Femmes;Vivant en couple
-217;Autres personnes sans activité professionnelle;25 à 29 ans;765400802;Femmes;Ne vivant pas en couple
-218;Cadres et professions intellectuelles supérieures;70 à 74 ans;765401004;Hommes;Ne vivant pas en couple
-219;Autres personnes sans activité professionnelle;40 à 44 ans;765400902;Hommes;Ne vivant pas en couple
-220;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400106;Hommes;Vivant en couple
-221;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400503;Hommes;Ne vivant pas en couple
-222;Ouvriers;20 à 24 ans;765400204;Hommes;Vivant en couple
-223;Autres personnes sans activité professionnelle;20 à 24 ans;765400202;Hommes;Ne vivant pas en couple
-224;Ouvriers;55 à 59 ans;765400102;Hommes;Vivant en couple
-225;Ouvriers;50 à 54 ans;765400102;Hommes;Ne vivant pas en couple
-226;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400103;Femmes;Vivant en couple
-227;Retraités;45 à 49 ans;765400305;Femmes;Ne vivant pas en couple
-228;Employés;80 à 84 ans;765400802;Femmes;Vivant en couple
-229;Professions intermédiaires;Moins de 5 ans;765401003;Femmes;Vivant en couple
-230;Retraités;30 à 34 ans;765400403;Femmes;Ne vivant pas en couple
-231;Professions intermédiaires;20 à 24 ans;765400204;Hommes;Vivant en couple
-232;Retraités;5 à 9 ans;765400501;Hommes;Vivant en couple
-233;Autres personnes sans activité professionnelle;20 à 24 ans;765400202;Hommes;Ne vivant pas en couple
-234;Professions intermédiaires;50 à 54 ans;765400402;Femmes;Vivant en couple
-235;Professions intermédiaires;70 à 74 ans;765400404;Hommes;Vivant en couple
-236;Retraités;10 à 14 ans;765400901;Femmes;Ne vivant pas en couple
-237;Ouvriers;20 à 24 ans;765400106;Femmes;Ne vivant pas en couple
-238;Artisans. commerçants. chefs d'entreprise;50 à 54 ans;765400203;Hommes;Ne vivant pas en couple
-239;Professions intermédiaires;30 à 34 ans;765400202;Femmes;Vivant en couple
-240;Professions intermédiaires;30 à 34 ans;765400103;Femmes;Vivant en couple
-241;Professions intermédiaires;40 à 44 ans;765400105;Hommes;Ne vivant pas en couple
-242;Ouvriers;65 à 69 ans;765400402;Hommes;Vivant en couple
-243;Retraités;60 à 64 ans;765400102;Femmes;Ne vivant pas en couple
-244;Retraités;25 à 29 ans;765400405;Femmes;Ne vivant pas en couple
-245;Ouvriers;40 à 44 ans;765400502;Hommes;Vivant en couple
-246;Employés;60 à 64 ans;765400202;Hommes;Vivant en couple
-247;Employés;55 à 59 ans;765400504;Femmes;Ne vivant pas en couple
-248;Employés;55 à 59 ans;765400501;Femmes;Vivant en couple
-249;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400304;Femmes;Vivant en couple
-250;Retraités;40 à 44 ans;765400203;Hommes;Ne vivant pas en couple
-251;Professions intermédiaires;10 à 14 ans;765400104;Hommes;Vivant en couple
-252;Employés;55 à 59 ans;765400901;Femmes;Vivant en couple
-253;Ouvriers;80 à 84 ans;765400204;Femmes;Vivant en couple
-254;Ouvriers;35 à 39 ans;765400901;Hommes;Vivant en couple
-255;Employés;30 à 34 ans;765400101;Hommes;Vivant en couple
-256;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400901;Femmes;Vivant en couple
-257;Professions intermédiaires;25 à 29 ans;765400402;Femmes;Ne vivant pas en couple
-258;Professions intermédiaires;20 à 24 ans;765400305;Hommes;Ne vivant pas en couple
-259;Ouvriers;50 à 54 ans;765400304;Hommes;Ne vivant pas en couple
-260;Retraités;35 à 39 ans;765401005;Femmes;Ne vivant pas en couple
-261;Employés;5 à 9 ans;765400802;Femmes;Ne vivant pas en couple
-262;Cadres et professions intellectuelles supérieures;40 à 44 ans;765401001;Hommes;Vivant en couple
-263;Autres personnes sans activité professionnelle;75 à 79 ans;765400402;Hommes;Ne vivant pas en couple
-264;Artisans. commerçants. chefs d'entreprise;50 à 54 ans;765400303;Hommes;Vivant en couple
-265;Ouvriers;15 à 19 ans;765400103;Hommes;Vivant en couple
-266;Ouvriers;15 à 19 ans;765400104;Hommes;Ne vivant pas en couple
-267;Retraités;50 à 54 ans;765401004;Hommes;Vivant en couple
-268;Retraités;40 à 44 ans;765400802;Hommes;Ne vivant pas en couple
-269;Retraités;85 à 89 ans;765401003;Hommes;Ne vivant pas en couple
-270;Employés;50 à 54 ans;765400404;Femmes;Vivant en couple
-271;Ouvriers;60 à 64 ans;765400502;Hommes;Ne vivant pas en couple
-272;Retraités;80 à 84 ans;765400106;Femmes;Vivant en couple
-273;Ouvriers;30 à 34 ans;765401003;Hommes;Ne vivant pas en couple
-274;Autres personnes sans activité professionnelle;75 à 79 ans;765400701;Femmes;Ne vivant pas en couple
-275;Artisans. commerçants. chefs d'entreprise;10 à 14 ans;765401001;Hommes;Vivant en couple
-276;Employés;40 à 44 ans;765400103;Femmes;Vivant en couple
-277;Employés;50 à 54 ans;765400404;Femmes;Ne vivant pas en couple
-278;Retraités;40 à 44 ans;765400701;Femmes;Vivant en couple
-279;Autres personnes sans activité professionnelle;10 à 14 ans;765400105;Femmes;Ne vivant pas en couple
-280;Retraités;30 à 34 ans;765400104;Hommes;Vivant en couple
-281;Professions intermédiaires;40 à 44 ans;765401001;Hommes;Ne vivant pas en couple
-282;Cadres et professions intellectuelles supérieures;35 à 39 ans;765400405;Hommes;Vivant en couple
-283;Retraités;75 à 79 ans;765400106;Hommes;Ne vivant pas en couple
-284;Employés;5 à 9 ans;765400306;Femmes;Vivant en couple
-285;Employés;5 à 9 ans;765400305;Femmes;Vivant en couple
-286;Artisans. commerçants. chefs d'entreprise;60 à 64 ans;765400103;Hommes;Ne vivant pas en couple
-287;Cadres et professions intellectuelles supérieures;60 à 64 ans;765400202;Hommes;Vivant en couple
-288;Retraités;15 à 19 ans;765400501;Femmes;Ne vivant pas en couple
-289;Retraités;10 à 14 ans;765400306;Hommes;Vivant en couple
-290;Employés;60 à 64 ans;765400301;Hommes;Vivant en couple
-291;Ouvriers;65 à 69 ans;765400101;Hommes;Ne vivant pas en couple
-292;Ouvriers;80 à 84 ans;765400101;Hommes;Vivant en couple
-293;Ouvriers;50 à 54 ans;765400802;Femmes;Ne vivant pas en couple
-294;Employés;20 à 24 ans;765400602;Femmes;Ne vivant pas en couple
-295;Ouvriers;40 à 44 ans;765400602;Femmes;Vivant en couple
-296;Autres personnes sans activité professionnelle;50 à 54 ans;765401002;Femmes;Vivant en couple
-297;Employés;80 à 84 ans;765400501;Femmes;Ne vivant pas en couple
-298;Employés;10 à 14 ans;765400101;Femmes;Ne vivant pas en couple
-299;Autres personnes sans activité professionnelle;40 à 44 ans;765400501;Femmes;Ne vivant pas en couple
-300;Employés;15 à 19 ans;765400602;Femmes;Ne vivant pas en couple
-301;Retraités;35 à 39 ans;765400501;Femmes;Ne vivant pas en couple
-302;Retraités;65 à 69 ans;765400303;Femmes;Ne vivant pas en couple
-303;Employés;45 à 49 ans;765401002;Hommes;Vivant en couple
-304;Cadres et professions intellectuelles supérieures;55 à 59 ans;765401002;Hommes;Vivant en couple
-305;Autres personnes sans activité professionnelle;Moins de 5 ans;765400701;Femmes;Vivant en couple
-306;Employés;25 à 29 ans;765401003;Femmes;Ne vivant pas en couple
-307;Professions intermédiaires;Moins de 5 ans;765400102;Hommes;Ne vivant pas en couple
-308;Employés;25 à 29 ans;765400303;Femmes;Vivant en couple
-309;Professions intermédiaires;50 à 54 ans;765401001;Femmes;Ne vivant pas en couple
-310;Retraités;65 à 69 ans;765400201;Femmes;Vivant en couple
-311;Artisans. commerçants. chefs d'entreprise;20 à 24 ans;765401002;Femmes;Ne vivant pas en couple
-312;Employés;35 à 39 ans;765400403;Femmes;Ne vivant pas en couple
-313;Autres personnes sans activité professionnelle;50 à 54 ans;765400404;Hommes;Vivant en couple
-314;Retraités;35 à 39 ans;765400502;Femmes;Ne vivant pas en couple
-315;Autres personnes sans activité professionnelle;65 à 69 ans;765401003;Femmes;Vivant en couple
-316;Autres personnes sans activité professionnelle;Moins de 5 ans;765400802;Femmes;Vivant en couple
-317;Autres personnes sans activité professionnelle;30 à 34 ans;765400405;Femmes;Vivant en couple
-318;Retraités;45 à 49 ans;765401001;Femmes;Vivant en couple
-319;Retraités;25 à 29 ans;765400104;Femmes;Vivant en couple
-320;Cadres et professions intellectuelles supérieures;5 à 9 ans;765400701;Femmes;Vivant en couple
-321;Ouvriers;5 à 9 ans;765400601;Hommes;Ne vivant pas en couple
-322;Ouvriers;35 à 39 ans;765401003;Hommes;Ne vivant pas en couple
-323;Retraités;Moins de 5 ans;765400106;Hommes;Vivant en couple
-324;Employés;20 à 24 ans;765400305;Femmes;Vivant en couple
-325;Autres personnes sans activité professionnelle;5 à 9 ans;765401001;Femmes;Ne vivant pas en couple
-326;Professions intermédiaires;10 à 14 ans;765400502;Hommes;Ne vivant pas en couple
-327;Retraités;45 à 49 ans;765400203;Hommes;Ne vivant pas en couple
-328;Autres personnes sans activité professionnelle;60 à 64 ans;765401003;Femmes;Vivant en couple
-329;Retraités;75 à 79 ans;765400104;Femmes;Vivant en couple
-330;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400201;Hommes;Ne vivant pas en couple
-331;Employés;25 à 29 ans;765400901;Femmes;Vivant en couple
-332;Autres personnes sans activité professionnelle;Moins de 5 ans;765400601;Femmes;Vivant en couple
-333;Retraités;15 à 19 ans;765401002;Hommes;Vivant en couple
-334;Professions intermédiaires;25 à 29 ans;765400306;Femmes;Vivant en couple
-335;Retraités;35 à 39 ans;765400102;Hommes;Vivant en couple
-336;Autres personnes sans activité professionnelle;55 à 59 ans;765400102;Hommes;Vivant en couple
-337;Ouvriers;70 à 74 ans;765400204;Hommes;Ne vivant pas en couple
-338;Artisans. commerçants. chefs d'entreprise;60 à 64 ans;765400602;Hommes;Ne vivant pas en couple
-339;Employés;20 à 24 ans;765400702;Hommes;Vivant en couple
-340;Ouvriers;25 à 29 ans;765401005;Hommes;Vivant en couple
-341;Autres personnes sans activité professionnelle;45 à 49 ans;765400303;Femmes;Ne vivant pas en couple
-342;Professions intermédiaires;15 à 19 ans;765400103;Hommes;Vivant en couple
-343;Ouvriers;60 à 64 ans;765400104;Hommes;Ne vivant pas en couple
-344;Retraités;20 à 24 ans;765400604;Femmes;Vivant en couple
-345;Employés;25 à 29 ans;765401002;Femmes;Vivant en couple
-346;Professions intermédiaires;Moins de 5 ans;765400303;Hommes;Vivant en couple
-347;Ouvriers;65 à 69 ans;765400403;Hommes;Ne vivant pas en couple
-348;Employés;45 à 49 ans;765400503;Femmes;Vivant en couple
-349;Autres personnes sans activité professionnelle;45 à 49 ans;765400404;Hommes;Vivant en couple
-350;Autres personnes sans activité professionnelle;45 à 49 ans;765400601;Femmes;Ne vivant pas en couple
-351;Retraités;65 à 69 ans;765400602;Femmes;Ne vivant pas en couple
-352;Retraités;25 à 29 ans;765400504;Hommes;Ne vivant pas en couple
-353;Retraités;55 à 59 ans;765400106;Hommes;Ne vivant pas en couple
-354;Artisans. commerçants. chefs d'entreprise;40 à 44 ans;765400103;Hommes;Vivant en couple
-355;Employés;25 à 29 ans;765400101;Hommes;Vivant en couple
-356;Employés;60 à 64 ans;765400501;Femmes;Ne vivant pas en couple
-357;Retraités;35 à 39 ans;765401003;Femmes;Ne vivant pas en couple
-358;Cadres et professions intellectuelles supérieures;15 à 19 ans;765401001;Femmes;Ne vivant pas en couple
-359;Professions intermédiaires;30 à 34 ans;765400204;Hommes;Ne vivant pas en couple
-360;Retraités;Moins de 5 ans;765400204;Hommes;Vivant en couple
-361;Ouvriers;15 à 19 ans;765400106;Hommes;Vivant en couple
-362;Professions intermédiaires;40 à 44 ans;765400201;Femmes;Ne vivant pas en couple
-363;Employés;20 à 24 ans;765400106;Femmes;Ne vivant pas en couple
-364;Retraités;20 à 24 ans;765400402;Femmes;Ne vivant pas en couple
-365;Artisans. commerçants. chefs d'entreprise;25 à 29 ans;765400105;Hommes;Ne vivant pas en couple
-366;Employés;40 à 44 ans;765400104;Femmes;Vivant en couple
-367;Retraités;75 à 79 ans;765401001;Femmes;Vivant en couple
-368;Professions intermédiaires;35 à 39 ans;765400303;Hommes;Vivant en couple
-369;Employés;30 à 34 ans;765400201;Femmes;Vivant en couple
-370;Employés;Moins de 5 ans;765400402;Femmes;Ne vivant pas en couple
-371;Ouvriers;50 à 54 ans;765400203;Hommes;Vivant en couple
-372;Retraités;Moins de 5 ans;765400404;Femmes;Ne vivant pas en couple
-373;Cadres et professions intellectuelles supérieures;Moins de 5 ans;765400404;Femmes;Vivant en couple
-374;Employés;30 à 34 ans;765400304;Femmes;Ne vivant pas en couple
-375;Professions intermédiaires;75 à 79 ans;765400202;Femmes;Vivant en couple
-376;Employés;50 à 54 ans;765400802;Femmes;Ne vivant pas en couple
-377;Retraités;5 à 9 ans;765400102;Hommes;Vivant en couple
-378;Autres personnes sans activité professionnelle;55 à 59 ans;765400303;Femmes;Ne vivant pas en couple
-379;Ouvriers;25 à 29 ans;765401004;Hommes;Ne vivant pas en couple
-380;Ouvriers;15 à 19 ans;765400106;Femmes;Ne vivant pas en couple
-381;Employés;45 à 49 ans;765400404;Femmes;Vivant en couple
-382;Retraités;55 à 59 ans;765400502;Hommes;Vivant en couple
-383;Employés;20 à 24 ans;765400304;Femmes;Ne vivant pas en couple
-384;Retraités;10 à 14 ans;765400203;Femmes;Vivant en couple
-385;Autres personnes sans activité professionnelle;Moins de 5 ans;765400702;Femmes;Vivant en couple
-386;Retraités;55 à 59 ans;765401005;Femmes;Ne vivant pas en couple
-387;Autres personnes sans activité professionnelle;10 à 14 ans;765400801;Hommes;Vivant en couple
-388;Ouvriers;40 à 44 ans;765401002;Femmes;Ne vivant pas en couple
-389;Ouvriers;50 à 54 ans;765400403;Hommes;Ne vivant pas en couple
-390;Autres personnes sans activité professionnelle;Moins de 5 ans;765401005;Hommes;Vivant en couple
-391;Retraités;20 à 24 ans;765401002;Femmes;Vivant en couple
-392;Retraités;20 à 24 ans;765400404;Hommes;Vivant en couple
-393;Employés;65 à 69 ans;765400701;Femmes;Ne vivant pas en couple
-394;Autres personnes sans activité professionnelle;15 à 19 ans;765400104;Hommes;Ne vivant pas en couple
-395;Ouvriers;25 à 29 ans;765400402;Hommes;Ne vivant pas en couple
-396;Retraités;70 à 74 ans;765400203;Femmes;Ne vivant pas en couple
-397;Autres personnes sans activité professionnelle;30 à 34 ans;765400306;Hommes;Vivant en couple
-398;Ouvriers;40 à 44 ans;765400503;Hommes;Vivant en couple
-399;Autres personnes sans activité professionnelle;15 à 19 ans;765400204;Femmes;Vivant en couple
-400;Employés;20 à 24 ans;765400202;Femmes;Vivant en couple
-401;Retraités;25 à 29 ans;765400701;Femmes;Ne vivant pas en couple
-402;Retraités;20 à 24 ans;765400101;Hommes;Vivant en couple
-403;Professions intermédiaires;5 à 9 ans;765400902;Femmes;Ne vivant pas en couple
-404;Employés;65 à 69 ans;765400304;Femmes;Ne vivant pas en couple
-405;Retraités;65 à 69 ans;765400405;Femmes;Ne vivant pas en couple
-406;Ouvriers;25 à 29 ans;765400501;Hommes;Vivant en couple
-407;Professions intermédiaires;40 à 44 ans;765400404;Hommes;Vivant en couple
-408;Retraités;80 à 84 ans;765401001;Femmes;Vivant en couple
-409;Employés;30 à 34 ans;765400802;Femmes;Vivant en couple
-410;Employés;15 à 19 ans;765400602;Hommes;Vivant en couple
-411;Retraités;65 à 69 ans;765400602;Hommes;Vivant en couple
-412;Professions intermédiaires;25 à 29 ans;765400403;Femmes;Ne vivant pas en couple
-413;Artisans. commerçants. chefs d'entreprise;45 à 49 ans;765400404;Hommes;Vivant en couple
-414;Professions intermédiaires;85 à 89 ans;765400306;Hommes;Vivant en couple
-415;Retraités;15 à 19 ans;765400202;Femmes;Vivant en couple
-416;Professions intermédiaires;5 à 9 ans;765400103;Femmes;Vivant en couple
-417;Retraités;65 à 69 ans;765400504;Hommes;Ne vivant pas en couple
-418;Retraités;55 à 59 ans;765400305;Hommes;Ne vivant pas en couple
-419;Cadres et professions intellectuelles supérieures;15 à 19 ans;765400902;Femmes;Vivant en couple
-420;Retraités;45 à 49 ans;765400503;Femmes;Vivant en couple
-421;Employés;25 à 29 ans;765400301;Femmes;Vivant en couple
-422;Autres personnes sans activité professionnelle;45 à 49 ans;765400402;Femmes;Vivant en couple
-423;Retraités;50 à 54 ans;765400305;Femmes;Vivant en couple
-424;Ouvriers;30 à 34 ans;765400403;Hommes;Vivant en couple
-425;Employés;20 à 24 ans;765400503;Femmes;Vivant en couple
-426;Employés;60 à 64 ans;765400502;Femmes;Ne vivant pas en couple
-427;Employés;30 à 34 ans;765400105;Femmes;Vivant en couple
-428;Cadres et professions intellectuelles supérieures;55 à 59 ans;765400106;Femmes;Ne vivant pas en couple
-429;Employés;20 à 24 ans;765400306;Femmes;Vivant en couple
-430;Autres personnes sans activité professionnelle;25 à 29 ans;765400404;Femmes;Vivant en couple
-431;Employés;30 à 34 ans;765400601;Hommes;Ne vivant pas en couple
-432;Cadres et professions intellectuelles supérieures;45 à 49 ans;765401001;Hommes;Vivant en couple
-433;Retraités;50 à 54 ans;765400305;Hommes;Vivant en couple
-434;Autres personnes sans activité professionnelle;45 à 49 ans;765400901;Hommes;Ne vivant pas en couple
-435;Professions intermédiaires;Moins de 5 ans;765400405;Femmes;Ne vivant pas en couple
-436;Autres personnes sans activité professionnelle;20 à 24 ans;765400502;Femmes;Vivant en couple
-437;Ouvriers;65 à 69 ans;765401002;Femmes;Vivant en couple
-438;Retraités;50 à 54 ans;765400603;Hommes;Ne vivant pas en couple
-439;Autres personnes sans activité professionnelle;60 à 64 ans;765400106;Femmes;Vivant en couple
-440;Cadres et professions intellectuelles supérieures;5 à 9 ans;765400103;Femmes;Vivant en couple
-441;Autres personnes sans activité professionnelle;30 à 34 ans;765400405;Femmes;Vivant en couple
-442;Cadres et professions intellectuelles supérieures;45 à 49 ans;765400305;Hommes;Vivant en couple
-443;Ouvriers;5 à 9 ans;765400501;Hommes;Vivant en couple
-444;Employés;40 à 44 ans;765400203;Femmes;Vivant en couple
-445;Autres personnes sans activité professionnelle;Moins de 5 ans;765401001;Femmes;Ne vivant pas en couple
-446;Professions intermédiaires;85 à 89 ans;765401005;Femmes;Vivant en couple
-447;Cadres et professions intellectuelles supérieures;70 à 74 ans;765400601;Hommes;Vivant en couple
-448;Employés;40 à 44 ans;765400202;Femmes;Vivant en couple
-449;Employés;25 à 29 ans;765400404;Femmes;Vivant en couple
-450;Agriculteurs exploitants;10 à 14 ans;765400901;Hommes;Ne vivant pas en couple
-451;Ouvriers;55 à 59 ans;765400203;Hommes;Ne vivant pas en couple
-452;Retraités;30 à 34 ans;765400106;Hommes;Vivant en couple
-453;Autres personnes sans activité professionnelle;80 à 84 ans;765400204;Femmes;Ne vivant pas en couple
-454;Retraités;15 à 19 ans;765400101;Hommes;Vivant en couple
-455;Employés;45 à 49 ans;765400501;Femmes;Vivant en couple
-456;Artisans. commerçants. chefs d'entreprise;70 à 74 ans;765400603;Hommes;Vivant en couple
-457;Cadres et professions intellectuelles supérieures;45 à 49 ans;765400106;Hommes;Ne vivant pas en couple
-458;Employés;45 à 49 ans;765401005;Femmes;Vivant en couple
-459;Autres personnes sans activité professionnelle;65 à 69 ans;765401001;Femmes;Vivant en couple
-460;Artisans. commerçants. chefs d'entreprise;80 à 84 ans;765400203;Hommes;Ne vivant pas en couple
-461;Ouvriers;40 à 44 ans;765400502;Hommes;Vivant en couple
-462;Professions intermédiaires;25 à 29 ans;765401003;Hommes;Vivant en couple
-463;Retraités;60 à 64 ans;765400403;Hommes;Ne vivant pas en couple
-464;Employés;85 à 89 ans;765400404;Hommes;Vivant en couple
-465;Autres personnes sans activité professionnelle;25 à 29 ans;765400103;Hommes;Vivant en couple
-466;Retraités;55 à 59 ans;765400901;Femmes;Vivant en couple
-467;Retraités;50 à 54 ans;765400201;Femmes;Ne vivant pas en couple
-468;Retraités;60 à 64 ans;765400503;Hommes;Vivant en couple
-469;Retraités;60 à 64 ans;765400601;Femmes;Ne vivant pas en couple
-470;Employés;80 à 84 ans;765400405;Femmes;Vivant en couple
-471;Ouvriers;45 à 49 ans;765400702;Femmes;Ne vivant pas en couple
-472;Employés;25 à 29 ans;765400801;Femmes;Ne vivant pas en couple
-473;Cadres et professions intellectuelles supérieures;15 à 19 ans;765400304;Hommes;Vivant en couple
-474;Retraités;50 à 54 ans;765400203;Femmes;Vivant en couple
-475;Professions intermédiaires;60 à 64 ans;765400102;Hommes;Vivant en couple
-476;Professions intermédiaires;20 à 24 ans;765400101;Hommes;Ne vivant pas en couple
-477;Retraités;65 à 69 ans;765401004;Femmes;Vivant en couple
-478;Retraités;65 à 69 ans;765400501;Hommes;Ne vivant pas en couple
-479;Autres personnes sans activité professionnelle;25 à 29 ans;765400101;Femmes;Ne vivant pas en couple
-480;Professions intermédiaires;60 à 64 ans;765400902;Hommes;Ne vivant pas en couple
-481;Professions intermédiaires;60 à 64 ans;765400203;Femmes;Vivant en couple
-482;Professions intermédiaires;5 à 9 ans;765400101;Hommes;Ne vivant pas en couple
-483;Ouvriers;Moins de 5 ans;765400202;Hommes;Vivant en couple
-484;Retraités;Moins de 5 ans;765400405;Femmes;Vivant en couple
-485;Professions intermédiaires;55 à 59 ans;765400101;Hommes;Vivant en couple
-486;Cadres et professions intellectuelles supérieures;Moins de 5 ans;765400402;Hommes;Ne vivant pas en couple
-487;Retraités;5 à 9 ans;765400202;Femmes;Ne vivant pas en couple
-488;Retraités;Moins de 5 ans;765401002;Femmes;Vivant en couple
-489;Employés;35 à 39 ans;765400601;Femmes;Ne vivant pas en couple
-490;Ouvriers;40 à 44 ans;765400102;Hommes;Ne vivant pas en couple
-491;Cadres et professions intellectuelles supérieures;60 à 64 ans;765401001;Femmes;Ne vivant pas en couple
-492;Ouvriers;80 à 84 ans;765400402;Hommes;Ne vivant pas en couple
-493;Autres personnes sans activité professionnelle;20 à 24 ans;765400204;Hommes;Vivant en couple
-494;Employés;Moins de 5 ans;765401001;Femmes;Vivant en couple
-495;Professions intermédiaires;20 à 24 ans;765400901;Femmes;Ne vivant pas en couple
-496;Professions intermédiaires;45 à 49 ans;765400802;Femmes;Ne vivant pas en couple
-497;Cadres et professions intellectuelles supérieures;45 à 49 ans;765400503;Hommes;Vivant en couple
-498;Ouvriers;50 à 54 ans;765401002;Femmes;Vivant en couple
-499;Employés;45 à 49 ans;765400702;Femmes;Ne vivant pas en couple
-500;Autres personnes sans activité professionnelle;10 à 14 ans;765400802;Femmes;Ne vivant pas en couple
-501;Professions intermédiaires;15 à 19 ans;765400502;Femmes;Vivant en couple
-502;Employés;45 à 49 ans;765401003;Femmes;Vivant en couple
-503;Professions intermédiaires;Moins de 5 ans;765400801;Femmes;Ne vivant pas en couple
-504;Retraités;65 à 69 ans;765400501;Hommes;Vivant en couple
-505;Autres personnes sans activité professionnelle;75 à 79 ans;765400702;Hommes;Ne vivant pas en couple
-506;Autres personnes sans activité professionnelle;5 à 9 ans;765400202;Hommes;Ne vivant pas en couple
-507;Professions intermédiaires;Moins de 5 ans;765400201;Hommes;Ne vivant pas en couple
-508;Retraités;45 à 49 ans;765400306;Femmes;Vivant en couple
-509;Retraités;20 à 24 ans;765400201;Hommes;Ne vivant pas en couple
-510;Retraités;25 à 29 ans;765400901;Femmes;Vivant en couple
-511;Autres personnes sans activité professionnelle;10 à 14 ans;765401002;Femmes;Ne vivant pas en couple
-512;Ouvriers;20 à 24 ans;765400306;Femmes;Ne vivant pas en couple
-513;Autres personnes sans activité professionnelle;55 à 59 ans;765400106;Femmes;Vivant en couple
-514;Employés;15 à 19 ans;765400902;Femmes;Vivant en couple
-515;Autres personnes sans activité professionnelle;20 à 24 ans;765400603;Femmes;Ne vivant pas en couple
-516;Autres personnes sans activité professionnelle;50 à 54 ans;765400404;Femmes;Ne vivant pas en couple
-517;Professions intermédiaires;45 à 49 ans;765400901;Femmes;Ne vivant pas en couple
-518;Employés;40 à 44 ans;765400303;Femmes;Vivant en couple
-519;Employés;70 à 74 ans;765400602;Femmes;Ne vivant pas en couple
-520;Autres personnes sans activité professionnelle;65 à 69 ans;765400303;Femmes;Vivant en couple
-521;Employés;50 à 54 ans;765400303;Femmes;Vivant en couple
-522;Cadres et professions intellectuelles supérieures;65 à 69 ans;765400106;Hommes;Ne vivant pas en couple
-523;Retraités;40 à 44 ans;765400303;Femmes;Ne vivant pas en couple
-524;Autres personnes sans activité professionnelle;20 à 24 ans;765400802;Hommes;Ne vivant pas en couple
-525;Retraités;15 à 19 ans;765400902;Femmes;Vivant en couple
-526;Autres personnes sans activité professionnelle;20 à 24 ans;765400303;Hommes;Vivant en couple
-527;Ouvriers;25 à 29 ans;765400201;Hommes;Ne vivant pas en couple
-528;Cadres et professions intellectuelles supérieures;45 à 49 ans;765400305;Femmes;Vivant en couple
-529;Autres personnes sans activité professionnelle;45 à 49 ans;765400404;Femmes;Ne vivant pas en couple
-530;Autres personnes sans activité professionnelle;60 à 64 ans;765400106;Hommes;Ne vivant pas en couple
-531;Professions intermédiaires;50 à 54 ans;765400303;Hommes;Vivant en couple
-532;Autres personnes sans activité professionnelle;65 à 69 ans;765400801;Hommes;Vivant en couple
-533;Cadres et professions intellectuelles supérieures;55 à 59 ans;765400301;Femmes;Ne vivant pas en couple
-534;Retraités;75 à 79 ans;765400702;Femmes;Vivant en couple
-535;Ouvriers;80 à 84 ans;765400405;Femmes;Ne vivant pas en couple
-536;Autres personnes sans activité professionnelle;Moins de 5 ans;765400203;Femmes;Vivant en couple
-537;Autres personnes sans activité professionnelle;65 à 69 ans;765400601;Hommes;Vivant en couple
-538;Retraités;45 à 49 ans;765400902;Femmes;Vivant en couple
-539;Retraités;20 à 24 ans;765400802;Femmes;Vivant en couple
-540;Retraités;5 à 9 ans;765400404;Hommes;Ne vivant pas en couple
-541;Artisans. commerçants. chefs d'entreprise;60 à 64 ans;765400303;Hommes;Ne vivant pas en couple
-542;Professions intermédiaires;75 à 79 ans;765400106;Hommes;Vivant en couple
-543;Retraités;5 à 9 ans;765400602;Femmes;Vivant en couple
-544;Autres personnes sans activité professionnelle;85 à 89 ans;765400504;Femmes;Ne vivant pas en couple
-545;Retraités;70 à 74 ans;765400502;Femmes;Vivant en couple
-546;Ouvriers;60 à 64 ans;765400604;Hommes;Ne vivant pas en couple
-547;Retraités;60 à 64 ans;765401003;Femmes;Ne vivant pas en couple
-548;Autres personnes sans activité professionnelle;30 à 34 ans;765400305;Hommes;Vivant en couple
-549;Professions intermédiaires;25 à 29 ans;765400402;Hommes;Vivant en couple
-550;Autres personnes sans activité professionnelle;40 à 44 ans;765400403;Femmes;Ne vivant pas en couple
-551;Employés;50 à 54 ans;765400503;Femmes;Ne vivant pas en couple
-552;Employés;25 à 29 ans;765400901;Femmes;Vivant en couple
-553;Cadres et professions intellectuelles supérieures;75 à 79 ans;765400101;Hommes;Vivant en couple
-554;Retraités;20 à 24 ans;765400201;Femmes;Vivant en couple
-555;Retraités;60 à 64 ans;765400702;Femmes;Ne vivant pas en couple
-556;Employés;30 à 34 ans;765401005;Femmes;Ne vivant pas en couple
-557;Retraités;85 à 89 ans;765400404;Femmes;Vivant en couple
-558;Retraités;30 à 34 ans;765400701;Femmes;Vivant en couple
-559;Autres personnes sans activité professionnelle;15 à 19 ans;765400201;Femmes;Vivant en couple
-560;Retraités;25 à 29 ans;765400402;Femmes;Vivant en couple
-561;Employés;20 à 24 ans;765400602;Hommes;Vivant en couple
-562;Autres personnes sans activité professionnelle;60 à 64 ans;765400604;Femmes;Vivant en couple
-563;Autres personnes sans activité professionnelle;65 à 69 ans;765400201;Femmes;Vivant en couple
-564;Professions intermédiaires;30 à 34 ans;765400106;Femmes;Ne vivant pas en couple
-565;Ouvriers;40 à 44 ans;765400602;Hommes;Ne vivant pas en couple
-566;Ouvriers;80 à 84 ans;765400402;Femmes;Vivant en couple
-567;Professions intermédiaires;45 à 49 ans;765400204;Hommes;Ne vivant pas en couple
-568;Professions intermédiaires;20 à 24 ans;765400801;Femmes;Vivant en couple
-569;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400304;Hommes;Vivant en couple
-570;Autres personnes sans activité professionnelle;75 à 79 ans;765400504;Femmes;Vivant en couple
-571;Retraités;15 à 19 ans;765401003;Hommes;Vivant en couple
-572;Employés;25 à 29 ans;765401005;Femmes;Ne vivant pas en couple
-573;Cadres et professions intellectuelles supérieures;10 à 14 ans;765400106;Hommes;Vivant en couple
-574;Cadres et professions intellectuelles supérieures;65 à 69 ans;765400402;Hommes;Ne vivant pas en couple
-575;Artisans. commerçants. chefs d'entreprise;Moins de 5 ans;765400301;Hommes;Vivant en couple
-576;Ouvriers;65 à 69 ans;765400802;Hommes;Vivant en couple
-577;Cadres et professions intellectuelles supérieures;Moins de 5 ans;765400101;Hommes;Vivant en couple
-578;Retraités;30 à 34 ans;765400103;Hommes;Ne vivant pas en couple
-579;Retraités;50 à 54 ans;765400304;Femmes;Vivant en couple
-580;Autres personnes sans activité professionnelle;45 à 49 ans;765400901;Hommes;Ne vivant pas en couple
-581;Ouvriers;50 à 54 ans;765400404;Hommes;Ne vivant pas en couple
-582;Professions intermédiaires;Moins de 5 ans;765400106;Femmes;Ne vivant pas en couple
-583;Agriculteurs exploitants;35 à 39 ans;765400305;Femmes;Ne vivant pas en couple
-584;Professions intermédiaires;Moins de 5 ans;765401002;Hommes;Vivant en couple
-585;Retraités;55 à 59 ans;765400303;Hommes;Vivant en couple
-586;Retraités;45 à 49 ans;765400502;Femmes;Ne vivant pas en couple
-587;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400504;Hommes;Vivant en couple
-588;Professions intermédiaires;40 à 44 ans;765400106;Femmes;Vivant en couple
-589;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400203;Hommes;Vivant en couple
-590;Autres personnes sans activité professionnelle;20 à 24 ans;765400301;Femmes;Ne vivant pas en couple
-591;Employés;20 à 24 ans;765400102;Hommes;Ne vivant pas en couple
-592;Retraités;80 à 84 ans;765401002;Femmes;Vivant en couple
-593;Professions intermédiaires;20 à 24 ans;765400103;Femmes;Vivant en couple
-594;Retraités;50 à 54 ans;765400602;Femmes;Ne vivant pas en couple
-595;Employés;50 à 54 ans;765400106;Hommes;Ne vivant pas en couple
-596;Ouvriers;75 à 79 ans;765400303;Hommes;Vivant en couple
-597;Retraités;25 à 29 ans;765401002;Femmes;Ne vivant pas en couple
-598;Cadres et professions intellectuelles supérieures;5 à 9 ans;765400503;Hommes;Vivant en couple
-599;Ouvriers;60 à 64 ans;765400201;Hommes;Ne vivant pas en couple
-600;Retraités;10 à 14 ans;765400601;Femmes;Vivant en couple
-601;Retraités;20 à 24 ans;765400801;Hommes;Vivant en couple
-602;Cadres et professions intellectuelles supérieures;70 à 74 ans;765400106;Hommes;Vivant en couple
-603;Ouvriers;55 à 59 ans;765401002;Hommes;Ne vivant pas en couple
-604;Cadres et professions intellectuelles supérieures;80 à 84 ans;765400405;Hommes;Ne vivant pas en couple
-605;Retraités;85 à 89 ans;765400101;Hommes;Ne vivant pas en couple
-606;Employés;15 à 19 ans;765400304;Femmes;Ne vivant pas en couple
-607;Ouvriers;20 à 24 ans;765400404;Hommes;Vivant en couple
-608;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400106;Hommes;Vivant en couple
-609;Employés;20 à 24 ans;765400303;Femmes;Ne vivant pas en couple
-610;Autres personnes sans activité professionnelle;15 à 19 ans;765400601;Femmes;Ne vivant pas en couple
-611;Retraités;20 à 24 ans;765401001;Hommes;Vivant en couple
-612;Employés;75 à 79 ans;765400601;Femmes;Ne vivant pas en couple
-613;Autres personnes sans activité professionnelle;60 à 64 ans;765401003;Femmes;Vivant en couple
-614;Professions intermédiaires;60 à 64 ans;765401002;Femmes;Vivant en couple
-615;Autres personnes sans activité professionnelle;65 à 69 ans;765400404;Femmes;Ne vivant pas en couple
-616;Retraités;65 à 69 ans;765400303;Femmes;Vivant en couple
-617;Autres personnes sans activité professionnelle;50 à 54 ans;765401003;Hommes;Ne vivant pas en couple
-618;Ouvriers;45 à 49 ans;765400204;Femmes;Vivant en couple
-619;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400106;Femmes;Ne vivant pas en couple
-620;Professions intermédiaires;10 à 14 ans;765400502;Femmes;Vivant en couple
-621;Ouvriers;45 à 49 ans;765400801;Femmes;Ne vivant pas en couple
-622;Retraités;20 à 24 ans;765400106;Hommes;Ne vivant pas en couple
-623;Artisans. commerçants. chefs d'entreprise;55 à 59 ans;765401003;Femmes;Ne vivant pas en couple
-624;Autres personnes sans activité professionnelle;40 à 44 ans;765401002;Hommes;Vivant en couple
-625;Autres personnes sans activité professionnelle;30 à 34 ans;765401001;Hommes;Ne vivant pas en couple
-626;Retraités;45 à 49 ans;765400702;Femmes;Vivant en couple
-627;Employés;5 à 9 ans;765400204;Femmes;Vivant en couple
-628;Ouvriers;85 à 89 ans;765400901;Femmes;Ne vivant pas en couple
-629;Retraités;30 à 34 ans;765400604;Femmes;Vivant en couple
-630;Employés;90 à 94 ans;765400102;Femmes;Ne vivant pas en couple
-631;Employés;10 à 14 ans;765400501;Femmes;Vivant en couple
-632;Ouvriers;10 à 14 ans;765400405;Hommes;Vivant en couple
-633;Ouvriers;45 à 49 ans;765400604;Hommes;Ne vivant pas en couple
-634;Autres personnes sans activité professionnelle;5 à 9 ans;765400303;Hommes;Vivant en couple
-635;Autres personnes sans activité professionnelle;55 à 59 ans;765400301;Femmes;Vivant en couple
-636;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400101;Femmes;Ne vivant pas en couple
-637;Retraités;10 à 14 ans;765401004;Hommes;Vivant en couple
-638;Employés;55 à 59 ans;765401004;Femmes;Vivant en couple
-639;Cadres et professions intellectuelles supérieures;5 à 9 ans;765400404;Hommes;Ne vivant pas en couple
-640;Autres personnes sans activité professionnelle;65 à 69 ans;765400202;Femmes;Vivant en couple
-641;Ouvriers;20 à 24 ans;765400106;Femmes;Vivant en couple
-642;Ouvriers;10 à 14 ans;765400502;Femmes;Vivant en couple
-643;Employés;45 à 49 ans;765400303;Hommes;Vivant en couple
-644;Professions intermédiaires;25 à 29 ans;765400305;Hommes;Vivant en couple
-645;Autres personnes sans activité professionnelle;50 à 54 ans;765400602;Femmes;Ne vivant pas en couple
-646;Retraités;35 à 39 ans;765400404;Hommes;Ne vivant pas en couple
-647;Ouvriers;Moins de 5 ans;765400602;Hommes;Ne vivant pas en couple
-648;Employés;85 à 89 ans;765400106;Femmes;Ne vivant pas en couple
-649;Retraités;35 à 39 ans;765401004;Femmes;Ne vivant pas en couple
-650;Employés;65 à 69 ans;765400303;Femmes;Vivant en couple
-651;Professions intermédiaires;75 à 79 ans;765400501;Femmes;Ne vivant pas en couple
-652;Retraités;80 à 84 ans;765400501;Femmes;Vivant en couple
-653;Professions intermédiaires;Moins de 5 ans;765400405;Hommes;Ne vivant pas en couple
-654;Professions intermédiaires;65 à 69 ans;765400503;Hommes;Vivant en couple
-655;Autres personnes sans activité professionnelle;5 à 9 ans;765400303;Femmes;Ne vivant pas en couple
-656;Autres personnes sans activité professionnelle;25 à 29 ans;765400604;Hommes;Vivant en couple
-657;Ouvriers;35 à 39 ans;765400601;Hommes;Vivant en couple
-658;Employés;20 à 24 ans;765400403;Femmes;Ne vivant pas en couple
-659;Professions intermédiaires;20 à 24 ans;765400402;Hommes;Ne vivant pas en couple
-660;Autres personnes sans activité professionnelle;60 à 64 ans;765400101;Femmes;Ne vivant pas en couple
-661;Professions intermédiaires;70 à 74 ans;765400701;Femmes;Vivant en couple
-662;Employés;25 à 29 ans;765400802;Femmes;Ne vivant pas en couple
-663;Artisans. commerçants. chefs d'entreprise;45 à 49 ans;765400301;Femmes;Ne vivant pas en couple
-664;Autres personnes sans activité professionnelle;10 à 14 ans;765400201;Femmes;Vivant en couple
-665;Ouvriers;10 à 14 ans;765401004;Hommes;Vivant en couple
-666;Employés;45 à 49 ans;765401002;Femmes;Ne vivant pas en couple
-667;Retraités;45 à 49 ans;765401003;Hommes;Vivant en couple
-668;Ouvriers;10 à 14 ans;765400403;Hommes;Ne vivant pas en couple
-669;Cadres et professions intellectuelles supérieures;55 à 59 ans;765400303;Femmes;Vivant en couple
-670;Employés;Moins de 5 ans;765401001;Femmes;Ne vivant pas en couple
-671;Artisans. commerçants. chefs d'entreprise;85 à 89 ans;765400105;Hommes;Vivant en couple
-672;Retraités;25 à 29 ans;765401001;Femmes;Ne vivant pas en couple
-673;Retraités;65 à 69 ans;765400306;Femmes;Vivant en couple
-674;Ouvriers;Moins de 5 ans;765400105;Hommes;Vivant en couple
-675;Professions intermédiaires;25 à 29 ans;765400801;Femmes;Ne vivant pas en couple
-676;Autres personnes sans activité professionnelle;50 à 54 ans;765400305;Femmes;Vivant en couple
-677;Ouvriers;50 à 54 ans;765400801;Hommes;Ne vivant pas en couple
-678;Retraités;50 à 54 ans;765400204;Hommes;Ne vivant pas en couple
-679;Professions intermédiaires;30 à 34 ans;765400601;Hommes;Vivant en couple
-680;Employés;20 à 24 ans;765401005;Femmes;Ne vivant pas en couple
-681;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400802;Femmes;Ne vivant pas en couple
-682;Employés;75 à 79 ans;765400203;Femmes;Vivant en couple
-683;Retraités;10 à 14 ans;765400203;Femmes;Ne vivant pas en couple
-684;Retraités;Moins de 5 ans;765400106;Femmes;Vivant en couple
-685;Ouvriers;35 à 39 ans;765401001;Hommes;Vivant en couple
-686;Professions intermédiaires;15 à 19 ans;765400305;Hommes;Vivant en couple
-687;Autres personnes sans activité professionnelle;5 à 9 ans;765400501;Femmes;Vivant en couple
-688;Retraités;45 à 49 ans;765400201;Femmes;Ne vivant pas en couple
-689;Retraités;30 à 34 ans;765400305;Hommes;Ne vivant pas en couple
-690;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400502;Femmes;Ne vivant pas en couple
-691;Autres personnes sans activité professionnelle;5 à 9 ans;765400106;Femmes;Vivant en couple
-692;Professions intermédiaires;60 à 64 ans;765400405;Femmes;Vivant en couple
-693;Cadres et professions intellectuelles supérieures;55 à 59 ans;765400601;Femmes;Vivant en couple
-694;Employés;15 à 19 ans;765400602;Femmes;Ne vivant pas en couple
-695;Ouvriers;60 à 64 ans;765400201;Hommes;Vivant en couple
-696;Professions intermédiaires;20 à 24 ans;765400102;Hommes;Vivant en couple
-697;Professions intermédiaires;35 à 39 ans;765400301;Femmes;Vivant en couple
-698;Autres personnes sans activité professionnelle;75 à 79 ans;765400204;Femmes;Vivant en couple
-699;Professions intermédiaires;15 à 19 ans;765400405;Hommes;Ne vivant pas en couple
-700;Employés;Moins de 5 ans;765401003;Femmes;Vivant en couple
-701;Professions intermédiaires;15 à 19 ans;765400201;Femmes;Ne vivant pas en couple
-702;Professions intermédiaires;45 à 49 ans;765400201;Hommes;Vivant en couple
-703;Cadres et professions intellectuelles supérieures;50 à 54 ans;765400504;Hommes;Vivant en couple
-704;Autres personnes sans activité professionnelle;10 à 14 ans;765400702;Hommes;Vivant en couple
-705;Retraités;60 à 64 ans;765400103;Hommes;Ne vivant pas en couple
-706;Autres personnes sans activité professionnelle;50 à 54 ans;765400403;Hommes;Vivant en couple
-707;Employés;45 à 49 ans;765400601;Femmes;Ne vivant pas en couple
-708;Employés;35 à 39 ans;765400502;Femmes;Vivant en couple
-709;Retraités;50 à 54 ans;765400501;Hommes;Ne vivant pas en couple
-710;Employés;10 à 14 ans;765400503;Femmes;Ne vivant pas en couple
-711;Retraités;50 à 54 ans;765400202;Femmes;Vivant en couple
-712;Retraités;60 à 64 ans;765400201;Hommes;Ne vivant pas en couple
-713;Retraités;80 à 84 ans;765401003;Femmes;Vivant en couple
-714;Cadres et professions intellectuelles supérieures;10 à 14 ans;765400305;Hommes;Vivant en couple
-715;Retraités;25 à 29 ans;765400402;Hommes;Vivant en couple
-716;Autres personnes sans activité professionnelle;35 à 39 ans;765400102;Femmes;Vivant en couple
-717;Ouvriers;60 à 64 ans;765400601;Hommes;Ne vivant pas en couple
-718;Retraités;5 à 9 ans;765400104;Femmes;Ne vivant pas en couple
-719;Retraités;40 à 44 ans;765400305;Hommes;Ne vivant pas en couple
-720;Retraités;Moins de 5 ans;765400203;Hommes;Ne vivant pas en couple
-721;Autres personnes sans activité professionnelle;35 à 39 ans;765400404;Hommes;Ne vivant pas en couple
-722;Ouvriers;35 à 39 ans;765400405;Femmes;Ne vivant pas en couple
-723;Employés;5 à 9 ans;765400601;Femmes;Vivant en couple
-724;Professions intermédiaires;10 à 14 ans;765400102;Hommes;Vivant en couple
-725;Employés;55 à 59 ans;765401004;Femmes;Ne vivant pas en couple
-726;Professions intermédiaires;30 à 34 ans;765400103;Hommes;Ne vivant pas en couple
-727;Professions intermédiaires;10 à 14 ans;765400201;Hommes;Ne vivant pas en couple
-728;Autres personnes sans activité professionnelle;20 à 24 ans;765400201;Femmes;Vivant en couple
-729;Cadres et professions intellectuelles supérieures;65 à 69 ans;765400103;Hommes;Vivant en couple
-730;Artisans. commerçants. chefs d'entreprise;5 à 9 ans;765400304;Hommes;Vivant en couple
-731;Autres personnes sans activité professionnelle;45 à 49 ans;765401004;Hommes;Ne vivant pas en couple
-732;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400105;Femmes;Vivant en couple
-733;Employés;80 à 84 ans;765400405;Femmes;Vivant en couple
-734;Retraités;55 à 59 ans;765401003;Hommes;Ne vivant pas en couple
-735;Retraités;20 à 24 ans;765400402;Femmes;Vivant en couple
-736;Autres personnes sans activité professionnelle;10 à 14 ans;765400501;Femmes;Vivant en couple
-737;Professions intermédiaires;60 à 64 ans;765400602;Hommes;Ne vivant pas en couple
-738;Retraités;35 à 39 ans;765400801;Femmes;Ne vivant pas en couple
-739;Employés;15 à 19 ans;765401003;Femmes;Vivant en couple
-740;Professions intermédiaires;50 à 54 ans;765400202;Femmes;Vivant en couple
-741;Employés;30 à 34 ans;765400105;Femmes;Vivant en couple
-742;Retraités;65 à 69 ans;765400702;Femmes;Vivant en couple
-743;Retraités;35 à 39 ans;765400103;Hommes;Ne vivant pas en couple
-744;Ouvriers;15 à 19 ans;765400502;Hommes;Ne vivant pas en couple
-745;Autres personnes sans activité professionnelle;Moins de 5 ans;765400203;Femmes;Vivant en couple
-746;Retraités;45 à 49 ans;765400405;Femmes;Ne vivant pas en couple
-747;Employés;65 à 69 ans;765400604;Femmes;Ne vivant pas en couple
-748;Retraités;5 à 9 ans;765400103;Femmes;Vivant en couple
-749;Ouvriers;10 à 14 ans;765401005;Hommes;Vivant en couple
-750;Employés;50 à 54 ans;765400303;Femmes;Vivant en couple
-751;Autres personnes sans activité professionnelle;50 à 54 ans;765400304;Femmes;Vivant en couple
-752;Employés;Moins de 5 ans;765400203;Femmes;Ne vivant pas en couple
-753;Retraités;50 à 54 ans;765400305;Femmes;Ne vivant pas en couple
-754;Employés;5 à 9 ans;765400502;Hommes;Ne vivant pas en couple
-755;Retraités;10 à 14 ans;765400701;Hommes;Vivant en couple
-756;Employés;75 à 79 ans;765400202;Femmes;Ne vivant pas en couple
-757;Professions intermédiaires;80 à 84 ans;765400105;Femmes;Ne vivant pas en couple
-758;Autres personnes sans activité professionnelle;20 à 24 ans;765400601;Femmes;Ne vivant pas en couple
-759;Employés;35 à 39 ans;765400202;Femmes;Ne vivant pas en couple
-760;Autres personnes sans activité professionnelle;65 à 69 ans;765400104;Hommes;Ne vivant pas en couple
-761;Cadres et professions intellectuelles supérieures;90 à 94 ans;765400502;Femmes;Ne vivant pas en couple
-762;Cadres et professions intellectuelles supérieures;50 à 54 ans;765400604;Femmes;Ne vivant pas en couple
-763;Autres personnes sans activité professionnelle;25 à 29 ans;765401002;Femmes;Ne vivant pas en couple
-764;Ouvriers;20 à 24 ans;765400602;Hommes;Vivant en couple
-765;Retraités;75 à 79 ans;765400404;Femmes;Ne vivant pas en couple
-766;Artisans. commerçants. chefs d'entreprise;45 à 49 ans;765400504;Femmes;Ne vivant pas en couple
-767;Artisans. commerçants. chefs d'entreprise;30 à 34 ans;765400601;Hommes;Vivant en couple
-768;Professions intermédiaires;55 à 59 ans;765400402;Hommes;Ne vivant pas en couple
-769;Ouvriers;80 à 84 ans;765400202;Hommes;Vivant en couple
-770;Ouvriers;45 à 49 ans;765400303;Hommes;Vivant en couple
-771;Ouvriers;20 à 24 ans;765400503;Hommes;Vivant en couple
-772;Employés;15 à 19 ans;765400305;Femmes;Ne vivant pas en couple
-773;Autres personnes sans activité professionnelle;75 à 79 ans;765401005;Femmes;Vivant en couple
-774;Ouvriers;Moins de 5 ans;765400106;Femmes;Ne vivant pas en couple
-775;Employés;50 à 54 ans;765400403;Femmes;Ne vivant pas en couple
-776;Ouvriers;60 à 64 ans;765400305;Hommes;Ne vivant pas en couple
-777;Ouvriers;Moins de 5 ans;765400405;Hommes;Vivant en couple
-778;Employés;15 à 19 ans;765400603;Femmes;Vivant en couple
-779;Ouvriers;Moins de 5 ans;765401002;Hommes;Ne vivant pas en couple
-780;Autres personnes sans activité professionnelle;5 à 9 ans;765400201;Hommes;Vivant en couple
-781;Retraités;10 à 14 ans;765400105;Femmes;Vivant en couple
-782;Retraités;10 à 14 ans;765400101;Femmes;Ne vivant pas en couple
-783;Employés;20 à 24 ans;765400404;Femmes;Vivant en couple
-784;Autres personnes sans activité professionnelle;70 à 74 ans;765401004;Femmes;Vivant en couple
-785;Cadres et professions intellectuelles supérieures;50 à 54 ans;765400306;Hommes;Vivant en couple
-786;Employés;55 à 59 ans;765400702;Hommes;Ne vivant pas en couple
-787;Retraités;50 à 54 ans;765400104;Femmes;Vivant en couple
-788;Employés;5 à 9 ans;765400802;Femmes;Vivant en couple
-789;Ouvriers;40 à 44 ans;765400106;Hommes;Vivant en couple
-790;Ouvriers;50 à 54 ans;765400403;Hommes;Ne vivant pas en couple
-791;Retraités;55 à 59 ans;765400106;Femmes;Vivant en couple
-792;Autres personnes sans activité professionnelle;20 à 24 ans;765400306;Hommes;Ne vivant pas en couple
-793;Autres personnes sans activité professionnelle;60 à 64 ans;765400404;Hommes;Ne vivant pas en couple
-794;Employés;45 à 49 ans;765400306;Femmes;Vivant en couple
-795;Employés;5 à 9 ans;765400203;Hommes;Vivant en couple
-796;Employés;20 à 24 ans;765400202;Femmes;Vivant en couple
-797;Retraités;60 à 64 ans;765400502;Femmes;Ne vivant pas en couple
-798;Ouvriers;85 à 89 ans;765400103;Hommes;Vivant en couple
-799;Autres personnes sans activité professionnelle;15 à 19 ans;765400604;Femmes;Vivant en couple
-800;Employés;25 à 29 ans;765400204;Hommes;Vivant en couple
-801;Cadres et professions intellectuelles supérieures;55 à 59 ans;765400702;Hommes;Vivant en couple
-802;Professions intermédiaires;65 à 69 ans;765400501;Femmes;Vivant en couple
-803;Artisans. commerçants. chefs d'entreprise;45 à 49 ans;765400404;Hommes;Vivant en couple
-804;Autres personnes sans activité professionnelle;60 à 64 ans;765400802;Femmes;Vivant en couple
-805;Retraités;45 à 49 ans;765400203;Hommes;Vivant en couple
-806;Ouvriers;10 à 14 ans;765400201;Hommes;Ne vivant pas en couple
-807;Professions intermédiaires;70 à 74 ans;765400405;Hommes;Vivant en couple
-808;Professions intermédiaires;10 à 14 ans;765400203;Hommes;Vivant en couple
-809;Cadres et professions intellectuelles supérieures;35 à 39 ans;765400204;Femmes;Ne vivant pas en couple
-810;Employés;65 à 69 ans;765400601;Femmes;Ne vivant pas en couple
-811;Employés;40 à 44 ans;765400105;Femmes;Ne vivant pas en couple
-812;Ouvriers;60 à 64 ans;765400303;Hommes;Vivant en couple
-813;Professions intermédiaires;Moins de 5 ans;765400501;Hommes;Ne vivant pas en couple
-814;Ouvriers;15 à 19 ans;765401005;Hommes;Vivant en couple
-815;Cadres et professions intellectuelles supérieures;50 à 54 ans;765401003;Femmes;Vivant en couple
-816;Cadres et professions intellectuelles supérieures;75 à 79 ans;765400405;Femmes;Vivant en couple
-817;Professions intermédiaires;15 à 19 ans;765400203;Femmes;Vivant en couple
-818;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400201;Hommes;Vivant en couple
-819;Retraités;45 à 49 ans;765400402;Femmes;Vivant en couple
-820;Autres personnes sans activité professionnelle;50 à 54 ans;765400203;Femmes;Vivant en couple
-821;Autres personnes sans activité professionnelle;75 à 79 ans;765401002;Femmes;Vivant en couple
-822;Retraités;25 à 29 ans;765400105;Femmes;Vivant en couple
-823;Employés;70 à 74 ans;765401001;Femmes;Ne vivant pas en couple
-824;Employés;25 à 29 ans;765400702;Femmes;Ne vivant pas en couple
-825;Autres personnes sans activité professionnelle;20 à 24 ans;765400404;Hommes;Ne vivant pas en couple
-826;Employés;45 à 49 ans;765400404;Femmes;Vivant en couple
-827;Employés;5 à 9 ans;765400501;Femmes;Ne vivant pas en couple
-828;Professions intermédiaires;55 à 59 ans;765401004;Femmes;Ne vivant pas en couple
-829;Retraités;30 à 34 ans;765400405;Femmes;Ne vivant pas en couple
-830;Employés;30 à 34 ans;765400501;Femmes;Ne vivant pas en couple
-831;Retraités;10 à 14 ans;765400501;Hommes;Ne vivant pas en couple
-832;Retraités;Moins de 5 ans;765400105;Femmes;Ne vivant pas en couple
-833;Autres personnes sans activité professionnelle;35 à 39 ans;765400201;Femmes;Ne vivant pas en couple
-834;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400503;Hommes;Ne vivant pas en couple
-835;Employés;85 à 89 ans;765400106;Femmes;Vivant en couple
-836;Retraités;55 à 59 ans;765400502;Hommes;Ne vivant pas en couple
-837;Professions intermédiaires;20 à 24 ans;765400604;Hommes;Vivant en couple
-838;Artisans. commerçants. chefs d'entreprise;10 à 14 ans;765400106;Hommes;Vivant en couple
-839;Employés;60 à 64 ans;765400503;Femmes;Vivant en couple
-840;Autres personnes sans activité professionnelle;80 à 84 ans;765400901;Femmes;Ne vivant pas en couple
-841;Ouvriers;Moins de 5 ans;765401001;Hommes;Vivant en couple
-842;Employés;10 à 14 ans;765400501;Femmes;Ne vivant pas en couple
-843;Professions intermédiaires;50 à 54 ans;765400204;Femmes;Ne vivant pas en couple
-844;Retraités;55 à 59 ans;765400306;Hommes;Ne vivant pas en couple
-845;Retraités;50 à 54 ans;765400902;Femmes;Vivant en couple
-846;Professions intermédiaires;10 à 14 ans;765400305;Femmes;Ne vivant pas en couple
-847;Professions intermédiaires;85 à 89 ans;765400901;Femmes;Ne vivant pas en couple
-848;Autres personnes sans activité professionnelle;45 à 49 ans;765400304;Femmes;Ne vivant pas en couple
-849;Retraités;15 à 19 ans;765400502;Hommes;Vivant en couple
-850;Employés;45 à 49 ans;765401005;Femmes;Vivant en couple
-851;Professions intermédiaires;45 à 49 ans;765400404;Hommes;Vivant en couple
-852;Retraités;10 à 14 ans;765400901;Femmes;Ne vivant pas en couple
-853;Retraités;35 à 39 ans;765400103;Hommes;Ne vivant pas en couple
-854;Employés;15 à 19 ans;765400203;Femmes;Ne vivant pas en couple
-855;Cadres et professions intellectuelles supérieures;65 à 69 ans;765400402;Hommes;Ne vivant pas en couple
-856;Employés;25 à 29 ans;765400502;Hommes;Ne vivant pas en couple
-857;Professions intermédiaires;20 à 24 ans;765400701;Femmes;Vivant en couple
-858;Retraités;50 à 54 ans;765400202;Femmes;Ne vivant pas en couple
-859;Ouvriers;40 à 44 ans;765400901;Hommes;Ne vivant pas en couple
-860;Retraités;10 à 14 ans;765400106;Femmes;Vivant en couple
-861;Ouvriers;85 à 89 ans;765400402;Hommes;Vivant en couple
-862;Retraités;20 à 24 ans;765400304;Hommes;Vivant en couple
-863;Employés;25 à 29 ans;765400504;Femmes;Vivant en couple
-864;Retraités;75 à 79 ans;765401005;Femmes;Vivant en couple
-865;Autres personnes sans activité professionnelle;55 à 59 ans;765401005;Hommes;Vivant en couple
-866;Employés;65 à 69 ans;765401003;Femmes;Ne vivant pas en couple
-867;Ouvriers;15 à 19 ans;765400403;Hommes;Vivant en couple
-868;Employés;10 à 14 ans;765400305;Femmes;Ne vivant pas en couple
-869;Autres personnes sans activité professionnelle;40 à 44 ans;765400103;Femmes;Ne vivant pas en couple
-870;Retraités;25 à 29 ans;765400303;Hommes;Vivant en couple
-871;Ouvriers;30 à 34 ans;765400203;Hommes;Vivant en couple
-872;Employés;15 à 19 ans;765400404;Femmes;Ne vivant pas en couple
-873;Professions intermédiaires;45 à 49 ans;765400601;Hommes;Vivant en couple
-874;Retraités;60 à 64 ans;765400304;Hommes;Ne vivant pas en couple
-875;Retraités;20 à 24 ans;765400504;Femmes;Vivant en couple
-876;Cadres et professions intellectuelles supérieures;20 à 24 ans;765400103;Hommes;Vivant en couple
-877;Autres personnes sans activité professionnelle;40 à 44 ans;765400502;Femmes;Ne vivant pas en couple
-878;Employés;15 à 19 ans;765400901;Femmes;Ne vivant pas en couple
-879;Ouvriers;Moins de 5 ans;765400303;Hommes;Ne vivant pas en couple
-880;Ouvriers;35 à 39 ans;765400106;Hommes;Ne vivant pas en couple
-881;Retraités;Moins de 5 ans;765401003;Hommes;Vivant en couple
-882;Retraités;60 à 64 ans;765400901;Hommes;Ne vivant pas en couple
-883;Retraités;75 à 79 ans;765400306;Hommes;Vivant en couple
-884;Retraités;55 à 59 ans;765400502;Femmes;Vivant en couple
-885;Autres personnes sans activité professionnelle;40 à 44 ans;765400901;Femmes;Vivant en couple
-886;Employés;20 à 24 ans;765400403;Femmes;Vivant en couple
-887;Ouvriers;85 à 89 ans;765400101;Hommes;Vivant en couple
-888;Autres personnes sans activité professionnelle;35 à 39 ans;765401001;Femmes;Ne vivant pas en couple
-889;Employés;40 à 44 ans;765400104;Femmes;Vivant en couple
-890;Ouvriers;85 à 89 ans;765400202;Hommes;Vivant en couple
-891;Retraités;55 à 59 ans;765400502;Femmes;Ne vivant pas en couple
-892;Cadres et professions intellectuelles supérieures;65 à 69 ans;765400106;Hommes;Vivant en couple
-893;Autres personnes sans activité professionnelle;40 à 44 ans;765400601;Hommes;Vivant en couple
-894;Autres personnes sans activité professionnelle;Moins de 5 ans;765400602;Hommes;Ne vivant pas en couple
-895;Employés;10 à 14 ans;765400106;Femmes;Vivant en couple
-896;Retraités;15 à 19 ans;765400504;Femmes;Ne vivant pas en couple
-897;Autres personnes sans activité professionnelle;70 à 74 ans;765400305;Hommes;Vivant en couple
-898;Employés;5 à 9 ans;765400403;Femmes;Vivant en couple
-899;Cadres et professions intellectuelles supérieures;35 à 39 ans;765401004;Hommes;Ne vivant pas en couple
-900;Retraités;20 à 24 ans;765400101;Femmes;Vivant en couple
-901;Professions intermédiaires;40 à 44 ans;765400801;Femmes;Ne vivant pas en couple
-902;Retraités;20 à 24 ans;765400601;Femmes;Vivant en couple
-903;Employés;95 à 99 ans;765400802;Femmes;Vivant en couple
-904;Retraités;20 à 24 ans;765400305;Femmes;Ne vivant pas en couple
-905;Retraités;45 à 49 ans;765400404;Femmes;Vivant en couple
-906;Professions intermédiaires;35 à 39 ans;765400203;Hommes;Vivant en couple
-907;Employés;50 à 54 ans;765400405;Hommes;Vivant en couple
-908;Autres personnes sans activité professionnelle;30 à 34 ans;765400402;Hommes;Vivant en couple
-909;Professions intermédiaires;10 à 14 ans;765400404;Femmes;Vivant en couple
-910;Retraités;45 à 49 ans;765400901;Hommes;Ne vivant pas en couple
-911;Retraités;10 à 14 ans;765400405;Hommes;Ne vivant pas en couple
-912;Artisans. commerçants. chefs d'entreprise;20 à 24 ans;765400902;Hommes;Ne vivant pas en couple
-913;Employés;70 à 74 ans;765400602;Femmes;Vivant en couple
-914;Ouvriers;45 à 49 ans;765400306;Hommes;Vivant en couple
-915;Employés;15 à 19 ans;765400802;Femmes;Vivant en couple
-916;Cadres et professions intellectuelles supérieures;30 à 34 ans;765400106;Hommes;Vivant en couple
-917;Ouvriers;65 à 69 ans;765400802;Femmes;Vivant en couple
-918;Autres personnes sans activité professionnelle;15 à 19 ans;765401004;Femmes;Vivant en couple
-919;Professions intermédiaires;40 à 44 ans;765400106;Femmes;Vivant en couple
-920;Professions intermédiaires;50 à 54 ans;765401005;Hommes;Ne vivant pas en couple
-921;Employés;45 à 49 ans;765400202;Femmes;Ne vivant pas en couple
-922;Retraités;Moins de 5 ans;765400902;Hommes;Ne vivant pas en couple
-923;Autres personnes sans activité professionnelle;10 à 14 ans;765401001;Femmes;Vivant en couple
-924;Professions intermédiaires;35 à 39 ans;765400604;Femmes;Vivant en couple
-925;Autres personnes sans activité professionnelle;30 à 34 ans;765400404;Femmes;Ne vivant pas en couple
-926;Autres personnes sans activité professionnelle;55 à 59 ans;765400304;Femmes;Vivant en couple
-927;Artisans. commerçants. chefs d'entreprise;Moins de 5 ans;765400203;Hommes;Ne vivant pas en couple
-928;Professions intermédiaires;55 à 59 ans;765400404;Hommes;Vivant en couple
-929;Employés;45 à 49 ans;765400202;Femmes;Ne vivant pas en couple
-930;Retraités;75 à 79 ans;765400405;Femmes;Vivant en couple
-931;Professions intermédiaires;70 à 74 ans;765400404;Femmes;Vivant en couple
-932;Employés;5 à 9 ans;765400104;Femmes;Vivant en couple
-933;Retraités;45 à 49 ans;765400602;Hommes;Ne vivant pas en couple
-934;Retraités;20 à 24 ans;765401002;Femmes;Vivant en couple
-935;Professions intermédiaires;Moins de 5 ans;765400501;Hommes;Vivant en couple
-936;Autres personnes sans activité professionnelle;30 à 34 ans;765400204;Hommes;Vivant en couple
-937;Autres personnes sans activité professionnelle;60 à 64 ans;765400106;Hommes;Ne vivant pas en couple
-938;Retraités;30 à 34 ans;765400503;Hommes;Vivant en couple
-939;Retraités;10 à 14 ans;765400202;Hommes;Vivant en couple
-940;Professions intermédiaires;60 à 64 ans;765400403;Femmes;Vivant en couple
-941;Retraités;65 à 69 ans;765400305;Femmes;Vivant en couple
-942;Professions intermédiaires;25 à 29 ans;765400502;Femmes;Vivant en couple
-943;Employés;45 à 49 ans;765400303;Femmes;Ne vivant pas en couple
-944;Cadres et professions intellectuelles supérieures;5 à 9 ans;765400503;Femmes;Ne vivant pas en couple
-945;Professions intermédiaires;55 à 59 ans;765400203;Femmes;Ne vivant pas en couple
-946;Retraités;70 à 74 ans;765400202;Femmes;Vivant en couple
-947;Retraités;35 à 39 ans;765400603;Hommes;Ne vivant pas en couple
-948;Autres personnes sans activité professionnelle;35 à 39 ans;765401003;Femmes;Ne vivant pas en couple
-949;Retraités;70 à 74 ans;765400303;Hommes;Vivant en couple
-950;Ouvriers;35 à 39 ans;765400204;Hommes;Vivant en couple
-951;Autres personnes sans activité professionnelle;5 à 9 ans;765401002;Hommes;Ne vivant pas en couple
-952;Artisans. commerçants. chefs d'entreprise;Moins de 5 ans;765401002;Femmes;Vivant en couple
-953;Professions intermédiaires;45 à 49 ans;765400602;Hommes;Vivant en couple
-954;Retraités;35 à 39 ans;765401005;Hommes;Ne vivant pas en couple
-955;Professions intermédiaires;60 à 64 ans;765400604;Hommes;Ne vivant pas en couple
-956;Autres personnes sans activité professionnelle;30 à 34 ans;765400502;Hommes;Vivant en couple
-957;Ouvriers;85 à 89 ans;765400502;Hommes;Vivant en couple
-958;Ouvriers;30 à 34 ans;765401005;Femmes;Ne vivant pas en couple
-959;Ouvriers;45 à 49 ans;765401003;Femmes;Ne vivant pas en couple
-960;Retraités;35 à 39 ans;765400604;Femmes;Vivant en couple
-961;Cadres et professions intellectuelles supérieures;55 à 59 ans;765400105;Hommes;Vivant en couple
-962;Retraités;35 à 39 ans;765400901;Femmes;Ne vivant pas en couple
-963;Cadres et professions intellectuelles supérieures;25 à 29 ans;765400301;Femmes;Ne vivant pas en couple
-964;Retraités;10 à 14 ans;765400601;Femmes;Vivant en couple
-965;Employés;15 à 19 ans;765400201;Hommes;Ne vivant pas en couple
-966;Employés;40 à 44 ans;765400301;Femmes;Vivant en couple
-967;Retraités;70 à 74 ans;765400801;Femmes;Ne vivant pas en couple
-968;Employés;Moins de 5 ans;765400306;Femmes;Ne vivant pas en couple
-969;Autres personnes sans activité professionnelle;45 à 49 ans;765401003;Hommes;Vivant en couple
-970;Artisans. commerçants. chefs d'entreprise;45 à 49 ans;765400405;Hommes;Ne vivant pas en couple
-971;Autres personnes sans activité professionnelle;20 à 24 ans;765401001;Femmes;Vivant en couple
-972;Retraités;25 à 29 ans;765400106;Hommes;Vivant en couple
-973;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400403;Hommes;Vivant en couple
-974;Ouvriers;10 à 14 ans;765400103;Femmes;Vivant en couple
-975;Artisans. commerçants. chefs d'entreprise;35 à 39 ans;765400104;Hommes;Vivant en couple
-976;Autres personnes sans activité professionnelle;85 à 89 ans;765400404;Femmes;Vivant en couple
-977;Ouvriers;35 à 39 ans;765400404;Hommes;Vivant en couple
-978;Autres personnes sans activité professionnelle;35 à 39 ans;765400601;Femmes;Ne vivant pas en couple
-979;Retraités;20 à 24 ans;765401001;Femmes;Vivant en couple
-980;Professions intermédiaires;5 à 9 ans;765400306;Femmes;Vivant en couple
-981;Employés;65 à 69 ans;765400305;Femmes;Ne vivant pas en couple
-982;Autres personnes sans activité professionnelle;15 à 19 ans;765401003;Hommes;Vivant en couple
-983;Employés;15 à 19 ans;765400303;Hommes;Vivant en couple
-984;Cadres et professions intellectuelles supérieures;40 à 44 ans;765400305;Femmes;Ne vivant pas en couple
-985;Ouvriers;10 à 14 ans;765400602;Hommes;Vivant en couple
-986;Autres personnes sans activité professionnelle;15 à 19 ans;765400303;Femmes;Ne vivant pas en couple
-987;Artisans. commerçants. chefs d'entreprise;85 à 89 ans;765400201;Hommes;Ne vivant pas en couple
-988;Retraités;70 à 74 ans;765400601;Femmes;Ne vivant pas en couple
-989;Employés;5 à 9 ans;765401001;Femmes;Vivant en couple
-990;Employés;Moins de 5 ans;765401005;Femmes;Ne vivant pas en couple
-991;Retraités;45 à 49 ans;765401003;Femmes;Vivant en couple
-992;Autres personnes sans activité professionnelle;Moins de 5 ans;765400404;Hommes;Vivant en couple
-993;Employés;60 à 64 ans;765400203;Femmes;Ne vivant pas en couple
-994;Professions intermédiaires;65 à 69 ans;765401001;Hommes;Ne vivant pas en couple
-995;Autres personnes sans activité professionnelle;10 à 14 ans;765400501;Femmes;Vivant en couple
-996;Professions intermédiaires;15 à 19 ans;765400105;Femmes;Vivant en couple
-997;Ouvriers;60 à 64 ans;765400403;Hommes;Vivant en couple
-998;Retraités;20 à 24 ans;765400404;Hommes;Vivant en couple
-999;Autres personnes sans activité professionnelle;30 à 34 ans;765400303;Femmes;Ne vivant pas en couple
-1000;Autres personnes sans activité professionnelle;30 à 34 ans;765400405;Femmes;Ne vivant pas en couple
+Individual;Age;CSP;iris;Sexe;Couple
+1;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400303;Femmes;Vivant en couple
+2;25 à 29 ans;Retraités;765400304;Femmes;Vivant en couple
+3;40 à 44 ans;Ouvriers;765400402;Hommes;Vivant en couple
+4;25 à 29 ans;Autres personnes sans activité professionnelle;765400504;Hommes;Ne vivant pas en couple
+5;5 à 9 ans;Autres personnes sans activité professionnelle;765400102;Femmes;Vivant en couple
+6;35 à 39 ans;Professions intermédiaires;765400901;Femmes;Vivant en couple
+7;45 à 49 ans;Retraités;765400404;Femmes;Vivant en couple
+8;20 à 24 ans;Retraités;765400604;Femmes;Vivant en couple
+9;Moins de 5 ans;Retraités;765400503;Femmes;Vivant en couple
+10;5 à 9 ans;Retraités;765400502;Hommes;Vivant en couple
+11;15 à 19 ans;Autres personnes sans activité professionnelle;765400403;Femmes;Ne vivant pas en couple
+12;60 à 64 ans;Professions intermédiaires;765401005;Femmes;Vivant en couple
+13;30 à 34 ans;Ouvriers;765400203;Hommes;Vivant en couple
+14;5 à 9 ans;Professions intermédiaires;765400602;Hommes;Vivant en couple
+15;85 à 89 ans;Retraités;765400103;Hommes;Vivant en couple
+16;30 à 34 ans;Retraités;765400405;Femmes;Ne vivant pas en couple
+17;Moins de 5 ans;Professions intermédiaires;765400501;Femmes;Ne vivant pas en couple
+18;50 à 54 ans;Retraités;765400305;Femmes;Vivant en couple
+19;75 à 79 ans;Retraités;765400101;Femmes;Vivant en couple
+20;40 à 44 ans;Retraités;765400101;Femmes;Vivant en couple
+21;25 à 29 ans;Employés;765400801;Hommes;Ne vivant pas en couple
+22;15 à 19 ans;Cadres et professions intellectuelles supérieures;765400104;Hommes;Vivant en couple
+23;15 à 19 ans;Retraités;765400202;Femmes;Vivant en couple
+24;Moins de 5 ans;Retraités;765400802;Femmes;Ne vivant pas en couple
+25;40 à 44 ans;Retraités;765400101;Femmes;Ne vivant pas en couple
+26;80 à 84 ans;Autres personnes sans activité professionnelle;765400405;Hommes;Ne vivant pas en couple
+27;75 à 79 ans;Artisans. commerçants. chefs d'entreprise;765400106;Hommes;Vivant en couple
+28;Moins de 5 ans;Employés;765400203;Hommes;Vivant en couple
+29;5 à 9 ans;Ouvriers;765401001;Femmes;Ne vivant pas en couple
+30;5 à 9 ans;Employés;765400602;Femmes;Vivant en couple
+31;25 à 29 ans;Autres personnes sans activité professionnelle;765400503;Femmes;Vivant en couple
+32;25 à 29 ans;Professions intermédiaires;765401005;Hommes;Vivant en couple
+33;60 à 64 ans;Autres personnes sans activité professionnelle;765400305;Hommes;Vivant en couple
+34;10 à 14 ans;Professions intermédiaires;765400201;Femmes;Vivant en couple
+35;5 à 9 ans;Ouvriers;765400503;Hommes;Vivant en couple
+36;15 à 19 ans;Professions intermédiaires;765400601;Femmes;Ne vivant pas en couple
+37;70 à 74 ans;Cadres et professions intellectuelles supérieures;765400102;Hommes;Vivant en couple
+38;10 à 14 ans;Employés;765400502;Femmes;Vivant en couple
+39;75 à 79 ans;Employés;765400304;Femmes;Vivant en couple
+40;5 à 9 ans;Retraités;765400901;Femmes;Vivant en couple
+41;20 à 24 ans;Retraités;765401001;Femmes;Ne vivant pas en couple
+42;Moins de 5 ans;Autres personnes sans activité professionnelle;765400604;Hommes;Ne vivant pas en couple
+43;80 à 84 ans;Retraités;765400201;Femmes;Vivant en couple
+44;55 à 59 ans;Employés;765400602;Femmes;Vivant en couple
+45;50 à 54 ans;Professions intermédiaires;765400902;Hommes;Vivant en couple
+46;Moins de 5 ans;Retraités;765400104;Hommes;Vivant en couple
+47;Moins de 5 ans;Ouvriers;765400404;Hommes;Ne vivant pas en couple
+48;35 à 39 ans;Retraités;765400106;Femmes;Ne vivant pas en couple
+49;10 à 14 ans;Autres personnes sans activité professionnelle;765400602;Hommes;Ne vivant pas en couple
+50;50 à 54 ans;Ouvriers;765400305;Hommes;Ne vivant pas en couple
+51;35 à 39 ans;Ouvriers;765400103;Femmes;Vivant en couple
+52;60 à 64 ans;Employés;765400306;Femmes;Vivant en couple
+53;45 à 49 ans;Employés;765400305;Femmes;Vivant en couple
+54;75 à 79 ans;Professions intermédiaires;765400504;Femmes;Ne vivant pas en couple
+55;25 à 29 ans;Cadres et professions intellectuelles supérieures;765400304;Femmes;Ne vivant pas en couple
+56;Moins de 5 ans;Ouvriers;765401001;Hommes;Ne vivant pas en couple
+57;25 à 29 ans;Retraités;765400602;Femmes;Ne vivant pas en couple
+58;20 à 24 ans;Employés;765400104;Femmes;Vivant en couple
+59;20 à 24 ans;Professions intermédiaires;765400405;Femmes;Ne vivant pas en couple
+60;45 à 49 ans;Autres personnes sans activité professionnelle;765400502;Hommes;Ne vivant pas en couple
+61;15 à 19 ans;Retraités;765400303;Femmes;Vivant en couple
+62;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400404;Femmes;Vivant en couple
+63;15 à 19 ans;Ouvriers;765400303;Hommes;Vivant en couple
+64;10 à 14 ans;Cadres et professions intellectuelles supérieures;765401002;Femmes;Ne vivant pas en couple
+65;45 à 49 ans;Retraités;765400402;Hommes;Ne vivant pas en couple
+66;30 à 34 ans;Retraités;765400902;Femmes;Vivant en couple
+67;20 à 24 ans;Professions intermédiaires;765400201;Femmes;Vivant en couple
+68;60 à 64 ans;Employés;765400403;Femmes;Vivant en couple
+69;10 à 14 ans;Autres personnes sans activité professionnelle;765400901;Femmes;Ne vivant pas en couple
+70;15 à 19 ans;Retraités;765400201;Hommes;Ne vivant pas en couple
+71;30 à 34 ans;Retraités;765400304;Hommes;Vivant en couple
+72;70 à 74 ans;Retraités;765400304;Femmes;Vivant en couple
+73;10 à 14 ans;Employés;765400204;Femmes;Ne vivant pas en couple
+74;10 à 14 ans;Retraités;765400201;Hommes;Vivant en couple
+75;80 à 84 ans;Ouvriers;765400405;Femmes;Vivant en couple
+76;40 à 44 ans;Professions intermédiaires;765400802;Femmes;Ne vivant pas en couple
+77;5 à 9 ans;Artisans. commerçants. chefs d'entreprise;765401003;Hommes;Ne vivant pas en couple
+78;10 à 14 ans;Employés;765400106;Femmes;Ne vivant pas en couple
+79;50 à 54 ans;Employés;765400504;Femmes;Vivant en couple
+80;Moins de 5 ans;Ouvriers;765400204;Femmes;Vivant en couple
+81;70 à 74 ans;Cadres et professions intellectuelles supérieures;765400106;Hommes;Ne vivant pas en couple
+82;50 à 54 ans;Retraités;765400106;Femmes;Vivant en couple
+83;75 à 79 ans;Retraités;765400306;Femmes;Ne vivant pas en couple
+84;30 à 34 ans;Retraités;765400701;Hommes;Ne vivant pas en couple
+85;55 à 59 ans;Autres personnes sans activité professionnelle;765401005;Femmes;Vivant en couple
+86;55 à 59 ans;Ouvriers;765400405;Hommes;Vivant en couple
+87;65 à 69 ans;Cadres et professions intellectuelles supérieures;765400402;Hommes;Vivant en couple
+88;60 à 64 ans;Retraités;765400402;Hommes;Ne vivant pas en couple
+89;30 à 34 ans;Professions intermédiaires;765401002;Hommes;Vivant en couple
+90;Moins de 5 ans;Employés;765400602;Femmes;Ne vivant pas en couple
+91;55 à 59 ans;Autres personnes sans activité professionnelle;765400306;Femmes;Ne vivant pas en couple
+92;Moins de 5 ans;Employés;765400601;Femmes;Vivant en couple
+93;60 à 64 ans;Ouvriers;765400203;Hommes;Vivant en couple
+94;25 à 29 ans;Employés;765400701;Femmes;Ne vivant pas en couple
+95;50 à 54 ans;Artisans. commerçants. chefs d'entreprise;765400304;Femmes;Ne vivant pas en couple
+96;35 à 39 ans;Professions intermédiaires;765400901;Hommes;Ne vivant pas en couple
+97;45 à 49 ans;Employés;765400104;Hommes;Ne vivant pas en couple
+98;Moins de 5 ans;Autres personnes sans activité professionnelle;765401005;Hommes;Vivant en couple
+99;55 à 59 ans;Professions intermédiaires;765400101;Hommes;Ne vivant pas en couple
+100;10 à 14 ans;Employés;765400404;Hommes;Ne vivant pas en couple
+101;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400402;Femmes;Ne vivant pas en couple
+102;80 à 84 ans;Autres personnes sans activité professionnelle;765400304;Femmes;Ne vivant pas en couple
+103;20 à 24 ans;Retraités;765400303;Hommes;Vivant en couple
+104;45 à 49 ans;Retraités;765400602;Femmes;Ne vivant pas en couple
+105;35 à 39 ans;Autres personnes sans activité professionnelle;765400203;Hommes;Vivant en couple
+106;10 à 14 ans;Retraités;765400503;Femmes;Vivant en couple
+107;60 à 64 ans;Professions intermédiaires;765400403;Hommes;Vivant en couple
+108;50 à 54 ans;Ouvriers;765400601;Hommes;Ne vivant pas en couple
+109;35 à 39 ans;Retraités;765400405;Femmes;Vivant en couple
+110;55 à 59 ans;Ouvriers;765400502;Hommes;Vivant en couple
+111;60 à 64 ans;Employés;765400502;Hommes;Vivant en couple
+112;5 à 9 ans;Employés;765400305;Femmes;Ne vivant pas en couple
+113;30 à 34 ans;Employés;765400602;Femmes;Ne vivant pas en couple
+114;30 à 34 ans;Retraités;765400303;Femmes;Vivant en couple
+115;75 à 79 ans;Employés;765400306;Hommes;Vivant en couple
+116;20 à 24 ans;Employés;765400602;Femmes;Vivant en couple
+117;Moins de 5 ans;Retraités;765400303;Hommes;Vivant en couple
+118;35 à 39 ans;Retraités;765400801;Femmes;Ne vivant pas en couple
+119;65 à 69 ans;Autres personnes sans activité professionnelle;765401001;Hommes;Ne vivant pas en couple
+120;5 à 9 ans;Professions intermédiaires;765400103;Femmes;Vivant en couple
+121;45 à 49 ans;Retraités;765400601;Hommes;Ne vivant pas en couple
+122;75 à 79 ans;Employés;765400101;Femmes;Ne vivant pas en couple
+123;20 à 24 ans;Autres personnes sans activité professionnelle;765400305;Hommes;Vivant en couple
+124;60 à 64 ans;Employés;765400103;Hommes;Vivant en couple
+125;35 à 39 ans;Professions intermédiaires;765400501;Hommes;Vivant en couple
+126;10 à 14 ans;Autres personnes sans activité professionnelle;765400306;Femmes;Vivant en couple
+127;5 à 9 ans;Employés;765400602;Femmes;Vivant en couple
+128;70 à 74 ans;Professions intermédiaires;765400404;Femmes;Vivant en couple
+129;45 à 49 ans;Retraités;765400601;Femmes;Vivant en couple
+130;20 à 24 ans;Employés;765400702;Femmes;Vivant en couple
+131;30 à 34 ans;Autres personnes sans activité professionnelle;765400204;Femmes;Vivant en couple
+132;25 à 29 ans;Employés;765400901;Hommes;Vivant en couple
+133;35 à 39 ans;Retraités;765400203;Hommes;Vivant en couple
+134;80 à 84 ans;Retraités;765400305;Femmes;Ne vivant pas en couple
+135;Moins de 5 ans;Autres personnes sans activité professionnelle;765400502;Femmes;Vivant en couple
+136;75 à 79 ans;Professions intermédiaires;765401002;Femmes;Ne vivant pas en couple
+137;80 à 84 ans;Retraités;765400202;Femmes;Vivant en couple
+138;25 à 29 ans;Cadres et professions intellectuelles supérieures;765400602;Hommes;Vivant en couple
+139;55 à 59 ans;Professions intermédiaires;765401001;Hommes;Vivant en couple
+140;25 à 29 ans;Employés;765400201;Femmes;Vivant en couple
+141;60 à 64 ans;Autres personnes sans activité professionnelle;765400203;Femmes;Ne vivant pas en couple
+142;60 à 64 ans;Ouvriers;765400106;Hommes;Vivant en couple
+143;Moins de 5 ans;Employés;765400502;Femmes;Vivant en couple
+144;55 à 59 ans;Ouvriers;765400405;Hommes;Vivant en couple
+145;50 à 54 ans;Retraités;765400503;Femmes;Vivant en couple
+146;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400403;Hommes;Vivant en couple
+147;85 à 89 ans;Professions intermédiaires;765401003;Femmes;Vivant en couple
+148;30 à 34 ans;Retraités;765400404;Hommes;Vivant en couple
+149;15 à 19 ans;Professions intermédiaires;765400306;Hommes;Vivant en couple
+150;90 à 94 ans;Professions intermédiaires;765400306;Femmes;Vivant en couple
+151;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400404;Hommes;Ne vivant pas en couple
+152;70 à 74 ans;Retraités;765400203;Hommes;Ne vivant pas en couple
+153;55 à 59 ans;Ouvriers;765400402;Hommes;Vivant en couple
+154;50 à 54 ans;Retraités;765400106;Hommes;Vivant en couple
+155;45 à 49 ans;Retraités;765401005;Femmes;Vivant en couple
+156;65 à 69 ans;Employés;765400106;Femmes;Ne vivant pas en couple
+157;50 à 54 ans;Ouvriers;765400402;Femmes;Ne vivant pas en couple
+158;35 à 39 ans;Autres personnes sans activité professionnelle;765400203;Femmes;Ne vivant pas en couple
+159;60 à 64 ans;Employés;765400202;Femmes;Vivant en couple
+160;Moins de 5 ans;Professions intermédiaires;765400402;Femmes;Ne vivant pas en couple
+161;20 à 24 ans;Artisans. commerçants. chefs d'entreprise;765400802;Femmes;Vivant en couple
+162;70 à 74 ans;Retraités;765400306;Femmes;Vivant en couple
+163;70 à 74 ans;Employés;765400404;Femmes;Vivant en couple
+164;25 à 29 ans;Retraités;765401001;Femmes;Ne vivant pas en couple
+165;30 à 34 ans;Ouvriers;765401001;Hommes;Ne vivant pas en couple
+166;45 à 49 ans;Professions intermédiaires;765400204;Femmes;Ne vivant pas en couple
+167;35 à 39 ans;Autres personnes sans activité professionnelle;765401005;Femmes;Vivant en couple
+168;20 à 24 ans;Retraités;765401001;Hommes;Vivant en couple
+169;45 à 49 ans;Employés;765400403;Hommes;Vivant en couple
+170;45 à 49 ans;Employés;765400801;Femmes;Vivant en couple
+171;45 à 49 ans;Employés;765400404;Hommes;Ne vivant pas en couple
+172;55 à 59 ans;Retraités;765400502;Hommes;Vivant en couple
+173;65 à 69 ans;Retraités;765400204;Hommes;Ne vivant pas en couple
+174;15 à 19 ans;Employés;765400604;Femmes;Ne vivant pas en couple
+175;5 à 9 ans;Retraités;765400504;Hommes;Ne vivant pas en couple
+176;Moins de 5 ans;Retraités;765401005;Hommes;Vivant en couple
+177;60 à 64 ans;Professions intermédiaires;765400402;Hommes;Vivant en couple
+178;55 à 59 ans;Retraités;765401005;Hommes;Ne vivant pas en couple
+179;5 à 9 ans;Professions intermédiaires;765400203;Hommes;Vivant en couple
+180;25 à 29 ans;Autres personnes sans activité professionnelle;765400201;Femmes;Ne vivant pas en couple
+181;35 à 39 ans;Ouvriers;765401001;Hommes;Vivant en couple
+182;75 à 79 ans;Retraités;765400203;Femmes;Ne vivant pas en couple
+183;60 à 64 ans;Employés;765400106;Hommes;Ne vivant pas en couple
+184;45 à 49 ans;Retraités;765400501;Femmes;Ne vivant pas en couple
+185;65 à 69 ans;Artisans. commerçants. chefs d'entreprise;765400303;Femmes;Vivant en couple
+186;85 à 89 ans;Employés;765400103;Femmes;Ne vivant pas en couple
+187;30 à 34 ans;Retraités;765400204;Femmes;Ne vivant pas en couple
+188;75 à 79 ans;Ouvriers;765400102;Femmes;Ne vivant pas en couple
+189;20 à 24 ans;Autres personnes sans activité professionnelle;765401001;Femmes;Vivant en couple
+190;30 à 34 ans;Professions intermédiaires;765400402;Hommes;Ne vivant pas en couple
+191;60 à 64 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Vivant en couple
+192;70 à 74 ans;Professions intermédiaires;765400102;Femmes;Vivant en couple
+193;65 à 69 ans;Professions intermédiaires;765400802;Femmes;Ne vivant pas en couple
+194;30 à 34 ans;Artisans. commerçants. chefs d'entreprise;765400901;Hommes;Ne vivant pas en couple
+195;40 à 44 ans;Autres personnes sans activité professionnelle;765400204;Femmes;Vivant en couple
+196;70 à 74 ans;Professions intermédiaires;765400403;Femmes;Ne vivant pas en couple
+197;40 à 44 ans;Retraités;765400201;Femmes;Vivant en couple
+198;50 à 54 ans;Professions intermédiaires;765400601;Hommes;Vivant en couple
+199;35 à 39 ans;Autres personnes sans activité professionnelle;765400306;Femmes;Vivant en couple
+200;65 à 69 ans;Autres personnes sans activité professionnelle;765400901;Femmes;Vivant en couple
+201;80 à 84 ans;Employés;765400303;Hommes;Vivant en couple
+202;5 à 9 ans;Ouvriers;765400106;Hommes;Ne vivant pas en couple
+203;55 à 59 ans;Cadres et professions intellectuelles supérieures;765400102;Hommes;Vivant en couple
+204;5 à 9 ans;Autres personnes sans activité professionnelle;765400405;Hommes;Ne vivant pas en couple
+205;20 à 24 ans;Employés;765400405;Femmes;Ne vivant pas en couple
+206;35 à 39 ans;Professions intermédiaires;765400901;Hommes;Vivant en couple
+207;10 à 14 ans;Autres personnes sans activité professionnelle;765401001;Hommes;Vivant en couple
+208;5 à 9 ans;Employés;765400306;Femmes;Vivant en couple
+209;20 à 24 ans;Employés;765400802;Hommes;Vivant en couple
+210;60 à 64 ans;Ouvriers;765400402;Hommes;Ne vivant pas en couple
+211;45 à 49 ans;Employés;765401001;Hommes;Vivant en couple
+212;5 à 9 ans;Employés;765400306;Hommes;Vivant en couple
+213;5 à 9 ans;Employés;765400901;Femmes;Vivant en couple
+214;20 à 24 ans;Autres personnes sans activité professionnelle;765400504;Femmes;Vivant en couple
+215;60 à 64 ans;Autres personnes sans activité professionnelle;765400902;Hommes;Vivant en couple
+216;5 à 9 ans;Retraités;765400106;Hommes;Ne vivant pas en couple
+217;45 à 49 ans;Autres personnes sans activité professionnelle;765400404;Hommes;Ne vivant pas en couple
+218;40 à 44 ans;Professions intermédiaires;765400601;Hommes;Vivant en couple
+219;15 à 19 ans;Ouvriers;765400601;Hommes;Vivant en couple
+220;50 à 54 ans;Retraités;765400502;Hommes;Vivant en couple
+221;Moins de 5 ans;Employés;765400801;Femmes;Vivant en couple
+222;20 à 24 ans;Autres personnes sans activité professionnelle;765400702;Femmes;Ne vivant pas en couple
+223;35 à 39 ans;Employés;765400102;Femmes;Vivant en couple
+224;35 à 39 ans;Professions intermédiaires;765400104;Hommes;Vivant en couple
+225;50 à 54 ans;Retraités;765400106;Femmes;Vivant en couple
+226;40 à 44 ans;Employés;765400405;Femmes;Vivant en couple
+227;35 à 39 ans;Autres personnes sans activité professionnelle;765400306;Femmes;Vivant en couple
+228;20 à 24 ans;Employés;765400204;Femmes;Ne vivant pas en couple
+229;85 à 89 ans;Cadres et professions intellectuelles supérieures;765400202;Hommes;Ne vivant pas en couple
+230;Moins de 5 ans;Retraités;765401005;Hommes;Vivant en couple
+231;15 à 19 ans;Employés;765400403;Femmes;Ne vivant pas en couple
+232;60 à 64 ans;Employés;765400204;Femmes;Ne vivant pas en couple
+233;15 à 19 ans;Retraités;765400305;Femmes;Ne vivant pas en couple
+234;70 à 74 ans;Employés;765400404;Femmes;Vivant en couple
+235;70 à 74 ans;Ouvriers;765400105;Hommes;Vivant en couple
+236;15 à 19 ans;Employés;765400203;Femmes;Ne vivant pas en couple
+237;5 à 9 ans;Ouvriers;765400301;Femmes;Ne vivant pas en couple
+238;35 à 39 ans;Employés;765400504;Femmes;Vivant en couple
+239;Moins de 5 ans;Retraités;765400501;Femmes;Ne vivant pas en couple
+240;35 à 39 ans;Retraités;765400204;Femmes;Vivant en couple
+241;85 à 89 ans;Retraités;765400405;Femmes;Vivant en couple
+242;20 à 24 ans;Professions intermédiaires;765400106;Femmes;Ne vivant pas en couple
+243;70 à 74 ans;Employés;765400403;Femmes;Vivant en couple
+244;35 à 39 ans;Retraités;765400604;Femmes;Ne vivant pas en couple
+245;20 à 24 ans;Retraités;765400306;Femmes;Vivant en couple
+246;Moins de 5 ans;Professions intermédiaires;765400101;Hommes;Vivant en couple
+247;Moins de 5 ans;Professions intermédiaires;765401003;Hommes;Vivant en couple
+248;35 à 39 ans;Ouvriers;765400301;Hommes;Vivant en couple
+249;60 à 64 ans;Employés;765401004;Femmes;Vivant en couple
+250;40 à 44 ans;Employés;765401001;Femmes;Ne vivant pas en couple
+251;40 à 44 ans;Autres personnes sans activité professionnelle;765400201;Hommes;Vivant en couple
+252;15 à 19 ans;Professions intermédiaires;765400401;Hommes;Ne vivant pas en couple
+253;45 à 49 ans;Employés;765400404;Femmes;Vivant en couple
+254;30 à 34 ans;Retraités;765400801;Hommes;Vivant en couple
+255;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400202;Hommes;Vivant en couple
+256;75 à 79 ans;Autres personnes sans activité professionnelle;765400203;Hommes;Vivant en couple
+257;25 à 29 ans;Employés;765401001;Femmes;Vivant en couple
+258;20 à 24 ans;Agriculteurs exploitants;765400604;Femmes;Vivant en couple
+259;75 à 79 ans;Cadres et professions intellectuelles supérieures;765400901;Femmes;Ne vivant pas en couple
+260;15 à 19 ans;Retraités;765400604;Femmes;Vivant en couple
+261;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400402;Hommes;Ne vivant pas en couple
+262;25 à 29 ans;Ouvriers;765400604;Hommes;Vivant en couple
+263;60 à 64 ans;Autres personnes sans activité professionnelle;765400503;Femmes;Ne vivant pas en couple
+264;60 à 64 ans;Retraités;765400203;Femmes;Vivant en couple
+265;70 à 74 ans;Autres personnes sans activité professionnelle;765400602;Femmes;Vivant en couple
+266;55 à 59 ans;Employés;765400702;Femmes;Vivant en couple
+267;65 à 69 ans;Ouvriers;765400301;Hommes;Vivant en couple
+268;45 à 49 ans;Retraités;765400403;Hommes;Vivant en couple
+269;40 à 44 ans;Employés;765400504;Femmes;Ne vivant pas en couple
+270;75 à 79 ans;Employés;765400104;Femmes;Vivant en couple
+271;60 à 64 ans;Ouvriers;765400305;Hommes;Ne vivant pas en couple
+272;5 à 9 ans;Retraités;765401002;Hommes;Ne vivant pas en couple
+273;45 à 49 ans;Autres personnes sans activité professionnelle;765400604;Hommes;Ne vivant pas en couple
+274;10 à 14 ans;Professions intermédiaires;765400201;Femmes;Ne vivant pas en couple
+275;60 à 64 ans;Autres personnes sans activité professionnelle;765400403;Femmes;Vivant en couple
+276;5 à 9 ans;Employés;765400103;Femmes;Ne vivant pas en couple
+277;40 à 44 ans;Retraités;765400104;Hommes;Ne vivant pas en couple
+278;50 à 54 ans;Retraités;765400105;Hommes;Ne vivant pas en couple
+279;Moins de 5 ans;Artisans. commerçants. chefs d'entreprise;765400602;Femmes;Vivant en couple
+280;25 à 29 ans;Retraités;765400602;Femmes;Vivant en couple
+281;65 à 69 ans;Ouvriers;765400502;Hommes;Vivant en couple
+282;55 à 59 ans;Retraités;765400106;Femmes;Vivant en couple
+283;80 à 84 ans;Employés;765400702;Femmes;Vivant en couple
+284;50 à 54 ans;Employés;765400702;Femmes;Vivant en couple
+285;20 à 24 ans;Autres personnes sans activité professionnelle;765400203;Hommes;Ne vivant pas en couple
+286;60 à 64 ans;Autres personnes sans activité professionnelle;765400601;Hommes;Vivant en couple
+287;65 à 69 ans;Autres personnes sans activité professionnelle;765400103;Femmes;Ne vivant pas en couple
+288;30 à 34 ans;Artisans. commerçants. chefs d'entreprise;765400901;Hommes;Vivant en couple
+289;55 à 59 ans;Cadres et professions intellectuelles supérieures;765400203;Femmes;Ne vivant pas en couple
+290;60 à 64 ans;Ouvriers;765400404;Hommes;Ne vivant pas en couple
+291;45 à 49 ans;Ouvriers;765401003;Hommes;Vivant en couple
+292;40 à 44 ans;Retraités;765400102;Femmes;Ne vivant pas en couple
+293;50 à 54 ans;Autres personnes sans activité professionnelle;765400501;Hommes;Vivant en couple
+294;40 à 44 ans;Retraités;765400303;Femmes;Vivant en couple
+295;40 à 44 ans;Ouvriers;765400204;Hommes;Ne vivant pas en couple
+296;30 à 34 ans;Autres personnes sans activité professionnelle;765400204;Femmes;Vivant en couple
+297;50 à 54 ans;Professions intermédiaires;765400201;Hommes;Vivant en couple
+298;45 à 49 ans;Artisans. commerçants. chefs d'entreprise;765400503;Femmes;Ne vivant pas en couple
+299;50 à 54 ans;Ouvriers;765400202;Hommes;Ne vivant pas en couple
+300;20 à 24 ans;Retraités;765400702;Femmes;Vivant en couple
+301;Moins de 5 ans;Ouvriers;765400303;Hommes;Ne vivant pas en couple
+302;50 à 54 ans;Professions intermédiaires;765400404;Femmes;Vivant en couple
+303;15 à 19 ans;Employés;765400902;Femmes;Vivant en couple
+304;40 à 44 ans;Autres personnes sans activité professionnelle;765400102;Femmes;Ne vivant pas en couple
+305;65 à 69 ans;Cadres et professions intellectuelles supérieures;765400402;Femmes;Vivant en couple
+306;35 à 39 ans;Ouvriers;765400203;Hommes;Ne vivant pas en couple
+307;5 à 9 ans;Employés;765400106;Femmes;Vivant en couple
+308;10 à 14 ans;Retraités;765401005;Hommes;Ne vivant pas en couple
+309;50 à 54 ans;Ouvriers;765400101;Hommes;Vivant en couple
+310;5 à 9 ans;Retraités;765401001;Femmes;Vivant en couple
+311;10 à 14 ans;Employés;765400602;Femmes;Vivant en couple
+312;15 à 19 ans;Professions intermédiaires;765400201;Hommes;Vivant en couple
+313;70 à 74 ans;Employés;765400701;Hommes;Vivant en couple
+314;55 à 59 ans;Retraités;765400402;Femmes;Vivant en couple
+315;30 à 34 ans;Autres personnes sans activité professionnelle;765400102;Femmes;Vivant en couple
+316;45 à 49 ans;Professions intermédiaires;765400404;Femmes;Vivant en couple
+317;55 à 59 ans;Retraités;765400204;Femmes;Vivant en couple
+318;15 à 19 ans;Autres personnes sans activité professionnelle;765401003;Femmes;Vivant en couple
+319;55 à 59 ans;Professions intermédiaires;765400101;Hommes;Vivant en couple
+320;15 à 19 ans;Retraités;765400203;Hommes;Vivant en couple
+321;20 à 24 ans;Autres personnes sans activité professionnelle;765400501;Femmes;Vivant en couple
+322;55 à 59 ans;Ouvriers;765400602;Hommes;Ne vivant pas en couple
+323;25 à 29 ans;Ouvriers;765400602;Femmes;Ne vivant pas en couple
+324;35 à 39 ans;Retraités;765400104;Femmes;Ne vivant pas en couple
+325;25 à 29 ans;Ouvriers;765400802;Femmes;Vivant en couple
+326;80 à 84 ans;Professions intermédiaires;765400305;Femmes;Vivant en couple
+327;5 à 9 ans;Cadres et professions intellectuelles supérieures;765400604;Hommes;Vivant en couple
+328;10 à 14 ans;Autres personnes sans activité professionnelle;765400502;Femmes;Vivant en couple
+329;20 à 24 ans;Retraités;765400701;Femmes;Vivant en couple
+330;20 à 24 ans;Ouvriers;765400404;Hommes;Vivant en couple
+331;60 à 64 ans;Ouvriers;765400106;Hommes;Ne vivant pas en couple
+332;35 à 39 ans;Professions intermédiaires;765400405;Femmes;Ne vivant pas en couple
+333;25 à 29 ans;Autres personnes sans activité professionnelle;765400403;Femmes;Vivant en couple
+334;85 à 89 ans;Retraités;765401003;Femmes;Ne vivant pas en couple
+335;70 à 74 ans;Ouvriers;765400203;Femmes;Vivant en couple
+336;35 à 39 ans;Ouvriers;765400501;Hommes;Vivant en couple
+337;35 à 39 ans;Employés;765400502;Hommes;Vivant en couple
+338;75 à 79 ans;Autres personnes sans activité professionnelle;765400106;Femmes;Vivant en couple
+339;5 à 9 ans;Autres personnes sans activité professionnelle;765400303;Hommes;Vivant en couple
+340;50 à 54 ans;Employés;765400301;Femmes;Vivant en couple
+341;40 à 44 ans;Retraités;765400102;Femmes;Vivant en couple
+342;55 à 59 ans;Employés;765400204;Femmes;Vivant en couple
+343;15 à 19 ans;Autres personnes sans activité professionnelle;765400204;Femmes;Vivant en couple
+344;5 à 9 ans;Ouvriers;765400105;Hommes;Vivant en couple
+345;80 à 84 ans;Retraités;765400202;Femmes;Ne vivant pas en couple
+346;15 à 19 ans;Ouvriers;765400306;Hommes;Vivant en couple
+347;20 à 24 ans;Retraités;765400403;Femmes;Ne vivant pas en couple
+348;15 à 19 ans;Retraités;765400604;Hommes;Ne vivant pas en couple
+349;15 à 19 ans;Retraités;765400204;Femmes;Vivant en couple
+350;30 à 34 ans;Artisans. commerçants. chefs d'entreprise;765400501;Hommes;Vivant en couple
+351;45 à 49 ans;Ouvriers;765400402;Hommes;Vivant en couple
+352;55 à 59 ans;Ouvriers;765400405;Hommes;Ne vivant pas en couple
+353;80 à 84 ans;Employés;765400901;Femmes;Ne vivant pas en couple
+354;40 à 44 ans;Autres personnes sans activité professionnelle;765401001;Femmes;Ne vivant pas en couple
+355;60 à 64 ans;Professions intermédiaires;765400404;Femmes;Vivant en couple
+356;10 à 14 ans;Professions intermédiaires;765400404;Femmes;Vivant en couple
+357;40 à 44 ans;Professions intermédiaires;765400501;Femmes;Vivant en couple
+358;5 à 9 ans;Ouvriers;765400404;Hommes;Vivant en couple
+359;Moins de 5 ans;Autres personnes sans activité professionnelle;765400502;Femmes;Ne vivant pas en couple
+360;Moins de 5 ans;Professions intermédiaires;765400105;Hommes;Vivant en couple
+361;70 à 74 ans;Professions intermédiaires;765401004;Femmes;Ne vivant pas en couple
+362;90 à 94 ans;Cadres et professions intellectuelles supérieures;765400404;Femmes;Vivant en couple
+363;15 à 19 ans;Professions intermédiaires;765400202;Femmes;Vivant en couple
+364;25 à 29 ans;Retraités;765400501;Femmes;Ne vivant pas en couple
+365;70 à 74 ans;Cadres et professions intellectuelles supérieures;765400504;Femmes;Vivant en couple
+366;Moins de 5 ans;Employés;765400502;Hommes;Vivant en couple
+367;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400604;Femmes;Vivant en couple
+368;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400701;Hommes;Ne vivant pas en couple
+369;65 à 69 ans;Employés;765400306;Femmes;Ne vivant pas en couple
+370;25 à 29 ans;Retraités;765400103;Femmes;Ne vivant pas en couple
+371;65 à 69 ans;Retraités;765400604;Hommes;Ne vivant pas en couple
+372;10 à 14 ans;Ouvriers;765400404;Hommes;Ne vivant pas en couple
+373;10 à 14 ans;Retraités;765400503;Femmes;Vivant en couple
+374;15 à 19 ans;Ouvriers;765400602;Hommes;Ne vivant pas en couple
+375;5 à 9 ans;Autres personnes sans activité professionnelle;765401003;Femmes;Ne vivant pas en couple
+376;50 à 54 ans;Autres personnes sans activité professionnelle;765400201;Femmes;Ne vivant pas en couple
+377;15 à 19 ans;Employés;765400304;Femmes;Vivant en couple
+378;20 à 24 ans;Autres personnes sans activité professionnelle;765400305;Hommes;Vivant en couple
+379;45 à 49 ans;Retraités;765400305;Femmes;Vivant en couple
+380;15 à 19 ans;Autres personnes sans activité professionnelle;765400203;Hommes;Vivant en couple
+381;60 à 64 ans;Professions intermédiaires;765400802;Femmes;Ne vivant pas en couple
+382;25 à 29 ans;Artisans. commerçants. chefs d'entreprise;765400602;Hommes;Vivant en couple
+383;30 à 34 ans;Autres personnes sans activité professionnelle;765400405;Hommes;Vivant en couple
+384;10 à 14 ans;Retraités;765400405;Femmes;Vivant en couple
+385;5 à 9 ans;Employés;765400306;Femmes;Vivant en couple
+386;15 à 19 ans;Employés;765400503;Femmes;Ne vivant pas en couple
+387;5 à 9 ans;Cadres et professions intellectuelles supérieures;765401003;Hommes;Vivant en couple
+388;25 à 29 ans;Ouvriers;765401001;Hommes;Ne vivant pas en couple
+389;40 à 44 ans;Retraités;765400103;Femmes;Ne vivant pas en couple
+390;45 à 49 ans;Ouvriers;765400502;Hommes;Vivant en couple
+391;80 à 84 ans;Employés;765400202;Femmes;Vivant en couple
+392;35 à 39 ans;Ouvriers;765400403;Hommes;Ne vivant pas en couple
+393;5 à 9 ans;Cadres et professions intellectuelles supérieures;765401004;Hommes;Ne vivant pas en couple
+394;15 à 19 ans;Professions intermédiaires;765400304;Femmes;Vivant en couple
+395;40 à 44 ans;Employés;765400501;Femmes;Ne vivant pas en couple
+396;40 à 44 ans;Retraités;765400102;Femmes;Vivant en couple
+397;40 à 44 ans;Employés;765401004;Femmes;Ne vivant pas en couple
+398;60 à 64 ans;Artisans. commerçants. chefs d'entreprise;765400102;Hommes;Ne vivant pas en couple
+399;35 à 39 ans;Autres personnes sans activité professionnelle;765400201;Hommes;Vivant en couple
+400;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400503;Hommes;Vivant en couple
+401;30 à 34 ans;Ouvriers;765401002;Femmes;Vivant en couple
+402;10 à 14 ans;Professions intermédiaires;765400503;Femmes;Vivant en couple
+403;55 à 59 ans;Ouvriers;765400502;Hommes;Ne vivant pas en couple
+404;40 à 44 ans;Ouvriers;765400405;Hommes;Ne vivant pas en couple
+405;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400202;Hommes;Vivant en couple
+406;80 à 84 ans;Professions intermédiaires;765400802;Hommes;Ne vivant pas en couple
+407;70 à 74 ans;Autres personnes sans activité professionnelle;765400404;Hommes;Vivant en couple
+408;65 à 69 ans;Ouvriers;765401003;Hommes;Vivant en couple
+409;10 à 14 ans;Retraités;765401005;Femmes;Vivant en couple
+410;25 à 29 ans;Ouvriers;765400604;Hommes;Vivant en couple
+411;50 à 54 ans;Ouvriers;765400901;Hommes;Vivant en couple
+412;40 à 44 ans;Employés;765400201;Femmes;Ne vivant pas en couple
+413;25 à 29 ans;Retraités;765400604;Hommes;Vivant en couple
+414;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400106;Femmes;Ne vivant pas en couple
+415;60 à 64 ans;Employés;765400404;Femmes;Vivant en couple
+416;5 à 9 ans;Employés;765400104;Hommes;Vivant en couple
+417;40 à 44 ans;Employés;765400101;Femmes;Vivant en couple
+418;50 à 54 ans;Employés;765400106;Femmes;Ne vivant pas en couple
+419;80 à 84 ans;Ouvriers;765400503;Hommes;Vivant en couple
+420;50 à 54 ans;Professions intermédiaires;765401001;Hommes;Vivant en couple
+421;25 à 29 ans;Cadres et professions intellectuelles supérieures;765400304;Femmes;Vivant en couple
+422;45 à 49 ans;Employés;765400104;Femmes;Vivant en couple
+423;25 à 29 ans;Employés;765401001;Femmes;Vivant en couple
+424;25 à 29 ans;Retraités;765400102;Femmes;Ne vivant pas en couple
+425;40 à 44 ans;Professions intermédiaires;765400801;Femmes;Ne vivant pas en couple
+426;65 à 69 ans;Professions intermédiaires;765400105;Hommes;Ne vivant pas en couple
+427;40 à 44 ans;Professions intermédiaires;765400404;Femmes;Ne vivant pas en couple
+428;70 à 74 ans;Retraités;765400603;Hommes;Vivant en couple
+429;15 à 19 ans;Autres personnes sans activité professionnelle;765401003;Hommes;Vivant en couple
+430;55 à 59 ans;Professions intermédiaires;765400202;Femmes;Vivant en couple
+431;Moins de 5 ans;Retraités;765400301;Hommes;Vivant en couple
+432;5 à 9 ans;Employés;765400602;Femmes;Ne vivant pas en couple
+433;55 à 59 ans;Employés;765400603;Femmes;Ne vivant pas en couple
+434;60 à 64 ans;Retraités;765400103;Femmes;Vivant en couple
+435;65 à 69 ans;Artisans. commerçants. chefs d'entreprise;765400604;Femmes;Vivant en couple
+436;70 à 74 ans;Ouvriers;765400802;Hommes;Vivant en couple
+437;Moins de 5 ans;Retraités;765400201;Femmes;Ne vivant pas en couple
+438;25 à 29 ans;Artisans. commerçants. chefs d'entreprise;765400601;Hommes;Ne vivant pas en couple
+439;Moins de 5 ans;Employés;765400404;Femmes;Ne vivant pas en couple
+440;40 à 44 ans;Autres personnes sans activité professionnelle;765400102;Hommes;Ne vivant pas en couple
+441;80 à 84 ans;Retraités;765400405;Hommes;Ne vivant pas en couple
+442;85 à 89 ans;Autres personnes sans activité professionnelle;765401002;Femmes;Ne vivant pas en couple
+443;70 à 74 ans;Ouvriers;765400102;Hommes;Ne vivant pas en couple
+444;45 à 49 ans;Employés;765400604;Femmes;Vivant en couple
+445;55 à 59 ans;Ouvriers;765400601;Hommes;Ne vivant pas en couple
+446;80 à 84 ans;Employés;765400402;Femmes;Vivant en couple
+447;60 à 64 ans;Professions intermédiaires;765400304;Hommes;Ne vivant pas en couple
+448;30 à 34 ans;Retraités;765401001;Femmes;Vivant en couple
+449;70 à 74 ans;Retraités;765400203;Hommes;Vivant en couple
+450;35 à 39 ans;Autres personnes sans activité professionnelle;765400702;Hommes;Vivant en couple
+451;35 à 39 ans;Ouvriers;765400101;Hommes;Ne vivant pas en couple
+452;Moins de 5 ans;Professions intermédiaires;765401002;Hommes;Ne vivant pas en couple
+453;85 à 89 ans;Ouvriers;765400101;Hommes;Ne vivant pas en couple
+454;15 à 19 ans;Autres personnes sans activité professionnelle;765400801;Femmes;Vivant en couple
+455;10 à 14 ans;Autres personnes sans activité professionnelle;765400306;Hommes;Vivant en couple
+456;5 à 9 ans;Professions intermédiaires;765400305;Hommes;Vivant en couple
+457;35 à 39 ans;Autres personnes sans activité professionnelle;765400104;Hommes;Ne vivant pas en couple
+458;25 à 29 ans;Retraités;765400601;Hommes;Ne vivant pas en couple
+459;60 à 64 ans;Professions intermédiaires;765400601;Hommes;Vivant en couple
+460;35 à 39 ans;Retraités;765400304;Femmes;Ne vivant pas en couple
+461;30 à 34 ans;Retraités;765401001;Hommes;Ne vivant pas en couple
+462;40 à 44 ans;Autres personnes sans activité professionnelle;765400601;Femmes;Ne vivant pas en couple
+463;Moins de 5 ans;Ouvriers;765400202;Femmes;Vivant en couple
+464;20 à 24 ans;Retraités;765400104;Hommes;Vivant en couple
+465;55 à 59 ans;Employés;765400601;Hommes;Vivant en couple
+466;65 à 69 ans;Employés;765400106;Femmes;Vivant en couple
+467;25 à 29 ans;Retraités;765400403;Femmes;Vivant en couple
+468;50 à 54 ans;Retraités;765400602;Hommes;Vivant en couple
+469;60 à 64 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Vivant en couple
+470;5 à 9 ans;Ouvriers;765400106;Hommes;Ne vivant pas en couple
+471;Moins de 5 ans;Retraités;765400303;Femmes;Vivant en couple
+472;60 à 64 ans;Retraités;765401003;Hommes;Ne vivant pas en couple
+473;80 à 84 ans;Professions intermédiaires;765400304;Hommes;Vivant en couple
+474;55 à 59 ans;Retraités;765400503;Femmes;Vivant en couple
+475;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400701;Hommes;Ne vivant pas en couple
+476;10 à 14 ans;Retraités;765400504;Femmes;Vivant en couple
+477;45 à 49 ans;Retraités;765400801;Femmes;Vivant en couple
+478;70 à 74 ans;Employés;765400202;Femmes;Ne vivant pas en couple
+479;Moins de 5 ans;Ouvriers;765400306;Femmes;Ne vivant pas en couple
+480;55 à 59 ans;Retraités;765400601;Femmes;Vivant en couple
+481;55 à 59 ans;Autres personnes sans activité professionnelle;765400304;Hommes;Vivant en couple
+482;70 à 74 ans;Professions intermédiaires;765400404;Hommes;Vivant en couple
+483;75 à 79 ans;Cadres et professions intellectuelles supérieures;765400103;Femmes;Ne vivant pas en couple
+484;45 à 49 ans;Autres personnes sans activité professionnelle;765400901;Femmes;Vivant en couple
+485;10 à 14 ans;Professions intermédiaires;765401001;Femmes;Vivant en couple
+486;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400402;Hommes;Ne vivant pas en couple
+487;50 à 54 ans;Autres personnes sans activité professionnelle;765400504;Femmes;Vivant en couple
+488;30 à 34 ans;Autres personnes sans activité professionnelle;765400603;Femmes;Vivant en couple
+489;35 à 39 ans;Autres personnes sans activité professionnelle;765400106;Hommes;Ne vivant pas en couple
+490;80 à 84 ans;Employés;765400303;Femmes;Vivant en couple
+491;45 à 49 ans;Retraités;765400103;Hommes;Ne vivant pas en couple
+492;20 à 24 ans;Professions intermédiaires;765401003;Femmes;Vivant en couple
+493;35 à 39 ans;Professions intermédiaires;765400601;Femmes;Ne vivant pas en couple
+494;30 à 34 ans;Ouvriers;765400204;Hommes;Vivant en couple
+495;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400306;Hommes;Vivant en couple
+496;35 à 39 ans;Retraités;765401001;Femmes;Vivant en couple
+497;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400405;Hommes;Ne vivant pas en couple
+498;25 à 29 ans;Professions intermédiaires;765400304;Hommes;Ne vivant pas en couple
+499;20 à 24 ans;Artisans. commerçants. chefs d'entreprise;765400504;Femmes;Vivant en couple
+500;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400106;Hommes;Vivant en couple
+501;45 à 49 ans;Autres personnes sans activité professionnelle;765400801;Femmes;Vivant en couple
+502;35 à 39 ans;Employés;765400602;Femmes;Vivant en couple
+503;25 à 29 ans;Employés;765401001;Hommes;Vivant en couple
+504;90 à 94 ans;Retraités;765400601;Femmes;Vivant en couple
+505;50 à 54 ans;Retraités;765400602;Femmes;Ne vivant pas en couple
+506;50 à 54 ans;Autres personnes sans activité professionnelle;765400501;Femmes;Vivant en couple
+507;80 à 84 ans;Autres personnes sans activité professionnelle;765400404;Hommes;Vivant en couple
+508;25 à 29 ans;Employés;765400201;Femmes;Vivant en couple
+509;50 à 54 ans;Retraités;765401001;Hommes;Ne vivant pas en couple
+510;60 à 64 ans;Autres personnes sans activité professionnelle;765400106;Hommes;Vivant en couple
+511;75 à 79 ans;Employés;765400601;Femmes;Ne vivant pas en couple
+512;25 à 29 ans;Retraités;765400404;Hommes;Vivant en couple
+513;60 à 64 ans;Retraités;765400801;Femmes;Vivant en couple
+514;80 à 84 ans;Employés;765400304;Femmes;Vivant en couple
+515;50 à 54 ans;Retraités;765400102;Hommes;Ne vivant pas en couple
+516;35 à 39 ans;Autres personnes sans activité professionnelle;765401003;Femmes;Ne vivant pas en couple
+517;45 à 49 ans;Retraités;765400602;Femmes;Vivant en couple
+518;75 à 79 ans;Employés;765401005;Femmes;Vivant en couple
+519;60 à 64 ans;Professions intermédiaires;765401001;Femmes;Vivant en couple
+520;10 à 14 ans;Ouvriers;765400404;Hommes;Vivant en couple
+521;5 à 9 ans;Artisans. commerçants. chefs d'entreprise;765400101;Hommes;Vivant en couple
+522;50 à 54 ans;Ouvriers;765400103;Hommes;Ne vivant pas en couple
+523;50 à 54 ans;Retraités;765400802;Femmes;Ne vivant pas en couple
+524;60 à 64 ans;Employés;765400104;Femmes;Vivant en couple
+525;55 à 59 ans;Professions intermédiaires;765400403;Hommes;Ne vivant pas en couple
+526;20 à 24 ans;Professions intermédiaires;765400403;Hommes;Vivant en couple
+527;65 à 69 ans;Retraités;765400601;Hommes;Ne vivant pas en couple
+528;70 à 74 ans;Employés;765400103;Femmes;Vivant en couple
+529;Moins de 5 ans;Ouvriers;765400504;Hommes;Ne vivant pas en couple
+530;15 à 19 ans;Employés;765400502;Hommes;Ne vivant pas en couple
+531;80 à 84 ans;Retraités;765400403;Femmes;Ne vivant pas en couple
+532;20 à 24 ans;Autres personnes sans activité professionnelle;765400203;Hommes;Ne vivant pas en couple
+533;35 à 39 ans;Professions intermédiaires;765400102;Hommes;Vivant en couple
+534;85 à 89 ans;Professions intermédiaires;765401004;Hommes;Vivant en couple
+535;60 à 64 ans;Ouvriers;765400604;Hommes;Vivant en couple
+536;35 à 39 ans;Employés;765400801;Hommes;Vivant en couple
+537;60 à 64 ans;Retraités;765401005;Hommes;Ne vivant pas en couple
+538;30 à 34 ans;Employés;765400701;Hommes;Vivant en couple
+539;25 à 29 ans;Retraités;765400405;Hommes;Vivant en couple
+540;20 à 24 ans;Employés;765400502;Femmes;Vivant en couple
+541;75 à 79 ans;Professions intermédiaires;765400502;Femmes;Vivant en couple
+542;10 à 14 ans;Ouvriers;765400403;Hommes;Ne vivant pas en couple
+543;95 à 99 ans;Retraités;765400101;Femmes;Ne vivant pas en couple
+544;35 à 39 ans;Retraités;765401001;Femmes;Vivant en couple
+545;25 à 29 ans;Ouvriers;765400301;Femmes;Ne vivant pas en couple
+546;65 à 69 ans;Employés;765400702;Hommes;Vivant en couple
+547;65 à 69 ans;Professions intermédiaires;765401001;Femmes;Vivant en couple
+548;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400102;Femmes;Vivant en couple
+549;50 à 54 ans;Retraités;765400404;Femmes;Vivant en couple
+550;50 à 54 ans;Retraités;765400503;Femmes;Ne vivant pas en couple
+551;25 à 29 ans;Ouvriers;765400601;Hommes;Vivant en couple
+552;35 à 39 ans;Autres personnes sans activité professionnelle;765400201;Hommes;Ne vivant pas en couple
+553;65 à 69 ans;Retraités;765400702;Hommes;Ne vivant pas en couple
+554;50 à 54 ans;Retraités;765400802;Hommes;Ne vivant pas en couple
+555;40 à 44 ans;Autres personnes sans activité professionnelle;765400304;Hommes;Vivant en couple
+556;45 à 49 ans;Retraités;765400405;Femmes;Ne vivant pas en couple
+557;45 à 49 ans;Retraités;765400501;Hommes;Vivant en couple
+558;10 à 14 ans;Ouvriers;765400305;Hommes;Ne vivant pas en couple
+559;10 à 14 ans;Professions intermédiaires;765400901;Hommes;Vivant en couple
+560;30 à 34 ans;Retraités;765401002;Femmes;Ne vivant pas en couple
+561;70 à 74 ans;Autres personnes sans activité professionnelle;765400204;Femmes;Ne vivant pas en couple
+562;Moins de 5 ans;Retraités;765400602;Hommes;Vivant en couple
+563;40 à 44 ans;Employés;765400404;Femmes;Vivant en couple
+564;15 à 19 ans;Retraités;765400201;Hommes;Vivant en couple
+565;15 à 19 ans;Employés;765400301;Femmes;Vivant en couple
+566;55 à 59 ans;Retraités;765400402;Femmes;Vivant en couple
+567;30 à 34 ans;Ouvriers;765400504;Hommes;Ne vivant pas en couple
+568;Moins de 5 ans;Professions intermédiaires;765400204;Femmes;Ne vivant pas en couple
+569;15 à 19 ans;Retraités;765400901;Femmes;Ne vivant pas en couple
+570;Moins de 5 ans;Ouvriers;765400106;Hommes;Vivant en couple
+571;50 à 54 ans;Cadres et professions intellectuelles supérieures;765400801;Hommes;Vivant en couple
+572;15 à 19 ans;Professions intermédiaires;765400201;Hommes;Vivant en couple
+573;35 à 39 ans;Professions intermédiaires;765401004;Hommes;Ne vivant pas en couple
+574;15 à 19 ans;Autres personnes sans activité professionnelle;765400404;Hommes;Vivant en couple
+575;50 à 54 ans;Retraités;765400304;Hommes;Ne vivant pas en couple
+576;Moins de 5 ans;Employés;765400402;Femmes;Ne vivant pas en couple
+577;20 à 24 ans;Retraités;765400303;Femmes;Vivant en couple
+578;25 à 29 ans;Retraités;765400301;Hommes;Ne vivant pas en couple
+579;25 à 29 ans;Employés;765400305;Femmes;Ne vivant pas en couple
+580;45 à 49 ans;Employés;765400902;Femmes;Ne vivant pas en couple
+581;35 à 39 ans;Retraités;765400304;Hommes;Vivant en couple
+582;50 à 54 ans;Cadres et professions intellectuelles supérieures;765400902;Hommes;Ne vivant pas en couple
+583;5 à 9 ans;Cadres et professions intellectuelles supérieures;765400802;Femmes;Vivant en couple
+584;10 à 14 ans;Autres personnes sans activité professionnelle;765400204;Femmes;Ne vivant pas en couple
+585;15 à 19 ans;Ouvriers;765400604;Hommes;Vivant en couple
+586;65 à 69 ans;Ouvriers;765400105;Hommes;Ne vivant pas en couple
+587;45 à 49 ans;Cadres et professions intellectuelles supérieures;765400304;Femmes;Vivant en couple
+588;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400901;Femmes;Vivant en couple
+589;45 à 49 ans;Cadres et professions intellectuelles supérieures;765400602;Hommes;Vivant en couple
+590;5 à 9 ans;Autres personnes sans activité professionnelle;765401002;Hommes;Vivant en couple
+591;40 à 44 ans;Employés;765400303;Femmes;Ne vivant pas en couple
+592;35 à 39 ans;Autres personnes sans activité professionnelle;765400801;Hommes;Ne vivant pas en couple
+593;60 à 64 ans;Retraités;765400901;Femmes;Ne vivant pas en couple
+594;5 à 9 ans;Retraités;765400303;Femmes;Vivant en couple
+595;35 à 39 ans;Ouvriers;765400202;Femmes;Vivant en couple
+596;60 à 64 ans;Professions intermédiaires;765400304;Hommes;Ne vivant pas en couple
+597;30 à 34 ans;Ouvriers;765400502;Hommes;Ne vivant pas en couple
+598;50 à 54 ans;Professions intermédiaires;765400305;Femmes;Ne vivant pas en couple
+599;10 à 14 ans;Retraités;765401005;Femmes;Vivant en couple
+600;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400103;Hommes;Vivant en couple
+601;70 à 74 ans;Retraités;765400901;Hommes;Vivant en couple
+602;30 à 34 ans;Retraités;765400204;Hommes;Vivant en couple
+603;30 à 34 ans;Retraités;765400501;Femmes;Vivant en couple
+604;70 à 74 ans;Autres personnes sans activité professionnelle;765400504;Hommes;Ne vivant pas en couple
+605;20 à 24 ans;Autres personnes sans activité professionnelle;765401002;Hommes;Ne vivant pas en couple
+606;10 à 14 ans;Retraités;765400101;Hommes;Vivant en couple
+607;20 à 24 ans;Employés;765401003;Femmes;Vivant en couple
+608;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400501;Femmes;Ne vivant pas en couple
+609;15 à 19 ans;Retraités;765401004;Femmes;Ne vivant pas en couple
+610;20 à 24 ans;Retraités;765400304;Femmes;Ne vivant pas en couple
+611;60 à 64 ans;Agriculteurs exploitants;765401002;Hommes;Ne vivant pas en couple
+612;30 à 34 ans;Autres personnes sans activité professionnelle;765400405;Hommes;Vivant en couple
+613;40 à 44 ans;Retraités;765400502;Femmes;Vivant en couple
+614;20 à 24 ans;Employés;765400404;Femmes;Vivant en couple
+615;50 à 54 ans;Retraités;765400502;Hommes;Ne vivant pas en couple
+616;15 à 19 ans;Retraités;765400105;Hommes;Vivant en couple
+617;80 à 84 ans;Retraités;765400702;Femmes;Vivant en couple
+618;40 à 44 ans;Autres personnes sans activité professionnelle;765400203;Femmes;Vivant en couple
+619;25 à 29 ans;Ouvriers;765400502;Hommes;Vivant en couple
+620;5 à 9 ans;Ouvriers;765400701;Femmes;Ne vivant pas en couple
+621;45 à 49 ans;Employés;765400502;Hommes;Vivant en couple
+622;80 à 84 ans;Retraités;765400402;Hommes;Vivant en couple
+623;80 à 84 ans;Autres personnes sans activité professionnelle;765401003;Femmes;Ne vivant pas en couple
+624;45 à 49 ans;Ouvriers;765400601;Hommes;Vivant en couple
+625;60 à 64 ans;Ouvriers;765400405;Hommes;Vivant en couple
+626;Moins de 5 ans;Retraités;765400201;Femmes;Vivant en couple
+627;Moins de 5 ans;Autres personnes sans activité professionnelle;765400501;Femmes;Ne vivant pas en couple
+628;40 à 44 ans;Employés;765400306;Femmes;Vivant en couple
+629;65 à 69 ans;Retraités;765400601;Femmes;Vivant en couple
+630;40 à 44 ans;Employés;765400403;Femmes;Ne vivant pas en couple
+631;25 à 29 ans;Professions intermédiaires;765400304;Hommes;Ne vivant pas en couple
+632;70 à 74 ans;Autres personnes sans activité professionnelle;765400504;Hommes;Ne vivant pas en couple
+633;5 à 9 ans;Cadres et professions intellectuelles supérieures;765401001;Femmes;Ne vivant pas en couple
+634;65 à 69 ans;Retraités;765400501;Femmes;Vivant en couple
+635;65 à 69 ans;Autres personnes sans activité professionnelle;765400604;Hommes;Vivant en couple
+636;65 à 69 ans;Ouvriers;765400602;Hommes;Ne vivant pas en couple
+637;50 à 54 ans;Autres personnes sans activité professionnelle;765400501;Hommes;Ne vivant pas en couple
+638;50 à 54 ans;Retraités;765400101;Hommes;Vivant en couple
+639;20 à 24 ans;Ouvriers;765400504;Hommes;Vivant en couple
+640;15 à 19 ans;Professions intermédiaires;765401003;Femmes;Ne vivant pas en couple
+641;50 à 54 ans;Ouvriers;765400303;Femmes;Vivant en couple
+642;55 à 59 ans;Employés;765401001;Hommes;Ne vivant pas en couple
+643;15 à 19 ans;Autres personnes sans activité professionnelle;765400203;Femmes;Ne vivant pas en couple
+644;60 à 64 ans;Autres personnes sans activité professionnelle;765400404;Femmes;Vivant en couple
+645;Moins de 5 ans;Employés;765401001;Hommes;Ne vivant pas en couple
+646;60 à 64 ans;Employés;765400201;Femmes;Ne vivant pas en couple
+647;5 à 9 ans;Professions intermédiaires;765400405;Femmes;Vivant en couple
+648;15 à 19 ans;Autres personnes sans activité professionnelle;765401003;Femmes;Vivant en couple
+649;55 à 59 ans;Employés;765400203;Hommes;Ne vivant pas en couple
+650;25 à 29 ans;Employés;765400106;Hommes;Vivant en couple
+651;10 à 14 ans;Ouvriers;765400303;Femmes;Vivant en couple
+652;25 à 29 ans;Autres personnes sans activité professionnelle;765400404;Hommes;Ne vivant pas en couple
+653;75 à 79 ans;Professions intermédiaires;765400203;Hommes;Vivant en couple
+654;30 à 34 ans;Retraités;765400304;Hommes;Ne vivant pas en couple
+655;50 à 54 ans;Ouvriers;765400103;Hommes;Ne vivant pas en couple
+656;70 à 74 ans;Autres personnes sans activité professionnelle;765400202;Femmes;Vivant en couple
+657;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400103;Hommes;Ne vivant pas en couple
+658;10 à 14 ans;Retraités;765400501;Hommes;Ne vivant pas en couple
+659;40 à 44 ans;Retraités;765400104;Femmes;Ne vivant pas en couple
+660;50 à 54 ans;Professions intermédiaires;765400604;Hommes;Vivant en couple
+661;65 à 69 ans;Autres personnes sans activité professionnelle;765401003;Hommes;Ne vivant pas en couple
+662;55 à 59 ans;Employés;765400102;Femmes;Ne vivant pas en couple
+663;5 à 9 ans;Retraités;765400801;Hommes;Vivant en couple
+664;15 à 19 ans;Retraités;765400901;Femmes;Ne vivant pas en couple
+665;40 à 44 ans;Employés;765400504;Femmes;Ne vivant pas en couple
+666;20 à 24 ans;Ouvriers;765401002;Hommes;Ne vivant pas en couple
+667;Moins de 5 ans;Retraités;765400203;Femmes;Vivant en couple
+668;40 à 44 ans;Retraités;765400604;Femmes;Ne vivant pas en couple
+669;20 à 24 ans;Employés;765400305;Femmes;Vivant en couple
+670;25 à 29 ans;Autres personnes sans activité professionnelle;765400402;Femmes;Vivant en couple
+671;40 à 44 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Vivant en couple
+672;45 à 49 ans;Retraités;765400201;Femmes;Vivant en couple
+673;65 à 69 ans;Employés;765400404;Femmes;Ne vivant pas en couple
+674;50 à 54 ans;Cadres et professions intellectuelles supérieures;765400802;Femmes;Vivant en couple
+675;Moins de 5 ans;Employés;765400203;Femmes;Ne vivant pas en couple
+676;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400404;Femmes;Vivant en couple
+677;20 à 24 ans;Ouvriers;765400801;Hommes;Vivant en couple
+678;20 à 24 ans;Professions intermédiaires;765401001;Hommes;Vivant en couple
+679;35 à 39 ans;Employés;765400201;Femmes;Vivant en couple
+680;Moins de 5 ans;Employés;765401005;Femmes;Vivant en couple
+681;75 à 79 ans;Ouvriers;765400305;Hommes;Vivant en couple
+682;80 à 84 ans;Retraités;765400901;Hommes;Vivant en couple
+683;60 à 64 ans;Autres personnes sans activité professionnelle;765400604;Femmes;Vivant en couple
+684;20 à 24 ans;Autres personnes sans activité professionnelle;765400902;Femmes;Vivant en couple
+685;45 à 49 ans;Retraités;765400106;Hommes;Ne vivant pas en couple
+686;75 à 79 ans;Employés;765400501;Femmes;Vivant en couple
+687;60 à 64 ans;Ouvriers;765401004;Hommes;Ne vivant pas en couple
+688;50 à 54 ans;Retraités;765400701;Hommes;Ne vivant pas en couple
+689;75 à 79 ans;Professions intermédiaires;765400306;Femmes;Vivant en couple
+690;55 à 59 ans;Cadres et professions intellectuelles supérieures;765400902;Femmes;Ne vivant pas en couple
+691;70 à 74 ans;Retraités;765400604;Femmes;Vivant en couple
+692;45 à 49 ans;Professions intermédiaires;765400802;Hommes;Vivant en couple
+693;60 à 64 ans;Autres personnes sans activité professionnelle;765400203;Hommes;Vivant en couple
+694;30 à 34 ans;Employés;765400305;Femmes;Vivant en couple
+695;35 à 39 ans;Ouvriers;765400105;Hommes;Ne vivant pas en couple
+696;80 à 84 ans;Ouvriers;765400502;Femmes;Ne vivant pas en couple
+697;15 à 19 ans;Employés;765400501;Femmes;Vivant en couple
+698;15 à 19 ans;Retraités;765401005;Femmes;Ne vivant pas en couple
+699;35 à 39 ans;Cadres et professions intellectuelles supérieures;765401001;Femmes;Ne vivant pas en couple
+700;5 à 9 ans;Professions intermédiaires;765400303;Hommes;Ne vivant pas en couple
+701;55 à 59 ans;Ouvriers;765400902;Hommes;Ne vivant pas en couple
+702;10 à 14 ans;Ouvriers;765400106;Hommes;Vivant en couple
+703;70 à 74 ans;Retraités;765401002;Hommes;Vivant en couple
+704;25 à 29 ans;Employés;765400203;Hommes;Ne vivant pas en couple
+705;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400402;Femmes;Ne vivant pas en couple
+706;20 à 24 ans;Autres personnes sans activité professionnelle;765400104;Hommes;Ne vivant pas en couple
+707;50 à 54 ans;Professions intermédiaires;765400501;Femmes;Ne vivant pas en couple
+708;20 à 24 ans;Cadres et professions intellectuelles supérieures;765400403;Femmes;Vivant en couple
+709;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400404;Hommes;Vivant en couple
+710;65 à 69 ans;Retraités;765400103;Hommes;Vivant en couple
+711;60 à 64 ans;Autres personnes sans activité professionnelle;765400604;Hommes;Ne vivant pas en couple
+712;50 à 54 ans;Professions intermédiaires;765400402;Hommes;Ne vivant pas en couple
+713;5 à 9 ans;Ouvriers;765400304;Femmes;Vivant en couple
+714;10 à 14 ans;Employés;765400103;Femmes;Vivant en couple
+715;5 à 9 ans;Retraités;765400702;Hommes;Vivant en couple
+716;45 à 49 ans;Ouvriers;765401001;Femmes;Ne vivant pas en couple
+717;25 à 29 ans;Retraités;765400501;Femmes;Vivant en couple
+718;60 à 64 ans;Autres personnes sans activité professionnelle;765400304;Hommes;Vivant en couple
+719;60 à 64 ans;Professions intermédiaires;765400802;Hommes;Vivant en couple
+720;15 à 19 ans;Retraités;765400203;Femmes;Vivant en couple
+721;45 à 49 ans;Employés;765400103;Femmes;Vivant en couple
+722;60 à 64 ans;Cadres et professions intellectuelles supérieures;765401003;Femmes;Vivant en couple
+723;5 à 9 ans;Autres personnes sans activité professionnelle;765400602;Hommes;Vivant en couple
+724;30 à 34 ans;Autres personnes sans activité professionnelle;765400106;Femmes;Vivant en couple
+725;Moins de 5 ans;Employés;765401003;Hommes;Vivant en couple
+726;65 à 69 ans;Retraités;765400503;Hommes;Ne vivant pas en couple
+727;Moins de 5 ans;Cadres et professions intellectuelles supérieures;765400404;Hommes;Ne vivant pas en couple
+728;10 à 14 ans;Ouvriers;765400503;Hommes;Vivant en couple
+729;10 à 14 ans;Retraités;765400103;Femmes;Vivant en couple
+730;20 à 24 ans;Professions intermédiaires;765400902;Femmes;Ne vivant pas en couple
+731;70 à 74 ans;Professions intermédiaires;765400601;Femmes;Vivant en couple
+732;55 à 59 ans;Employés;765400201;Femmes;Vivant en couple
+733;35 à 39 ans;Autres personnes sans activité professionnelle;765400901;Femmes;Vivant en couple
+734;25 à 29 ans;Ouvriers;765400601;Hommes;Ne vivant pas en couple
+735;65 à 69 ans;Retraités;765400306;Femmes;Vivant en couple
+736;55 à 59 ans;Retraités;765400602;Hommes;Vivant en couple
+737;70 à 74 ans;Employés;765400901;Hommes;Ne vivant pas en couple
+738;65 à 69 ans;Autres personnes sans activité professionnelle;765400404;Femmes;Ne vivant pas en couple
+739;5 à 9 ans;Retraités;765401004;Femmes;Vivant en couple
+740;75 à 79 ans;Cadres et professions intellectuelles supérieures;765400602;Hommes;Vivant en couple
+741;5 à 9 ans;Employés;765401004;Hommes;Vivant en couple
+742;75 à 79 ans;Retraités;765400901;Femmes;Ne vivant pas en couple
+743;10 à 14 ans;Professions intermédiaires;765400604;Hommes;Vivant en couple
+744;20 à 24 ans;Autres personnes sans activité professionnelle;765400404;Femmes;Vivant en couple
+745;20 à 24 ans;Retraités;765400103;Hommes;Ne vivant pas en couple
+746;Moins de 5 ans;Retraités;765400403;Hommes;Vivant en couple
+747;25 à 29 ans;Ouvriers;765400103;Hommes;Vivant en couple
+748;65 à 69 ans;Retraités;765400402;Hommes;Vivant en couple
+749;30 à 34 ans;Retraités;765400504;Femmes;Vivant en couple
+750;30 à 34 ans;Employés;765400104;Hommes;Ne vivant pas en couple
+751;40 à 44 ans;Ouvriers;765400501;Femmes;Ne vivant pas en couple
+752;65 à 69 ans;Ouvriers;765400702;Hommes;Vivant en couple
+753;25 à 29 ans;Retraités;765400602;Hommes;Vivant en couple
+754;20 à 24 ans;Cadres et professions intellectuelles supérieures;765400601;Femmes;Vivant en couple
+755;25 à 29 ans;Ouvriers;765400103;Hommes;Vivant en couple
+756;10 à 14 ans;Autres personnes sans activité professionnelle;765400103;Hommes;Vivant en couple
+757;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400402;Femmes;Vivant en couple
+758;30 à 34 ans;Ouvriers;765401002;Hommes;Vivant en couple
+759;5 à 9 ans;Employés;765400402;Femmes;Vivant en couple
+760;40 à 44 ans;Ouvriers;765400202;Hommes;Ne vivant pas en couple
+761;50 à 54 ans;Retraités;765400203;Femmes;Ne vivant pas en couple
+762;15 à 19 ans;Cadres et professions intellectuelles supérieures;765400801;Femmes;Vivant en couple
+763;Moins de 5 ans;Retraités;765400602;Hommes;Vivant en couple
+764;30 à 34 ans;Professions intermédiaires;765400404;Hommes;Ne vivant pas en couple
+765;65 à 69 ans;Autres personnes sans activité professionnelle;765400601;Hommes;Vivant en couple
+766;60 à 64 ans;Retraités;765400404;Hommes;Vivant en couple
+767;5 à 9 ans;Cadres et professions intellectuelles supérieures;765401002;Hommes;Ne vivant pas en couple
+768;20 à 24 ans;Employés;765400104;Femmes;Vivant en couple
+769;55 à 59 ans;Autres personnes sans activité professionnelle;765400105;Femmes;Ne vivant pas en couple
+770;60 à 64 ans;Retraités;765400204;Femmes;Ne vivant pas en couple
+771;25 à 29 ans;Employés;765400204;Hommes;Ne vivant pas en couple
+772;50 à 54 ans;Ouvriers;765400303;Hommes;Vivant en couple
+773;75 à 79 ans;Professions intermédiaires;765401002;Hommes;Ne vivant pas en couple
+774;40 à 44 ans;Ouvriers;765400204;Hommes;Ne vivant pas en couple
+775;35 à 39 ans;Professions intermédiaires;765400102;Hommes;Vivant en couple
+776;15 à 19 ans;Retraités;765401001;Hommes;Vivant en couple
+777;65 à 69 ans;Autres personnes sans activité professionnelle;765400702;Femmes;Vivant en couple
+778;15 à 19 ans;Professions intermédiaires;765401002;Femmes;Vivant en couple
+779;80 à 84 ans;Autres personnes sans activité professionnelle;765400901;Femmes;Vivant en couple
+780;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400204;Femmes;Vivant en couple
+781;80 à 84 ans;Retraités;765400204;Femmes;Vivant en couple
+782;55 à 59 ans;Ouvriers;765400204;Hommes;Ne vivant pas en couple
+783;25 à 29 ans;Retraités;765400202;Femmes;Ne vivant pas en couple
+784;5 à 9 ans;Ouvriers;765400106;Hommes;Ne vivant pas en couple
+785;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400501;Femmes;Vivant en couple
+786;55 à 59 ans;Artisans. commerçants. chefs d'entreprise;765400106;Hommes;Ne vivant pas en couple
+787;65 à 69 ans;Retraités;765400106;Hommes;Vivant en couple
+788;10 à 14 ans;Ouvriers;765400401;Hommes;Vivant en couple
+789;25 à 29 ans;Employés;765400303;Femmes;Vivant en couple
+790;55 à 59 ans;Professions intermédiaires;765400902;Hommes;Ne vivant pas en couple
+791;30 à 34 ans;Ouvriers;765400602;Hommes;Ne vivant pas en couple
+792;80 à 84 ans;Professions intermédiaires;765400601;Femmes;Vivant en couple
+793;30 à 34 ans;Retraités;765400306;Hommes;Vivant en couple
+794;30 à 34 ans;Employés;765400303;Femmes;Ne vivant pas en couple
+795;75 à 79 ans;Professions intermédiaires;765400901;Hommes;Vivant en couple
+796;5 à 9 ans;Cadres et professions intellectuelles supérieures;765400204;Hommes;Ne vivant pas en couple
+797;70 à 74 ans;Retraités;765400106;Femmes;Vivant en couple
+798;20 à 24 ans;Employés;765400306;Femmes;Ne vivant pas en couple
+799;15 à 19 ans;Cadres et professions intellectuelles supérieures;765400201;Femmes;Ne vivant pas en couple
+800;30 à 34 ans;Employés;765400403;Femmes;Vivant en couple
+801;55 à 59 ans;Retraités;765400304;Femmes;Vivant en couple
+802;55 à 59 ans;Employés;765400502;Femmes;Vivant en couple
+803;20 à 24 ans;Employés;765400106;Femmes;Vivant en couple
+804;45 à 49 ans;Autres personnes sans activité professionnelle;765401005;Femmes;Ne vivant pas en couple
+805;45 à 49 ans;Retraités;765400802;Hommes;Vivant en couple
+806;35 à 39 ans;Ouvriers;765400303;Hommes;Ne vivant pas en couple
+807;45 à 49 ans;Professions intermédiaires;765400306;Hommes;Vivant en couple
+808;70 à 74 ans;Autres personnes sans activité professionnelle;765400203;Femmes;Vivant en couple
+809;45 à 49 ans;Employés;765400304;Femmes;Ne vivant pas en couple
+810;30 à 34 ans;Employés;765401002;Femmes;Vivant en couple
+811;20 à 24 ans;Professions intermédiaires;765400104;Hommes;Vivant en couple
+812;55 à 59 ans;Retraités;765400405;Femmes;Vivant en couple
+813;15 à 19 ans;Employés;765400203;Hommes;Ne vivant pas en couple
+814;45 à 49 ans;Retraités;765400104;Femmes;Vivant en couple
+815;85 à 89 ans;Professions intermédiaires;765400106;Hommes;Vivant en couple
+816;45 à 49 ans;Employés;765400303;Femmes;Vivant en couple
+817;5 à 9 ans;Ouvriers;765400502;Hommes;Ne vivant pas en couple
+818;20 à 24 ans;Employés;765400604;Femmes;Vivant en couple
+819;30 à 34 ans;Ouvriers;765400402;Hommes;Ne vivant pas en couple
+820;25 à 29 ans;Cadres et professions intellectuelles supérieures;765400901;Hommes;Ne vivant pas en couple
+821;45 à 49 ans;Employés;765400106;Femmes;Ne vivant pas en couple
+822;40 à 44 ans;Professions intermédiaires;765401005;Hommes;Vivant en couple
+823;85 à 89 ans;Ouvriers;765400303;Femmes;Vivant en couple
+824;35 à 39 ans;Retraités;765400204;Femmes;Vivant en couple
+825;20 à 24 ans;Retraités;765400304;Femmes;Ne vivant pas en couple
+826;45 à 49 ans;Retraités;765401003;Femmes;Ne vivant pas en couple
+827;55 à 59 ans;Employés;765400106;Hommes;Vivant en couple
+828;30 à 34 ans;Professions intermédiaires;765400305;Hommes;Vivant en couple
+829;15 à 19 ans;Artisans. commerçants. chefs d'entreprise;765400502;Hommes;Vivant en couple
+830;40 à 44 ans;Ouvriers;765400902;Hommes;Vivant en couple
+831;45 à 49 ans;Retraités;765400902;Hommes;Vivant en couple
+832;40 à 44 ans;Retraités;765401002;Hommes;Vivant en couple
+833;65 à 69 ans;Ouvriers;765401002;Hommes;Ne vivant pas en couple
+834;5 à 9 ans;Agriculteurs exploitants;765400502;Hommes;Vivant en couple
+835;65 à 69 ans;Retraités;765401003;Femmes;Ne vivant pas en couple
+836;55 à 59 ans;Autres personnes sans activité professionnelle;765400404;Femmes;Vivant en couple
+837;80 à 84 ans;Ouvriers;765400501;Hommes;Ne vivant pas en couple
+838;65 à 69 ans;Retraités;765400501;Femmes;Ne vivant pas en couple
+839;20 à 24 ans;Employés;765400502;Femmes;Vivant en couple
+840;40 à 44 ans;Autres personnes sans activité professionnelle;765400202;Femmes;Ne vivant pas en couple
+841;45 à 49 ans;Autres personnes sans activité professionnelle;765400304;Femmes;Ne vivant pas en couple
+842;25 à 29 ans;Professions intermédiaires;765401002;Hommes;Vivant en couple
+843;Moins de 5 ans;Professions intermédiaires;765400102;Femmes;Ne vivant pas en couple
+844;50 à 54 ans;Ouvriers;765400301;Hommes;Vivant en couple
+845;15 à 19 ans;Professions intermédiaires;765400602;Femmes;Vivant en couple
+846;60 à 64 ans;Professions intermédiaires;765400103;Femmes;Ne vivant pas en couple
+847;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400901;Femmes;Vivant en couple
+848;75 à 79 ans;Retraités;765400106;Femmes;Ne vivant pas en couple
+849;40 à 44 ans;Autres personnes sans activité professionnelle;765401004;Femmes;Vivant en couple
+850;25 à 29 ans;Professions intermédiaires;765400201;Hommes;Ne vivant pas en couple
+851;50 à 54 ans;Retraités;765400204;Hommes;Vivant en couple
+852;30 à 34 ans;Autres personnes sans activité professionnelle;765401002;Femmes;Vivant en couple
+853;Moins de 5 ans;Ouvriers;765401002;Hommes;Ne vivant pas en couple
+854;30 à 34 ans;Employés;765400106;Hommes;Vivant en couple
+855;45 à 49 ans;Professions intermédiaires;765400306;Femmes;Ne vivant pas en couple
+856;5 à 9 ans;Ouvriers;765400106;Hommes;Ne vivant pas en couple
+857;85 à 89 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Ne vivant pas en couple
+858;25 à 29 ans;Professions intermédiaires;765401005;Hommes;Vivant en couple
+859;60 à 64 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Vivant en couple
+860;30 à 34 ans;Retraités;765400501;Femmes;Vivant en couple
+861;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400602;Femmes;Vivant en couple
+862;60 à 64 ans;Cadres et professions intellectuelles supérieures;765400502;Hommes;Vivant en couple
+863;5 à 9 ans;Autres personnes sans activité professionnelle;765401005;Hommes;Vivant en couple
+864;30 à 34 ans;Professions intermédiaires;765401005;Femmes;Vivant en couple
+865;15 à 19 ans;Professions intermédiaires;765400602;Hommes;Ne vivant pas en couple
+866;10 à 14 ans;Employés;765400202;Femmes;Vivant en couple
+867;65 à 69 ans;Autres personnes sans activité professionnelle;765400501;Hommes;Vivant en couple
+868;20 à 24 ans;Ouvriers;765400404;Hommes;Ne vivant pas en couple
+869;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400304;Hommes;Ne vivant pas en couple
+870;20 à 24 ans;Professions intermédiaires;765401002;Femmes;Vivant en couple
+871;40 à 44 ans;Autres personnes sans activité professionnelle;765400106;Femmes;Ne vivant pas en couple
+872;55 à 59 ans;Employés;765400504;Femmes;Vivant en couple
+873;5 à 9 ans;Autres personnes sans activité professionnelle;765401003;Hommes;Vivant en couple
+874;85 à 89 ans;Ouvriers;765400602;Hommes;Ne vivant pas en couple
+875;5 à 9 ans;Employés;765400102;Femmes;Ne vivant pas en couple
+876;75 à 79 ans;Professions intermédiaires;765400204;Hommes;Ne vivant pas en couple
+877;15 à 19 ans;Ouvriers;765400305;Hommes;Ne vivant pas en couple
+878;35 à 39 ans;Cadres et professions intellectuelles supérieures;765400604;Femmes;Ne vivant pas en couple
+879;65 à 69 ans;Employés;765400204;Femmes;Ne vivant pas en couple
+880;40 à 44 ans;Employés;765400602;Femmes;Vivant en couple
+881;80 à 84 ans;Ouvriers;765401002;Femmes;Vivant en couple
+882;60 à 64 ans;Autres personnes sans activité professionnelle;765400105;Hommes;Ne vivant pas en couple
+883;70 à 74 ans;Retraités;765400902;Hommes;Vivant en couple
+884;80 à 84 ans;Employés;765400104;Femmes;Ne vivant pas en couple
+885;10 à 14 ans;Employés;765400604;Femmes;Ne vivant pas en couple
+886;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400602;Femmes;Ne vivant pas en couple
+887;80 à 84 ans;Artisans. commerçants. chefs d'entreprise;765400702;Hommes;Ne vivant pas en couple
+888;Moins de 5 ans;Retraités;765400602;Hommes;Vivant en couple
+889;70 à 74 ans;Retraités;765400303;Hommes;Vivant en couple
+890;Moins de 5 ans;Artisans. commerçants. chefs d'entreprise;765400104;Femmes;Ne vivant pas en couple
+891;Moins de 5 ans;Retraités;765400203;Femmes;Vivant en couple
+892;70 à 74 ans;Retraités;765400404;Femmes;Vivant en couple
+893;45 à 49 ans;Employés;765400403;Hommes;Ne vivant pas en couple
+894;10 à 14 ans;Ouvriers;765400802;Femmes;Vivant en couple
+895;70 à 74 ans;Ouvriers;765400303;Hommes;Ne vivant pas en couple
+896;Moins de 5 ans;Employés;765400602;Femmes;Ne vivant pas en couple
+897;5 à 9 ans;Employés;765400402;Femmes;Vivant en couple
+898;50 à 54 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Vivant en couple
+899;40 à 44 ans;Autres personnes sans activité professionnelle;765401001;Femmes;Vivant en couple
+900;15 à 19 ans;Ouvriers;765400305;Hommes;Ne vivant pas en couple
+901;50 à 54 ans;Cadres et professions intellectuelles supérieures;765400404;Femmes;Vivant en couple
+902;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400404;Hommes;Vivant en couple
+903;20 à 24 ans;Artisans. commerçants. chefs d'entreprise;765400301;Femmes;Vivant en couple
+904;5 à 9 ans;Retraités;765400802;Hommes;Ne vivant pas en couple
+905;20 à 24 ans;Autres personnes sans activité professionnelle;765400601;Hommes;Ne vivant pas en couple
+906;15 à 19 ans;Autres personnes sans activité professionnelle;765400602;Femmes;Vivant en couple
+907;40 à 44 ans;Cadres et professions intellectuelles supérieures;765400402;Hommes;Ne vivant pas en couple
+908;65 à 69 ans;Autres personnes sans activité professionnelle;765401005;Femmes;Ne vivant pas en couple
+909;Moins de 5 ans;Autres personnes sans activité professionnelle;765400102;Femmes;Vivant en couple
+910;20 à 24 ans;Retraités;765400101;Hommes;Ne vivant pas en couple
+911;50 à 54 ans;Employés;765400202;Femmes;Ne vivant pas en couple
+912;80 à 84 ans;Employés;765400901;Femmes;Vivant en couple
+913;40 à 44 ans;Ouvriers;765400502;Femmes;Vivant en couple
+914;55 à 59 ans;Ouvriers;765400104;Hommes;Vivant en couple
+915;55 à 59 ans;Retraités;765400203;Femmes;Ne vivant pas en couple
+916;75 à 79 ans;Employés;765400802;Hommes;Vivant en couple
+917;60 à 64 ans;Retraités;765400204;Femmes;Ne vivant pas en couple
+918;10 à 14 ans;Employés;765400101;Femmes;Vivant en couple
+919;Moins de 5 ans;Employés;765400501;Femmes;Vivant en couple
+920;45 à 49 ans;Autres personnes sans activité professionnelle;765400501;Femmes;Vivant en couple
+921;35 à 39 ans;Retraités;765400601;Femmes;Vivant en couple
+922;25 à 29 ans;Autres personnes sans activité professionnelle;765400305;Femmes;Ne vivant pas en couple
+923;20 à 24 ans;Retraités;765401001;Femmes;Vivant en couple
+924;20 à 24 ans;Ouvriers;765400201;Hommes;Vivant en couple
+925;60 à 64 ans;Retraités;765400203;Hommes;Ne vivant pas en couple
+926;25 à 29 ans;Retraités;765401002;Femmes;Ne vivant pas en couple
+927;70 à 74 ans;Cadres et professions intellectuelles supérieures;765401003;Hommes;Vivant en couple
+928;35 à 39 ans;Ouvriers;765400604;Hommes;Vivant en couple
+929;55 à 59 ans;Employés;765400104;Femmes;Ne vivant pas en couple
+930;75 à 79 ans;Retraités;765400103;Femmes;Vivant en couple
+931;25 à 29 ans;Employés;765400901;Femmes;Vivant en couple
+932;5 à 9 ans;Retraités;765400503;Femmes;Vivant en couple
+933;50 à 54 ans;Autres personnes sans activité professionnelle;765400106;Hommes;Vivant en couple
+934;25 à 29 ans;Retraités;765400105;Hommes;Ne vivant pas en couple
+935;50 à 54 ans;Ouvriers;765400201;Hommes;Vivant en couple
+936;60 à 64 ans;Employés;765400802;Femmes;Ne vivant pas en couple
+937;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400203;Femmes;Ne vivant pas en couple
+938;60 à 64 ans;Autres personnes sans activité professionnelle;765400106;Hommes;Vivant en couple
+939;Moins de 5 ans;Retraités;765401005;Hommes;Ne vivant pas en couple
+940;45 à 49 ans;Professions intermédiaires;765400104;Hommes;Ne vivant pas en couple
+941;10 à 14 ans;Retraités;765401003;Femmes;Vivant en couple
+942;65 à 69 ans;Cadres et professions intellectuelles supérieures;765401001;Hommes;Vivant en couple
+943;45 à 49 ans;Retraités;765400201;Hommes;Vivant en couple
+944;80 à 84 ans;Autres personnes sans activité professionnelle;765400502;Hommes;Ne vivant pas en couple
+945;55 à 59 ans;Cadres et professions intellectuelles supérieures;765401005;Femmes;Ne vivant pas en couple
+946;30 à 34 ans;Retraités;765400304;Hommes;Vivant en couple
+947;50 à 54 ans;Cadres et professions intellectuelles supérieures;765400303;Femmes;Vivant en couple
+948;55 à 59 ans;Ouvriers;765400201;Hommes;Vivant en couple
+949;30 à 34 ans;Cadres et professions intellectuelles supérieures;765400604;Hommes;Ne vivant pas en couple
+950;10 à 14 ans;Retraités;765400203;Femmes;Ne vivant pas en couple
+951;85 à 89 ans;Professions intermédiaires;765400305;Femmes;Vivant en couple
+952;10 à 14 ans;Retraités;765401002;Femmes;Vivant en couple
+953;35 à 39 ans;Professions intermédiaires;765400305;Hommes;Vivant en couple
+954;40 à 44 ans;Autres personnes sans activité professionnelle;765401005;Femmes;Ne vivant pas en couple
+955;45 à 49 ans;Autres personnes sans activité professionnelle;765400404;Hommes;Vivant en couple
+956;5 à 9 ans;Retraités;765400404;Femmes;Vivant en couple
+957;50 à 54 ans;Employés;765400801;Femmes;Vivant en couple
+958;30 à 34 ans;Ouvriers;765400201;Hommes;Ne vivant pas en couple
+959;20 à 24 ans;Autres personnes sans activité professionnelle;765400405;Femmes;Vivant en couple
+960;80 à 84 ans;Ouvriers;765400203;Hommes;Vivant en couple
+961;40 à 44 ans;Autres personnes sans activité professionnelle;765400404;Femmes;Ne vivant pas en couple
+962;20 à 24 ans;Employés;765400502;Femmes;Vivant en couple
+963;10 à 14 ans;Employés;765400504;Femmes;Vivant en couple
+964;25 à 29 ans;Employés;765400604;Femmes;Ne vivant pas en couple
+965;85 à 89 ans;Employés;765400105;Femmes;Vivant en couple
+966;35 à 39 ans;Employés;765400901;Femmes;Ne vivant pas en couple
+967;25 à 29 ans;Retraités;765400503;Femmes;Vivant en couple
+968;15 à 19 ans;Employés;765400405;Hommes;Vivant en couple
+969;50 à 54 ans;Ouvriers;765400404;Hommes;Vivant en couple
+970;35 à 39 ans;Autres personnes sans activité professionnelle;765400104;Femmes;Ne vivant pas en couple
+971;25 à 29 ans;Autres personnes sans activité professionnelle;765400502;Femmes;Vivant en couple
+972;65 à 69 ans;Cadres et professions intellectuelles supérieures;765400104;Hommes;Vivant en couple
+973;15 à 19 ans;Professions intermédiaires;765400503;Femmes;Ne vivant pas en couple
+974;50 à 54 ans;Professions intermédiaires;765400106;Femmes;Vivant en couple
+975;35 à 39 ans;Retraités;765400304;Hommes;Ne vivant pas en couple
+976;20 à 24 ans;Cadres et professions intellectuelles supérieures;765400101;Femmes;Vivant en couple
+977;10 à 14 ans;Retraités;765400202;Femmes;Ne vivant pas en couple
+978;40 à 44 ans;Professions intermédiaires;765400303;Femmes;Ne vivant pas en couple
+979;40 à 44 ans;Employés;765400802;Hommes;Ne vivant pas en couple
+980;20 à 24 ans;Retraités;765400901;Femmes;Vivant en couple
+981;Moins de 5 ans;Retraités;765400106;Femmes;Vivant en couple
+982;40 à 44 ans;Autres personnes sans activité professionnelle;765400503;Femmes;Vivant en couple
+983;35 à 39 ans;Retraités;765400305;Femmes;Ne vivant pas en couple
+984;50 à 54 ans;Ouvriers;765400203;Hommes;Vivant en couple
+985;20 à 24 ans;Employés;765400502;Femmes;Ne vivant pas en couple
+986;55 à 59 ans;Professions intermédiaires;765400303;Hommes;Ne vivant pas en couple
+987;25 à 29 ans;Autres personnes sans activité professionnelle;765400306;Femmes;Vivant en couple
+988;40 à 44 ans;Retraités;765400203;Femmes;Vivant en couple
+989;35 à 39 ans;Professions intermédiaires;765400104;Hommes;Vivant en couple
+990;20 à 24 ans;Ouvriers;765400801;Hommes;Vivant en couple
+991;25 à 29 ans;Ouvriers;765401003;Hommes;Vivant en couple
+992;35 à 39 ans;Employés;765400103;Hommes;Vivant en couple
+993;10 à 14 ans;Autres personnes sans activité professionnelle;765400305;Femmes;Ne vivant pas en couple
+994;70 à 74 ans;Employés;765400201;Femmes;Ne vivant pas en couple
+995;30 à 34 ans;Employés;765400105;Hommes;Vivant en couple
+996;20 à 24 ans;Cadres et professions intellectuelles supérieures;765401001;Femmes;Vivant en couple
+997;10 à 14 ans;Cadres et professions intellectuelles supérieures;765400604;Hommes;Ne vivant pas en couple
+998;35 à 39 ans;Ouvriers;765400902;Hommes;Ne vivant pas en couple
+999;50 à 54 ans;Employés;765400405;Femmes;Ne vivant pas en couple
+1000;35 à 39 ans;Retraités;765400103;Femmes;Ne vivant pas en couple

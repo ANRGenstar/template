@@ -29,10 +29,10 @@ import core.util.excpetion.GSIllegalRangedData;
 import gospl.entity.attribute.GosplAttributeFactory;
 import gospl.entity.attribute.GSEnumAttributeType;
 
-public class GSCBangkok_IS {
+public class GSCBangkok {
 
 	public static String CONF_CLASS_PATH = "src/main/java/bangkok/gospl/data/";
-	public static String CONF_EXPORT = "GSC_Bangkok_IS";
+	public static String CONF_EXPORT = "GSC_Bangkok";
 
 	public static void main(String[] args) throws InvalidFormatException {
 
@@ -189,9 +189,9 @@ public class GSCBangkok_IS {
 				// Setup "EDU" attribute: INDIVIDUAL
 				// --------------------------
 
-				//				indivAttributes.add(attf.createAttribute("education", GSEnumDataType.String, 
-				//						Arrays.asList("GC00", "GC01", "GC02", "GC03", "GC04", "GC05", "GC06"), 
-				//						GSEnumAttributeType.unique));
+				inputAttributes.add(attf.createAttribute("education", GSEnumDataType.String, 
+						Arrays.asList("GC00", "GC01", "GC02", "GC03", "GC04", "GC05", "GC06"), 
+										GSEnumAttributeType.unique));
 
 				// -------------------------
 				// Setup "WRK" attribute: INDIVIDUAL
