@@ -180,7 +180,7 @@ public class NetworkOnPopulation {
 
 		
 		SpinNetwork network = 
-		SpinNetworkFactory.getIntance().generateNetwork(ENetworkEnumGenerator.Regular, localizedPop);
+		SpinNetworkFactory.getInstance().generateNetwork(ENetworkEnumGenerator.Regular, localizedPop);
 		
 		GraphStreamFactory.getIntance().generateGraphStreamGraph(network);
 		Graph gsGraph = GraphStreamFactory.getIntance().getGraphStreamGraph(EGraphStreamNetworkType.spinNetwork);
