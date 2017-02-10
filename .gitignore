@@ -5,3 +5,4 @@ target/*
 .DS_Store
 src/main/java/rouen/spll/output/*
 !src/main/java/rouen/spll/output/package-info.java
+/target/
