@@ -41,7 +41,7 @@ public class IS {
 	final static String report = "PopReport.csv";
 	final static String export = "PopExport.csv";
 	
-	static int targetPopulation = 1000;
+	static int targetPopulation = 100000;
 	final static Path confFile = Paths.get("src/main/java/rouen/gospl/data/GSC_Rouen_IS.xml");
 	
 	public static void main(String[] args) {
