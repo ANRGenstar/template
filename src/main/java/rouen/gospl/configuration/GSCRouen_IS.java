@@ -2,7 +2,6 @@ package rouen.gospl.configuration;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,19 +51,17 @@ public class GSCRouen_IS {
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
 
-		// Make file path absolute
-		Path relativePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
 			// Setup input files' configuration for individual aggregated data
-			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Couple-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("Age & Couple-Tableau 1.csv", 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
-			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe & CSP-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("Age & Sexe & CSP-Tableau 1.csv", 
 					GSSurveyType.ContingencyTable, ';', 2, 1));
-			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("Age & Sexe-Tableau 1.csv", 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
-			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Rouen_iris.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("Rouen_iris.csv", 
 					GSSurveyType.ContingencyTable, ',', 1, 1));
 
 			try {
@@ -185,7 +182,7 @@ public class GSCRouen_IS {
 				gxs.serializeGSConfig(gsdI, CONF_EXPORT);
 				System.out.println("Serialize Genstar input data with:\n"+
 						gsdI.getAttributes().size()+" attributs\n"+
-						gsdI.getSurveyWrapper().size()+" data files");
+						gsdI.getSurveyWrappers().size()+" data files");
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -201,7 +198,7 @@ public class GSCRouen_IS {
 			}
 			System.out.println("Deserialize Genstar data configuration contains:\n"+
 					gcf.getAttributes().size()+" attributs\n"+
-					gcf.getSurveyWrapper().size()+" data files");
+					gcf.getSurveyWrappers().size()+" data files");
 		}
 		
 	}

@@ -59,13 +59,13 @@ public class GSCBangkok {
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
 			// Setup input files' configuration for individual aggregated data
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 DEM-Tableau 1-sans PA.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("BKK 160 NSO10 DEM-Tableau 1-sans PA.csv", 
 					GSSurveyType.ContingencyTable, ';', 1, 3));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 WRK-Tableau 1-sans PA.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("BKK 160 NSO10 WRK-Tableau 1-sans PA.csv", 
 					GSSurveyType.LocalFrequencyTable, ';', 1, 3));
-			//inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("BKK 160 NSO10 EDU-Tableau 1.csv").toString(), 
+			//inputFiles.add(new GSSurveyWrapper("BKK 160 NSO10 EDU-Tableau 1.csv", 
 			//		GSSurveyType.LocalFrequencyTable, ';', 1, 4));
-			inputFiles.add(new GSSurveyWrapper(absolutePath.resolve("Districts-Tableau 1.csv").toString(), 
+			inputFiles.add(new GSSurveyWrapper("Districts-Tableau 1.csv", 
 					GSSurveyType.ContingencyTable, ';', 1, 3));
 
 
@@ -236,7 +236,7 @@ public class GSCBangkok {
 				gxs.serializeGSConfig(gsdI, CONF_EXPORT);
 				System.out.println("Serialize Genstar configuration data with:\n"+
 						gsdI.getAttributes().size()+" attributs\n"+
-						gsdI.getSurveyWrapper().size()+" data files");
+						gsdI.getSurveyWrappers().size()+" data files");
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -252,7 +252,7 @@ public class GSCBangkok {
 			}
 			System.out.println("Deserialize Genstar data configuration contains:\n"+
 					gcf.getAttributes().size()+" attributs\n"+
-					gcf.getSurveyWrapper().size()+" data files");
+					gcf.getSurveyWrappers().size()+" data files");
 		}
 	}
 
