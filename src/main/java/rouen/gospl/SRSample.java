@@ -69,18 +69,12 @@ public class SRSample {
 
 		try {
 			gdf.buildSamples();
-		} catch (final RuntimeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (final IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		} catch (final InvalidSurveyFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		
 		//---------------------------------------//
@@ -89,6 +83,7 @@ public class SRSample {
 
 		// Input sample
 		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> seed = gdf.getRawSamples().iterator().next();
+		
 		
 		// Input control tables (also known as marginals)
 		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> collapsedMarginals = null;

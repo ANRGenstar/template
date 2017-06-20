@@ -2,7 +2,6 @@ package bangkok.spll.configuration;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
@@ -44,11 +43,9 @@ public class GSCBangkok_Localisation {
 		// Setup the factory that build attribute
 		GosplAttributeFactory attf = new GosplAttributeFactory();
 
-		// Make file path absolute
-		Path absolutePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
-		
+	
 		// What to define in this configuration file
-		GSSurveyWrapper populationInput = new GSSurveyWrapper(absolutePath.resolve("PopExport.csv").toString(), 
+		GSSurveyWrapper populationInput = new GSSurveyWrapper("PopExport.csv", 
 					GSSurveyType.Sample, ';', 1, 1);
 		populationInput.setRelativePath(Paths.get(CONF_CLASS_PATH).iterator().next().toAbsolutePath().getParent());
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
