@@ -20,19 +20,17 @@ import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.util.GSPerformanceUtil;
-import gospl.distribution.GosplDistributionBuilder;
+import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
 import spll.datamapper.exception.GSMapperException;
-import spll.entity.GeoEntityFactory;
 import spll.io.SPLGeofileFactory;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPUniformLocalizer;
-import spll.popmapper.constraint.SpatialConstraintMaxNumber;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
 public class LocalisationBangkok {
@@ -53,9 +51,9 @@ public class LocalisationBangkok {
 		GSPerformanceUtil gspu = new GSPerformanceUtil("Localisation de la population de Bangkok");
 		
 		// INPUT POPULATION
-		GosplDistributionBuilder gdb = null;
+		GosplInputDataManager gdb = null;
 		try {
-			gdb = new GosplDistributionBuilder(Paths.get(stringPathToGenstarConfiguration));
+			gdb = new GosplInputDataManager(Paths.get(stringPathToGenstarConfiguration));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -88,7 +86,7 @@ public class LocalisationBangkok {
 
 		SPLVectorFile sfAdmin = null;
 		
-		IGSGeofile rasteFile = null;
+		IGSGeofile<? extends AGeoEntity> geoFile = null;
 		
 		try {
 			sfAdmin = gf.getShapeFile(new File(stringPathToCensusShapefile));
@@ -107,9 +105,9 @@ public class LocalisationBangkok {
 		List<IGSGeofile<? extends AGeoEntity>> endogeneousVarFile = new ArrayList<>();
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
-				rasteFile = gf.getGeofile(new File(path));
+				geoFile = gf.getGeofile(new File(path));
 				System.out.println("");
-				endogeneousVarFile.add(rasteFile);
+				endogeneousVarFile.add(geoFile);
 			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
 				e2.printStackTrace();
 			}
@@ -119,7 +117,7 @@ public class LocalisationBangkok {
 				LocalisationBangkok.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, rasteFile));
+		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, geoFile));
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population

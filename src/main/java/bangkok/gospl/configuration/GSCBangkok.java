@@ -236,7 +236,7 @@ public class GSCBangkok {
 				gxs.serializeGSConfig(gsdI, CONF_EXPORT);
 				System.out.println("Serialize Genstar configuration data with:\n"+
 						gsdI.getAttributes().size()+" attributs\n"+
-						gsdI.getSurveyWrapper().size()+" data files");
+						gsdI.getSurveyWrappers().size()+" data files");
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -252,7 +252,7 @@ public class GSCBangkok {
 			}
 			System.out.println("Deserialize Genstar data configuration contains:\n"+
 					gcf.getAttributes().size()+" attributs\n"+
-					gcf.getSurveyWrapper().size()+" data files");
+					gcf.getSurveyWrappers().size()+" data files");
 		}
 	}
 

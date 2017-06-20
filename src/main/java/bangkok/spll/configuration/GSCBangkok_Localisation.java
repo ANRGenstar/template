@@ -215,7 +215,7 @@ public class GSCBangkok_Localisation {
 			gxs.serializeGSConfig(gsdI, CONF_EXPORT);
 			System.out.println("Serialize Genstar input data with:\n"+
 					gsdI.getAttributes().size()+" attributs\n"+
-					gsdI.getSurveyWrapper().size()+" data files");
+					gsdI.getSurveyWrappers().size()+" data files");
 							
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
