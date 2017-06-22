@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
@@ -38,7 +41,7 @@ public class SRNoSample {
 	
 	final static String ALGO = "IS";
 	
-	static int targetPopulation = 8000000;
+	static int targetPopulation = 80000;
 	final static String attributeNamePopulation = "population";
 	
 	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok.xml");
@@ -128,11 +131,26 @@ public class SRNoSample {
 
 		// MAKE REPORT
 		final GosplSurveyFactory sf = new GosplSurveyFactory(0, ';', 1, 1);
-		final String pathFolder = confFile.getParent().getParent().toString() + File.separator + "output" + File.separator;
+		final String pathFolder = confFile.getParent().getParent().toString() 
+				+ File.separator + "output" + File.separator;
 
 		try {
 			sf.createSummary(new File(pathFolder+export), GSSurveyType.Sample, population);
 			sf.createSummary(new File(pathFolder+report), GSSurveyType.GlobalFrequencyTable, population);
+			Set<APopulationAttribute> popAtt = population.getPopulationAttributes();
+			List<Set<APopulationAttribute>> formats = df.getRawDataTables()
+					.stream().map(matrix -> matrix.getDimensions()
+							.stream().filter(dim -> !dim.isRecordAttribute() 
+									&& popAtt.contains(dim))
+							.collect(Collectors.toSet()))
+					.collect(Collectors.toList());
+			for(Set<APopulationAttribute> format : formats){
+				String name = format.stream().map(dim -> dim.getAttributeName().length() > 2 ?
+							dim.getAttributeName().substring(0, 2) : dim.getAttributeName())
+						.collect(Collectors.joining("x"));
+				sf.createContingencyTable(new File(pathFolder+name+".csv"), 
+						format, population);
+			}
 		} catch (IOException | InvalidSurveyFormatException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
