@@ -20,7 +20,7 @@ import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.util.GSPerformanceUtil;
-import gospl.distribution.GosplDistributionBuilder;
+import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
@@ -68,9 +68,9 @@ public class LocalisationRouen {
 		GSPerformanceUtil gspu = new GSPerformanceUtil("Localisation de la population de Rouen");
 		
 		// INPUT POPULATION
-		GosplDistributionBuilder gdb = null;
+		GosplInputDataManager gdb = null;
 		try {
-			gdb = new GosplDistributionBuilder(Paths.get(stringPathToGenstarConfiguration));
+			gdb = new GosplInputDataManager(Paths.get(stringPathToGenstarConfiguration));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

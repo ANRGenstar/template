@@ -15,8 +15,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarXmlSerializer;
 import core.metamodel.IAttribute;
@@ -26,15 +24,16 @@ import core.metamodel.pop.io.GSSurveyType;
 import core.metamodel.pop.io.GSSurveyWrapper;
 import core.util.data.GSEnumDataType;
 import core.util.excpetion.GSIllegalRangedData;
-import gospl.entity.attribute.GosplAttributeFactory;
 import gospl.entity.attribute.GSEnumAttributeType;
+import gospl.entity.attribute.GosplAttributeFactory;
+import gospl.io.exception.InvalidSurveyFormatException;
 
 public class GSCBangkok {
 
 	public static String CONF_CLASS_PATH = "src/main/java/bangkok/gospl/data/";
 	public static String CONF_EXPORT = "GSC_Bangkok";
 
-	public static void main(String[] args) throws InvalidFormatException {
+	public static void main(String[] args) throws InvalidSurveyFormatException {
 
 		// Setup the serializer that save configuration file
 		GenstarXmlSerializer gxs = null;

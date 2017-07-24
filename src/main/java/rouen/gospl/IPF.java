@@ -12,20 +12,20 @@ import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.metamodel.pop.io.GSSurveyType;
-import gospl.algo.ISyntheticReconstructionAlgo;
-import gospl.algo.ipf.DistributionInferenceIPFAlgo;
-import gospl.algo.sampler.IDistributionSampler;
-import gospl.algo.sampler.ISampler;
-import gospl.algo.sampler.sr.GosplBasicSampler;
-import gospl.distribution.GosplDistributionBuilder;
+import gospl.algo.ipf.SRIPFAlgo;
+import gospl.algo.sr.ISyntheticReconstructionAlgo;
+import gospl.distribution.GosplInputDataManager;
 import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
 import gospl.distribution.matrix.INDimensionalMatrix;
 import gospl.distribution.matrix.coordinate.ACoordinate;
-import gospl.algo.generator.DistributionBasedGenerator;
-import gospl.algo.generator.ISyntheticGosplPopGenerator;
+import gospl.generator.DistributionBasedGenerator;
+import gospl.generator.ISyntheticGosplPopGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
+import gospl.sampler.IDistributionSampler;
+import gospl.sampler.ISampler;
+import gospl.sampler.sr.GosplBasicSampler;
 
 public class IPF {
 
@@ -42,15 +42,15 @@ public class IPF {
 		//------- START TO PROCESS INPUTS -------//
 		//---------------------------------------//
 
-		GosplDistributionBuilder gdf = null;
+		GosplInputDataManager gdf = null;
 		try {
-			gdf = new GosplDistributionBuilder(configurationFile);
+			gdf = new GosplInputDataManager(configurationFile);
 		} catch (final FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
 		try {
-			gdf.buildDistributions();
+			gdf.buildDataTables();
 		} catch (final RuntimeException e) {
 			e.printStackTrace();
 		} catch (final IOException e) {
@@ -83,7 +83,7 @@ public class IPF {
 		// Input control tables (also known as marginals)
 		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> matrix = null;
 		try {
-			matrix = gdf.collapseDistributions();
+			matrix = gdf.collapseDataTablesIntoDistributions();
 		} catch (IllegalDistributionCreation e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -96,7 +96,7 @@ public class IPF {
 		popSize = popSize <= 0 ? matrix.getVal().getValue().intValue() : popSize;
 
 		// Setup IPF with seed, number of maximum fitting iteration, and delta convergence criteria 
-		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new DistributionInferenceIPFAlgo(seed, 1000, Math.pow(10, -2));
+		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new SRIPFAlgo(seed, 1000, Math.pow(10, -2));
 
 		// Build a sample from the IPF process
 		ISampler<ACoordinate<APopulationAttribute, APopulationValue>> sampler = null;
@@ -120,7 +120,7 @@ public class IPF {
 		// Setup survey factory to export output population
 		GosplSurveyFactory gsf = new GosplSurveyFactory();
 		try {
-			gsf.createSurvey(outputPath.toFile(), GSSurveyType.Sample, population);
+			gsf.createSummary(outputPath.toFile(), GSSurveyType.Sample, population);
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -13,20 +13,20 @@ import core.metamodel.pop.APopulationValue;
 import core.metamodel.pop.io.GSSurveyType;
 import core.util.GSPerformanceUtil;
 import gospl.GosplPopulation;
-import gospl.algo.ISyntheticReconstructionAlgo;
-import gospl.algo.generator.DistributionBasedGenerator;
-import gospl.algo.generator.ISyntheticGosplPopGenerator;
-import gospl.algo.is.IndependantHypothesisAlgo;
-import gospl.algo.sampler.IDistributionSampler;
-import gospl.algo.sampler.ISampler;
-import gospl.algo.sampler.sr.GosplBasicSampler;
-import gospl.distribution.GosplDistributionBuilder;
+import gospl.algo.sr.ISyntheticReconstructionAlgo;
+import gospl.algo.sr.is.IndependantHypothesisAlgo;
+import gospl.distribution.GosplInputDataManager;
 import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
 import gospl.distribution.matrix.INDimensionalMatrix;
 import gospl.distribution.matrix.coordinate.ACoordinate;
+import gospl.generator.DistributionBasedGenerator;
+import gospl.generator.ISyntheticGosplPopGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
+import gospl.sampler.IDistributionSampler;
+import gospl.sampler.ISampler;
+import gospl.sampler.sr.GosplBasicSampler;
 
 public class IS {
 
@@ -44,16 +44,16 @@ public class IS {
 		GosplPopulation population = null;
 
 		// INSTANCIATE FACTORY
-		GosplDistributionBuilder df = null;
+		GosplInputDataManager df = null;
 		try {
-			df = new GosplDistributionBuilder(confFile);
+			df = new GosplInputDataManager(confFile);
 		} catch (final FileNotFoundException e) {
 			e.printStackTrace();
 		}
 
 		// RETRIEV INFORMATION FROM DATA IN FORM OF A SET OF JOINT DISTRIBUTIONS
 		try {
-			df.buildDistributions();
+			df.buildDataTables();
 		} catch (final RuntimeException e) {
 			e.printStackTrace();
 		} catch (final IOException e) {
@@ -71,7 +71,7 @@ public class IS {
 		// so we collapse all distribution build from the data
 		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> distribution = null;
 		try {
-			distribution = df.collapseDistributions();
+			distribution = df.collapseDataTablesIntoDistributions();
 		} catch (final IllegalDistributionCreation e1) {
 			e1.printStackTrace();
 		} catch (final IllegalControlTotalException e1) {
@@ -112,8 +112,8 @@ public class IS {
 		final String pathFolder = confFile.getParent().getParent().toString() + File.separator + "output" + File.separator;
 
 		try {
-			sf.createSurvey(new File(pathFolder+export), GSSurveyType.Sample, population);
-			sf.createSurvey(new File(pathFolder+report), GSSurveyType.GlobalFrequencyTable, population);
+			sf.createSummary(new File(pathFolder+export), GSSurveyType.Sample, population);
+			sf.createSummary(new File(pathFolder+report), GSSurveyType.GlobalFrequencyTable, population);
 		} catch (IOException | InvalidSurveyFormatException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
