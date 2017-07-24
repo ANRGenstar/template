@@ -51,7 +51,7 @@ public class LocalisationRouen {
 	//name of the property that contains the id of the census spatial areas in the shapefile
 	static String stringOfCensusIdInShapefile = "CODE_IRIS";
 
-	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/output/GSC_Rouen_Localisation.xml";
+	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/data/GSC_Rouen_Localisation.xml";
 	//name of the property that contains the id of the census spatial areas in the csv file (and population)
 	static String stringOfCensusIdInCSVfile = "iris";
 	//name of the property that define the number of entities per census spatial areas.
@@ -145,13 +145,13 @@ public class LocalisationRouen {
 		densityConstr.setPriority(-1);
 		densityConstr.setIncreaseStep(1.0/100.0);
 		densityConstr.setMaxIncrease(1.0/20.0);
-		localizer.getConstraints().add(densityConstr);
+		localizer.addConstraint(densityConstr);
 		*/
 		SpatialConstraintMaxNumber numberConstr = new SpatialConstraintMaxNumber(sfBuildings.getGeoEntity(), 1.0);
 		numberConstr.setPriority(10);
 		numberConstr.setIncreaseStep(2);
 		numberConstr.setMaxIncrease(60);
-		localizer.getConstraints().add(numberConstr);
+		localizer.addConstraint(numberConstr);
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 

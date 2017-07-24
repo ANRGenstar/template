@@ -86,7 +86,7 @@ public class LocalisationBangkok {
 
 		SPLVectorFile sfAdmin = null;
 		
-		IGSGeofile rasteFile = null;
+		IGSGeofile<? extends AGeoEntity> geoFile = null;
 		
 		try {
 			sfAdmin = gf.getShapeFile(new File(stringPathToCensusShapefile));
@@ -105,9 +105,9 @@ public class LocalisationBangkok {
 		List<IGSGeofile<? extends AGeoEntity>> endogeneousVarFile = new ArrayList<>();
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
-				rasteFile = gf.getGeofile(new File(path));
+				geoFile = gf.getGeofile(new File(path));
 				System.out.println("");
-				endogeneousVarFile.add(rasteFile);
+				endogeneousVarFile.add(geoFile);
 			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
 				e2.printStackTrace();
 			}
@@ -117,7 +117,7 @@ public class LocalisationBangkok {
 				LocalisationBangkok.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, rasteFile));
+		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, geoFile));
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population

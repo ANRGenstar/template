@@ -20,12 +20,12 @@ import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.util.GSPerformanceUtil;
+import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import rouen.spll.LocalisationRouen;
 import spin.SpinPopulation;
 import spin.algo.factory.SpinNetworkFactory;
 import spin.interfaces.ENetworkGenerator;
-import spin.objects.SpinNetwork;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
@@ -71,9 +71,9 @@ public class NetworkOnPopulation {
 		GSPerformanceUtil gspu = new GSPerformanceUtil("Localisation de la population de Rouen");
 		
 		// INPUT POPULATION
-		GosplDistributionBuilder gdb = null;
+		GosplInputDataManager gdb = null;
 		try {
-			gdb = new GosplDistributionBuilder(Paths.get(stringPathToGenstarConfiguration));
+			gdb = new GosplInputDataManager(Paths.get(stringPathToGenstarConfiguration));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -148,13 +148,13 @@ public class NetworkOnPopulation {
 		densityConstr.setPriority(-1);
 		densityConstr.setIncreaseStep(1.0/100.0);
 		densityConstr.setMaxIncrease(1.0/20.0);
-		localizer.getConstraints().add(densityConstr);
+		localizer.addConstraint(densityConstr);
 		*/
 		SpatialConstraintMaxNumber numberConstr = new SpatialConstraintMaxNumber(sfBuildings.getGeoEntity(), 1.0);
 		numberConstr.setPriority(10);
 		numberConstr.setIncreaseStep(2);
 		numberConstr.setMaxIncrease(60);
-		localizer.getConstraints().add(numberConstr);
+		localizer.addConstraint(numberConstr);
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
@@ -175,15 +175,16 @@ public class NetworkOnPopulation {
 		}
 
 		
-		SpinNetwork network = 
-
-		SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
+		SpinPopulation network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
+		
+		/*
 		SpinPopulation spinPop = new SpinPopulation(localizedPop, network);
 
 
 		System.out.println("Density " + StatFactory.getInstance().getDensity());
 		
 		GraphStreamFactory.getIntance().getGraphStreamGraph(EGraphStreamNetwork.spinNetwork).display();
+		*/
 
 	}
 

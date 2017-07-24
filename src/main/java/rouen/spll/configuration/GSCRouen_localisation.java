@@ -2,6 +2,7 @@ package rouen.spll.configuration;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -26,6 +27,8 @@ public class GSCRouen_localisation {
 	public static String CONF_CLASS_PATH = "src/main/java/rouen/gospl/output/";
 	public static String CONF_EXPORT = "GSC_Rouen_Localisation";
 	
+	public static String SAMPLE = "SRNoSample_export.csv";
+	
 	public static void main(String[] args) {
 
 		// Setup the serializer that save configuration file
@@ -39,9 +42,12 @@ public class GSCRouen_localisation {
 
 		// Setup the factory that build attribute
 		GosplAttributeFactory attf = new GosplAttributeFactory();
+
+		// Make file path absolute
+		Path absolutePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
 		
 		// What to define in this configuration file
-		GSSurveyWrapper populationInput = new GSSurveyWrapper("PopExport.csv", 
+		GSSurveyWrapper populationInput = new GSSurveyWrapper(absolutePath.resolve(SAMPLE).toString(), 
 					GSSurveyType.Sample, ';', 1, 1);
 		populationInput.setRelativePath(Paths.get(CONF_CLASS_PATH).iterator().next().toAbsolutePath().getParent());
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
