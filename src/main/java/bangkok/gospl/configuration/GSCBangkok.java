@@ -2,6 +2,7 @@ package bangkok.gospl.configuration;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,8 +15,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarXmlSerializer;
 import core.metamodel.IAttribute;
@@ -27,13 +26,14 @@ import core.util.data.GSEnumDataType;
 import core.util.excpetion.GSIllegalRangedData;
 import gospl.entity.attribute.GSEnumAttributeType;
 import gospl.entity.attribute.GosplAttributeFactory;
+import gospl.io.exception.InvalidSurveyFormatException;
 
 public class GSCBangkok {
 
 	public static String CONF_CLASS_PATH = "src/main/java/bangkok/gospl/data/";
 	public static String CONF_EXPORT = "GSC_Bangkok";
 
-	public static void main(String[] args) throws InvalidFormatException {
+	public static void main(String[] args) throws InvalidSurveyFormatException {
 
 		// Setup the serializer that save configuration file
 		GenstarXmlSerializer gxs = null;
@@ -51,6 +51,9 @@ public class GSCBangkok {
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
+
+		// Make things a bit more abstract
+		Path absolutePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 

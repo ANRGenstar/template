@@ -13,7 +13,6 @@ import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.metamodel.pop.io.GSSurveyType;
-import gospl.GosplPopulation;
 import gospl.algo.ipf.SRIPFAlgo;
 import gospl.algo.sr.ISyntheticReconstructionAlgo;
 import gospl.distribution.GosplInputDataManager;
@@ -97,7 +96,7 @@ public class SRSample {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-
+		
 		// Setup IPF with seed, number of maximum fitting iteration, and delta convergence criteria 
 		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new SRIPFAlgo(seed, 1000, Math.pow(10, -2));
 
@@ -115,7 +114,7 @@ public class SRSample {
 		//----------------------------------------------//
 
 		// Setup the generator using ipf-based sampler
-		ISyntheticGosplPopGenerator<GosplPopulation> generator = new DistributionBasedGenerator(sampler);
+		ISyntheticGosplPopGenerator generator = new DistributionBasedGenerator(sampler);
 
 		// Generate the population
 		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = generator.generate(popSize);

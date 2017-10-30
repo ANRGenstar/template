@@ -181,6 +181,7 @@ public class NetworkOnPopulation {
 		/*
 		SpinPopulation spinPop = new SpinPopulation(localizedPop, network);
 
+
 		System.out.println("Density " + StatFactory.getInstance().getDensity());
 		
 		GraphStreamFactory.getIntance().getGraphStreamGraph(EGraphStreamNetwork.spinNetwork).display();

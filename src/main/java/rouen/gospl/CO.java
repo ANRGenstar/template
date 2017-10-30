@@ -17,7 +17,6 @@ import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.metamodel.pop.io.GSSurveyType;
 import core.util.GSPerformanceUtil;
-import gospl.GosplPopulation;
 import gospl.algo.co.SampleBasedAlgorithm;
 import gospl.algo.co.simannealing.SimulatedAnnealing;
 import gospl.algo.co.tabusearch.TabuSearch;
@@ -31,8 +30,8 @@ import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
 import gospl.sampler.ISampler;
 import gospl.sampler.co.AOptiAlgoSampler;
-import gospl.sampler.co.SampleBasedRandomSampler;
-import gospl.sampler.co.SimulatedAnnealingSampler;
+import gospl.sampler.co.RandomSampler;
+import gospl.sampler.co.SimAnnealingSampler;
 import gospl.sampler.co.TabuSampler;
 import gospl.validation.GosplIndicator;
 import gospl.validation.GosplIndicatorFactory;
@@ -119,14 +118,14 @@ public class CO {
 			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, tabuSampler);
 			break;
 		case "SA":
-			AOptiAlgoSampler<SimulatedAnnealing> simAnnealingSampler = new SimulatedAnnealingSampler();
+			AOptiAlgoSampler<SimulatedAnnealing> simAnnealingSampler = new SimAnnealingSampler();
 			objectives.stream().forEach(obj -> simAnnealingSampler.addObjectives(obj));
 			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, simAnnealingSampler);
 			break;
 		case "HC":
 			break;
 		default:
-			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, new SampleBasedRandomSampler());
+			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, new RandomSampler());
 			break;
 		}
 
@@ -135,7 +134,7 @@ public class CO {
 		//----------------------------------------------//
 
 		// Setup the generator using ipf-based sampler
-		ISyntheticGosplPopGenerator<GosplPopulation> generator = new SampleBasedGenerator(sampler);
+		ISyntheticGosplPopGenerator generator = new SampleBasedGenerator(sampler);
 		
 		gspu.sysoStempMessage("Start generating synthetic population");
 		// Generate the population
