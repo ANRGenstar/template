@@ -2,7 +2,6 @@ package bangkok.gospl.configuration;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,8 +25,8 @@ import core.metamodel.pop.io.GSSurveyType;
 import core.metamodel.pop.io.GSSurveyWrapper;
 import core.util.data.GSEnumDataType;
 import core.util.excpetion.GSIllegalRangedData;
-import gospl.entity.attribute.GosplAttributeFactory;
 import gospl.entity.attribute.GSEnumAttributeType;
+import gospl.entity.attribute.GosplAttributeFactory;
 
 public class GSCBangkok {
 
@@ -46,15 +45,12 @@ public class GSCBangkok {
 		}
 
 		// Setup the factory that build attribute
-		GosplAttributeFactory attf = new GosplAttributeFactory();
+		GosplAttributeFactory attf = GosplAttributeFactory.getFactory();
 
 		// What to define in this configuration file
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
 		Set<APopulationAttribute> inputAttributes = new HashSet<>();
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
-
-		// Make things a bit more abstract
-		Path absolutePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 

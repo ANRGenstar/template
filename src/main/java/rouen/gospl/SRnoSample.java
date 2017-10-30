@@ -13,23 +13,23 @@ import core.metamodel.pop.APopulationValue;
 import core.metamodel.pop.io.GSSurveyType;
 import core.util.GSPerformanceUtil;
 import gospl.GosplPopulation;
-import gospl.algo.ISyntheticReconstructionAlgo;
-import gospl.algo.generator.DistributionBasedGenerator;
-import gospl.algo.generator.ISyntheticGosplPopGenerator;
-import gospl.algo.hs.HierarchicalHypothesisAlgo;
-import gospl.algo.is.IndependantHypothesisAlgo;
-import gospl.algo.sampler.IDistributionSampler;
-import gospl.algo.sampler.IHierarchicalSampler;
-import gospl.algo.sampler.ISampler;
-import gospl.algo.sampler.sr.GosplBasicSampler;
-import gospl.algo.sampler.sr.GosplHierarchicalSampler;
+import gospl.algo.sr.ISyntheticReconstructionAlgo;
+import gospl.algo.sr.hs.HierarchicalHypothesisAlgo;
+import gospl.algo.sr.is.IndependantHypothesisAlgo;
 import gospl.distribution.GosplInputDataManager;
 import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
 import gospl.distribution.matrix.INDimensionalMatrix;
 import gospl.distribution.matrix.coordinate.ACoordinate;
+import gospl.generator.DistributionBasedGenerator;
+import gospl.generator.ISyntheticGosplPopGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
+import gospl.sampler.IDistributionSampler;
+import gospl.sampler.IHierarchicalSampler;
+import gospl.sampler.ISampler;
+import gospl.sampler.sr.GosplBasicSampler;
+import gospl.sampler.sr.GosplHierarchicalSampler;
 import gospl.validation.GosplIndicator;
 import gospl.validation.GosplIndicatorFactory;
 
@@ -123,7 +123,7 @@ public class SRnoSample {
 				new GSPerformanceUtil("Start generating synthetic population of size " + targetPopulation);
 
 		// BUILD THE GENERATOR
-		final ISyntheticGosplPopGenerator ispGenerator = new DistributionBasedGenerator(sampler);
+		final ISyntheticGosplPopGenerator<GosplPopulation> ispGenerator = new DistributionBasedGenerator(sampler);
 
 		// BUILD THE POPULATION
 		try {

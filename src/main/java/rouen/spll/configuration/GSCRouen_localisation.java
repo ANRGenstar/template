@@ -41,7 +41,7 @@ public class GSCRouen_localisation {
 		}
 
 		// Setup the factory that build attribute
-		GosplAttributeFactory attf = new GosplAttributeFactory();
+		GosplAttributeFactory attf = GosplAttributeFactory.getFactory();
 
 		// Make file path absolute
 		Path absolutePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();

@@ -44,7 +44,7 @@ public class GSCRouen {
 		}
 
 		// Setup the factory that build attribute
-		GosplAttributeFactory attf = new GosplAttributeFactory();
+		GosplAttributeFactory attf = GosplAttributeFactory.getFactory();
 
 		// What to define in this configuration file
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();

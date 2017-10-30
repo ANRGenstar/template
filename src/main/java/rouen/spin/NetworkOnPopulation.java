@@ -176,6 +176,7 @@ public class NetworkOnPopulation {
 
 		
 		SpinPopulation network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
+		System.out.println(network.toString());
 		
 		/*
 		SpinPopulation spinPop = new SpinPopulation(localizedPop, network);

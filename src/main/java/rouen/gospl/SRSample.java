@@ -13,20 +13,21 @@ import core.metamodel.pop.APopulationAttribute;
 import core.metamodel.pop.APopulationEntity;
 import core.metamodel.pop.APopulationValue;
 import core.metamodel.pop.io.GSSurveyType;
-import gospl.algo.ISyntheticReconstructionAlgo;
+import gospl.GosplPopulation;
 import gospl.algo.ipf.SRIPFAlgo;
-import gospl.algo.sampler.IDistributionSampler;
-import gospl.algo.sampler.ISampler;
-import gospl.algo.sampler.sr.GosplBasicSampler;
+import gospl.algo.sr.ISyntheticReconstructionAlgo;
 import gospl.distribution.GosplInputDataManager;
 import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
 import gospl.distribution.matrix.INDimensionalMatrix;
 import gospl.distribution.matrix.coordinate.ACoordinate;
-import gospl.algo.generator.DistributionBasedGenerator;
-import gospl.algo.generator.ISyntheticGosplPopGenerator;
+import gospl.generator.DistributionBasedGenerator;
+import gospl.generator.ISyntheticGosplPopGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
+import gospl.sampler.IDistributionSampler;
+import gospl.sampler.ISampler;
+import gospl.sampler.sr.GosplBasicSampler;
 import gospl.validation.GosplIndicator;
 import gospl.validation.GosplIndicatorFactory;
 
@@ -114,7 +115,7 @@ public class SRSample {
 		//----------------------------------------------//
 
 		// Setup the generator using ipf-based sampler
-		ISyntheticGosplPopGenerator generator = new DistributionBasedGenerator(sampler);
+		ISyntheticGosplPopGenerator<GosplPopulation> generator = new DistributionBasedGenerator(sampler);
 
 		// Generate the population
 		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = generator.generate(popSize);
