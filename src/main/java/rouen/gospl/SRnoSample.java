@@ -1,6 +1,5 @@
 package rouen.gospl;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,9 +7,9 @@ import java.util.Arrays;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
-import core.metamodel.pop.APopulationAttribute;
-import core.metamodel.pop.APopulationValue;
-import core.metamodel.pop.io.GSSurveyType;
+import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.io.GSSurveyType;
+import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.GosplPopulation;
 import gospl.algo.sr.ISyntheticReconstructionAlgo;
@@ -52,7 +51,7 @@ public class SRnoSample {
 	final static Path reportPath = Paths.get("src/main/java/rouen/gospl/output/SRNoSample_report.csv");
 	final static Path statPath = Paths.get("src/main/java/rouen/gospl/output/SRNoSample_stat.csv");
 	// Configuration file path
-	final static Path confFile = Paths.get("src/main/java/rouen/gospl/data/GSC_Rouen.xml");
+	final static Path confFile = Paths.get("src/main/java/rouen/gospl/data/rouen_demographics.gns");
 	
 	public static void main(String[] args) {
 
@@ -63,21 +62,15 @@ public class SRnoSample {
 		GosplInputDataManager df = null;
 		try {
 			df = new GosplInputDataManager(confFile);
-		} catch (final FileNotFoundException e) {
+		} catch (final IllegalArgumentException | IOException e) {
 			e.printStackTrace();
 		}
 
 		// RETRIEV INFORMATION FROM DATA IN FORM OF A SET OF JOINT DISTRIBUTIONS
 		try {
 			df.buildDataTables();
-		} catch (final RuntimeException e) {
-			e.printStackTrace();
-		} catch (final IOException e) {
-			e.printStackTrace();
-		} catch (final InvalidSurveyFormatException e) {
-			e.printStackTrace();
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
+		} catch (final RuntimeException | IOException | 
+				InvalidSurveyFormatException | InvalidFormatException e) {
 			e.printStackTrace();
 		}
 
@@ -85,17 +78,15 @@ public class SRnoSample {
 		// Choice is made here to use distribution based generator
 
 		// so we collapse all distribution build from the data
-		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> distribution = null;
+		INDimensionalMatrix<DemographicAttribute<? extends IValue>, IValue, Double> distribution = null;
 		try {
-			distribution = df.collapseDataTablesIntoDistributions();
-		} catch (final IllegalDistributionCreation e1) {
-			e1.printStackTrace();
-		} catch (final IllegalControlTotalException e1) {
+			distribution = df.collapseDataTablesIntoDistribution();
+		} catch (final IllegalDistributionCreation | IllegalControlTotalException e1) {
 			e1.printStackTrace();
 		}
 
 		// BUILD THE SAMPLER WITH THE INFERENCE ALGORITHM
-		ISampler<ACoordinate<APopulationAttribute, APopulationValue>> sampler = null;
+		ISampler<ACoordinate<DemographicAttribute<? extends IValue>, IValue>> sampler = null;
 
 		switch (ALGO) {
 		case "HS":
@@ -123,7 +114,7 @@ public class SRnoSample {
 				new GSPerformanceUtil("Start generating synthetic population of size " + targetPopulation);
 
 		// BUILD THE GENERATOR
-		final ISyntheticGosplPopGenerator<GosplPopulation> ispGenerator = new DistributionBasedGenerator(sampler);
+		final ISyntheticGosplPopGenerator ispGenerator = new DistributionBasedGenerator(sampler);
 
 		// BUILD THE POPULATION
 		try {
@@ -143,10 +134,7 @@ public class SRnoSample {
 			sf.createSummary(reportPath.toFile(), GSSurveyType.GlobalFrequencyTable, population);
 			gif.saveReport(statPath.toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
 					distribution, population), ALGO, population.size());
-		} catch (IOException | InvalidSurveyFormatException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (InvalidFormatException e) {
+		} catch (IOException | InvalidSurveyFormatException | InvalidFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

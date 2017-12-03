@@ -1,67 +1,62 @@
 package rouen.gospl.configuration;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import core.configuration.GenstarConfigurationFile;
-import core.configuration.GenstarXmlSerializer;
-import core.metamodel.IAttribute;
-import core.metamodel.IValue;
-import core.metamodel.pop.APopulationAttribute;
-import core.metamodel.pop.io.GSSurveyType;
-import core.metamodel.pop.io.GSSurveyWrapper;
+import core.configuration.GenstarJsonUtil;
+import core.configuration.dictionary.DemographicDictionary;
+import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.attribute.demographic.DemographicAttributeFactory;
+import core.metamodel.attribute.demographic.MappedDemographicAttribute;
+import core.metamodel.io.GSSurveyType;
+import core.metamodel.io.GSSurveyWrapper;
+import core.metamodel.value.IValue;
+import core.metamodel.value.numeric.IntegerValue;
+import core.metamodel.value.numeric.RangeValue;
+import core.util.data.GSDataParser;
 import core.util.data.GSEnumDataType;
 import core.util.excpetion.GSIllegalRangedData;
-import gospl.entity.attribute.GSEnumAttributeType;
-import gospl.entity.attribute.GosplAttributeFactory;
 
 public class GSCRouen {
 
-	public static String CONF_CLASS_PATH = "src/main/java/rouen/gospl/data/";
-	public static String CONF_EXPORT = "GSC_Rouen";
+	public static String CONF_CLASS_PATH = "src/main/java/rouen/gospl/data";
+	public static String CONF_EXPORT = "rouen_demographics.gns";
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		// Setup the serializer that save configuration file
-		GenstarXmlSerializer gxs = null;
-		try {
-			gxs = new GenstarXmlSerializer();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 		// Setup the factory that build attribute
-		GosplAttributeFactory attf = GosplAttributeFactory.getFactory();
+		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
 
 		// What to define in this configuration file
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
-		Set<APopulationAttribute> inputAttributes = new HashSet<>();
-		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
+		
+		DemographicDictionary<DemographicAttribute<? extends IValue>> dd = new DemographicDictionary<>();
+		DemographicDictionary<MappedDemographicAttribute<? extends IValue, ? extends IValue>> records = new DemographicDictionary<>();
 
+		Path baseDirectory = FileSystems.getDefault().getPath(".");
+		Path relativePath = Paths.get(CONF_CLASS_PATH);
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
 			// Setup input files' configuration for individual aggregated data
-			inputFiles.add(new GSSurveyWrapper("Age & Couple-Tableau 1.csv", 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Couple-Tableau 1.csv"), 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
-			inputFiles.add(new GSSurveyWrapper("Age & Sexe & CSP-Tableau 1.csv", 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe & CSP-Tableau 1.csv"), 
 					GSSurveyType.ContingencyTable, ';', 2, 1));
-			inputFiles.add(new GSSurveyWrapper("Age & Sexe-Tableau 1.csv", 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Age & Sexe-Tableau 1.csv"), 
 					GSSurveyType.ContingencyTable, ';', 1, 1));
-			inputFiles.add(new GSSurveyWrapper("Rouen_iris.csv", 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Rouen_iris.csv"), 
 					GSSurveyType.ContingencyTable, ',', 1, 1));
 
 			try {
@@ -71,89 +66,75 @@ public class GSCRouen {
 				// --------------------------
 
 				// Instantiate a referent attribute
-				APopulationAttribute referentAgeAttribute = attf.createAttribute("Age", GSEnumDataType.Integer, 
-						Arrays.asList("Moins de 5 ans", "5 à 9 ans", "10 à 14 ans", "15 à 19 ans", "20 à 24 ans", 
-								"25 à 29 ans", "30 à 34 ans", "35 à 39 ans", "40 à 44 ans", "45 à 49 ans", 
-								"50 à 54 ans", "55 à 59 ans", "60 à 64 ans", "65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
-								"80 à 84 ans", "85 à 89 ans", "90 à 94 ans", "95 à 99 ans", "100 ans ou plus"), GSEnumAttributeType.range);
-				inputAttributes.add(referentAgeAttribute);		
+				DemographicAttribute<RangeValue> referentAgeAttribute = attf.createRangeAttribute("Age", 
+						List.of("Moins de 5 ans", "5 à 9 ans", "10 à 14 ans", "15 à 19 ans", "20 à 24 ans", 
+						"25 à 29 ans", "30 à 34 ans", "35 à 39 ans", "40 à 44 ans", "45 à 49 ans", 
+						"50 à 54 ans", "55 à 59 ans", "60 à 64 ans", "65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
+						"80 à 84 ans", "85 à 89 ans", "90 à 94 ans", "95 à 99 ans", "100 ans ou plus"));
+				dd.addAttributes(referentAgeAttribute);		
 
 				// Create a mapper
-				Map<Set<String>, Set<String>> mapperA1 = new HashMap<>();
-				mapperA1.put(Stream.of("15 à 19 ans").collect(Collectors.toSet()), 
-						Stream.of("15 à 19 ans").collect(Collectors.toSet()));
-				mapperA1.put(Stream.of("20 à 24 ans").collect(Collectors.toSet()), 
-						Stream.of("20 à 24 ans").collect(Collectors.toSet())); 
-				mapperA1.put(Stream.of("25 à 39 ans").collect(Collectors.toSet()), 
-						Stream.of("25 à 29 ans", "30 à 34 ans", "35 à 39 ans").collect(Collectors.toSet()));
-				mapperA1.put(Stream.of("40 à 54 ans").collect(Collectors.toSet()), 
-						Stream.of("40 à 44 ans", "45 à 49 ans", "50 à 54 ans").collect(Collectors.toSet()));
-				mapperA1.put(Stream.of("55 à 64 ans").collect(Collectors.toSet()),
-						Stream.of("55 à 59 ans", "60 à 64 ans").collect(Collectors.toSet()));
-				mapperA1.put(Stream.of("65 à 79 ans").collect(Collectors.toSet()), 
-						Stream.of("65 à 69 ans", "70 à 74 ans", "75 à 79 ans").collect(Collectors.toSet()));
-				mapperA1.put(Stream.of("80 ans ou plus").collect(Collectors.toCollection(HashSet::new)),
-						Stream.of("80 à 84 ans", "85 à 89 ans", "90 à 94 ans", 
-								"95 à 99 ans", "100 ans ou plus").collect(Collectors.toCollection(HashSet::new)));
+				Map<String, Collection<String>> mapperA1 = Map.ofEntries(
+						Map.entry("15 à 19 ans", Set.of("15 à 19 ans")),
+						Map.entry("20 à 24 ans", Set.of("20 à 24 ans")),
+						Map.entry("25 à 39 ans", Set.of("25 à 29 ans", "30 à 34 ans", "35 à 39 ans")),
+						Map.entry("40 à 54 ans", Set.of("40 à 44 ans", "45 à 49 ans", "50 à 54 ans")),
+						Map.entry("55 à 64 ans", Set.of("55 à 59 ans", "60 à 64 ans")),
+						Map.entry("65 à 79 ans", Set.of("65 à 69 ans", "70 à 74 ans", "75 à 79 ans")),
+						Map.entry("80 ans ou plus", Set.of("80 à 84 ans", "85 à 89 ans", "90 à 94 ans", 
+								"95 à 99 ans", "100 ans ou plus")));
 				// Instantiate an aggregated attribute using previously referent attribute
-				inputAttributes.add(attf.createAttribute("Age_2", GSEnumDataType.Integer,
-						mapperA1.keySet().stream().flatMap(set -> set.stream()).collect(Collectors.toList()), 
-						GSEnumAttributeType.range, referentAgeAttribute, mapperA1));
+				dd.addAttributes(attf.createRangeAggregatedAttribute("Age_2", new GSDataParser()
+						.getRangeTemplate(mapperA1.keySet().stream().collect(Collectors.toList())),
+						referentAgeAttribute, mapperA1));
 
 				// Create another mapper
-				Map<Set<String>, Set<String>> mapperA2 = new HashMap<>();
-				mapperA2.put(Stream.of("15 à 19 ans").collect(Collectors.toSet()), 
-						Stream.of("15 à 19 ans").collect(Collectors.toSet()));
-				mapperA2.put(Stream.of("20 à 24 ans").collect(Collectors.toSet()), 
-						Stream.of("20 à 24 ans").collect(Collectors.toSet()));
-				mapperA2.put(Stream.of("25 à 39 ans").collect(Collectors.toSet()), 
-						Stream.of("25 à 29 ans", "30 à 34 ans", "35 à 39 ans").collect(Collectors.toSet()));
-				mapperA2.put(Stream.of("40 à 54 ans").collect(Collectors.toSet()), 
-						Stream.of("40 à 44 ans", "45 à 49 ans", "50 à 54 ans").collect(Collectors.toSet()));
-				mapperA2.put(Stream.of("55 à 64 ans").collect(Collectors.toSet()),
-						Stream.of("55 à 59 ans", "60 à 64 ans").collect(Collectors.toSet()));
-				mapperA2.put(Stream.of("65 ans ou plus").collect(Collectors.toSet()), 
-						Stream.of("65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
-								"80 à 84 ans", "85 à 89 ans", "90 à 94 ans", "95 à 99 ans", "100 ans ou plus").collect(Collectors.toSet()));
-				inputAttributes.add(attf.createAttribute("Age_3", GSEnumDataType.Integer,
-						mapperA2.keySet().stream().flatMap(set -> set.stream()).collect(Collectors.toList()), 
-						GSEnumAttributeType.range, referentAgeAttribute, mapperA2));		
+				Map<String, Collection<String>> mapperA2 = Map.ofEntries(
+						Map.entry("15 à 19 ans", Set.of("15 à 19 ans")),
+						Map.entry("20 à 24 ans", Set.of("20 à 24 ans")),
+						Map.entry("25 à 39 ans", Set.of("25 à 29 ans", "30 à 34 ans", "35 à 39 ans")),
+						Map.entry("40 à 54 ans", Set.of("40 à 44 ans", "45 à 49 ans", "50 à 54 ans")),
+						Map.entry("55 à 64 ans", Set.of("55 à 59 ans", "60 à 64 ans")),
+						Map.entry("65 ans ou plus", Set.of("65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
+								"80 à 84 ans", "85 à 89 ans", "90 à 94 ans", "95 à 99 ans", "100 ans ou plus")));
+				
+				dd.addAttributes(attf.createRangeAggregatedAttribute("Age_3", new GSDataParser()
+						.getRangeTemplate(mapperA2.keySet().stream().collect(Collectors.toList())),
+						referentAgeAttribute, mapperA2));		
 
 				// --------------------------
 				// Setup "COUPLE" attribute: INDIVIDUAL
 				// --------------------------
 
-				APopulationAttribute attCouple = attf.createAttribute("Couple", GSEnumDataType.String, 
-						Arrays.asList("Vivant en couple", "Ne vivant pas en couple"), 
-						GSEnumAttributeType.unique); 
+				DemographicAttribute<? extends IValue> attCouple = attf.createAttribute("Couple", GSEnumDataType.Nominal, 
+						Arrays.asList("Vivant en couple", "Ne vivant pas en couple")); 
 				// WARNING: special empty value, not to get null empty value
-				// attCouple.setEmptyValue(attCouple.getValue("Ne vivant pas en couple"));
-				inputAttributes.add(attCouple);
+				attCouple.getValueSpace().setEmptyValue("Ne vivant pas en couple");
+				dd.addAttributes(attCouple);
 
 				// -------------------------
 				// Setup "SEXE" attribute: INDIVIDUAL
 				// -------------------------
 
-				APopulationAttribute attSexe = attf.createAttribute("Sexe", GSEnumDataType.String,
-						Arrays.asList("Hommes", "Femmes"), GSEnumAttributeType.unique);
-				inputAttributes.add(attSexe);
+				DemographicAttribute<? extends IValue> attSexe = attf.createAttribute("Sexe", GSEnumDataType.Nominal,
+						Arrays.asList("Hommes", "Femmes"));
+				dd.addAttributes(attSexe);
 
 				// -------------------------
 				// Setup "CSP" attribute: INDIVIDUAL
 				// -------------------------
-				APopulationAttribute attCSP = attf.createAttribute("CSP", GSEnumDataType.String, 
+				DemographicAttribute<? extends IValue> attCSP = attf.createAttribute("CSP", GSEnumDataType.Nominal, 
 						Arrays.asList("Agriculteurs exploitants", "Artisans. commerçants. chefs d'entreprise", 
 								"Cadres et professions intellectuelles supérieures", "Professions intermédiaires", 
-								"Employés", "Ouvriers", "Retraités", "Autres personnes sans activité professionnelle"), 
-						GSEnumAttributeType.unique); 
+								"Employés", "Ouvriers", "Retraités", "Autres personnes sans activité professionnelle")); 
 				// WARNING: special empty value, not to get null empty value
-				attCSP.setEmptyValue(attCSP.getValue("Autres personnes sans activité professionnelle"));
-				inputAttributes.add(attCSP);
+				attCSP.getValueSpace().setEmptyValue("Autres personnes sans activité professionnelle");
+				dd.addAttributes(attCSP);
 				
 				// -------------------------
 				// Setup "IRIS" attribute: INDIVIDUAL
 				// -------------------------
-				APopulationAttribute attIris = attf.createAttribute("iris", GSEnumDataType.String, 
+				DemographicAttribute<? extends IValue> attIris = attf.createAttribute("iris", GSEnumDataType.Nominal, 
 						Arrays.asList("765400602", "765400104","765400306","765400201",
 								"765400601","765400901","765400302","765400604","765400304",
 								"765400305","765400801","765400301","765401004","765401003",
@@ -162,14 +143,12 @@ public class GSCRouen {
 								"765400502","765400106","765400701","765401005","765400204",
 								"765401001","765400405","765400501","765400102","765400503",
 								"765400404","765400105","765401002","765400902","765400403",
-								"765400203","765400101","765400205"), 
-						GSEnumAttributeType.unique); 
+								"765400203","765400101","765400205")); 
+				dd.addAttributes(attIris);
 				
-				APopulationAttribute attIrisRecord = attf.createAttribute("population", GSEnumDataType.Integer, 
-						Arrays.asList("P13_POP"), GSEnumAttributeType.record, attIris, Collections.emptyMap());
-				
-				inputAttributes.add(attIris);
-				inputAttributes.add(attIrisRecord);
+				MappedDemographicAttribute<IntegerValue, ? extends IValue> attIrisRecord = 
+						attf.createIntegerRecordAttribute("P13_POP", attIris);
+				records.addAttributes(attIrisRecord);
 
 			} catch (GSIllegalRangedData e) {
 				// TODO Auto-generated catch block
@@ -180,14 +159,14 @@ public class GSCRouen {
 			// SERIALIZE CONFIGURATION FILES
 			// ------------------------------
 
+			GenstarConfigurationFile gcf = new GenstarConfigurationFile();
+			gcf.setBaseDirectory(baseDirectory);
+			gcf.setSurveyWrappers(inputFiles);
+			gcf.setDemoDictionary(dd);
+			gcf.setRecords(records);
+			
 			try {
-				gxs.setMkdir(Paths.get(CONF_CLASS_PATH).toAbsolutePath());
-				GenstarConfigurationFile gsdI = new GenstarConfigurationFile(inputFiles, inputAttributes, inputKeyMap);
-				gxs.serializeGSConfig(gsdI, CONF_EXPORT);
-				System.out.println("Serialize Genstar input data with:\n"+
-						gsdI.getAttributes().size()+" attributs\n"+
-						gsdI.getSurveyWrappers().size()+" data files");
-
+				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -195,13 +174,14 @@ public class GSCRouen {
 		} else {
 			GenstarConfigurationFile gcf = null;
 			try {
-				gcf = gxs.deserializeGSConfig(Paths.get(args[0].trim()));
-			} catch (FileNotFoundException e) {
+				gcf = new GenstarJsonUtil().unmarshalFromGenstarJson(Paths.get(args[0].trim()), 
+						GenstarConfigurationFile.class);
+			} catch (IllegalArgumentException | IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println("Deserialize Genstar data configuration contains:\n"+
-					gcf.getAttributes().size()+" attributs\n"+
+					gcf.getDemoDictionary().getAttributes().size()+" attributs\n"+
 					gcf.getSurveyWrappers().size()+" data files");
 		}
 		

@@ -1,6 +1,5 @@
 package rouen.gospl;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,10 +11,10 @@ import java.util.stream.Collectors;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.pop.APopulationAttribute;
-import core.metamodel.pop.APopulationEntity;
-import core.metamodel.pop.APopulationValue;
-import core.metamodel.pop.io.GSSurveyType;
+import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.entity.ADemoEntity;
+import core.metamodel.io.GSSurveyType;
+import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.algo.co.SampleBasedAlgorithm;
 import gospl.algo.co.simannealing.SimulatedAnnealing;
@@ -62,36 +61,21 @@ public class CO {
 		GosplInputDataManager gdf = null;
 		try {
 			gdf = new GosplInputDataManager(configurationFile);
-		} catch (final FileNotFoundException e) {
+		} catch (final IllegalArgumentException | IOException e) {
 			e.printStackTrace();
 		}
 
 		try {
 			gdf.buildDataTables();
-		} catch (final RuntimeException e) {
-			e.printStackTrace();
-		} catch (final IOException e) {
-			e.printStackTrace();
-		} catch (final InvalidSurveyFormatException e) {
-			e.printStackTrace();
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
+		} catch (final RuntimeException | IOException 
+				| InvalidSurveyFormatException | InvalidFormatException e) {
 			e.printStackTrace();
 		}
 
 		try {
 			gdf.buildSamples();
-		} catch (final RuntimeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (final IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (final InvalidSurveyFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
+		} catch (final RuntimeException | IOException | 
+				InvalidSurveyFormatException | InvalidFormatException e) {
 			e.printStackTrace();
 		}
 
@@ -100,10 +84,10 @@ public class CO {
 		//---------------------------------------//
 
 		// Build a sampler according to what
-		ISampler<APopulationEntity> sampler = null;
+		ISampler<ADemoEntity> sampler = null;
 		
 		// Retrieve sample to setup the CO sampler
-		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> sample = 
+		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> sample = 
 				gdf.getRawSamples().iterator().next();
 		
 		// Retrieve known objectives from input data
@@ -138,7 +122,7 @@ public class CO {
 		
 		gspu.sysoStempMessage("Start generating synthetic population");
 		// Generate the population
-		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = generator.generate(popSize);
+		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = generator.generate(popSize);
 
 		// Setup survey factory to export output population
 		GosplSurveyFactory gsf = new GosplSurveyFactory();
@@ -150,15 +134,15 @@ public class CO {
 					GSSurveyType.GlobalFrequencyTable, population);
 			
 			// FORMAT Output
-			List<Set<APopulationAttribute>> formats = gdf.getRawDataTables()
-					.stream().map(data -> data.getDimensions().stream().filter(dim -> !dim.isRecordAttribute())
+			List<Set<DemographicAttribute<? extends IValue>>> formats = gdf.getRawDataTables()
+					.stream().map(data -> data.getDimensions().stream()
 							.map(dim -> population.getPopulationAttributes().contains(dim) ? dim : 
 								population.getPopulationAttributes().stream()
 								.filter(dimPop -> dimPop.getReferentAttribute().equals(dim)).findFirst().get())
 							.collect(Collectors.toSet()))
 					.collect(Collectors.toList());
 			// TEST PURPOSE
-			for(Set<APopulationAttribute> format : formats)
+			for(Set<DemographicAttribute<? extends IValue>> format : formats)
 				gsf.createContingencyTable(Paths.get(outputPath.toString(), "tables"+
 						format.stream().map(dim -> dim.getAttributeName().substring(0, 3))
 							.collect(Collectors.joining("X"))+".csv").toFile(), 
@@ -166,21 +150,9 @@ public class CO {
 			
 			gif.saveReport(Paths.get(outputPath.toString(), "outputReport.csv").toFile(), 
 					gif.getReport(Arrays.asList(GosplIndicator.values()), 
-					gdf.collapseDataTablesIntoDistributions(), population), ALGO, population.size());
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidSurveyFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalDistributionCreation e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalControlTotalException e) {
-			// TODO Auto-generated catch block
+					gdf.collapseDataTablesIntoDistribution(), population), ALGO, population.size());
+		} catch (InvalidFormatException | IOException | InvalidSurveyFormatException 
+				| IllegalDistributionCreation | IllegalControlTotalException e) {
 			e.printStackTrace();
 		}
 

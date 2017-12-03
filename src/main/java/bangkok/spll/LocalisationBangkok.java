@@ -1,7 +1,6 @@
 package bangkok.spll;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -14,11 +13,11 @@ import org.geotools.feature.SchemaException;
 import org.opengis.referencing.operation.TransformException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.geo.AGeoEntity;
-import core.metamodel.geo.io.IGSGeofile;
-import core.metamodel.pop.APopulationAttribute;
-import core.metamodel.pop.APopulationEntity;
-import core.metamodel.pop.APopulationValue;
+import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.entity.ADemoEntity;
+import core.metamodel.entity.AGeoEntity;
+import core.metamodel.io.IGSGeofile;
+import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
@@ -26,7 +25,7 @@ import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
 import spll.datamapper.exception.GSMapperException;
-import spll.io.SPLGeofileFactory;
+import spll.io.SPLGeofileBuilder;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
@@ -54,7 +53,7 @@ public class LocalisationBangkok {
 		GosplInputDataManager gdb = null;
 		try {
 			gdb = new GosplInputDataManager(Paths.get(stringPathToGenstarConfiguration));
-		} catch (FileNotFoundException e) {
+		} catch (IllegalArgumentException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
@@ -76,20 +75,17 @@ public class LocalisationBangkok {
 			e.printStackTrace();
 		}
 
-		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = gdb.getRawSamples().iterator().next();
+		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
 				LocalisationBangkok.class.getSimpleName());
-		
-		// IMPORT DATA FILES
-		SPLGeofileFactory gf = new SPLGeofileFactory();
 
 		SPLVectorFile sfAdmin = null;
 		
-		IGSGeofile<? extends AGeoEntity> geoFile = null;
+		IGSGeofile<? extends AGeoEntity<? extends IValue>, IValue> geoFile = null;
 		
 		try {
-			sfAdmin = gf.getShapeFile(new File(stringPathToCensusShapefile));
+			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {
@@ -102,12 +98,10 @@ public class LocalisationBangkok {
 		Collection<String> stringPathToAncilaryGeofiles = new ArrayList<>();
 		stringPathToAncilaryGeofiles.add(stringPathToLandUseGrid);
 
-		List<IGSGeofile<? extends AGeoEntity>> endogeneousVarFile = new ArrayList<>();
+		List<IGSGeofile<? extends AGeoEntity<? extends IValue>, ? extends IValue>> endogeneousVarFile = new ArrayList<>();
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
-				geoFile = gf.getGeofile(new File(path));
-				System.out.println("");
-				endogeneousVarFile.add(geoFile);
+				endogeneousVarFile.add(new SPLGeofileBuilder().setFile(new File(path)).buildGeofile());
 			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
 				e2.printStackTrace();
 			}
@@ -141,7 +135,8 @@ public class LocalisationBangkok {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
 					new LMRegressionOLS(), new SPLUniformNormalizer(0, SPLRasterFile.DEF_NODATA));
 		} catch (IndexOutOfBoundsException | IOException | TransformException | InterruptedException
-				| ExecutionException | IllegalRegressionException | GSMapperException | SchemaException e) {
+				| ExecutionException | IllegalRegressionException | GSMapperException | SchemaException | 
+				IllegalArgumentException | InvalidGeoFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -149,8 +144,9 @@ public class LocalisationBangkok {
 		//localize the population
 		SpllPopulation localizedPop = localizer.localisePopulation();
 		try {
-			new SPLGeofileFactory().createShapeFile(new File(stringPathToPopulationShapefile), localizedPop);
-		} catch (IOException | SchemaException e) {
+			new SPLGeofileBuilder().setFile(new File(stringPathToPopulationShapefile)).setPopulation(localizedPop)
+				.buildShapeFile();
+		} catch (IOException | SchemaException | InvalidGeoFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

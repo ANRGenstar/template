@@ -1,6 +1,5 @@
 package rouen.gospl;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -9,10 +8,10 @@ import java.util.Arrays;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.pop.APopulationAttribute;
-import core.metamodel.pop.APopulationEntity;
-import core.metamodel.pop.APopulationValue;
-import core.metamodel.pop.io.GSSurveyType;
+import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.entity.ADemoEntity;
+import core.metamodel.io.GSSurveyType;
+import core.metamodel.value.IValue;
 import gospl.algo.ipf.SRIPFAlgo;
 import gospl.algo.sr.ISyntheticReconstructionAlgo;
 import gospl.distribution.GosplInputDataManager;
@@ -39,7 +38,7 @@ public class SRSample {
 	final static Path reportPath = Paths.get("src/main/java/rouen/gospl/output/SRSample_report.csv");
 	final static Path statPath = Paths.get("src/main/java/rouen/gospl/output/SRSample_stat.csv");
 	// Setup configuration file
-	final static Path configurationFile = Paths.get("src/main/java/rouen/gospl/data/GSC_Rouen_IPF.xml");
+	final static Path configurationFile = Paths.get("src/main/java/rouen/gospl/data/rouen_demographics_with_sample.gns");
 	
 	public static void main(String[] args) {
 
@@ -50,30 +49,21 @@ public class SRSample {
 		GosplInputDataManager gdf = null;
 		try {
 			gdf = new GosplInputDataManager(configurationFile);
-		} catch (final FileNotFoundException e) {
+		} catch (final IllegalArgumentException | IOException e) {
 			e.printStackTrace();
 		}
 		
 		try {
 			gdf.buildDataTables();
-		} catch (final RuntimeException e) {
-			e.printStackTrace();
-		} catch (final IOException e) {
-			e.printStackTrace();
-		} catch (final InvalidSurveyFormatException e) {
-			e.printStackTrace();
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
+		} catch (final RuntimeException | IOException 
+				| InvalidSurveyFormatException | InvalidFormatException e) {
 			e.printStackTrace();
 		}
 
 		try {
 			gdf.buildSamples();
-		} catch (final IOException e) {
-			throw new RuntimeException(e);
-		} catch (final InvalidSurveyFormatException e) {
-			throw new RuntimeException(e);
-		} catch (InvalidFormatException e) {
+		} catch (final IOException | InvalidSurveyFormatException 
+				| InvalidFormatException e) {
 			throw new RuntimeException(e);
 		}
 		
@@ -82,18 +72,14 @@ public class SRSample {
 		//---------------------------------------//
 
 		// Input sample
-		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> seed = gdf.getRawSamples().iterator().next();
+		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> seed = gdf.getRawSamples().iterator().next();
 		
 		
 		// Input control tables (also known as marginals)
-		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> collapsedMarginals = null;
+		INDimensionalMatrix<DemographicAttribute<? extends IValue>, IValue, Double> collapsedMarginals = null;
 		try {
-			collapsedMarginals = gdf.collapseDataTablesIntoDistributions();
-		} catch (IllegalDistributionCreation e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (IllegalControlTotalException e1) {
-			// TODO Auto-generated catch block
+			collapsedMarginals = gdf.collapseDataTablesIntoDistribution();
+		} catch (IllegalDistributionCreation | IllegalControlTotalException e1) {
 			e1.printStackTrace();
 		}
 		
@@ -101,7 +87,7 @@ public class SRSample {
 		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new SRIPFAlgo(seed, 1000, Math.pow(10, -2));
 
 		// Build a sample from the IPF process
-		ISampler<ACoordinate<APopulationAttribute, APopulationValue>> sampler = null;
+		ISampler<ACoordinate<DemographicAttribute<? extends IValue>, IValue>> sampler = null;
 		try {
 			sampler = ipf.inferSRSampler(collapsedMarginals, new GosplBasicSampler());
 		} catch (IllegalDistributionCreation e) {
@@ -117,7 +103,7 @@ public class SRSample {
 		ISyntheticGosplPopGenerator generator = new DistributionBasedGenerator(sampler);
 
 		// Generate the population
-		IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> population = generator.generate(popSize);
+		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = generator.generate(popSize);
 
 		// Setup survey factory to export output population
 		GosplSurveyFactory gsf = new GosplSurveyFactory();
@@ -127,14 +113,7 @@ public class SRSample {
 			gsf.createSummary(reportPath.toFile(), GSSurveyType.GlobalFrequencyTable, population);
 			gif.saveReport(statPath.toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
 					collapsedMarginals, population), "IPF", population.size());
-		} catch (InvalidFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvalidSurveyFormatException e) {
-			// TODO Auto-generated catch block
+		} catch (InvalidFormatException | IOException | InvalidSurveyFormatException e) {
 			e.printStackTrace();
 		}
 

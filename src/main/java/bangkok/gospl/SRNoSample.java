@@ -1,7 +1,6 @@
 package bangkok.gospl;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,9 +10,9 @@ import java.util.stream.Collectors;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
-import core.metamodel.pop.APopulationAttribute;
-import core.metamodel.pop.APopulationValue;
-import core.metamodel.pop.io.GSSurveyType;
+import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.io.GSSurveyType;
+import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.GosplPopulation;
 import gospl.algo.sr.ISyntheticReconstructionAlgo;
@@ -44,7 +43,7 @@ public class SRNoSample {
 	static int targetPopulation = 80000;
 	final static String attributeNamePopulation = "population";
 	
-	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/GSC_Bangkok.xml");
+	final static Path confFile = Paths.get("src/main/java/bangkok/gospl/data/bangkok_demo.gns");
 	
 	public static void main(String[] args) {
 
@@ -58,7 +57,7 @@ public class SRNoSample {
 		GosplInputDataManager df = null;
 		try {
 			df = new GosplInputDataManager(confFile);
-		} catch (final FileNotFoundException e) {
+		} catch (final IllegalArgumentException | IOException e) {
 			e.printStackTrace();
 		}
 
@@ -82,9 +81,9 @@ public class SRNoSample {
 		gspu.sysoStempMessage("Start collapse input data into n dimensional matrix");
 
 		// so we collapse all distribution build from the data
-		INDimensionalMatrix<APopulationAttribute, APopulationValue, Double> distribution = null;
+		INDimensionalMatrix<DemographicAttribute<? extends IValue>, IValue, Double> distribution = null;
 		try {
-			distribution = df.collapseDataTablesIntoDistributions();
+			distribution = df.collapseDataTablesIntoDistribution();
 		} catch (final IllegalDistributionCreation e1) {
 			e1.printStackTrace();
 		} catch (final IllegalControlTotalException e1) {
@@ -92,7 +91,7 @@ public class SRNoSample {
 		}
 
 		// BUILD THE SAMPLER WITH THE INFERENCE ALGORITHM
-		ISampler<ACoordinate<APopulationAttribute, APopulationValue>> sampler = null;
+		ISampler<ACoordinate<DemographicAttribute<? extends IValue>, IValue>> sampler = null;
 
 		switch (ALGO) {
 		case "HS":
@@ -117,7 +116,8 @@ public class SRNoSample {
 		targetPopulation = targetPopulation <= 0 ? 
 				distribution.getVal(distribution.getDimensions()
 						.stream().filter(dim -> dim.getAttributeName().equals(attributeNamePopulation))
-						.findAny().get().getValues()).getValue().intValue() : targetPopulation;
+						.findAny().get().getValueSpace().getValues()
+						.stream().collect(Collectors.toList())).getValue().intValue() : targetPopulation;
 
 		gspu.sysoStempPerformance("Start generating synthetic population of size " + targetPopulation, 
 				SRNoSample.class.getCanonicalName());
@@ -142,14 +142,13 @@ public class SRNoSample {
 		try {
 			sf.createSummary(new File(pathFolder+export), GSSurveyType.Sample, population);
 			sf.createSummary(new File(pathFolder+report), GSSurveyType.GlobalFrequencyTable, population);
-			Set<APopulationAttribute> popAtt = population.getPopulationAttributes();
-			List<Set<APopulationAttribute>> formats = df.getRawDataTables()
+			Set<DemographicAttribute<? extends IValue>> popAtt = population.getPopulationAttributes();
+			List<Set<DemographicAttribute<? extends IValue>>> formats = df.getRawDataTables()
 					.stream().map(matrix -> matrix.getDimensions()
-							.stream().filter(dim -> !dim.isRecordAttribute() 
-									&& popAtt.contains(dim))
+							.stream().filter(dim -> popAtt.contains(dim))
 							.collect(Collectors.toSet()))
 					.collect(Collectors.toList());
-			for(Set<APopulationAttribute> format : formats){
+			for(Set<DemographicAttribute<? extends IValue>> format : formats){
 				String name = format.stream().map(dim -> dim.getAttributeName().length() > 2 ?
 							dim.getAttributeName().substring(0, 2) : dim.getAttributeName())
 						.collect(Collectors.joining("x"));
