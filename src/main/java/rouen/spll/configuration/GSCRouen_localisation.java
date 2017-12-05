@@ -5,8 +5,7 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
-
-import com.sun.tools.javac.util.List;
+import java.util.List;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
@@ -82,7 +81,7 @@ public class GSCRouen_localisation {
 		
 		GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 		gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
-		gcf.setSurveyWrappers(List.of(populationInput));
+		gcf.setSurveyWrappers(Arrays.asList(populationInput));
 		gcf.setDemoDictionary(dd);
 		gcf.setRecords(records);
 		
