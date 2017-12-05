@@ -127,7 +127,7 @@ public class LocalisationRouenRoads {
 				LocalisationRouenRoads.class.getSimpleName());
 		SPLVectorFile sfRoads2 = null;
 		try { 
-			sfRoads2 = ((SPLVectorFile) sfRoads).applyBuffer(2.0, 10.0, true, "src/main/java/rouen/spll/output/RouenSpll2.shp");
+			sfRoads2 = ((SPLVectorFile) sfRoads).minMaxDistance(2.0, 10.0, true);
 		} catch (IOException | SchemaException | InvalidGeoFormatException e1) {
 			e1.printStackTrace();
 		}

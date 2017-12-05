@@ -10,8 +10,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.sun.tools.javac.util.List;
-
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
 import core.configuration.dictionary.DemographicDictionary;
