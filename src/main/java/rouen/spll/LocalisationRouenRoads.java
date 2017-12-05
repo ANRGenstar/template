@@ -26,6 +26,7 @@ import spll.io.SPLGeofileBuilder;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.constraint.SpatialConstraintMaxDensity;
 
 public class LocalisationRouenRoads {
 
@@ -125,19 +126,14 @@ public class LocalisationRouenRoads {
 
 		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
 				LocalisationRouenRoads.class.getSimpleName());
-		SPLVectorFile sfRoads2 = null;
-		try { 
-			sfRoads2 = ((SPLVectorFile) sfRoads).minMaxDistance(2.0, 10.0, true);
-		} catch (IOException | SchemaException | InvalidGeoFormatException e1) {
-			e1.printStackTrace();
-		}
-	
+		((SPLVectorFile) sfRoads).minMaxDistance(2.0, 10.0, false, gspu);
 		
-		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
+		
+		gspu.sysoStempPerformance("Proxy geometries have been computed", 
 				LocalisationRouenRoads.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfRoads2));
+		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfRoads));
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
@@ -145,6 +141,12 @@ public class LocalisationRouenRoads {
 		localizer.getLocalizationConstraint().setIncreaseStep(100.0);
 		localizer.getLocalizationConstraint().setMaxIncrease(100.0); 
 	
+		SpatialConstraintMaxDensity densityConstr = new SpatialConstraintMaxDensity(sfRoads.getGeoEntity(), 1.0/100.0);
+		densityConstr.setPriority(-1);
+		densityConstr.setIncreaseStep(1.0/100.0);
+		densityConstr.setMaxIncrease(1.0/20.0);
+		localizer.addConstraint(densityConstr);
+		
 		//localize the population
 		SpllPopulation localizedPop = localizer.localisePopulation();
 		
