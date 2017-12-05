@@ -21,10 +21,11 @@ import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
-import rouen.spll.LocalisationRouen;
+import rouen.spll.LocalisationRouenBuildings;
 import spin.SpinPopulation;
 import spin.algo.factory.SpinNetworkFactory;
 import spin.interfaces.ENetworkGenerator;
+import spll.SpllEntity;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
@@ -98,23 +99,23 @@ public class NetworkOnPopulation {
 		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
-				LocalisationRouen.class.getSimpleName());
+				LocalisationRouenBuildings.class.getSimpleName());
 		
 		SPLVectorFile sfAdmin = null;
 		SPLVectorFile sfBuildings = null;
 
 		try {
 			//building shapefile
-			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile));
+			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), null);
 			//Iris shapefile
-			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile));
+			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}
 
-		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouen.class.getSimpleName());
+		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouenBuildings.class.getSimpleName());
 
 		//import the land-use file
 		Collection<String> stringPathToAncilaryGeofiles = new ArrayList<>();
@@ -130,7 +131,7 @@ public class NetworkOnPopulation {
 		}
 		
 		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
-				LocalisationRouen.class.getSimpleName());
+				LocalisationRouenBuildings.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
 		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
@@ -170,7 +171,7 @@ public class NetworkOnPopulation {
 		}
 
 		
-		SpinPopulation network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
+		SpinPopulation<SpllEntity> network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
 		System.out.println(network.toString());
 		
 		/*

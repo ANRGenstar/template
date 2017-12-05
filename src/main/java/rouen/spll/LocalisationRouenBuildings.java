@@ -121,13 +121,12 @@ public class LocalisationRouenBuildings {
 		List<IGSGeofile<? extends AGeoEntity<? extends IValue>, ? extends IValue>> endogeneousVarFile = new ArrayList<>();
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
-				File f = new File(path);
-				
-				endogeneousVarFile.add(new SPLGeofileBuilder().setFile(f).buildGeofile());
+				endogeneousVarFile.add(new SPLGeofileBuilder().setFile(new File(path)).buildGeofile());
 			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
 				e2.printStackTrace();
 			}
 		}
+		
 		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
 				LocalisationRouenBuildings.class.getSimpleName());
 		
@@ -160,6 +159,7 @@ public class LocalisationRouenBuildings {
 				| IllegalArgumentException | InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}
+		
 		//localize the population
 		SpllPopulation localizedPop = localizer.localisePopulation();
 		

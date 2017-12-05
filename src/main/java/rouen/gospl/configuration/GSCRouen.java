@@ -7,9 +7,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import core.configuration.GenstarConfigurationFile;
@@ -67,21 +68,21 @@ public class GSCRouen {
 
 				// Instantiate a referent attribute
 				DemographicAttribute<RangeValue> referentAgeAttribute = attf.createRangeAttribute("Age", 
-						List.of("Moins de 5 ans", "5 à 9 ans", "10 à 14 ans", "15 à 19 ans", "20 à 24 ans", 
+						Arrays.asList("Moins de 5 ans", "5 à 9 ans", "10 à 14 ans", "15 à 19 ans", "20 à 24 ans", 
 						"25 à 29 ans", "30 à 34 ans", "35 à 39 ans", "40 à 44 ans", "45 à 49 ans", 
 						"50 à 54 ans", "55 à 59 ans", "60 à 64 ans", "65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
 						"80 à 84 ans", "85 à 89 ans", "90 à 94 ans", "95 à 99 ans", "100 ans ou plus"));
 				dd.addAttributes(referentAgeAttribute);		
 
 				// Create a mapper
-				Map<String, Collection<String>> mapperA1 = Map.ofEntries(
-						Map.entry("15 à 19 ans", Set.of("15 à 19 ans")),
-						Map.entry("20 à 24 ans", Set.of("20 à 24 ans")),
-						Map.entry("25 à 39 ans", Set.of("25 à 29 ans", "30 à 34 ans", "35 à 39 ans")),
-						Map.entry("40 à 54 ans", Set.of("40 à 44 ans", "45 à 49 ans", "50 à 54 ans")),
-						Map.entry("55 à 64 ans", Set.of("55 à 59 ans", "60 à 64 ans")),
-						Map.entry("65 à 79 ans", Set.of("65 à 69 ans", "70 à 74 ans", "75 à 79 ans")),
-						Map.entry("80 ans ou plus", Set.of("80 à 84 ans", "85 à 89 ans", "90 à 94 ans", 
+				Map<String, Collection<String>> mapperA1 = new LinkedHashMap<>(); 
+				mapperA1.put("15 à 19 ans", new HashSet<>(Arrays.asList("15 à 19 ans")));
+				mapperA1.put("20 à 24 ans", new HashSet<>(Arrays.asList("20 à 24 ans")));
+				mapperA1.put("25 à 39 ans", new HashSet<>(Arrays.asList("25 à 29 ans", "30 à 34 ans", "35 à 39 ans")));
+				mapperA1.put("40 à 54 ans", new HashSet<>(Arrays.asList("40 à 44 ans", "45 à 49 ans", "50 à 54 ans")));
+				mapperA1.put("55 à 64 ans", new HashSet<>(Arrays.asList("55 à 59 ans", "60 à 64 ans")));
+				mapperA1.put("65 à 79 ans", new HashSet<>(Arrays.asList("65 à 69 ans", "70 à 74 ans", "75 à 79 ans")));
+				mapperA1.put("80 ans ou plus", new HashSet<>(Arrays.asList("80 à 84 ans", "85 à 89 ans", "90 à 94 ans", 
 								"95 à 99 ans", "100 ans ou plus")));
 				// Instantiate an aggregated attribute using previously referent attribute
 				dd.addAttributes(attf.createRangeAggregatedAttribute("Age_2", new GSDataParser()
@@ -89,13 +90,13 @@ public class GSCRouen {
 						referentAgeAttribute, mapperA1));
 
 				// Create another mapper
-				Map<String, Collection<String>> mapperA2 = Map.ofEntries(
-						Map.entry("15 à 19 ans", Set.of("15 à 19 ans")),
-						Map.entry("20 à 24 ans", Set.of("20 à 24 ans")),
-						Map.entry("25 à 39 ans", Set.of("25 à 29 ans", "30 à 34 ans", "35 à 39 ans")),
-						Map.entry("40 à 54 ans", Set.of("40 à 44 ans", "45 à 49 ans", "50 à 54 ans")),
-						Map.entry("55 à 64 ans", Set.of("55 à 59 ans", "60 à 64 ans")),
-						Map.entry("65 ans ou plus", Set.of("65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
+				Map<String, Collection<String>> mapperA2 = new LinkedHashMap<>();
+				mapperA2.put("15 à 19 ans", new HashSet<>(Arrays.asList("15 à 19 ans")));
+				mapperA2.put("20 à 24 ans", new HashSet<>(Arrays.asList("20 à 24 ans")));
+				mapperA2.put("25 à 39 ans", new HashSet<>(Arrays.asList("25 à 29 ans", "30 à 34 ans", "35 à 39 ans")));
+				mapperA2.put("40 à 54 ans", new HashSet<>(Arrays.asList("40 à 44 ans", "45 à 49 ans", "50 à 54 ans")));
+				mapperA2.put("55 à 64 ans", new HashSet<>(Arrays.asList("55 à 59 ans", "60 à 64 ans")));
+				mapperA2.put("65 ans ou plus", new HashSet<>(Arrays.asList("65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
 								"80 à 84 ans", "85 à 89 ans", "90 à 94 ans", "95 à 99 ans", "100 ans ou plus")));
 				
 				dd.addAttributes(attf.createRangeAggregatedAttribute("Age_3", new GSDataParser()
