@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -34,7 +35,7 @@ import spll.popmapper.SPUniformLocalizer;
 import spll.popmapper.constraint.SpatialConstraintMaxNumber;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
-public class LocalisationRouen {
+public class LocalisationRouenBuildings {
 
 	//path to the main census shapefile - the entities are generated at this level
 	static String stringPathToCensusShapefile = "src/main/java/rouen/spll/data/shp/Rouen_iris.shp";
@@ -50,7 +51,7 @@ public class LocalisationRouen {
 	//name of the property that contains the id of the census spatial areas in the shapefile
 	static String stringOfCensusIdInShapefile = "CODE_IRIS";
 
-	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/data/GSC_Rouen_Localisation.xml";
+	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/output/rouen_demo_spll.gns";
 	//name of the property that contains the id of the census spatial areas in the csv file (and population)
 	static String stringOfCensusIdInCSVfile = "iris";
 	//name of the property that define the number of entities per census spatial areas.
@@ -91,18 +92,19 @@ public class LocalisationRouen {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
-				LocalisationRouen.class.getSimpleName());
+				LocalisationRouenBuildings.class.getSimpleName());
 
 		SPLVectorFile sfAdmin = null;
 		SPLVectorFile sfBuildings = null;
-
+		
 		try {
 			//building shapefile
-			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), null);
+			
+			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), Arrays.asList("name", "type"), null);
 			//Iris shapefile
 			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
 		} catch (IOException e) {
@@ -110,8 +112,7 @@ public class LocalisationRouen {
 		} catch (InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}
-
-		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouen.class.getSimpleName());
+		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouenBuildings.class.getSimpleName());
 
 		//import the land-use file
 		Collection<String> stringPathToAncilaryGeofiles = new ArrayList<>();
@@ -127,7 +128,7 @@ public class LocalisationRouen {
 		}
 		
 		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
-				LocalisationRouen.class.getSimpleName());
+				LocalisationRouenBuildings.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
 		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
@@ -148,6 +149,7 @@ public class LocalisationRouen {
 		numberConstr.setIncreaseStep(2);
 		numberConstr.setMaxIncrease(60);
 		localizer.addConstraint(numberConstr);
+		
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
@@ -160,6 +162,7 @@ public class LocalisationRouen {
 		
 		//localize the population
 		SpllPopulation localizedPop = localizer.localisePopulation();
+		
 		try {
 			new SPLGeofileBuilder().setFile(new File(stringPathToOutputFile)).setPopulation(localizedPop).buildShapeFile();
 		} catch (IOException | SchemaException | InvalidGeoFormatException e) {
