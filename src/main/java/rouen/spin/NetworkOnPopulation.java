@@ -21,7 +21,7 @@ import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
-import rouen.spll.LocalisationRouen;
+import rouen.spll.LocalisationRouenBuildings;
 import spin.SpinPopulation;
 import spin.algo.factory.SpinNetworkFactory;
 import spin.interfaces.ENetworkGenerator;
@@ -99,7 +99,7 @@ public class NetworkOnPopulation {
 		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
-				LocalisationRouen.class.getSimpleName());
+				LocalisationRouenBuildings.class.getSimpleName());
 		
 		SPLVectorFile sfAdmin = null;
 		SPLVectorFile sfBuildings = null;
@@ -115,7 +115,7 @@ public class NetworkOnPopulation {
 			e.printStackTrace();
 		}
 
-		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouen.class.getSimpleName());
+		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouenBuildings.class.getSimpleName());
 
 		//import the land-use file
 		Collection<String> stringPathToAncilaryGeofiles = new ArrayList<>();
@@ -131,7 +131,7 @@ public class NetworkOnPopulation {
 		}
 		
 		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
-				LocalisationRouen.class.getSimpleName());
+				LocalisationRouenBuildings.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
 		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
