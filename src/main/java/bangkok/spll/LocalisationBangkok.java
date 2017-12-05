@@ -85,7 +85,7 @@ public class LocalisationBangkok {
 		IGSGeofile<? extends AGeoEntity<? extends IValue>, IValue> geoFile = null;
 		
 		try {
-			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile));
+			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {

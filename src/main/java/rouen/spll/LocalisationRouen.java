@@ -102,9 +102,9 @@ public class LocalisationRouen {
 
 		try {
 			//building shapefile
-			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile));
+			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), null);
 			//Iris shapefile
-			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile));
+			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {

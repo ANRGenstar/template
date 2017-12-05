@@ -25,6 +25,7 @@ import rouen.spll.LocalisationRouen;
 import spin.SpinPopulation;
 import spin.algo.factory.SpinNetworkFactory;
 import spin.interfaces.ENetworkGenerator;
+import spll.SpllEntity;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
@@ -105,9 +106,9 @@ public class NetworkOnPopulation {
 
 		try {
 			//building shapefile
-			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile));
+			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), null);
 			//Iris shapefile
-			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile));
+			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {
@@ -170,7 +171,7 @@ public class NetworkOnPopulation {
 		}
 
 		
-		SpinPopulation network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
+		SpinPopulation<SpllEntity> network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
 		System.out.println(network.toString());
 		
 		/*
