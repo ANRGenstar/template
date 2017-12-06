@@ -138,12 +138,7 @@ public class LocalisationRouenBuildings {
 		localizer.setMatcher(sfAdmin, stringOfCensusIdInCSVfile, stringOfCensusIdInShapefile);
 		localizer.getLocalizationConstraint().setIncreaseStep(100.0);
 		localizer.getLocalizationConstraint().setMaxIncrease(100.0); 
-		/*SpatialConstraintMaxDensity densityConstr = new SpatialConstraintMaxDensity(sfBuildings.getGeoEntity(), 1.0/100.0);
-		densityConstr.setPriority(-1);
-		densityConstr.setIncreaseStep(1.0/100.0);
-		densityConstr.setMaxIncrease(1.0/20.0);
-		localizer.addConstraint(densityConstr);
-		*/
+		
 		SpatialConstraintMaxNumber numberConstr = new SpatialConstraintMaxNumber(sfBuildings.getGeoEntity(), 1.0);
 		numberConstr.setPriority(10);
 		numberConstr.setIncreaseStep(2);

@@ -42,7 +42,7 @@ public class LocalisationBangkok {
 
 	static String stringPathToPopulationShapefile = "src/main/java/bangkok/spll/output/spllOutput.shp";
 	
-	static String stringPathToGenstarConfiguration = "src/main/java/bangkok/gospl/output/GSC_Bangkok_Localisation.xml";
+	static String stringPathToGenstarConfiguration = "src/main/java/bangkok/gospl/output/bangkok_demo_spll.gns";
 	
 	
 	public static void main(String[] args) {
