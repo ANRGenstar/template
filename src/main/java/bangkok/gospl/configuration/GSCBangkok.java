@@ -146,7 +146,7 @@ public class GSCBangkok {
 			gcf.setRecords(records);
 			
 			try {
-				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf);
+				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
