@@ -44,7 +44,7 @@ import gospl.validation.GosplIndicatorFactory;
 public class SRnoSample {
 
 	private static final String ALGO = "IS";
-	static int targetPopulation = 100000;
+	static int targetPopulation = 100;
 	
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/rouen/gospl/output/SRNoSample_export.csv"); 
