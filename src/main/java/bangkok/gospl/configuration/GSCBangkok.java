@@ -35,7 +35,7 @@ public class GSCBangkok {
 	public static void main(String[] args) throws InvalidSurveyFormatException {
 
 		// Make file path absolute
-		Path relativePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
+		Path relativePath = Paths.get(CONF_CLASS_PATH);
 		
 		// Setup the factory that build attribute
 		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
@@ -49,13 +49,13 @@ public class GSCBangkok {
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
 			// Setup input files' configuration for individual aggregated data
-			inputFiles.add(new GSSurveyWrapper(Paths.get("BKK 160 NSO10 DEM-Tableau 1-sans PA.csv"), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("BKK 160 NSO10 DEM-Tableau 1.csv"), 
 					GSSurveyType.ContingencyTable, ';', 1, 3));
-			inputFiles.add(new GSSurveyWrapper(Paths.get("BKK 160 NSO10 WRK-Tableau 1-sans PA.csv"), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("BKK 160 NSO10 WRK-Tableau 1.csv"), 
 					GSSurveyType.LocalFrequencyTable, ';', 1, 3));
 			//inputFiles.add(new GSSurveyWrapper("BKK 160 NSO10 EDU-Tableau 1.csv", 
 			//		GSSurveyType.LocalFrequencyTable, ';', 1, 4));
-			inputFiles.add(new GSSurveyWrapper(Paths.get("Districts-Tableau 1.csv"), 
+			inputFiles.add(new GSSurveyWrapper(relativePath.resolve("Districts-Tableau 1.csv"), 
 					GSSurveyType.ContingencyTable, ';', 1, 3));
 
 
@@ -88,7 +88,7 @@ public class GSCBangkok {
 
 				mdd.addAttributes(attf.createNominalAggregatedAttribute("PA", new GSCategoricTemplate(), 
 						(DemographicAttribute<NominalValue>) khwaeng, khwaeng.getValueSpace().getValues().stream().map(IValue::getStringValue)
-						.collect(Collectors.groupingBy(value -> value.substring(0, 3), 
+						.collect(Collectors.groupingBy(value -> value.substring(0, 4), 
 								Collectors.mapping(Function.identity(), Collectors.toCollection(HashSet::new))))));
 
 				// --------------------------

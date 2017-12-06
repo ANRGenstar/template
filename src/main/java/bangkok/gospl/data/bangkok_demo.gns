@@ -1,0 +1,644 @@
+{
+  "DEMOGRAPHIC DICTIONARY" : {
+    "DEMOGRAPHIC DICTIONARY" : {
+      "ATTRIBUTES" : [ {
+        "DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "PAT",
+          "VALUE SPACE" : {
+            "TYPE" : "Nominal",
+            "VALUES" : [ {
+              "INPUT VALUE" : "103501"
+            }, {
+              "INPUT VALUE" : "101104"
+            }, {
+              "INPUT VALUE" : "101702"
+            }, {
+              "INPUT VALUE" : "103703"
+            }, {
+              "INPUT VALUE" : "103202"
+            }, {
+              "INPUT VALUE" : "101904"
+            }, {
+              "INPUT VALUE" : "102303"
+            }, {
+              "INPUT VALUE" : "104603"
+            }, {
+              "INPUT VALUE" : "102210"
+            }, {
+              "INPUT VALUE" : "100112"
+            }, {
+              "INPUT VALUE" : "102901"
+            }, {
+              "INPUT VALUE" : "104102"
+            }, {
+              "INPUT VALUE" : "100302"
+            }, {
+              "INPUT VALUE" : "100601"
+            }, {
+              "INPUT VALUE" : "102004"
+            }, {
+              "INPUT VALUE" : "104902"
+            }, {
+              "INPUT VALUE" : "104401"
+            }, {
+              "INPUT VALUE" : "102206"
+            }, {
+              "INPUT VALUE" : "100803"
+            }, {
+              "INPUT VALUE" : "100108"
+            }, {
+              "INPUT VALUE" : "103201"
+            }, {
+              "INPUT VALUE" : "101501"
+            }, {
+              "INPUT VALUE" : "101105"
+            }, {
+              "INPUT VALUE" : "103702"
+            }, {
+              "INPUT VALUE" : "102302"
+            }, {
+              "INPUT VALUE" : "104604"
+            }, {
+              "INPUT VALUE" : "105001"
+            }, {
+              "INPUT VALUE" : "101905"
+            }, {
+              "INPUT VALUE" : "100101"
+            }, {
+              "INPUT VALUE" : "102803"
+            }, {
+              "INPUT VALUE" : "100206"
+            }, {
+              "INPUT VALUE" : "100303"
+            }, {
+              "INPUT VALUE" : "102601"
+            }, {
+              "INPUT VALUE" : "100109"
+            }, {
+              "INPUT VALUE" : "104701"
+            }, {
+              "INPUT VALUE" : "102504"
+            }, {
+              "INPUT VALUE" : "100804"
+            }, {
+              "INPUT VALUE" : "101102"
+            }, {
+              "INPUT VALUE" : "101401"
+            }, {
+              "INPUT VALUE" : "103903"
+            }, {
+              "INPUT VALUE" : "103103"
+            }, {
+              "INPUT VALUE" : "103701"
+            }, {
+              "INPUT VALUE" : "101506"
+            }, {
+              "INPUT VALUE" : "101902"
+            }, {
+              "INPUT VALUE" : "100110"
+            }, {
+              "INPUT VALUE" : "104605"
+            }, {
+              "INPUT VALUE" : "104201"
+            }, {
+              "INPUT VALUE" : "100106"
+            }, {
+              "INPUT VALUE" : "100502"
+            }, {
+              "INPUT VALUE" : "100203"
+            }, {
+              "INPUT VALUE" : "102503"
+            }, {
+              "INPUT VALUE" : "100308"
+            }, {
+              "INPUT VALUE" : "100801"
+            }, {
+              "INPUT VALUE" : "102107"
+            }, {
+              "INPUT VALUE" : "100405"
+            }, {
+              "INPUT VALUE" : "102802"
+            }, {
+              "INPUT VALUE" : "100704"
+            }, {
+              "INPUT VALUE" : "100608"
+            }, {
+              "INPUT VALUE" : "101103"
+            }, {
+              "INPUT VALUE" : "101701"
+            }, {
+              "INPUT VALUE" : "103102"
+            }, {
+              "INPUT VALUE" : "101903"
+            }, {
+              "INPUT VALUE" : "103005"
+            }, {
+              "INPUT VALUE" : "101507"
+            }, {
+              "INPUT VALUE" : "103401"
+            }, {
+              "INPUT VALUE" : "103902"
+            }, {
+              "INPUT VALUE" : "102009"
+            }, {
+              "INPUT VALUE" : "100301"
+            }, {
+              "INPUT VALUE" : "100111"
+            }, {
+              "INPUT VALUE" : "100107"
+            }, {
+              "INPUT VALUE" : "104202"
+            }, {
+              "INPUT VALUE" : "100204"
+            }, {
+              "INPUT VALUE" : "104501"
+            }, {
+              "INPUT VALUE" : "102502"
+            }, {
+              "INPUT VALUE" : "100802"
+            }, {
+              "INPUT VALUE" : "102801"
+            }, {
+              "INPUT VALUE" : "100508"
+            }, {
+              "INPUT VALUE" : "101302"
+            }, {
+              "INPUT VALUE" : "101504"
+            }, {
+              "INPUT VALUE" : "101601"
+            }, {
+              "INPUT VALUE" : "103101"
+            }, {
+              "INPUT VALUE" : "103004"
+            }, {
+              "INPUT VALUE" : "103303"
+            }, {
+              "INPUT VALUE" : "103602"
+            }, {
+              "INPUT VALUE" : "101803"
+            }, {
+              "INPUT VALUE" : "103901"
+            }, {
+              "INPUT VALUE" : "102105"
+            }, {
+              "INPUT VALUE" : "104801"
+            }, {
+              "INPUT VALUE" : "102501"
+            }, {
+              "INPUT VALUE" : "102202"
+            }, {
+              "INPUT VALUE" : "100201"
+            }, {
+              "INPUT VALUE" : "100403"
+            }, {
+              "INPUT VALUE" : "100104"
+            }, {
+              "INPUT VALUE" : "104001"
+            }, {
+              "INPUT VALUE" : "100702"
+            }, {
+              "INPUT VALUE" : "100306"
+            }, {
+              "INPUT VALUE" : "104203"
+            }, {
+              "INPUT VALUE" : "100905"
+            }, {
+              "INPUT VALUE" : "101101"
+            }, {
+              "INPUT VALUE" : "101602"
+            }, {
+              "INPUT VALUE" : "103003"
+            }, {
+              "INPUT VALUE" : "101303"
+            }, {
+              "INPUT VALUE" : "101804"
+            }, {
+              "INPUT VALUE" : "103302"
+            }, {
+              "INPUT VALUE" : "101901"
+            }, {
+              "INPUT VALUE" : "103504"
+            }, {
+              "INPUT VALUE" : "101505"
+            }, {
+              "INPUT VALUE" : "102007"
+            }, {
+              "INPUT VALUE" : "104802"
+            }, {
+              "INPUT VALUE" : "102201"
+            }, {
+              "INPUT VALUE" : "100202"
+            }, {
+              "INPUT VALUE" : "104301"
+            }, {
+              "INPUT VALUE" : "100404"
+            }, {
+              "INPUT VALUE" : "100105"
+            }, {
+              "INPUT VALUE" : "104002"
+            }, {
+              "INPUT VALUE" : "102209"
+            }, {
+              "INPUT VALUE" : "100703"
+            }, {
+              "INPUT VALUE" : "100307"
+            }, {
+              "INPUT VALUE" : "100805"
+            }, {
+              "INPUT VALUE" : "101203"
+            }, {
+              "INPUT VALUE" : "101001"
+            }, {
+              "INPUT VALUE" : "101801"
+            }, {
+              "INPUT VALUE" : "101502"
+            }, {
+              "INPUT VALUE" : "103002"
+            }, {
+              "INPUT VALUE" : "103301"
+            }, {
+              "INPUT VALUE" : "101106"
+            }, {
+              "INPUT VALUE" : "103802"
+            }, {
+              "INPUT VALUE" : "101704"
+            }, {
+              "INPUT VALUE" : "103503"
+            }, {
+              "INPUT VALUE" : "102402"
+            }, {
+              "INPUT VALUE" : "100102"
+            }, {
+              "INPUT VALUE" : "100304"
+            }, {
+              "INPUT VALUE" : "104003"
+            }, {
+              "INPUT VALUE" : "100401"
+            }, {
+              "INPUT VALUE" : "102208"
+            }, {
+              "INPUT VALUE" : "102701"
+            }, {
+              "INPUT VALUE" : "102006"
+            }, {
+              "INPUT VALUE" : "104601"
+            }, {
+              "INPUT VALUE" : "103502"
+            }, {
+              "INPUT VALUE" : "101301"
+            }, {
+              "INPUT VALUE" : "101002"
+            }, {
+              "INPUT VALUE" : "103001"
+            }, {
+              "INPUT VALUE" : "101503"
+            }, {
+              "INPUT VALUE" : "103203"
+            }, {
+              "INPUT VALUE" : "103704"
+            }, {
+              "INPUT VALUE" : "101204"
+            }, {
+              "INPUT VALUE" : "101802"
+            }, {
+              "INPUT VALUE" : "103801"
+            }, {
+              "INPUT VALUE" : "102401"
+            }, {
+              "INPUT VALUE" : "101907"
+            }, {
+              "INPUT VALUE" : "100103"
+            }, {
+              "INPUT VALUE" : "104004"
+            }, {
+              "INPUT VALUE" : "100305"
+            }, {
+              "INPUT VALUE" : "104101"
+            }, {
+              "INPUT VALUE" : "100701"
+            }, {
+              "INPUT VALUE" : "100402"
+            }, {
+              "INPUT VALUE" : "102207"
+            }, {
+              "INPUT VALUE" : "102005"
+            }, {
+              "INPUT VALUE" : "104901"
+            }, {
+              "INPUT VALUE" : "104602"
+            } ],
+            "categoricTemplate" : {
+              "regex" : [ ]
+            },
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : null
+            }
+          }
+        }
+      }, {
+        "MAPPED DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "PA",
+          "VALUE SPACE" : {
+            "TYPE" : "Nominal",
+            "VALUES" : [ {
+              "INPUT VALUE" : "1050"
+            }, {
+              "INPUT VALUE" : "1030"
+            }, {
+              "INPUT VALUE" : "1042"
+            }, {
+              "INPUT VALUE" : "1010"
+            }, {
+              "INPUT VALUE" : "1022"
+            }, {
+              "INPUT VALUE" : "1034"
+            }, {
+              "INPUT VALUE" : "1002"
+            }, {
+              "INPUT VALUE" : "1046"
+            }, {
+              "INPUT VALUE" : "1014"
+            }, {
+              "INPUT VALUE" : "1026"
+            }, {
+              "INPUT VALUE" : "1038"
+            }, {
+              "INPUT VALUE" : "1006"
+            }, {
+              "INPUT VALUE" : "1018"
+            }, {
+              "INPUT VALUE" : "1041"
+            }, {
+              "INPUT VALUE" : "1021"
+            }, {
+              "INPUT VALUE" : "1033"
+            }, {
+              "INPUT VALUE" : "1045"
+            }, {
+              "INPUT VALUE" : "1001"
+            }, {
+              "INPUT VALUE" : "1013"
+            }, {
+              "INPUT VALUE" : "1025"
+            }, {
+              "INPUT VALUE" : "1037"
+            }, {
+              "INPUT VALUE" : "1005"
+            }, {
+              "INPUT VALUE" : "1049"
+            }, {
+              "INPUT VALUE" : "1017"
+            }, {
+              "INPUT VALUE" : "1029"
+            }, {
+              "INPUT VALUE" : "1009"
+            }, {
+              "INPUT VALUE" : "1040"
+            }, {
+              "INPUT VALUE" : "1020"
+            }, {
+              "INPUT VALUE" : "1032"
+            }, {
+              "INPUT VALUE" : "1044"
+            }, {
+              "INPUT VALUE" : "1012"
+            }, {
+              "INPUT VALUE" : "1024"
+            }, {
+              "INPUT VALUE" : "1036"
+            }, {
+              "INPUT VALUE" : "1048"
+            }, {
+              "INPUT VALUE" : "1004"
+            }, {
+              "INPUT VALUE" : "1016"
+            }, {
+              "INPUT VALUE" : "1028"
+            }, {
+              "INPUT VALUE" : "1008"
+            }, {
+              "INPUT VALUE" : "1031"
+            }, {
+              "INPUT VALUE" : "1043"
+            }, {
+              "INPUT VALUE" : "1011"
+            }, {
+              "INPUT VALUE" : "1023"
+            }, {
+              "INPUT VALUE" : "1035"
+            }, {
+              "INPUT VALUE" : "1047"
+            }, {
+              "INPUT VALUE" : "1003"
+            }, {
+              "INPUT VALUE" : "1015"
+            }, {
+              "INPUT VALUE" : "1027"
+            }, {
+              "INPUT VALUE" : "1039"
+            }, {
+              "INPUT VALUE" : "1007"
+            }, {
+              "INPUT VALUE" : "1019"
+            } ],
+            "categoricTemplate" : {
+              "regex" : [ ]
+            },
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : null
+            }
+          },
+          "REFERENT ATTRIBUTE" : "PAT",
+          "MAPPER" : {
+            "TYPE" : "AGG",
+            "THE MAP" : [ "1050 : 105001", "1030 : 103001; 103003; 103002; 103005; 103004", "1042 : 104201; 104202; 104203", "1010 : 101001; 101002", "1022 : 102209; 102210; 102202; 102201; 102206; 102208; 102207", "1034 : 103401", "1002 : 100201; 100202; 100203; 100204; 100206", "1046 : 104601; 104602; 104605; 104603; 104604", "1014 : 101401", "1026 : 102601", "1038 : 103801; 103802", "1006 : 100608; 100601", "1018 : 101802; 101803; 101804; 101801", "1041 : 104102; 104101", "1021 : 102105; 102107", "1033 : 103302; 103301; 103303", "1045 : 104501", "1001 : 100108; 100109; 100110; 100111; 100112; 100101; 100102; 100103; 100104; 100105; 100106; 100107", "1013 : 101301; 101302; 101303", "1025 : 102501; 102503; 102502; 102504", "1037 : 103702; 103701; 103704; 103703", "1005 : 100508; 100502", "1049 : 104902; 104901", "1017 : 101704; 101701; 101702", "1029 : 102901", "1009 : 100905", "1040 : 104003; 104004; 104001; 104002", "1020 : 102004; 102006; 102005; 102007; 102009", "1032 : 103201; 103203; 103202", "1044 : 104401", "1012 : 101203; 101204", "1024 : 102402; 102401", "1036 : 103602", "1048 : 104801; 104802", "1004 : 100405; 100401; 100402; 100403; 100404", "1016 : 101601; 101602", "1028 : 102803; 102802; 102801", "1008 : 100801; 100802; 100803; 100804; 100805", "1031 : 103102; 103101; 103103", "1043 : 104301", "1011 : 101101; 101102; 101103; 101104; 101105; 101106", "1023 : 102303; 102302", "1035 : 103502; 103501; 103504; 103503", "1047 : 104701", "1003 : 100306; 100307; 100308; 100301; 100302; 100303; 100304; 100305", "1015 : 101505; 101506; 101507; 101501; 101502; 101503; 101504", "1027 : 102701", "1039 : 103903; 103902; 103901", "1007 : 100702; 100703; 100704; 100701", "1019 : 101902; 101901; 101904; 101903; 101905; 101907" ]
+          }
+        }
+      }, {
+        "DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "education",
+          "VALUE SPACE" : {
+            "TYPE" : "Order",
+            "VALUES" : [ {
+              "INPUT VALUE" : "GC00"
+            }, {
+              "INPUT VALUE" : "GC01"
+            }, {
+              "INPUT VALUE" : "GC02"
+            }, {
+              "INPUT VALUE" : "GC03"
+            }, {
+              "INPUT VALUE" : "GC04"
+            }, {
+              "INPUT VALUE" : "GC05"
+            }, {
+              "INPUT VALUE" : "GC06"
+            } ],
+            "categoricTemplate" : {
+              "regex" : [ ]
+            },
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : null
+            }
+          }
+        }
+      }, {
+        "DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "occupation",
+          "VALUE SPACE" : {
+            "TYPE" : "Nominal",
+            "VALUES" : [ {
+              "INPUT VALUE" : "TOCC7"
+            }, {
+              "INPUT VALUE" : "TOCC8"
+            }, {
+              "INPUT VALUE" : "TOCC9"
+            }, {
+              "INPUT VALUE" : "TOCC3"
+            }, {
+              "INPUT VALUE" : "TOCC4"
+            }, {
+              "INPUT VALUE" : "TOCC5"
+            }, {
+              "INPUT VALUE" : "TTOCC"
+            }, {
+              "INPUT VALUE" : "TOCC6"
+            }, {
+              "INPUT VALUE" : "TOCC1"
+            }, {
+              "INPUT VALUE" : "TOCC2"
+            } ],
+            "categoricTemplate" : {
+              "regex" : [ ]
+            },
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : null
+            }
+          }
+        }
+      }, {
+        "DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "tranche age",
+          "VALUE SPACE" : {
+            "TYPE" : "Range",
+            "VALUES" : [ {
+              "INPUT VALUE" : "70-74"
+            }, {
+              "INPUT VALUE" : "25-29"
+            }, {
+              "INPUT VALUE" : "100+"
+            }, {
+              "INPUT VALUE" : "55-59"
+            }, {
+              "INPUT VALUE" : "85-89"
+            }, {
+              "INPUT VALUE" : "20-24"
+            }, {
+              "INPUT VALUE" : "50-54"
+            }, {
+              "INPUT VALUE" : "5-9"
+            }, {
+              "INPUT VALUE" : "80-84"
+            }, {
+              "INPUT VALUE" : "35-39"
+            }, {
+              "INPUT VALUE" : "65-69"
+            }, {
+              "INPUT VALUE" : "95-99"
+            }, {
+              "INPUT VALUE" : "30-34"
+            }, {
+              "INPUT VALUE" : "60-64"
+            }, {
+              "INPUT VALUE" : "15-19"
+            }, {
+              "INPUT VALUE" : "90-94"
+            }, {
+              "INPUT VALUE" : "45-49"
+            }, {
+              "INPUT VALUE" : "75-79"
+            }, {
+              "INPUT VALUE" : "0-4"
+            }, {
+              "INPUT VALUE" : "10-14"
+            }, {
+              "INPUT VALUE" : "40-44"
+            } ],
+            "min" : -2147483648,
+            "max" : 2147483647,
+            "rangeTemplate" : {
+              "numerciMatcher" : "INT_POSITIF_MATCH"
+            },
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : "NaN-NaN"
+            }
+          }
+        }
+      }, {
+        "DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "gender",
+          "VALUE SPACE" : {
+            "TYPE" : "Nominal",
+            "VALUES" : [ {
+              "INPUT VALUE" : "Male"
+            }, {
+              "INPUT VALUE" : "Female"
+            } ],
+            "categoricTemplate" : {
+              "regex" : [ ]
+            },
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : null
+            }
+          }
+        }
+      } ]
+    }
+  },
+  "DEMOGRAPHIC RECORDS" : {
+    "DEMOGRAPHIC DICTIONARY" : {
+      "ATTRIBUTES" : [ {
+        "MAPPED DEMOGRAPHIC ATTRIBUTE" : {
+          "NAME" : "POP",
+          "VALUE SPACE" : {
+            "TYPE" : "Integer",
+            "VALUES" : [ ],
+            "EMPTY VALUE" : {
+              "INPUT VALUE" : "null"
+            },
+            "min" : -2147483648,
+            "max" : 2147483647
+          },
+          "REFERENT ATTRIBUTE" : "PAT",
+          "MAPPER" : {
+            "TYPE" : "REC",
+            "THE MAP" : [ ]
+          }
+        }
+      } ]
+    }
+  },
+  "MAIN DIRECTORY" : ".",
+  "INPUT FILES" : [ {
+    "RELATIVE PATH" : "src/main/java/bangkok/gospl/data/BKK 160 NSO10 DEM-Tableau 1.csv",
+    "SURVEY TYPE" : "ContingencyTable",
+    "SEPARATOR" : ";",
+    "FRI" : 1,
+    "FCI" : 3,
+    "SHEET NB" : 0
+  }, {
+    "RELATIVE PATH" : "src/main/java/bangkok/gospl/data/BKK 160 NSO10 WRK-Tableau 1.csv",
+    "SURVEY TYPE" : "LocalFrequencyTable",
+    "SEPARATOR" : ";",
+    "FRI" : 1,
+    "FCI" : 3,
+    "SHEET NB" : 0
+  }, {
+    "RELATIVE PATH" : "src/main/java/bangkok/gospl/data/Districts-Tableau 1.csv",
+    "SURVEY TYPE" : "ContingencyTable",
+    "SEPARATOR" : ";",
+    "FRI" : 1,
+    "FCI" : 3,
+    "SHEET NB" : 0
+  } ]
+}
