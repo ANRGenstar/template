@@ -130,6 +130,7 @@ public class SRnoSample {
 		final GosplIndicatorFactory gif = GosplIndicatorFactory.getFactory();
 
 		try {
+			outputPath.getParent().toFile().mkdirs();
 			sf.createSummary(outputPath.toFile(), GSSurveyType.Sample, population);
 			sf.createSummary(reportPath.toFile(), GSSurveyType.GlobalFrequencyTable, population);
 			gif.saveReport(statPath.toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
