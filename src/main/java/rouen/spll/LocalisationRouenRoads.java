@@ -124,9 +124,7 @@ public class LocalisationRouenRoads {
 		
 
 
-		gspu.sysoStempPerformance("GIS data have been import to process population localization", 
-				LocalisationRouenRoads.class.getSimpleName());
-		((SPLVectorFile) sfRoads).minMaxDistance(2.0, 10.0, false, gspu);
+		((SPLVectorFile) sfRoads).minMaxDistance(2.0, 10.0, false);
 		
 		
 		gspu.sysoStempPerformance("Proxy geometries have been computed", 
