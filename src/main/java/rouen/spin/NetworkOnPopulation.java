@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -19,11 +20,16 @@ import core.metamodel.entity.AGeoEntity;
 import core.metamodel.io.IGSGeofile;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
+import gospl.GosplEntity;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import rouen.spll.LocalisationRouenBuildings;
+import rouen.spll.LocalisationRouenRoads;
 import spin.SpinPopulation;
 import spin.algo.factory.SpinNetworkFactory;
+import spin.algo.generator.SpinPopulationGenerator;
+import spin.algo.generator.network.CompleteNetworkGenerator;
+import spin.algo.generator.network.RandomNetworkGenerator;
 import spin.interfaces.ENetworkGenerator;
 import spll.SpllEntity;
 import spll.SpllPopulation;
@@ -36,10 +42,12 @@ import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.constraint.SpatialConstraintMaxDensity;
 import spll.popmapper.constraint.SpatialConstraintMaxNumber;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
 public class NetworkOnPopulation {
+
 	//path to the main census shapefile - the entities are generated at this level
 	static String stringPathToCensusShapefile = "src/main/java/rouen/spll/data/shp/Rouen_iris.shp";
 
@@ -54,7 +62,7 @@ public class NetworkOnPopulation {
 	//name of the property that contains the id of the census spatial areas in the shapefile
 	static String stringOfCensusIdInShapefile = "CODE_IRIS";
 
-	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/output/GSC_Rouen_Localisation.xml";
+	static String stringPathToGenstarConfiguration = "src/main/java/rouen/gospl/output/rouen_demo_spll.gns";
 	//name of the property that contains the id of the census spatial areas in the csv file (and population)
 	static String stringOfCensusIdInCSVfile = "iris";
 	//name of the property that define the number of entities per census spatial areas.
@@ -95,18 +103,19 @@ public class NetworkOnPopulation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
 				LocalisationRouenBuildings.class.getSimpleName());
-		
+
 		SPLVectorFile sfAdmin = null;
 		SPLVectorFile sfBuildings = null;
-
+		
 		try {
 			//building shapefile
-			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), null);
+			
+			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), Arrays.asList("name", "type"), null);
 			//Iris shapefile
 			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
 		} catch (IOException e) {
@@ -114,7 +123,6 @@ public class NetworkOnPopulation {
 		} catch (InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}
-
 		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouenBuildings.class.getSimpleName());
 
 		//import the land-use file
@@ -141,48 +149,38 @@ public class NetworkOnPopulation {
 		localizer.setMatcher(sfAdmin, stringOfCensusIdInCSVfile, stringOfCensusIdInShapefile);
 		localizer.getLocalizationConstraint().setIncreaseStep(100.0);
 		localizer.getLocalizationConstraint().setMaxIncrease(100.0); 
-		/*SpatialConstraintMaxDensity densityConstr = new SpatialConstraintMaxDensity(sfBuildings.getGeoEntity(), 1.0/100.0);
-		densityConstr.setPriority(-1);
-		densityConstr.setIncreaseStep(1.0/100.0);
-		densityConstr.setMaxIncrease(1.0/20.0);
-		localizer.addConstraint(densityConstr);
-		*/
+		
 		SpatialConstraintMaxNumber numberConstr = new SpatialConstraintMaxNumber(sfBuildings.getGeoEntity(), 1.0);
 		numberConstr.setPriority(10);
 		numberConstr.setIncreaseStep(2);
 		numberConstr.setMaxIncrease(60);
 		localizer.addConstraint(numberConstr);
+		
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
 					new LMRegressionOLS(), new SPLUniformNormalizer(0, SPLRasterFile.DEF_NODATA));
 		} catch (IndexOutOfBoundsException | IOException | TransformException | InterruptedException
-				| ExecutionException | IllegalRegressionException | GSMapperException 
-				| SchemaException | IllegalArgumentException | InvalidGeoFormatException e) {
+				| ExecutionException | IllegalRegressionException | GSMapperException | SchemaException 
+				| IllegalArgumentException | InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}
 		
 		//localize the population
 		SpllPopulation localizedPop = localizer.localisePopulation();
+		
 		try {
 			new SPLGeofileBuilder().setFile(new File(stringPathToOutputFile)).setPopulation(localizedPop).buildShapeFile();
 		} catch (IOException | SchemaException | InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}
-
+	
+		// Create SpinPopulation
+		SpinPopulationGenerator spinPopGen = new SpinPopulationGenerator(
+				new RandomNetworkGenerator<SpllEntity>(0.0001));
+		SpinPopulation<SpllEntity> networkedPop = spinPopGen.generate(localizedPop);
+	
+		System.out.println(networkedPop.toString());
 		
-		SpinPopulation<SpllEntity> network = SpinNetworkFactory.getInstance().generateNetwork(ENetworkGenerator.Regular, localizedPop);
-		System.out.println(network.toString());
-		
-		/*
-		SpinPopulation spinPop = new SpinPopulation(localizedPop, network);
-
-
-		System.out.println("Density " + StatFactory.getInstance().getDensity());
-		
-		GraphStreamFactory.getIntance().getGraphStreamGraph(EGraphStreamNetwork.spinNetwork).display();
-		*/
-
 	}
-
 }
