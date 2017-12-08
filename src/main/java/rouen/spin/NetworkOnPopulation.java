@@ -20,17 +20,13 @@ import core.metamodel.entity.AGeoEntity;
 import core.metamodel.io.IGSGeofile;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
-import gospl.GosplEntity;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import rouen.spll.LocalisationRouenBuildings;
-import rouen.spll.LocalisationRouenRoads;
 import spin.SpinPopulation;
-import spin.algo.factory.SpinNetworkFactory;
 import spin.algo.generator.SpinPopulationGenerator;
-import spin.algo.generator.network.CompleteNetworkGenerator;
 import spin.algo.generator.network.RandomNetworkGenerator;
-import spin.interfaces.ENetworkGenerator;
+import spin.algo.generator.network.SpatialNetworkGenerator;
 import spll.SpllEntity;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
@@ -42,7 +38,6 @@ import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPUniformLocalizer;
-import spll.popmapper.constraint.SpatialConstraintMaxDensity;
 import spll.popmapper.constraint.SpatialConstraintMaxNumber;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
@@ -175,12 +170,22 @@ public class NetworkOnPopulation {
 			e.printStackTrace();
 		}
 	
-		// Create SpinPopulation
+		// Create SpinPopulation with RandomNetworkGenerator
+		System.out.println("START of the random network generation");
 		SpinPopulationGenerator spinPopGen = new SpinPopulationGenerator(
 				new RandomNetworkGenerator<SpllEntity>(0.0001));
-		SpinPopulation<SpllEntity> networkedPop = spinPopGen.generate(localizedPop);
+		SpinPopulation<? extends ADemoEntity> networkedPop = spinPopGen.generate(localizedPop);
 	
 		System.out.println(networkedPop.toString());
+
+		// Create SpinPopulation with SpatialNetworkGenerator	
+		System.out.println("START of the spatial network generation");	
+		System.out.println("------------ until now, does not work on the dataset, because of a memory lack ...");
 		
+		SpinPopulationGenerator spinPopGenLoc = new SpinPopulationGenerator(
+				new SpatialNetworkGenerator<SpllEntity>(100));
+		SpinPopulation<? extends ADemoEntity> networkedPopLoc = spinPopGenLoc.generate(localizedPop);
+	
+		System.out.println(networkedPopLoc.toString());
 	}
 }
