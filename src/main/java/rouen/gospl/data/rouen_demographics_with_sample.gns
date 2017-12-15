@@ -7,6 +7,40 @@
           "VALUE SPACE" : {
             "TYPE" : "Range",
             "VALUES" : [ {
+              "INPUT VALUE" : "65 à 69 ans"
+            }, {
+              "INPUT VALUE" : "20 à 24 ans"
+            }, {
+              "INPUT VALUE" : "25 à 29 ans"
+            }, {
+              "INPUT VALUE" : "60 à 64 ans"
+            }, {
+              "INPUT VALUE" : "5 à 9 ans"
+            }, {
+              "INPUT VALUE" : "Moins de 5 ans"
+            }, {
+              "INPUT VALUE" : "55 à 59 ans"
+            }, {
+              "INPUT VALUE" : "90 à 94 ans"
+            }, {
+              "INPUT VALUE" : "95 à 99 ans"
+            }, {
+              "INPUT VALUE" : "10 à 14 ans"
+            }, {
+              "INPUT VALUE" : "15 à 19 ans"
+            }, {
+              "INPUT VALUE" : "50 à 54 ans"
+            }, {
+              "INPUT VALUE" : "80 à 84 ans"
+            }, {
+              "INPUT VALUE" : "85 à 89 ans"
+            }, {
+              "INPUT VALUE" : "45 à 49 ans"
+            }, {
+              "INPUT VALUE" : "40 à 44 ans"
+            }, {
+              "INPUT VALUE" : "100 ans ou plus"
+            }, {
               "INPUT VALUE" : "70 à 74 ans"
             }, {
               "INPUT VALUE" : "75 à 79 ans"
@@ -14,40 +48,6 @@
               "INPUT VALUE" : "30 à 34 ans"
             }, {
               "INPUT VALUE" : "35 à 39 ans"
-            }, {
-              "INPUT VALUE" : "100 ans ou plus"
-            }, {
-              "INPUT VALUE" : "65 à 69 ans"
-            }, {
-              "INPUT VALUE" : "25 à 29 ans"
-            }, {
-              "INPUT VALUE" : "60 à 64 ans"
-            }, {
-              "INPUT VALUE" : "20 à 24 ans"
-            }, {
-              "INPUT VALUE" : "55 à 59 ans"
-            }, {
-              "INPUT VALUE" : "90 à 94 ans"
-            }, {
-              "INPUT VALUE" : "5 à 9 ans"
-            }, {
-              "INPUT VALUE" : "95 à 99 ans"
-            }, {
-              "INPUT VALUE" : "15 à 19 ans"
-            }, {
-              "INPUT VALUE" : "50 à 54 ans"
-            }, {
-              "INPUT VALUE" : "10 à 14 ans"
-            }, {
-              "INPUT VALUE" : "45 à 49 ans"
-            }, {
-              "INPUT VALUE" : "80 à 84 ans"
-            }, {
-              "INPUT VALUE" : "85 à 89 ans"
-            }, {
-              "INPUT VALUE" : "Moins de 5 ans"
-            }, {
-              "INPUT VALUE" : "40 à 44 ans"
             } ],
             "min" : -2147483648,
             "max" : 2147483647,
@@ -65,15 +65,15 @@
           "VALUE SPACE" : {
             "TYPE" : "Range",
             "VALUES" : [ {
-              "INPUT VALUE" : "15 à 19 ans"
-            }, {
-              "INPUT VALUE" : "65 à 79 ans"
+              "INPUT VALUE" : "25 à 39 ans"
             }, {
               "INPUT VALUE" : "40 à 54 ans"
             }, {
-              "INPUT VALUE" : "25 à 39 ans"
-            }, {
               "INPUT VALUE" : "80 ans ou plus"
+            }, {
+              "INPUT VALUE" : "65 à 79 ans"
+            }, {
+              "INPUT VALUE" : "15 à 19 ans"
             }, {
               "INPUT VALUE" : "55 à 64 ans"
             }, {
@@ -91,7 +91,7 @@
           "REFERENT ATTRIBUTE" : "Age",
           "MAPPER" : {
             "TYPE" : "AGG",
-            "THE MAP" : [ "15 à 19 ans : 15 à 19 ans", "65 à 79 ans : 70 à 74 ans; 75 à 79 ans; 65 à 69 ans", "40 à 54 ans : 45 à 49 ans; 40 à 44 ans; 50 à 54 ans", "25 à 39 ans : 25 à 29 ans; 35 à 39 ans; 30 à 34 ans", "80 ans ou plus : 80 à 84 ans; 90 à 94 ans; 100 ans ou plus; 85 à 89 ans; 95 à 99 ans", "55 à 64 ans : 60 à 64 ans; 55 à 59 ans", "20 à 24 ans : 20 à 24 ans" ]
+            "THE MAP" : [ "25 à 39 ans : 35 à 39 ans; 25 à 29 ans; 30 à 34 ans", "40 à 54 ans : 50 à 54 ans; 40 à 44 ans; 45 à 49 ans", "80 ans ou plus : 85 à 89 ans; 90 à 94 ans; 100 ans ou plus; 95 à 99 ans; 80 à 84 ans", "65 à 79 ans : 70 à 74 ans; 75 à 79 ans; 65 à 69 ans", "15 à 19 ans : 15 à 19 ans", "55 à 64 ans : 55 à 59 ans; 60 à 64 ans", "20 à 24 ans : 20 à 24 ans" ]
           }
         }
       }, {
@@ -100,15 +100,15 @@
           "VALUE SPACE" : {
             "TYPE" : "Range",
             "VALUES" : [ {
-              "INPUT VALUE" : "65 ans ou plus"
+              "INPUT VALUE" : "25 à 39 ans"
             }, {
               "INPUT VALUE" : "40 à 54 ans"
-            }, {
-              "INPUT VALUE" : "25 à 39 ans"
             }, {
               "INPUT VALUE" : "15 à 19 ans"
             }, {
               "INPUT VALUE" : "55 à 64 ans"
+            }, {
+              "INPUT VALUE" : "65 ans ou plus"
             }, {
               "INPUT VALUE" : "20 à 24 ans"
             } ],
@@ -124,7 +124,7 @@
           "REFERENT ATTRIBUTE" : "Age",
           "MAPPER" : {
             "TYPE" : "AGG",
-            "THE MAP" : [ "65 ans ou plus : 65 à 69 ans; 70 à 74 ans; 75 à 79 ans; 80 à 84 ans; 85 à 89 ans; 90 à 94 ans; 95 à 99 ans; 100 ans ou plus", "40 à 54 ans : 45 à 49 ans; 40 à 44 ans; 50 à 54 ans", "25 à 39 ans : 25 à 29 ans; 35 à 39 ans; 30 à 34 ans", "15 à 19 ans : 15 à 19 ans", "55 à 64 ans : 60 à 64 ans; 55 à 59 ans", "20 à 24 ans : 20 à 24 ans" ]
+            "THE MAP" : [ "25 à 39 ans : 35 à 39 ans; 25 à 29 ans; 30 à 34 ans", "40 à 54 ans : 50 à 54 ans; 40 à 44 ans; 45 à 49 ans", "15 à 19 ans : 15 à 19 ans", "55 à 64 ans : 55 à 59 ans; 60 à 64 ans", "65 ans ou plus : 85 à 89 ans; 70 à 74 ans; 90 à 94 ans; 75 à 79 ans; 100 ans ou plus; 65 à 69 ans; 95 à 99 ans; 80 à 84 ans", "20 à 24 ans : 20 à 24 ans" ]
           }
         }
       }, {
@@ -151,9 +151,9 @@
           "VALUE SPACE" : {
             "TYPE" : "Nominal",
             "VALUES" : [ {
-              "INPUT VALUE" : "Femmes"
-            }, {
               "INPUT VALUE" : "Hommes"
+            }, {
+              "INPUT VALUE" : "Femmes"
             } ],
             "categoricTemplate" : {
               "regex" : [ ]
@@ -169,21 +169,21 @@
           "VALUE SPACE" : {
             "TYPE" : "Nominal",
             "VALUES" : [ {
-              "INPUT VALUE" : "Agriculteurs exploitants"
-            }, {
-              "INPUT VALUE" : "Professions intermédiaires"
-            }, {
-              "INPUT VALUE" : "Retraités"
-            }, {
-              "INPUT VALUE" : "Artisans. commerçants. chefs d'entreprise"
+              "INPUT VALUE" : "Cadres et professions intellectuelles supérieures"
             }, {
               "INPUT VALUE" : "Employés"
             }, {
               "INPUT VALUE" : "Ouvriers"
             }, {
+              "INPUT VALUE" : "Agriculteurs exploitants"
+            }, {
               "INPUT VALUE" : "Autres personnes sans activité professionnelle"
             }, {
-              "INPUT VALUE" : "Cadres et professions intellectuelles supérieures"
+              "INPUT VALUE" : "Professions intermédiaires"
+            }, {
+              "INPUT VALUE" : "Artisans. commerçants. chefs d'entreprise"
+            }, {
+              "INPUT VALUE" : "Retraités"
             } ],
             "categoricTemplate" : {
               "regex" : [ ]
@@ -199,17 +199,31 @@
           "VALUE SPACE" : {
             "TYPE" : "Nominal",
             "VALUES" : [ {
-              "INPUT VALUE" : "765401003"
+              "INPUT VALUE" : "765401001"
             }, {
               "INPUT VALUE" : "765400902"
             }, {
-              "INPUT VALUE" : "765401005"
+              "INPUT VALUE" : "765401003"
             }, {
-              "INPUT VALUE" : "765401001"
+              "INPUT VALUE" : "765400801"
+            }, {
+              "INPUT VALUE" : "765400702"
+            }, {
+              "INPUT VALUE" : "765400302"
+            }, {
+              "INPUT VALUE" : "765400401"
+            }, {
+              "INPUT VALUE" : "765400106"
+            }, {
+              "INPUT VALUE" : "765400205"
             }, {
               "INPUT VALUE" : "765400304"
             }, {
               "INPUT VALUE" : "765400403"
+            }, {
+              "INPUT VALUE" : "765400104"
+            }, {
+              "INPUT VALUE" : "765400203"
             }, {
               "INPUT VALUE" : "765400601"
             }, {
@@ -219,51 +233,39 @@
             }, {
               "INPUT VALUE" : "765400405"
             }, {
-              "INPUT VALUE" : "765400106"
-            }, {
-              "INPUT VALUE" : "765400205"
-            }, {
               "INPUT VALUE" : "765400603"
             }, {
               "INPUT VALUE" : "765400504"
             }, {
-              "INPUT VALUE" : "765400801"
-            }, {
-              "INPUT VALUE" : "765400702"
-            }, {
-              "INPUT VALUE" : "765400104"
-            }, {
-              "INPUT VALUE" : "765400203"
-            }, {
-              "INPUT VALUE" : "765400302"
-            }, {
-              "INPUT VALUE" : "765400401"
-            }, {
-              "INPUT VALUE" : "765400201"
-            }, {
-              "INPUT VALUE" : "765400102"
-            }, {
-              "INPUT VALUE" : "765401004"
+              "INPUT VALUE" : "765400101"
             }, {
               "INPUT VALUE" : "765401006"
             }, {
               "INPUT VALUE" : "765400901"
             }, {
+              "INPUT VALUE" : "765401002"
+            }, {
               "INPUT VALUE" : "765400802"
             }, {
-              "INPUT VALUE" : "765400604"
+              "INPUT VALUE" : "765401004"
             }, {
-              "INPUT VALUE" : "765401002"
+              "INPUT VALUE" : "765400701"
+            }, {
+              "INPUT VALUE" : "765400204"
+            }, {
+              "INPUT VALUE" : "765400105"
+            }, {
+              "INPUT VALUE" : "765400301"
+            }, {
+              "INPUT VALUE" : "765400103"
+            }, {
+              "INPUT VALUE" : "765400202"
             }, {
               "INPUT VALUE" : "765400501"
             }, {
               "INPUT VALUE" : "765400402"
             }, {
               "INPUT VALUE" : "765400303"
-            }, {
-              "INPUT VALUE" : "765400204"
-            }, {
-              "INPUT VALUE" : "765400105"
             }, {
               "INPUT VALUE" : "765400602"
             }, {
@@ -273,15 +275,13 @@
             }, {
               "INPUT VALUE" : "765400404"
             }, {
-              "INPUT VALUE" : "765400103"
+              "INPUT VALUE" : "765400604"
             }, {
-              "INPUT VALUE" : "765400202"
+              "INPUT VALUE" : "765400201"
             }, {
-              "INPUT VALUE" : "765400701"
+              "INPUT VALUE" : "765400102"
             }, {
-              "INPUT VALUE" : "765400101"
-            }, {
-              "INPUT VALUE" : "765400301"
+              "INPUT VALUE" : "765401005"
             } ],
             "categoricTemplate" : {
               "regex" : [ ]
@@ -297,55 +297,55 @@
           "VALUE SPACE" : {
             "TYPE" : "Integer",
             "VALUES" : [ {
-              "INPUT VALUE" : "95"
-            }, {
-              "INPUT VALUE" : "85"
-            }, {
-              "INPUT VALUE" : "75"
-            }, {
-              "INPUT VALUE" : "65"
-            }, {
-              "INPUT VALUE" : "55"
-            }, {
-              "INPUT VALUE" : "105"
-            }, {
-              "INPUT VALUE" : "45"
-            }, {
-              "INPUT VALUE" : "35"
-            }, {
-              "INPUT VALUE" : "25"
-            }, {
-              "INPUT VALUE" : "15"
-            }, {
-              "INPUT VALUE" : "110"
-            }, {
-              "INPUT VALUE" : "100"
-            }, {
-              "INPUT VALUE" : "120"
-            }, {
-              "INPUT VALUE" : "0"
-            }, {
-              "INPUT VALUE" : "90"
-            }, {
               "INPUT VALUE" : "80"
             }, {
               "INPUT VALUE" : "70"
             }, {
-              "INPUT VALUE" : "60"
-            }, {
-              "INPUT VALUE" : "50"
+              "INPUT VALUE" : "90"
             }, {
               "INPUT VALUE" : "40"
             }, {
               "INPUT VALUE" : "30"
             }, {
+              "INPUT VALUE" : "60"
+            }, {
+              "INPUT VALUE" : "50"
+            }, {
+              "INPUT VALUE" : "0"
+            }, {
+              "INPUT VALUE" : "120"
+            }, {
+              "INPUT VALUE" : "110"
+            }, {
+              "INPUT VALUE" : "100"
+            }, {
               "INPUT VALUE" : "20"
             }, {
               "INPUT VALUE" : "10"
             }, {
-              "INPUT VALUE" : "115"
+              "INPUT VALUE" : "95"
+            }, {
+              "INPUT VALUE" : "85"
             }, {
               "INPUT VALUE" : "5"
+            }, {
+              "INPUT VALUE" : "115"
+            }, {
+              "INPUT VALUE" : "55"
+            }, {
+              "INPUT VALUE" : "45"
+            }, {
+              "INPUT VALUE" : "75"
+            }, {
+              "INPUT VALUE" : "65"
+            }, {
+              "INPUT VALUE" : "15"
+            }, {
+              "INPUT VALUE" : "105"
+            }, {
+              "INPUT VALUE" : "35"
+            }, {
+              "INPUT VALUE" : "25"
             } ],
             "EMPTY VALUE" : {
               "INPUT VALUE" : "null"
@@ -356,7 +356,7 @@
           "REFERENT ATTRIBUTE" : "Age",
           "MAPPER" : {
             "TYPE" : "UND",
-            "THE MAP" : [ "90 : 90 à 94 ans", "80 : 80 à 84 ans", "70 : 70 à 74 ans", "60 : 60 à 64 ans", "110; 100; 120; 115; 105 : 100 ans ou plus", "50 : 50 à 54 ans", "95 : 95 à 99 ans", "40 : 40 à 44 ans", "85 : 85 à 89 ans", "30 : 30 à 34 ans", "75 : 75 à 79 ans", "20 : 20 à 24 ans", "65 : 65 à 69 ans", "10 : 10 à 14 ans", "55 : 55 à 59 ans", "45 : 45 à 49 ans", "35 : 35 à 39 ans", "25 : 25 à 29 ans", "15 : 15 à 19 ans", "0 : Moins de 5 ans", "5 : 5 à 9 ans" ]
+            "THE MAP" : [ "80 : 80 à 84 ans", "70 : 70 à 74 ans", "90 : 90 à 94 ans", "95 : 95 à 99 ans", "40 : 40 à 44 ans", "85 : 85 à 89 ans", "30 : 30 à 34 ans", "60 : 60 à 64 ans", "50 : 50 à 54 ans", "0 : Moins de 5 ans", "5 : 5 à 9 ans", "55 : 55 à 59 ans", "45 : 45 à 49 ans", "75 : 75 à 79 ans", "20 : 20 à 24 ans", "65 : 65 à 69 ans", "10 : 10 à 14 ans", "15 : 15 à 19 ans", "115; 120; 110; 100; 105 : 100 ans ou plus", "35 : 35 à 39 ans", "25 : 25 à 29 ans" ]
           }
         }
       }, {
@@ -388,9 +388,9 @@
           "VALUE SPACE" : {
             "TYPE" : "Nominal",
             "VALUES" : [ {
-              "INPUT VALUE" : "2"
-            }, {
               "INPUT VALUE" : "1"
+            }, {
+              "INPUT VALUE" : "2"
             } ],
             "categoricTemplate" : {
               "regex" : [ ]
@@ -402,7 +402,7 @@
           "REFERENT ATTRIBUTE" : "Sexe",
           "MAPPER" : {
             "TYPE" : "REC",
-            "THE MAP" : [ "2 : Femmes", "1 : Hommes" ]
+            "THE MAP" : [ "1 : Hommes", "2 : Femmes" ]
           }
         }
       }, {
@@ -411,13 +411,7 @@
           "VALUE SPACE" : {
             "TYPE" : "Nominal",
             "VALUES" : [ {
-              "INPUT VALUE" : "0"
-            }, {
-              "INPUT VALUE" : "1"
-            }, {
-              "INPUT VALUE" : "2"
-            }, {
-              "INPUT VALUE" : "3"
+              "INPUT VALUE" : "8"
             }, {
               "INPUT VALUE" : "4"
             }, {
@@ -426,6 +420,12 @@
               "INPUT VALUE" : "6"
             }, {
               "INPUT VALUE" : "7"
+            }, {
+              "INPUT VALUE" : "1"
+            }, {
+              "INPUT VALUE" : "2"
+            }, {
+              "INPUT VALUE" : "3"
             } ],
             "categoricTemplate" : {
               "regex" : [ ]
@@ -437,31 +437,15 @@
           "REFERENT ATTRIBUTE" : "CSP",
           "MAPPER" : {
             "TYPE" : "REC",
-            "THE MAP" : [ "0 : Agriculteurs exploitants", "1 : Artisans. commerçants. chefs d'entreprise", "2 : Cadres et professions intellectuelles supérieures", "3 : Professions intermédiaires", "4 : Employés", "5 : Ouvriers", "6 : Retraités", "7 : Autres personnes sans activité professionnelle" ]
+            "THE MAP" : [ "8 : Autres personnes sans activité professionnelle", "4 : Professions intermédiaires", "5 : Employés", "6 : Ouvriers", "7 : Retraités", "1 : Agriculteurs exploitants", "2 : Artisans. commerçants. chefs d'entreprise", "3 : Cadres et professions intellectuelles supérieures" ]
           }
         }
-      } ]
-    }
-  },
-  "DEMOGRAPHIC RECORDS" : {
-    "DEMOGRAPHIC DICTIONARY" : {
-      "ATTRIBUTES" : [ {
-        "MAPPED DEMOGRAPHIC ATTRIBUTE" : {
+      } ],
+      "RECORD ATTRIBUTES" : [ {
+        "RECORD ATTRIBUTE" : {
           "NAME" : "P13_POP",
-          "VALUE SPACE" : {
-            "TYPE" : "Integer",
-            "VALUES" : [ ],
-            "EMPTY VALUE" : {
-              "INPUT VALUE" : "null"
-            },
-            "min" : -2147483648,
-            "max" : 2147483647
-          },
-          "REFERENT ATTRIBUTE" : "iris",
-          "MAPPER" : {
-            "TYPE" : "REC",
-            "THE MAP" : [ ]
-          }
+          "PROXY ATTRIBUTE TYPE" : "Integer",
+          "REFERENT ATTRIBUTE" : "iris"
         }
       } ]
     }

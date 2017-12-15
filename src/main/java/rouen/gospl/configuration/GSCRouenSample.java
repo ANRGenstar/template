@@ -114,7 +114,7 @@ public class GSCRouenSample {
 				gcf.getDemoDictionary().addAttributes(attf.createNominalRecordAttribute("cs1", 
 						gcf.getDemoDictionary().getAttribute("CSP"), 
 						csp.stream().collect(Collectors.toMap(
-								p -> Integer.toString(csp.indexOf(p)), 
+								p -> Integer.toString(csp.indexOf(p)+1), 
 								Function.identity()))));
 
 				// ------------------------------

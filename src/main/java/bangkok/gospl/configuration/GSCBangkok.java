@@ -16,7 +16,6 @@ import core.configuration.GenstarJsonUtil;
 import core.configuration.dictionary.DemographicDictionary;
 import core.metamodel.attribute.demographic.DemographicAttribute;
 import core.metamodel.attribute.demographic.DemographicAttributeFactory;
-import core.metamodel.attribute.demographic.MappedDemographicAttribute;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 import core.metamodel.value.IValue;
@@ -44,7 +43,6 @@ public class GSCBangkok {
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
 		
 		DemographicDictionary<DemographicAttribute<? extends IValue>> mdd = new DemographicDictionary<>();
-		DemographicDictionary<MappedDemographicAttribute<? extends IValue, ? extends IValue>> records = new DemographicDictionary<>();
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
@@ -96,7 +94,7 @@ public class GSCBangkok {
 				// --------------------------
 
 				// Instantiate a record attribute: just count the number of occurrences
-				records.addAttributes(attf.createIntegerRecordAttribute("POP", khwaeng));		
+				mdd.addRecords(attf.createRecordAttribute("POP", GSEnumDataType.Integer, khwaeng));		
 
 				// --------------------------
 				// Setup "EDU" attribute: INDIVIDUAL
@@ -143,7 +141,6 @@ public class GSCBangkok {
 			gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
 			gcf.setSurveyWrappers(inputFiles);
 			gcf.setDemoDictionary(mdd);
-			gcf.setRecords(records);
 			
 			try {
 				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);

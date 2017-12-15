@@ -18,11 +18,9 @@ import core.configuration.GenstarJsonUtil;
 import core.configuration.dictionary.DemographicDictionary;
 import core.metamodel.attribute.demographic.DemographicAttribute;
 import core.metamodel.attribute.demographic.DemographicAttributeFactory;
-import core.metamodel.attribute.demographic.MappedDemographicAttribute;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 import core.metamodel.value.IValue;
-import core.metamodel.value.numeric.IntegerValue;
 import core.metamodel.value.numeric.RangeValue;
 import core.util.data.GSDataParser;
 import core.util.data.GSEnumDataType;
@@ -43,7 +41,6 @@ public class GSCRouen {
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
 		
 		DemographicDictionary<DemographicAttribute<? extends IValue>> dd = new DemographicDictionary<>();
-		DemographicDictionary<MappedDemographicAttribute<? extends IValue, ? extends IValue>> records = new DemographicDictionary<>();
 
 		Path baseDirectory = FileSystems.getDefault().getPath(".");
 		Path relativePath = Paths.get(CONF_CLASS_PATH);
@@ -147,9 +144,7 @@ public class GSCRouen {
 								"765400203","765400101","765400205")); 
 				dd.addAttributes(attIris);
 				
-				MappedDemographicAttribute<IntegerValue, ? extends IValue> attIrisRecord = 
-						attf.createIntegerRecordAttribute("P13_POP", attIris);
-				records.addAttributes(attIrisRecord);
+				dd.addRecords(attf.createRecordAttribute("P13_POP", GSEnumDataType.Integer, attIris));
 
 			} catch (GSIllegalRangedData e) {
 				// TODO Auto-generated catch block
@@ -164,7 +159,6 @@ public class GSCRouen {
 			gcf.setBaseDirectory(baseDirectory);
 			gcf.setSurveyWrappers(inputFiles);
 			gcf.setDemoDictionary(dd);
-			gcf.setRecords(records);
 			
 			try {
 				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);

@@ -84,7 +84,7 @@ public class SRSample {
 		}
 		
 		// Setup IPF with seed, number of maximum fitting iteration, and delta convergence criteria 
-		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new SRIPFAlgo(seed, 1000, Math.pow(10, -2));
+		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new SRIPFAlgo(seed, 100, Math.pow(10, -4));
 
 		// Build a sample from the IPF process
 		ISampler<ACoordinate<DemographicAttribute<? extends IValue>, IValue>> sampler = null;
@@ -111,6 +111,7 @@ public class SRSample {
 		try {
 			gsf.createSummary(outputPath.toFile(), GSSurveyType.Sample, population);
 			gsf.createSummary(reportPath.toFile(), GSSurveyType.GlobalFrequencyTable, population);
+			gsf.createSummary(reportPath.getParent().resolve("sample_report2.csv").toFile(), GSSurveyType.GlobalFrequencyTable, seed);
 			gif.saveReport(statPath.toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
 					collapsedMarginals, population), "IPF", population.size());
 		} catch (InvalidFormatException | IOException | InvalidSurveyFormatException e) {

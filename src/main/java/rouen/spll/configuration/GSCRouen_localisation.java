@@ -11,7 +11,6 @@ import core.configuration.GenstarJsonUtil;
 import core.configuration.dictionary.DemographicDictionary;
 import core.metamodel.attribute.demographic.DemographicAttribute;
 import core.metamodel.attribute.demographic.DemographicAttributeFactory;
-import core.metamodel.attribute.demographic.MappedDemographicAttribute;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 import core.metamodel.value.IValue;
@@ -39,7 +38,6 @@ public class GSCRouen_localisation {
 					GSSurveyType.Sample, ';', 1, 1);
 		
 		DemographicDictionary<DemographicAttribute<? extends IValue>> dd = new DemographicDictionary<>();
-		DemographicDictionary<MappedDemographicAttribute<? extends IValue, ? extends IValue>> records = new DemographicDictionary<>();
 		
 		try {
 			// Add attributes to the dictionnary
@@ -82,7 +80,6 @@ public class GSCRouen_localisation {
 		gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
 		gcf.setSurveyWrappers(Arrays.asList(populationInput));
 		gcf.setDemoDictionary(dd);
-		gcf.setRecords(records);
 		
 		try {
 			new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);
