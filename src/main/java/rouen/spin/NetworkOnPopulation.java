@@ -24,7 +24,6 @@ import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import rouen.spll.LocalisationRouenBuildings;
 import spin.SpinPopulation;
-import spin.algo.generator.SpinRandomNetworkGenerator;
 import spin.algo.generator.SpinSpatialNetworkGenerator;
 import spll.SpllEntity;
 import spll.SpllPopulation;
@@ -170,17 +169,16 @@ public class NetworkOnPopulation {
 		}
 	
 		// Create SpinPopulation with RandomNetworkGenerator
-		System.out.println("START of the random network generation");
-		SpinRandomNetworkGenerator<SpllEntity> spinPopGen = new SpinRandomNetworkGenerator<SpllEntity>(0.0001);
-		SpinPopulation<? extends ADemoEntity> networkedPop = spinPopGen.generate(localizedPop);
+	//	System.out.println("START of the random network generation");
+	//	SpinRandomNetworkGenerator<SpllEntity> spinPopGen = new SpinRandomNetworkGenerator<SpllEntity>(0.0001);
+	//	SpinPopulation<? extends ADemoEntity> networkedPop = spinPopGen.generate(localizedPop);
 	
-		System.out.println(networkedPop.toString());
+	//	System.out.println(networkedPop.toString());
 
 		// Create SpinPopulation with SpatialNetworkGenerator	
 		System.out.println("START of the spatial network generation");	
-		System.out.println("------------ until now, does not work on the dataset, because of a memory lack ...");
 		
-		SpinSpatialNetworkGenerator<SpllEntity> spinPopGenLoc = new SpinSpatialNetworkGenerator<SpllEntity>(100);
+		SpinSpatialNetworkGenerator<SpllEntity> spinPopGenLoc = new SpinSpatialNetworkGenerator<SpllEntity>(10);
 		SpinPopulation<? extends ADemoEntity> networkedPopLoc = spinPopGenLoc.generate(localizedPop);
 	
 		System.out.println(networkedPopLoc.toString());
