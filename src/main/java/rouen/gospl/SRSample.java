@@ -32,7 +32,7 @@ import gospl.validation.GosplIndicatorFactory;
 public class SRSample {
 
 	// Input nb of entity
-	static int popSize = 100000;
+	static int popSize = 110755;
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/rouen/gospl/output/SRSample_export.csv"); 
 	final static Path reportPath = Paths.get("src/main/java/rouen/gospl/output/SRSample_report.csv");

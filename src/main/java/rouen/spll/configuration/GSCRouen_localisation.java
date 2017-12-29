@@ -22,7 +22,7 @@ public class GSCRouen_localisation {
 	public static String CONF_CLASS_PATH = "src/main/java/rouen/gospl/output/";
 	public static String CONF_EXPORT = "rouen_demo_spll.gns";
 	
-	public static String SAMPLE = "SRNoSample_export.csv";
+	public static String SAMPLE = "SRSample_export.csv";
 	
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
