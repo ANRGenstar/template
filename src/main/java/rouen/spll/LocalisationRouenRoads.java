@@ -25,7 +25,7 @@ import spll.entity.GeoEntityFactory;
 import spll.io.SPLGeofileBuilder;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.SPLocalizer;
 import spll.popmapper.constraint.SpatialConstraintMaxDensity;
 
 public class LocalisationRouenRoads {
@@ -131,7 +131,7 @@ public class LocalisationRouenRoads {
 				LocalisationRouenRoads.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfRoads));
+		SPLocalizer localizer = new SPLocalizer(population, sfRoads);
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population

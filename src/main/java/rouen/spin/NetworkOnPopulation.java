@@ -35,7 +35,7 @@ import spll.io.SPLGeofileBuilder;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.SPLocalizer;
 import spll.popmapper.constraint.SpatialConstraintMaxNumber;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
@@ -135,7 +135,7 @@ public class NetworkOnPopulation {
 				LocalisationRouenBuildings.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
+		SPLocalizer localizer = new SPLocalizer(population, sfBuildings);
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population

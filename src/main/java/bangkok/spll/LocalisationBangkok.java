@@ -29,7 +29,7 @@ import spll.io.SPLGeofileBuilder;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.SPLocalizer;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
 public class LocalisationBangkok {
@@ -111,7 +111,7 @@ public class LocalisationBangkok {
 				LocalisationBangkok.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, geoFile));
+		SPLocalizer localizer = new SPLocalizer(population, geoFile);
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population

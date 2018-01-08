@@ -31,10 +31,8 @@ import spll.io.SPLGeofileBuilder;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPUniformLocalizer;
+import spll.popmapper.SPLocalizer;
 import spll.popmapper.constraint.SpatialConstraintMaxDensity;
-import spll.popmapper.distribution.AreaSpatialDistribution;
-import spll.popmapper.distribution.NumberDensitySpatialDistribution;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
 public class LocalisationRouenIJGIS_1 {
@@ -133,7 +131,7 @@ public class LocalisationRouenIJGIS_1 {
 				LocalisationRouenIJGIS_1.class.getSimpleName());
 		
 		// SETUP THE LOCALIZER
-		SPUniformLocalizer localizer = new SPUniformLocalizer(new SpllPopulation(population, sfBuildings));
+		SPLocalizer localizer = new SPLocalizer(population, sfBuildings);
 		
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
