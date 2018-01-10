@@ -32,17 +32,16 @@ import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.popmapper.SPLocalizer;
-import spll.popmapper.constraint.SpatialConstraintMaxDensity;
 import spll.popmapper.distribution.SpatialDistributionFactory;
 import spll.popmapper.normalizer.SPLUniformNormalizer;
 
-public class LocalisationRouenIJGIS_3 {
+public class LocalisationRouenIJGIS_3 { 
 
 	//path to the main census shapefile - the entities are generated at this level
 	static String stringPathToCensusShapefile = "src/main/java/rouen/spll/data/shp/Rouen_iris.shp";
 
 	//path to the shapefile that define the geographical objects on which the entities should be located
-	static String stringPathToNestShapefile = "src/main/java/rouen/spll/data/shp/buildings.shp";
+	static String stringPathToNestShapefile = "src/main/java/rouen/spll/data/shp/buildings_residential.shp";
 
 	//path to the file that will be used as support for the spatial regression (bring additional spatial data)
 	static String stringPathToLandUseGrid = "src/main/java/rouen/spll/data/raster/occsol_rouen.tif";
@@ -139,18 +138,7 @@ public class LocalisationRouenIJGIS_3 {
 		// SETUP GEOGRAPHICAL MATCHER
 		// use of the IRIS attribute of the population
 		localizer.setMatcher(sfAdmin, stringOfCensusIdInCSVfile, stringOfCensusIdInShapefile);
-		
-		
-		//localizer.getLocalizationConstraint().setIncreaseStep(100.0);
-		//localizer.getLocalizationConstraint().setMaxIncrease(100.0); 
-		
-		
-		SpatialConstraintMaxDensity maxDens = new SpatialConstraintMaxDensity(sfBuildings.getGeoEntity(), 0.0005);
-		maxDens.setPriority(10);
-		maxDens.setIncreaseStep(0.0002);
-		maxDens.setMaxIncrease(0.003);
-		localizer.addConstraint(maxDens);
-		
+			
 		// SETUP REGRESSION
 		try {
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
