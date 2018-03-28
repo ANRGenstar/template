@@ -12,9 +12,9 @@ import java.util.stream.Stream;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
-import core.configuration.dictionary.DemographicDictionary;
-import core.metamodel.attribute.demographic.DemographicAttribute;
-import core.metamodel.attribute.demographic.DemographicAttributeFactory;
+import core.configuration.dictionary.AttributeDictionary;
+import core.metamodel.attribute.Attribute;
+import core.metamodel.attribute.AttributeFactory;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 import core.metamodel.value.IValue;
@@ -32,7 +32,7 @@ public class GSCBangkok_Localisation {
 	public static void main(String[] args) {
 
 		// Setup the factory that build attribute
-		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
+		AttributeFactory attf = AttributeFactory.getFactory();
 
 		Path relativePath = Paths.get(CONF_CLASS_PATH).toAbsolutePath();
 	
@@ -40,10 +40,10 @@ public class GSCBangkok_Localisation {
 		GSSurveyWrapper populationInput = new GSSurveyWrapper(Paths.get(CONF_CLASS_PATH).resolve("PopExport.csv"), 
 					GSSurveyType.Sample, ';', 1, 1);
 		
-		DemographicDictionary<DemographicAttribute<? extends IValue>> dd = new DemographicDictionary<>();
+		AttributeDictionary dd = new AttributeDictionary();
 		
 		/*
-		Set<DemographicAttribute<? extends IValue>> inputAttributes = new HashSet<>();
+		Set<Attribute<? extends IValue>> inputAttributes = new HashSet<>();
 		Map<String, IAttribute<? extends IValue>> inputKeyMap = new HashMap<>();
 		*/
 		
@@ -52,7 +52,7 @@ public class GSCBangkok_Localisation {
 			// Setup "PAT" attribute: INDIVIDUAL & MENAGE
 			// -------------------------
 
-			DemographicAttribute<NominalValue> khwaeng = attf.createNominalAttribute("PAT", new GSCategoricTemplate()); 
+			Attribute<NominalValue> khwaeng = attf.createNominalAttribute("PAT", new GSCategoricTemplate()); 
 			Stream.of("100101", "100102", "100103", "100104", "100105", "100106", "100107", "100108", "100109", "100110", "100111", "100112",
 					"100201", "100202", "100203", "100204", "100206", "100301", "100302", "100303", "100304", "100305", "100306", "100307", 
 					"100308", "100401", "100402", "100403", "100404", "100405", "100502", "100508", "100601", "100608", "100701", "100702",
@@ -125,7 +125,7 @@ public class GSCBangkok_Localisation {
 		GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 		gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
 		gcf.setSurveyWrappers(Arrays.asList(populationInput));
-		gcf.setDemoDictionary(dd);
+		gcf.setDictionary(dd);
 		
 		try {
 			new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);

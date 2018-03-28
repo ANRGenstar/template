@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
-import core.configuration.dictionary.DemographicDictionary;
-import core.metamodel.attribute.demographic.DemographicAttribute;
-import core.metamodel.attribute.demographic.DemographicAttributeFactory;
+import core.configuration.dictionary.AttributeDictionary;
+import core.metamodel.attribute.Attribute;
+import core.metamodel.attribute.AttributeFactory;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 import core.metamodel.value.IValue;
@@ -37,12 +37,12 @@ public class GSCBangkok {
 		Path relativePath = Paths.get(CONF_CLASS_PATH);
 		
 		// Setup the factory that build attribute
-		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
+		AttributeFactory attf = AttributeFactory.getFactory();
 
 		// What to define in this configuration file
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
 		
-		DemographicDictionary<DemographicAttribute<? extends IValue>> mdd = new DemographicDictionary<>();
+		AttributeDictionary mdd = new AttributeDictionary();
 
 		if(new ArrayList<>(Arrays.asList(args)).isEmpty()){
 
@@ -62,7 +62,7 @@ public class GSCBangkok {
 				// Setup "PAT" attribute: INDIVIDUAL & MENAGE
 				// -------------------------
 
-				DemographicAttribute<? extends IValue> khwaeng = attf.createAttribute("PAT", GSEnumDataType.Nominal,
+				Attribute<? extends IValue> khwaeng = attf.createAttribute("PAT", GSEnumDataType.Nominal,
 						Arrays.asList("100101", "100102", "100103", "100104", "100105", "100106", "100107", "100108", "100109", "100110", "100111", "100112",
 								"100201", "100202", "100203", "100204", "100206", "100301", "100302", "100303", "100304", "100305", "100306", "100307", 
 								"100308", "100401", "100402", "100403", "100404", "100405", "100502", "100508", "100601", "100608", "100701", "100702",
@@ -85,7 +85,7 @@ public class GSCBangkok {
 				// -------------------------
 
 				mdd.addAttributes(attf.createNominalAggregatedAttribute("PA", new GSCategoricTemplate(), 
-						(DemographicAttribute<NominalValue>) khwaeng, khwaeng.getValueSpace().getValues().stream().map(IValue::getStringValue)
+						(Attribute<NominalValue>) khwaeng, khwaeng.getValueSpace().getValues().stream().map(IValue::getStringValue)
 						.collect(Collectors.groupingBy(value -> value.substring(0, 4), 
 								Collectors.mapping(Function.identity(), Collectors.toCollection(HashSet::new))))));
 
@@ -140,7 +140,7 @@ public class GSCBangkok {
 			GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 			gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
 			gcf.setSurveyWrappers(inputFiles);
-			gcf.setDemoDictionary(mdd);
+			gcf.setDictionary(mdd);
 			
 			try {
 				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);
@@ -157,7 +157,7 @@ public class GSCBangkok {
 				e.printStackTrace();
 			}
 			System.out.println("Deserialize Genstar data configuration contains:\n"+
-					gcf.getDemoDictionary().getAttributes().size()+" attributs\n"+
+					gcf.getDictionary().getAttributes().size()+" attributs\n"+
 					gcf.getSurveyWrappers().size()+" data files");
 		}
 	}

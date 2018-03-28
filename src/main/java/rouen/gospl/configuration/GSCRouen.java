@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
-import core.configuration.dictionary.DemographicDictionary;
-import core.metamodel.attribute.demographic.DemographicAttribute;
-import core.metamodel.attribute.demographic.DemographicAttributeFactory;
+import core.configuration.dictionary.AttributeDictionary;
+import core.metamodel.attribute.Attribute;
+import core.metamodel.attribute.AttributeFactory;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 import core.metamodel.value.IValue;
@@ -35,12 +35,12 @@ public class GSCRouen {
 	public static void main(String[] args) {
 
 		// Setup the factory that build attribute
-		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
+		AttributeFactory attf = AttributeFactory.getFactory();
 
 		// What to define in this configuration file
 		List<GSSurveyWrapper> inputFiles = new ArrayList<>();
 		
-		DemographicDictionary<DemographicAttribute<? extends IValue>> dd = new DemographicDictionary<>();
+		AttributeDictionary dd = new AttributeDictionary();
 
 		Path baseDirectory = FileSystems.getDefault().getPath(".");
 		Path relativePath = Paths.get(CONF_CLASS_PATH);
@@ -64,7 +64,7 @@ public class GSCRouen {
 				// --------------------------
 
 				// Instantiate a referent attribute
-				DemographicAttribute<RangeValue> referentAgeAttribute = attf.createRangeAttribute("Age", 
+				Attribute<RangeValue> referentAgeAttribute = attf.createRangeAttribute("Age", 
 						Arrays.asList("Moins de 5 ans", "5 à 9 ans", "10 à 14 ans", "15 à 19 ans", "20 à 24 ans", 
 						"25 à 29 ans", "30 à 34 ans", "35 à 39 ans", "40 à 44 ans", "45 à 49 ans", 
 						"50 à 54 ans", "55 à 59 ans", "60 à 64 ans", "65 à 69 ans", "70 à 74 ans", "75 à 79 ans", 
@@ -104,7 +104,7 @@ public class GSCRouen {
 				// Setup "COUPLE" attribute: INDIVIDUAL
 				// --------------------------
 
-				DemographicAttribute<? extends IValue> attCouple = attf.createAttribute("Couple", GSEnumDataType.Nominal, 
+				Attribute<? extends IValue> attCouple = attf.createAttribute("Couple", GSEnumDataType.Nominal, 
 						Arrays.asList("Vivant en couple", "Ne vivant pas en couple")); 
 				// WARNING: special empty value, not to get null empty value
 				attCouple.getValueSpace().setEmptyValue("Ne vivant pas en couple");
@@ -114,14 +114,14 @@ public class GSCRouen {
 				// Setup "SEXE" attribute: INDIVIDUAL
 				// -------------------------
 
-				DemographicAttribute<? extends IValue> attSexe = attf.createAttribute("Sexe", GSEnumDataType.Nominal,
+				Attribute<? extends IValue> attSexe = attf.createAttribute("Sexe", GSEnumDataType.Nominal,
 						Arrays.asList("Hommes", "Femmes"));
 				dd.addAttributes(attSexe);
 
 				// -------------------------
 				// Setup "CSP" attribute: INDIVIDUAL
 				// -------------------------
-				DemographicAttribute<? extends IValue> attCSP = attf.createAttribute("CSP", GSEnumDataType.Nominal, 
+				Attribute<? extends IValue> attCSP = attf.createAttribute("CSP", GSEnumDataType.Nominal, 
 						Arrays.asList("Agriculteurs exploitants", "Artisans. commerçants. chefs d'entreprise", 
 								"Cadres et professions intellectuelles supérieures", "Professions intermédiaires", 
 								"Employés", "Ouvriers", "Retraités", "Autres personnes sans activité professionnelle")); 
@@ -132,7 +132,7 @@ public class GSCRouen {
 				// -------------------------
 				// Setup "IRIS" attribute: INDIVIDUAL
 				// -------------------------
-				DemographicAttribute<? extends IValue> attIris = attf.createAttribute("iris", GSEnumDataType.Nominal, 
+				Attribute<? extends IValue> attIris = attf.createAttribute("iris", GSEnumDataType.Nominal, 
 						Arrays.asList("765400602", "765400104","765400306","765400201",
 								"765400601","765400901","765400302","765400604","765400304",
 								"765400305","765400801","765400301","765401004","765401003",
@@ -158,7 +158,7 @@ public class GSCRouen {
 			GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 			gcf.setBaseDirectory(baseDirectory);
 			gcf.setSurveyWrappers(inputFiles);
-			gcf.setDemoDictionary(dd);
+			gcf.setDictionary(dd);
 			
 			try {
 				new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);
@@ -176,7 +176,7 @@ public class GSCRouen {
 				e.printStackTrace();
 			}
 			System.out.println("Deserialize Genstar data configuration contains:\n"+
-					gcf.getDemoDictionary().getAttributes().size()+" attributs\n"+
+					gcf.getDictionary().getAttributes().size()+" attributs\n"+
 					gcf.getSurveyWrappers().size()+" data files");
 		}
 		

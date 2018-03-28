@@ -8,12 +8,10 @@ import java.util.Arrays;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
-import core.configuration.dictionary.DemographicDictionary;
-import core.metamodel.attribute.demographic.DemographicAttribute;
-import core.metamodel.attribute.demographic.DemographicAttributeFactory;
+import core.configuration.dictionary.AttributeDictionary;
+import core.metamodel.attribute.AttributeFactory;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
-import core.metamodel.value.IValue;
 import core.util.data.GSEnumDataType;
 import core.util.excpetion.GSIllegalRangedData;
 
@@ -28,7 +26,7 @@ public class GSCRouen_localisation {
 	public static void main(String[] args) {
 
 		// Setup the factory that build attribute
-		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
+		AttributeFactory attf = AttributeFactory.getFactory();
 
 		// Make file path absolute
 		Path relativePath = Paths.get(CONF_CLASS_PATH);
@@ -37,7 +35,7 @@ public class GSCRouen_localisation {
 		GSSurveyWrapper populationInput = new GSSurveyWrapper(relativePath.resolve(SAMPLE), 
 					GSSurveyType.Sample, ';', 1, 1);
 		
-		DemographicDictionary<DemographicAttribute<? extends IValue>> dd = new DemographicDictionary<>();
+		AttributeDictionary dd = new AttributeDictionary();
 		
 		try {
 			// Add attributes to the dictionnary
@@ -79,7 +77,7 @@ public class GSCRouen_localisation {
 		GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 		gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
 		gcf.setSurveyWrappers(Arrays.asList(populationInput));
-		gcf.setDemoDictionary(dd);
+		gcf.setDictionary(dd);
 		
 		try {
 			new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);

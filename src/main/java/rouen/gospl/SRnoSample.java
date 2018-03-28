@@ -7,14 +7,14 @@ import java.util.Arrays;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
-import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.attribute.Attribute;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.GosplPopulation;
 import gospl.algo.sr.ISyntheticReconstructionAlgo;
+import gospl.algo.sr.ds.DirectSamplingAlgo;
 import gospl.algo.sr.hs.HierarchicalHypothesisAlgo;
-import gospl.algo.sr.is.IndependantHypothesisAlgo;
 import gospl.distribution.GosplInputDataManager;
 import gospl.distribution.exception.IllegalControlTotalException;
 import gospl.distribution.exception.IllegalDistributionCreation;
@@ -78,7 +78,7 @@ public class SRnoSample {
 		// Choice is made here to use distribution based generator
 
 		// so we collapse all distribution build from the data
-		INDimensionalMatrix<DemographicAttribute<? extends IValue>, IValue, Double> distribution = null;
+		INDimensionalMatrix<Attribute<? extends IValue>, IValue, Double> distribution = null;
 		try {
 			distribution = df.collapseDataTablesIntoDistribution();
 		} catch (final IllegalDistributionCreation | IllegalControlTotalException e1) {
@@ -86,7 +86,7 @@ public class SRnoSample {
 		}
 
 		// BUILD THE SAMPLER WITH THE INFERENCE ALGORITHM
-		ISampler<ACoordinate<DemographicAttribute<? extends IValue>, IValue>> sampler = null;
+		ISampler<ACoordinate<Attribute<? extends IValue>, IValue>> sampler = null;
 
 		switch (ALGO) {
 		case "HS":
@@ -99,7 +99,7 @@ public class SRnoSample {
 			}
 			break;
 		default:
-			ISyntheticReconstructionAlgo<IDistributionSampler> distributionInfAlgo = new IndependantHypothesisAlgo();
+			ISyntheticReconstructionAlgo<IDistributionSampler> distributionInfAlgo = new DirectSamplingAlgo();
 			try {
 				sampler = distributionInfAlgo.inferSRSampler(distribution, new GosplBasicSampler());
 			} catch (final IllegalDistributionCreation e1) {

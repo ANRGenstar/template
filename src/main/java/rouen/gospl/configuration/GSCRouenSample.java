@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
-import core.metamodel.attribute.demographic.DemographicAttributeFactory;
+import core.metamodel.attribute.AttributeFactory;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.io.GSSurveyWrapper;
 
@@ -30,7 +30,7 @@ public class GSCRouenSample {
 		// TODO Auto-generated method stub
 
 		// Setup the factory that build attribute
-		DemographicAttributeFactory attf = DemographicAttributeFactory.getFactory();
+		AttributeFactory attf = AttributeFactory.getFactory();
 
 
 
@@ -80,8 +80,8 @@ public class GSCRouenSample {
 				theMap.put(Arrays.asList("090"), Arrays.asList("90 à 94 ans"));
 				theMap.put(Arrays.asList("095"), Arrays.asList("95 à 99 ans"));
 				theMap.put(Arrays.asList("100", "105", "110", "115", "120"), Arrays.asList("100 ans ou plus"));
-				gcf.getDemoDictionary().addAttributes(attf.createIntegerAttribute("agerevq", 
-						gcf.getDemoDictionary().getAttribute("Age"), theMap));
+				gcf.getDictionary().addAttributes(attf.createIntegerAttribute("agerevq", 
+						gcf.getDictionary().getAttribute("Age"), theMap));
 
 				// --------------------------
 				// Setup "COUPLE" attribute: INDIVIDUAL
@@ -90,8 +90,8 @@ public class GSCRouenSample {
 				Map<String, String> theRecord = new HashMap<>();
 				theRecord.put("1", "Vivant en couple");
 				theRecord.put("2", "Ne vivant pas en couple");
-				gcf.getDemoDictionary().addAttributes(attf.createNominalRecordAttribute("couple", 
-						gcf.getDemoDictionary().getAttribute("Couple"), theRecord));
+				gcf.getDictionary().addAttributes(attf.createNominalRecordAttribute("couple", 
+						gcf.getDictionary().getAttribute("Couple"), theRecord));
 
 				// -------------------------
 				// Setup "SEXE" attribute: INDIVIDUAL
@@ -100,8 +100,8 @@ public class GSCRouenSample {
 				Map<String, String> theRecord2 = new HashMap<>();
 				theRecord2.put("1", "Hommes");
 				theRecord2.put("2", "Femmes");
-				gcf.getDemoDictionary().addAttributes(attf.createNominalRecordAttribute("Gender", 
-						gcf.getDemoDictionary().getAttribute("Sexe"), theRecord2));
+				gcf.getDictionary().addAttributes(attf.createNominalRecordAttribute("Gender", 
+						gcf.getDictionary().getAttribute("Sexe"), theRecord2));
 
 				// -------------------------
 				// Setup "CSP" attribute: INDIVIDUAL
@@ -111,8 +111,8 @@ public class GSCRouenSample {
 						"Cadres et professions intellectuelles supérieures", "Professions intermédiaires", 
 						"Employés", "Ouvriers", "Retraités", "Autres personnes sans activité professionnelle");
 
-				gcf.getDemoDictionary().addAttributes(attf.createNominalRecordAttribute("cs1", 
-						gcf.getDemoDictionary().getAttribute("CSP"), 
+				gcf.getDictionary().addAttributes(attf.createNominalRecordAttribute("cs1", 
+						gcf.getDictionary().getAttribute("CSP"), 
 						csp.stream().collect(Collectors.toMap(
 								p -> Integer.toString(csp.indexOf(p)+1), 
 								Function.identity()))));

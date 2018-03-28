@@ -11,13 +11,16 @@ import java.util.stream.Collectors;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.attribute.Attribute;
 import core.metamodel.entity.ADemoEntity;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import gospl.algo.co.SampleBasedAlgorithm;
+import gospl.algo.co.hillclimbing.HillClimbing;
+import gospl.algo.co.metamodel.IOptimizationAlgorithm;
 import gospl.algo.co.simannealing.SimulatedAnnealing;
+import gospl.algo.co.tabusearch.TabuList;
 import gospl.algo.co.tabusearch.TabuSearch;
 import gospl.distribution.GosplInputDataManager;
 import gospl.distribution.exception.IllegalControlTotalException;
@@ -28,10 +31,7 @@ import gospl.generator.SampleBasedGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
 import gospl.sampler.ISampler;
-import gospl.sampler.co.AOptiAlgoSampler;
-import gospl.sampler.co.RandomSampler;
-import gospl.sampler.co.SimAnnealingSampler;
-import gospl.sampler.co.TabuSampler;
+import gospl.sampler.co.CombinatorialOptimizationSampler;
 import gospl.validation.GosplIndicator;
 import gospl.validation.GosplIndicatorFactory;
 
@@ -42,11 +42,11 @@ public class CO {
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/rouen/gospl/output"); 
 	// Setup configuration file
-	final static Path configurationFile = Paths.get("src/main/java/rouen/gospl/data/GSC_Rouen_Sample.xml");
+	final static Path configurationFile = Paths.get("src/main/java/rouen/gospl/data/rouen_demographics_with_sample.gns");
 	
-	private static final String ALGO = "RANDOM";
+	private static final String ALGO = "TABU";
 	
-	private static final int MAX_TABU_ITER = (int) Math.pow(10, 5);
+	private static final int MAX_ITER = (int) Math.pow(10, 5);
 	private static final int SIZE_TABU_LIST = 10;
 
 	public static void main(String[] args) {
@@ -87,31 +87,32 @@ public class CO {
 		ISampler<ADemoEntity> sampler = null;
 		
 		// Retrieve sample to setup the CO sampler
-		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> sample = 
+		IPopulation<ADemoEntity, Attribute<? extends IValue>> sample = 
 				gdf.getRawSamples().iterator().next();
 		
 		// Retrieve known objectives from input data
 		Set<AFullNDimensionalMatrix<Integer>> objectives = gdf.getContingencyTables();
+		CombinatorialOptimizationSampler<IOptimizationAlgorithm> samplerCO;
 		
 		// TODO: make a colapseContingency(int total) method to use all info to setup contingency objectives
 				
 		switch (ALGO) {
 		case "TABU":
-			AOptiAlgoSampler<TabuSearch> tabuSampler = new TabuSampler(MAX_TABU_ITER, SIZE_TABU_LIST);
-			objectives.stream().forEach(obj -> tabuSampler.addObjectives(obj));
-			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, tabuSampler);
+			samplerCO = new CombinatorialOptimizationSampler<>(
+					new TabuSearch(new TabuList(SIZE_TABU_LIST), 1d, MAX_ITER), sample, false);
 			break;
 		case "SA":
-			AOptiAlgoSampler<SimulatedAnnealing> simAnnealingSampler = new SimAnnealingSampler();
-			objectives.stream().forEach(obj -> simAnnealingSampler.addObjectives(obj));
-			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, simAnnealingSampler);
-			break;
-		case "HC":
+			samplerCO = new CombinatorialOptimizationSampler<>(
+					new SimulatedAnnealing(), sample, false);
 			break;
 		default:
-			sampler = new SampleBasedAlgorithm().setupCOSampler(sample, new RandomSampler());
+			samplerCO = new CombinatorialOptimizationSampler<>(
+					new HillClimbing(1d, MAX_ITER), sample, false);
 			break;
 		}
+
+		objectives.stream().forEach(obj -> samplerCO.addObjectives(obj));
+		sampler = new SampleBasedAlgorithm().setupCOSampler(sample, samplerCO);
 
 		//----------------------------------------------//
 		//------- GENERATE POPULATION AND EXPORT -------//
@@ -121,8 +122,12 @@ public class CO {
 		ISyntheticGosplPopGenerator generator = new SampleBasedGenerator(sampler);
 		
 		gspu.sysoStempMessage("Start generating synthetic population");
+		gspu.sysoStempPerformance(0, CO.class);
 		// Generate the population
-		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = generator.generate(popSize);
+		IPopulation<ADemoEntity, Attribute<? extends IValue>> population = generator.generate(popSize);
+		
+		gspu.sysoStempPerformance(1, CO.class);
+		gspu.sysoStempMessage("Ends up with a synthetic population");
 
 		// Setup survey factory to export output population
 		GosplSurveyFactory gsf = new GosplSurveyFactory();
@@ -134,7 +139,7 @@ public class CO {
 					GSSurveyType.GlobalFrequencyTable, population);
 			
 			// FORMAT Output
-			List<Set<DemographicAttribute<? extends IValue>>> formats = gdf.getRawDataTables()
+			List<Set<Attribute<? extends IValue>>> formats = gdf.getRawDataTables()
 					.stream().map(data -> data.getDimensions().stream()
 							.map(dim -> population.getPopulationAttributes().contains(dim) ? dim : 
 								population.getPopulationAttributes().stream()
@@ -142,7 +147,7 @@ public class CO {
 							.collect(Collectors.toSet()))
 					.collect(Collectors.toList());
 			// TEST PURPOSE
-			for(Set<DemographicAttribute<? extends IValue>> format : formats)
+			for(Set<Attribute<? extends IValue>> format : formats)
 				gsf.createContingencyTable(Paths.get(outputPath.toString(), "tables"+
 						format.stream().map(dim -> dim.getAttributeName().substring(0, 3))
 							.collect(Collectors.joining("X"))+".csv").toFile(), 

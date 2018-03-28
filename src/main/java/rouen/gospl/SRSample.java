@@ -8,7 +8,7 @@ import java.util.Arrays;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.attribute.Attribute;
 import core.metamodel.entity.ADemoEntity;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.value.IValue;
@@ -72,11 +72,11 @@ public class SRSample {
 		//---------------------------------------//
 
 		// Input sample
-		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> seed = gdf.getRawSamples().iterator().next();
+		IPopulation<ADemoEntity, Attribute<? extends IValue>> seed = gdf.getRawSamples().iterator().next();
 		
 		
 		// Input control tables (also known as marginals)
-		INDimensionalMatrix<DemographicAttribute<? extends IValue>, IValue, Double> collapsedMarginals = null;
+		INDimensionalMatrix<Attribute<? extends IValue>, IValue, Double> collapsedMarginals = null;
 		try {
 			collapsedMarginals = gdf.collapseDataTablesIntoDistribution();
 		} catch (IllegalDistributionCreation | IllegalControlTotalException e1) {
@@ -87,7 +87,7 @@ public class SRSample {
 		ISyntheticReconstructionAlgo<IDistributionSampler> ipf = new SRIPFAlgo(seed, 100, Math.pow(10, -4));
 
 		// Build a sample from the IPF process
-		ISampler<ACoordinate<DemographicAttribute<? extends IValue>, IValue>> sampler = null;
+		ISampler<ACoordinate<Attribute<? extends IValue>, IValue>> sampler = null;
 		try {
 			sampler = ipf.inferSRSampler(collapsedMarginals, new GosplBasicSampler());
 		} catch (IllegalDistributionCreation e) {
@@ -103,7 +103,7 @@ public class SRSample {
 		ISyntheticGosplPopGenerator generator = new DistributionBasedGenerator(sampler);
 
 		// Generate the population
-		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = generator.generate(popSize);
+		IPopulation<ADemoEntity, Attribute<? extends IValue>> population = generator.generate(popSize);
 
 		// Setup survey factory to export output population
 		GosplSurveyFactory gsf = new GosplSurveyFactory();

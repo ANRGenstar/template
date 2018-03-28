@@ -13,12 +13,13 @@ import org.geotools.feature.SchemaException;
 import org.opengis.referencing.operation.TransformException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.attribute.demographic.DemographicAttribute;
+import core.metamodel.attribute.Attribute;
 import core.metamodel.entity.ADemoEntity;
 import core.metamodel.entity.AGeoEntity;
 import core.metamodel.io.IGSGeofile;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
+import core.util.excpetion.GSIllegalRangedData;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
 import spll.SpllPopulation;
@@ -75,7 +76,7 @@ public class LocalisationBangkok {
 			e.printStackTrace();
 		}
 
-		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
+		IPopulation<ADemoEntity, Attribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
 				LocalisationBangkok.class.getSimpleName());
@@ -90,6 +91,9 @@ public class LocalisationBangkok {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {
 			e.printStackTrace();
+		} catch (GSIllegalRangedData e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		gspu.sysoStempPerformance("Import main shapefiles", LocalisationBangkok.class.getSimpleName());
@@ -102,7 +106,7 @@ public class LocalisationBangkok {
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
 				endogeneousVarFile.add(new SPLGeofileBuilder().setFile(new File(path)).buildGeofile());
-			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
+			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException | GSIllegalRangedData e2) {
 				e2.printStackTrace();
 			}
 		}

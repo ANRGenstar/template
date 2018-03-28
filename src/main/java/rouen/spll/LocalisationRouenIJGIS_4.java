@@ -14,14 +14,15 @@ import org.geotools.feature.SchemaException;
 import org.opengis.referencing.operation.TransformException;
 
 import core.metamodel.IPopulation;
-import core.metamodel.attribute.demographic.DemographicAttribute;
-import core.metamodel.attribute.geographic.GeographicAttributeFactory;
+import core.metamodel.attribute.Attribute;
+import core.metamodel.attribute.AttributeFactory;
 import core.metamodel.entity.ADemoEntity;
 import core.metamodel.entity.AGeoEntity;
 import core.metamodel.io.IGSGeofile;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
 import core.util.data.GSEnumDataType;
+import core.util.excpetion.GSIllegalRangedData;
 import gospl.GosplPopulation;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
@@ -108,7 +109,7 @@ public class LocalisationRouenIJGIS_4 {
 			e.printStackTrace();
 		}
 		
-		IPopulation<ADemoEntity, DemographicAttribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
+		IPopulation<ADemoEntity, Attribute<? extends IValue>> population = gdb.getRawSamples().iterator().next();
 		
 		gspu.sysoStempPerformance("Population ("+population.size()+") have been retrieve from data", 
 				LocalisationRouenIJGIS_4.class.getSimpleName());
@@ -129,6 +130,9 @@ public class LocalisationRouenIJGIS_4 {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {
 			e.printStackTrace();
+		} catch (GSIllegalRangedData e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		gspu.sysoStempPerformance("Import main shapefiles", LocalisationRouenIJGIS_4.class.getSimpleName());
 
@@ -140,7 +144,7 @@ public class LocalisationRouenIJGIS_4 {
 		for(String path : stringPathToAncilaryGeofiles){
 			try {
 				endogeneousVarFile.add(new SPLGeofileBuilder().setFile(new File(path)).buildGeofile());
-			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException e2) {
+			} catch (IllegalArgumentException | TransformException | IOException | InvalidGeoFormatException | GSIllegalRangedData e2) {
 				e2.printStackTrace();
 			}
 		}
@@ -194,8 +198,13 @@ public class LocalisationRouenIJGIS_4 {
 		
 		Collection<? extends AGeoEntity<? extends IValue>> candidates = sfSchools.getGeoEntity();
 		
-		localizer.linkPopulation(localizedPop, linker, candidates, 
-				GeographicAttributeFactory.getFactory().createAttribute("Schools", GSEnumDataType.Nominal));
+		try {
+			localizer.linkPopulation(localizedPop, linker, candidates, 
+					AttributeFactory.getFactory().createAttribute("Schools", GSEnumDataType.Nominal));
+		} catch (GSIllegalRangedData e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 
 		gspu.sysoStempPerformance("Population ("+localizedPop.size()+") have been linked", 
