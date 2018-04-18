@@ -181,10 +181,11 @@ public class NetworkOnPopulation {
 
 		// Create SpinPopulation with SpatialNetworkGenerator	
 		System.out.println("START of the spatial network generation");	
-		
-		SpinSpatialNetworkGenerator<SpllEntity> spinPopGenLoc = new SpinSpatialNetworkGenerator<SpllEntity>(10);
-		SpinPopulation<? extends ADemoEntity> networkedPopLoc = spinPopGenLoc.generate(localizedPop);
-	
-		System.out.println(networkedPopLoc.toString());
+
+// TODO toredo !		
+//		SpinSpatialNetworkGenerator<SpllEntity> spinPopGenLoc = new SpinSpatialNetworkGenerator<SpllEntity>(10);
+//		SpinPopulation<? extends ADemoEntity> networkedPopLoc = spinPopGenLoc.generate(localizedPop);
+//	
+//		System.out.println(networkedPopLoc.toString());
 	}
 }
