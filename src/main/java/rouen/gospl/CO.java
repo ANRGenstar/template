@@ -99,15 +99,15 @@ public class CO {
 		switch (ALGO) {
 		case "TABU":
 			samplerCO = new CombinatorialOptimizationSampler<>(
-					new TabuSearch(new TabuList(SIZE_TABU_LIST), 1d, MAX_ITER), sample, false);
+					new TabuSearch(new TabuList(SIZE_TABU_LIST), 1d, MAX_ITER), sample);
 			break;
 		case "SA":
 			samplerCO = new CombinatorialOptimizationSampler<>(
-					new SimulatedAnnealing(), sample, false);
+					new SimulatedAnnealing(), sample);
 			break;
 		default:
 			samplerCO = new CombinatorialOptimizationSampler<>(
-					new HillClimbing(1d, MAX_ITER), sample, false);
+					new HillClimbing(1d, MAX_ITER), sample);
 			break;
 		}
 
