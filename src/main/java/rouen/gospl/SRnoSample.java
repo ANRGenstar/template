@@ -43,7 +43,7 @@ import gospl.validation.GosplIndicatorFactory;
  */
 public class SRnoSample {
 
-	private static final String ALGO = "HS";
+	private static final String ALGO = "BITE";
 	static int targetPopulation = 110755;
 	
 	// Output file path 

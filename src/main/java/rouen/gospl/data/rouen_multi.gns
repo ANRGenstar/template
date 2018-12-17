@@ -2,13 +2,6 @@
   "CONFIGURATION FILE" : {
     "MAIN DIRECTORY" : ".",
     "INPUT FILES" : [ "LAYER LEVEL : 0", {
-      "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Age & Sexe-Tableau 1.csv",
-      "SURVEY TYPE" : "ContingencyTable",
-      "SEPARATOR" : ";",
-      "FRI" : "1",
-      "FCI" : "1",
-      "SHEET NB" : "0"
-    }, "LAYER LEVEL : 0", {
       "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Rouen_iris.csv",
       "SURVEY TYPE" : "ContingencyTable",
       "SEPARATOR" : ",",
@@ -24,6 +17,34 @@
       "SHEET NB" : "0"
     }, "LAYER LEVEL : 0", {
       "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Age & Couple-Tableau 1.csv",
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Age & Sexe-Tableau 1.csv",
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 1", {
+      "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Taille ménage & Sex & Age-Tableau 1.csv",
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "2",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 1", {
+      "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Ménage & Enfants-Tableau 1.csv",
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 1", {
+      "RELATIVE PATH" : "src/main/java/rouen/gospl/data/Taille ménage & CSP référent-Tableau 1.csv",
       "SURVEY TYPE" : "ContingencyTable",
       "SEPARATOR" : ";",
       "FRI" : "1",
@@ -457,289 +478,6 @@
             },
             "ENCODED VALUES" : null
           }
-        }, {
-          "MAPPED ATTRIBUTE" : {
-            "NAME" : "agerevq",
-            "VALUE SPACE" : {
-              "TYPE" : "Integer",
-              "VALUES" : [ {
-                "INPUT VALUE" : "80"
-              }, {
-                "INPUT VALUE" : "90"
-              }, {
-                "INPUT VALUE" : "10"
-              }, {
-                "INPUT VALUE" : "20"
-              }, {
-                "INPUT VALUE" : "30"
-              }, {
-                "INPUT VALUE" : "40"
-              }, {
-                "INPUT VALUE" : "50"
-              }, {
-                "INPUT VALUE" : "60"
-              }, {
-                "INPUT VALUE" : "70"
-              }, {
-                "INPUT VALUE" : "100"
-              }, {
-                "INPUT VALUE" : "55"
-              }, {
-                "INPUT VALUE" : "65"
-              }, {
-                "INPUT VALUE" : "75"
-              }, {
-                "INPUT VALUE" : "85"
-              }, {
-                "INPUT VALUE" : "5"
-              }, {
-                "INPUT VALUE" : "95"
-              }, {
-                "INPUT VALUE" : "110"
-              }, {
-                "INPUT VALUE" : "120"
-              }, {
-                "INPUT VALUE" : "15"
-              }, {
-                "INPUT VALUE" : "105"
-              }, {
-                "INPUT VALUE" : "25"
-              }, {
-                "INPUT VALUE" : "115"
-              }, {
-                "INPUT VALUE" : "35"
-              }, {
-                "INPUT VALUE" : "0"
-              }, {
-                "INPUT VALUE" : "45"
-              } ],
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : "null"
-              },
-              "min" : -2147483648,
-              "max" : 2147483647
-            },
-            "REFERENT ATTRIBUTE" : {
-              "ATTRIBUTE" : {
-                "NAME" : "Age",
-                "VALUE SPACE" : {
-                  "TYPE" : "Range",
-                  "VALUES" : [ {
-                    "INPUT VALUE" : "100 ans ou plus"
-                  }, {
-                    "INPUT VALUE" : "40 à 44 ans"
-                  }, {
-                    "INPUT VALUE" : "45 à 49 ans"
-                  }, {
-                    "INPUT VALUE" : "80 à 84 ans"
-                  }, {
-                    "INPUT VALUE" : "85 à 89 ans"
-                  }, {
-                    "INPUT VALUE" : "30 à 34 ans"
-                  }, {
-                    "INPUT VALUE" : "35 à 39 ans"
-                  }, {
-                    "INPUT VALUE" : "70 à 74 ans"
-                  }, {
-                    "INPUT VALUE" : "75 à 79 ans"
-                  }, {
-                    "INPUT VALUE" : "Moins de 5 ans"
-                  }, {
-                    "INPUT VALUE" : "20 à 24 ans"
-                  }, {
-                    "INPUT VALUE" : "25 à 29 ans"
-                  }, {
-                    "INPUT VALUE" : "60 à 64 ans"
-                  }, {
-                    "INPUT VALUE" : "65 à 69 ans"
-                  }, {
-                    "INPUT VALUE" : "5 à 9 ans"
-                  }, {
-                    "INPUT VALUE" : "10 à 14 ans"
-                  }, {
-                    "INPUT VALUE" : "15 à 19 ans"
-                  }, {
-                    "INPUT VALUE" : "50 à 54 ans"
-                  }, {
-                    "INPUT VALUE" : "55 à 59 ans"
-                  }, {
-                    "INPUT VALUE" : "90 à 94 ans"
-                  }, {
-                    "INPUT VALUE" : "95 à 99 ans"
-                  } ],
-                  "min" : 0,
-                  "max" : 2147483647,
-                  "rangeTemplate" : {
-                    "numberMatcher" : "INT_POSITIF_MATCH",
-                    "theoreticalMin" : 0,
-                    "theoreticalMax" : 2147483647
-                  },
-                  "EMPTY VALUE" : {
-                    "INPUT VALUE" : "NaN à NaN ans"
-                  }
-                },
-                "ENCODED VALUES" : null
-              }
-            },
-            "MAPPER" : {
-              "TYPE" : "UND",
-              "THE MAP" : [ "80 : 80 à 84 ans", "90 : 90 à 94 ans", "55 : 55 à 59 ans", "65 : 65 à 69 ans", "10 : 10 à 14 ans", "75 : 75 à 79 ans", "20 : 20 à 24 ans", "85 : 85 à 89 ans", "30 : 30 à 34 ans", "95 : 95 à 99 ans", "40 : 40 à 44 ans", "5 : 5 à 9 ans", "50 : 50 à 54 ans", "60 : 60 à 64 ans", "70 : 70 à 74 ans", "100;105;115;110;120 : 100 ans ou plus", "15 : 15 à 19 ans", "25 : 25 à 29 ans", "35 : 35 à 39 ans", "45 : 45 à 49 ans", "0 : Moins de 5 ans" ]
-            },
-            "ENCODED VALUES" : null
-          }
-        }, {
-          "MAPPED ATTRIBUTE" : {
-            "NAME" : "couple",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "2"
-              }, {
-                "INPUT VALUE" : "1"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "REFERENT ATTRIBUTE" : {
-              "ATTRIBUTE" : {
-                "NAME" : "Couple",
-                "VALUE SPACE" : {
-                  "TYPE" : "Nominal",
-                  "VALUES" : [ {
-                    "INPUT VALUE" : "Vivant en couple"
-                  }, {
-                    "INPUT VALUE" : "Ne vivant pas en couple"
-                  } ],
-                  "categoricTemplate" : {
-                    "regex" : [ ]
-                  },
-                  "EMPTY VALUE" : {
-                    "INPUT VALUE" : null
-                  }
-                },
-                "ENCODED VALUES" : null
-              }
-            },
-            "MAPPER" : {
-              "TYPE" : "REC",
-              "THE MAP" : [ "2 : Ne vivant pas en couple", "1 : Vivant en couple" ]
-            },
-            "ENCODED VALUES" : null
-          }
-        }, {
-          "MAPPED ATTRIBUTE" : {
-            "NAME" : "Gender",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "2"
-              }, {
-                "INPUT VALUE" : "1"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "REFERENT ATTRIBUTE" : {
-              "ATTRIBUTE" : {
-                "NAME" : "Sexe",
-                "VALUE SPACE" : {
-                  "TYPE" : "Nominal",
-                  "VALUES" : [ {
-                    "INPUT VALUE" : "Femmes"
-                  }, {
-                    "INPUT VALUE" : "Hommes"
-                  } ],
-                  "categoricTemplate" : {
-                    "regex" : [ ]
-                  },
-                  "EMPTY VALUE" : {
-                    "INPUT VALUE" : null
-                  }
-                },
-                "ENCODED VALUES" : null
-              }
-            },
-            "MAPPER" : {
-              "TYPE" : "REC",
-              "THE MAP" : [ "2 : Femmes", "1 : Hommes" ]
-            },
-            "ENCODED VALUES" : null
-          }
-        }, {
-          "MAPPED ATTRIBUTE" : {
-            "NAME" : "cs1",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "1"
-              }, {
-                "INPUT VALUE" : "3"
-              }, {
-                "INPUT VALUE" : "2"
-              }, {
-                "INPUT VALUE" : "5"
-              }, {
-                "INPUT VALUE" : "4"
-              }, {
-                "INPUT VALUE" : "7"
-              }, {
-                "INPUT VALUE" : "6"
-              }, {
-                "INPUT VALUE" : "8"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "REFERENT ATTRIBUTE" : {
-              "ATTRIBUTE" : {
-                "NAME" : "CSP",
-                "VALUE SPACE" : {
-                  "TYPE" : "Nominal",
-                  "VALUES" : [ {
-                    "INPUT VALUE" : "Agriculteurs exploitants"
-                  }, {
-                    "INPUT VALUE" : "Professions intermédiaires"
-                  }, {
-                    "INPUT VALUE" : "Retraités"
-                  }, {
-                    "INPUT VALUE" : "Employés"
-                  }, {
-                    "INPUT VALUE" : "Artisans. commerçants. chefs d'entreprise"
-                  }, {
-                    "INPUT VALUE" : "Ouvriers"
-                  }, {
-                    "INPUT VALUE" : "Cadres et professions intellectuelles supérieures"
-                  }, {
-                    "INPUT VALUE" : "Autres personnes sans activité professionnelle"
-                  } ],
-                  "categoricTemplate" : {
-                    "regex" : [ ]
-                  },
-                  "EMPTY VALUE" : {
-                    "INPUT VALUE" : null
-                  }
-                },
-                "ENCODED VALUES" : null
-              }
-            },
-            "MAPPER" : {
-              "TYPE" : "REC",
-              "THE MAP" : [ "1 : Agriculteurs exploitants", "3 : Cadres et professions intellectuelles supérieures", "2 : Artisans. commerçants. chefs d'entreprise", "5 : Employés", "4 : Professions intermédiaires", "7 : Retraités", "6 : Ouvriers", "8 : Autres personnes sans activité professionnelle" ]
-            },
-            "ENCODED VALUES" : null
-          }
         } ],
         "RECORDS" : [ {
           "RECORD ATTRIBUTE" : {
@@ -749,6 +487,255 @@
           }
         } ],
         "SIZE ATTRIBUTE" : null,
+        "level" : 0,
+        "weightAttributeName" : null,
+        "identifierAttributeName" : null
+      }
+    }, {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "EMERGENT ATTRIBUTE" : {
+            "NAME" : "Number of child",
+            "VALUE SPACE" : {
+              "TYPE" : "Order",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Aucun enfant de moins de 25 ans"
+              }, {
+                "INPUT VALUE" : "1 enfant de moins de 25 ans"
+              }, {
+                "INPUT VALUE" : "2 enfant de moins de 25 ans"
+              }, {
+                "INPUT VALUE" : "3 enfant de moins de 25 ans"
+              }, {
+                "INPUT VALUE" : "4 enfants ou plus de moins de 25 ans"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "EMERGENT FUNCTION" : {
+              "TYPE ID" : "EMERGENT COUNT FUNCTION",
+              "REFERENT ATTRIBUTE" : "Number of child",
+              "VALUE MAPPING" : [ "0 : Aucun enfant de moins de 25 ans", "1 : 1 enfant de moins de 25 ans", "2 : 2 enfant de moins de 25 ans", "3 : 3 enfant de moins de 25 ans", "4 : 4 enfants ou plus de moins de 25 ans" ]
+            },
+            "EMERGENT FILTER" : {
+              "TYPE" : "MATCH FILTER",
+              "COMPARATOR" : {
+                "CONTENT" : "Default"
+              },
+              "MATCH TYPE" : "ALL",
+              "MATCHERS" : {
+                "ENTITY MATCH TYPE" : "TAG MATCHER",
+                "MATCH VECTOR" : [ "Child" ]
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "EMERGENT ATTRIBUTE" : {
+            "NAME" : "CSP of head",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Agriculteurs exploitants"
+              }, {
+                "INPUT VALUE" : "Professions intermédiaires"
+              }, {
+                "INPUT VALUE" : "Retraités"
+              }, {
+                "INPUT VALUE" : "Employés"
+              }, {
+                "INPUT VALUE" : "Artisans. commerçants. chefs d'entreprise"
+              }, {
+                "INPUT VALUE" : "Ouvriers"
+              }, {
+                "INPUT VALUE" : "Cadres et professions intellectuelles supérieures"
+              }, {
+                "INPUT VALUE" : "Autres personnes sans activité professionnelle"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "EMERGENT FUNCTION" : {
+              "TYPE ID" : "ENTITY ATTRIBUTE VALUE FUNCTION",
+              "REFERENT ATTRIBUTE" : "CSP",
+              "VALUE MAPPING" : [ "Identity" ]
+            },
+            "EMERGENT FILTER" : {
+              "TYPE" : "SELECTION FILTER",
+              "COMPARATOR" : {
+                "CONTENT" : "Default"
+              },
+              "MATCH TYPE" : "ALL",
+              "MATCHERS" : {
+                "ENTITY MATCH TYPE" : "TAG MATCHER",
+                "MATCH VECTOR" : [ "HHHead" ]
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "EMERGENT ATTRIBUTE" : {
+            "NAME" : "Age of head",
+            "VALUE SPACE" : {
+              "TYPE" : "Range",
+              "VALUES" : [ {
+                "INPUT VALUE" : "100 ans ou plus"
+              }, {
+                "INPUT VALUE" : "40 à 44 ans"
+              }, {
+                "INPUT VALUE" : "45 à 49 ans"
+              }, {
+                "INPUT VALUE" : "80 à 84 ans"
+              }, {
+                "INPUT VALUE" : "85 à 89 ans"
+              }, {
+                "INPUT VALUE" : "30 à 34 ans"
+              }, {
+                "INPUT VALUE" : "35 à 39 ans"
+              }, {
+                "INPUT VALUE" : "70 à 74 ans"
+              }, {
+                "INPUT VALUE" : "75 à 79 ans"
+              }, {
+                "INPUT VALUE" : "Moins de 5 ans"
+              }, {
+                "INPUT VALUE" : "20 à 24 ans"
+              }, {
+                "INPUT VALUE" : "25 à 29 ans"
+              }, {
+                "INPUT VALUE" : "60 à 64 ans"
+              }, {
+                "INPUT VALUE" : "65 à 69 ans"
+              }, {
+                "INPUT VALUE" : "5 à 9 ans"
+              }, {
+                "INPUT VALUE" : "10 à 14 ans"
+              }, {
+                "INPUT VALUE" : "15 à 19 ans"
+              }, {
+                "INPUT VALUE" : "50 à 54 ans"
+              }, {
+                "INPUT VALUE" : "55 à 59 ans"
+              }, {
+                "INPUT VALUE" : "90 à 94 ans"
+              }, {
+                "INPUT VALUE" : "95 à 99 ans"
+              } ],
+              "min" : 0,
+              "max" : 2147483647,
+              "rangeTemplate" : {
+                "numberMatcher" : "INT_POSITIF_MATCH",
+                "theoreticalMin" : 0,
+                "theoreticalMax" : 2147483647
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "NaN à NaN ans"
+              }
+            },
+            "EMERGENT FUNCTION" : {
+              "TYPE ID" : "ENTITY ATTRIBUTE VALUE FUNCTION",
+              "REFERENT ATTRIBUTE" : "Age",
+              "VALUE MAPPING" : [ "Identity" ]
+            },
+            "EMERGENT FILTER" : {
+              "TYPE" : "SELECTION FILTER",
+              "COMPARATOR" : {
+                "CONTENT" : "Default"
+              },
+              "MATCH TYPE" : "ALL",
+              "MATCHERS" : {
+                "ENTITY MATCH TYPE" : "TAG MATCHER",
+                "MATCH VECTOR" : [ "HHHead" ]
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "EMERGENT ATTRIBUTE" : {
+            "NAME" : "Gender of head",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Femmes"
+              }, {
+                "INPUT VALUE" : "Hommes"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "EMERGENT FUNCTION" : {
+              "TYPE ID" : "ENTITY ATTRIBUTE VALUE FUNCTION",
+              "REFERENT ATTRIBUTE" : "Sexe",
+              "VALUE MAPPING" : [ "Identity" ]
+            },
+            "EMERGENT FILTER" : {
+              "TYPE" : "SELECTION FILTER",
+              "COMPARATOR" : {
+                "CONTENT" : "Default"
+              },
+              "MATCH TYPE" : "ALL",
+              "MATCHERS" : {
+                "ENTITY MATCH TYPE" : "TAG MATCHER",
+                "MATCH VECTOR" : [ "HHHead" ]
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        } ],
+        "RECORDS" : [ ],
+        "SIZE ATTRIBUTE" : {
+          "EMERGENT ATTRIBUTE" : {
+            "NAME" : "Number of people in household",
+            "VALUE SPACE" : {
+              "TYPE" : "Order",
+              "VALUES" : [ {
+                "INPUT VALUE" : "1 personne"
+              }, {
+                "INPUT VALUE" : "2 personnes"
+              }, {
+                "INPUT VALUE" : "3 personnes"
+              }, {
+                "INPUT VALUE" : "4 personnes"
+              }, {
+                "INPUT VALUE" : "5 personnes"
+              }, {
+                "INPUT VALUE" : "6 personnes ou plus"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "EMERGENT FUNCTION" : {
+              "TYPE ID" : "EMERGENT COUNT FUNCTION",
+              "REFERENT ATTRIBUTE" : "Number of people in household",
+              "VALUE MAPPING" : [ "1 : 1 personne", "2 : 2 personnes", "3 : 3 personnes", "4 : 4 personnes", "5 : 5 personnes", "6 : 6 personnes ou plus" ]
+            },
+            "EMERGENT FILTER" : {
+              "TYPE" : "EMPTY FILTER",
+              "COMPARATOR" : {
+                "CONTENT" : "Default"
+              },
+              "MATCH TYPE" : "ALL",
+              "MATCHERS" : null
+            },
+            "ENCODED VALUES" : null
+          }
+        },
         "level" : 0,
         "weightAttributeName" : null,
         "identifierAttributeName" : null

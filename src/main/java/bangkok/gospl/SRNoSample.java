@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-
 import core.metamodel.attribute.Attribute;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.value.IValue;

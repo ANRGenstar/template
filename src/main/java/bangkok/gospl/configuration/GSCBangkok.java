@@ -139,7 +139,7 @@ public class GSCBangkok {
 
 			GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 			gcf.setBaseDirectory(FileSystems.getDefault().getPath("."));
-			gcf.setSurveyWrappers(inputFiles);
+			gcf.setSurveyWrapper(inputFiles);
 			gcf.setDictionary(mdd);
 			
 			try {
