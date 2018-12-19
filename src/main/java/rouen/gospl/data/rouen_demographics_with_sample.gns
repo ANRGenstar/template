@@ -29,6 +29,13 @@
       "FRI" : "1",
       "FCI" : "1",
       "SHEET NB" : "0"
+    }, "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src/main/java/rouen/gospl/data/sampleRouen.csv",
+      "SURVEY TYPE" : "Sample",
+      "SEPARATOR" : ",",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
     } ],
     "DICTIONARIES" : [ {
       "DICTIONARY" : {
@@ -463,55 +470,55 @@
             "VALUE SPACE" : {
               "TYPE" : "Integer",
               "VALUES" : [ {
-                "INPUT VALUE" : "80"
-              }, {
-                "INPUT VALUE" : "90"
-              }, {
-                "INPUT VALUE" : "10"
-              }, {
-                "INPUT VALUE" : "20"
-              }, {
-                "INPUT VALUE" : "30"
-              }, {
-                "INPUT VALUE" : "40"
-              }, {
-                "INPUT VALUE" : "50"
+                "INPUT VALUE" : "70"
               }, {
                 "INPUT VALUE" : "60"
               }, {
-                "INPUT VALUE" : "70"
+                "INPUT VALUE" : "90"
               }, {
-                "INPUT VALUE" : "100"
+                "INPUT VALUE" : "80"
               }, {
-                "INPUT VALUE" : "55"
+                "INPUT VALUE" : "30"
               }, {
-                "INPUT VALUE" : "65"
+                "INPUT VALUE" : "20"
               }, {
-                "INPUT VALUE" : "75"
+                "INPUT VALUE" : "50"
               }, {
-                "INPUT VALUE" : "85"
-              }, {
-                "INPUT VALUE" : "5"
-              }, {
-                "INPUT VALUE" : "95"
-              }, {
-                "INPUT VALUE" : "110"
-              }, {
-                "INPUT VALUE" : "120"
-              }, {
-                "INPUT VALUE" : "15"
-              }, {
-                "INPUT VALUE" : "105"
-              }, {
-                "INPUT VALUE" : "25"
-              }, {
-                "INPUT VALUE" : "115"
-              }, {
-                "INPUT VALUE" : "35"
+                "INPUT VALUE" : "40"
               }, {
                 "INPUT VALUE" : "0"
               }, {
+                "INPUT VALUE" : "120"
+              }, {
+                "INPUT VALUE" : "110"
+              }, {
+                "INPUT VALUE" : "100"
+              }, {
+                "INPUT VALUE" : "10"
+              }, {
+                "INPUT VALUE" : "85"
+              }, {
+                "INPUT VALUE" : "75"
+              }, {
+                "INPUT VALUE" : "95"
+              }, {
+                "INPUT VALUE" : "5"
+              }, {
+                "INPUT VALUE" : "115"
+              }, {
+                "INPUT VALUE" : "105"
+              }, {
                 "INPUT VALUE" : "45"
+              }, {
+                "INPUT VALUE" : "35"
+              }, {
+                "INPUT VALUE" : "65"
+              }, {
+                "INPUT VALUE" : "55"
+              }, {
+                "INPUT VALUE" : "25"
+              }, {
+                "INPUT VALUE" : "15"
               } ],
               "EMPTY VALUE" : {
                 "INPUT VALUE" : "null"
@@ -583,7 +590,7 @@
             },
             "MAPPER" : {
               "TYPE" : "UND",
-              "THE MAP" : [ "80 : 80 à 84 ans", "90 : 90 à 94 ans", "55 : 55 à 59 ans", "65 : 65 à 69 ans", "10 : 10 à 14 ans", "75 : 75 à 79 ans", "20 : 20 à 24 ans", "85 : 85 à 89 ans", "30 : 30 à 34 ans", "95 : 95 à 99 ans", "40 : 40 à 44 ans", "5 : 5 à 9 ans", "50 : 50 à 54 ans", "60 : 60 à 64 ans", "70 : 70 à 74 ans", "100;105;115;110;120 : 100 ans ou plus", "15 : 15 à 19 ans", "25 : 25 à 29 ans", "35 : 35 à 39 ans", "45 : 45 à 49 ans", "0 : Moins de 5 ans" ]
+              "THE MAP" : [ "70 : 70 à 74 ans", "60 : 60 à 64 ans", "90 : 90 à 94 ans", "80 : 80 à 84 ans", "85 : 85 à 89 ans", "30 : 30 à 34 ans", "75 : 75 à 79 ans", "20 : 20 à 24 ans", "50 : 50 à 54 ans", "95 : 95 à 99 ans", "40 : 40 à 44 ans", "0 : Moins de 5 ans", "5 : 5 à 9 ans", "115;105;120;110;100 : 100 ans ou plus", "45 : 45 à 49 ans", "35 : 35 à 39 ans", "65 : 65 à 69 ans", "10 : 10 à 14 ans", "55 : 55 à 59 ans", "25 : 25 à 29 ans", "15 : 15 à 19 ans" ]
             },
             "ENCODED VALUES" : null
           }

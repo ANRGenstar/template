@@ -49,7 +49,7 @@ public class GSCRouenSample {
 		}
 
 		// What to define in this configuration file
-		gcf.getSurveyWrappers().add(new GSSurveyWrapper(relativePath.resolve("sampleRouen.csv"), 
+		gcf.addSurveyWrapper(new GSSurveyWrapper(relativePath.resolve("sampleRouen.csv"), 
 				GSSurveyType.Sample, ',', 1, 1));
 
 		// --------------------------

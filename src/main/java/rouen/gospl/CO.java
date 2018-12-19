@@ -44,7 +44,7 @@ public class CO {
 	// Setup configuration file
 	final static Path configurationFile = Paths.get("src/main/java/rouen/gospl/data/rouen_demographics_with_sample.gns");
 	
-	private static final String ALGO = "TABU";
+	private static final String ALGO = "SA";
 	
 	private static final int MAX_ITER = (int) Math.pow(10, 5);
 	private static final int SIZE_TABU_LIST = 10;
