@@ -19,8 +19,8 @@ import spll.SpllPopulation;
 import spll.io.SPLGeofileBuilder;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPLocalizer;
-import spll.popmapper.distribution.SpatialDistributionFactory;
+import spll.localizer.SPLocalizer;
+import spll.localizer.distribution.SpatialDistributionFactory;
 
 public class LocalisationRouenIJGIS_2 {
 

@@ -26,8 +26,8 @@ import spll.entity.GeoEntityFactory;
 import spll.io.SPLGeofileBuilder;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPLocalizer;
-import spll.popmapper.constraint.SpatialConstraintMaxDensity;
+import spll.localizer.SPLocalizer;
+import spll.localizer.constraint.SpatialConstraintMaxDensity;
 
 public class LocalisationRouenRoads {
 

@@ -26,12 +26,12 @@ import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
 import spll.datamapper.exception.GSMapperException;
+import spll.datamapper.normalizer.SPLUniformNormalizer;
 import spll.io.SPLGeofileBuilder;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPLocalizer;
-import spll.popmapper.normalizer.SPLUniformNormalizer;
+import spll.localizer.SPLocalizer;
 
 public class LocalisationBangkok {
 

@@ -31,17 +31,17 @@ import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
 import spll.datamapper.exception.GSMapperException;
+import spll.datamapper.normalizer.SPLUniformNormalizer;
 import spll.entity.GeoEntityFactory;
 import spll.io.SPLGeofileBuilder;
 import spll.io.SPLRasterFile;
 import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
-import spll.popmapper.SPLocalizer;
-import spll.popmapper.constraint.SpatialConstraintMaxDensity;
-import spll.popmapper.distribution.SpatialDistributionFactory;
-import spll.popmapper.linker.ISPLinker;
-import spll.popmapper.linker.SPLinker;
-import spll.popmapper.normalizer.SPLUniformNormalizer;
+import spll.localizer.SPLocalizer;
+import spll.localizer.constraint.SpatialConstraintMaxDensity;
+import spll.localizer.distribution.SpatialDistributionFactory;
+import spll.localizer.linker.ISPLinker;
+import spll.localizer.linker.SPLinker;
 
 public class LocalisationRouenIJGIS_4 {
 
