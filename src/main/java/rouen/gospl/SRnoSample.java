@@ -132,7 +132,7 @@ public class SRnoSample {
 		try {
 			outputPath.getParent().toFile().mkdirs();
 			sf.createSummary(outputPath.toFile(), GSSurveyType.Sample, population);
-			sf.createSummary(reportPath.toFile(), GSSurveyType.GlobalFrequencyTable, population);
+			sf.createSummary(reportPath.toFile(), GSSurveyType.ContingencyTable, population);
 			gif.saveReport(statPath.toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
 					distribution, population), ALGO, population.size());
 		} catch (IOException | InvalidSurveyFormatException | InvalidFormatException e) {

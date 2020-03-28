@@ -1,0 +1,284 @@
+{
+  "CONFIGURATION FILE" : {
+    "MAIN DIRECTORY" : ".",
+    "INPUT FILES" : [ "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_BT.csv",
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ",",
+      "FRI" : "1",
+      "FCI" : "6",
+      "SHEET NB" : "0"
+    } ],
+    "DICTIONARIES" : [ {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "ATTRIBUTE" : {
+            "NAME" : "commune",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Xã Thừa Đức"
+              }, {
+                "INPUT VALUE" : "Thị trấn Bình Đại"
+              }, {
+                "INPUT VALUE" : "Xã Thới Thuận"
+              }, {
+                "INPUT VALUE" : "Xã Bình Thắng"
+              }, {
+                "INPUT VALUE" : "Xã Long Hòa"
+              }, {
+                "INPUT VALUE" : "Xã Phú Long"
+              }, {
+                "INPUT VALUE" : "Xã Châu Hưng"
+              }, {
+                "INPUT VALUE" : "Xã Vang Quới Đông"
+              }, {
+                "INPUT VALUE" : "Xã Tam Hiệp"
+              }, {
+                "INPUT VALUE" : "Xã Long Định"
+              }, {
+                "INPUT VALUE" : "Xã Đại Hòa Lộc"
+              }, {
+                "INPUT VALUE" : "Xã Định Trung"
+              }, {
+                "INPUT VALUE" : "Xã Phú Vang"
+              }, {
+                "INPUT VALUE" : "Xã Lộc Thuận"
+              }, {
+                "INPUT VALUE" : "Xã Phú Thuận"
+              }, {
+                "INPUT VALUE" : "Xã Bình Thới"
+              }, {
+                "INPUT VALUE" : "Xã Thạnh Phước"
+              }, {
+                "INPUT VALUE" : "Xã Thới Lai"
+              }, {
+                "INPUT VALUE" : "Xã Thạnh Trị"
+              }, {
+                "INPUT VALUE" : "Xã Vang Quới Tây"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "age",
+            "VALUE SPACE" : {
+              "TYPE" : "Range",
+              "VALUES" : [ {
+                "INPUT VALUE" : "[21, 22)"
+              }, {
+                "INPUT VALUE" : "[66, 67)"
+              }, {
+                "INPUT VALUE" : "[37, 38)"
+              }, {
+                "INPUT VALUE" : "[50, 51)"
+              }, {
+                "INPUT VALUE" : "[79, 80)"
+              }, {
+                "INPUT VALUE" : "[14, 15)"
+              }, {
+                "INPUT VALUE" : "[10, 11)"
+              }, {
+                "INPUT VALUE" : "[55, 56)"
+              }, {
+                "INPUT VALUE" : "[48, 49)"
+              }, {
+                "INPUT VALUE" : "[61, 62)"
+              }, {
+                "INPUT VALUE" : "[0, 1)"
+              }, {
+                "INPUT VALUE" : "[43, 44)"
+              }, {
+                "INPUT VALUE" : "[15, 16)"
+              }, {
+                "INPUT VALUE" : "[49, 50)"
+              }, {
+                "INPUT VALUE" : "[72, 73)"
+              }, {
+                "INPUT VALUE" : "[6, 7)"
+              }, {
+                "INPUT VALUE" : "[3, 4)"
+              }, {
+                "INPUT VALUE" : "[77, 78)"
+              }, {
+                "INPUT VALUE" : "[32, 33)"
+              }, {
+                "INPUT VALUE" : "[26, 27)"
+              }, {
+                "INPUT VALUE" : "[38, 39)"
+              }, {
+                "INPUT VALUE" : "[40, 41)"
+              }, {
+                "INPUT VALUE" : "[74, 75)"
+              }, {
+                "INPUT VALUE" : "[7, 8)"
+              }, {
+                "INPUT VALUE" : "[22, 23)"
+              }, {
+                "INPUT VALUE" : "[56, 57)"
+              }, {
+                "INPUT VALUE" : "[19, 20)"
+              }, {
+                "INPUT VALUE" : "[51, 52)"
+              }, {
+                "INPUT VALUE" : "[11, 12)"
+              }, {
+                "INPUT VALUE" : "[45, 46)"
+              }, {
+                "INPUT VALUE" : "[1, 2)"
+              }, {
+                "INPUT VALUE" : "[16, 17)"
+              }, {
+                "INPUT VALUE" : "[62, 63)"
+              }, {
+                "INPUT VALUE" : "[44, 45)"
+              }, {
+                "INPUT VALUE" : "[78, 79)"
+              }, {
+                "INPUT VALUE" : "[8, 9)"
+              }, {
+                "INPUT VALUE" : "[27, 28)"
+              }, {
+                "INPUT VALUE" : "[73, 74)"
+              }, {
+                "INPUT VALUE" : "[2, 3)"
+              }, {
+                "INPUT VALUE" : "[9, 10)"
+              }, {
+                "INPUT VALUE" : "[33, 34)"
+              }, {
+                "INPUT VALUE" : "[67, 68)"
+              }, {
+                "INPUT VALUE" : "[80, Inf)"
+              }, {
+                "INPUT VALUE" : "[30, 31)"
+              }, {
+                "INPUT VALUE" : "[75, 76)"
+              }, {
+                "INPUT VALUE" : "[12, 13)"
+              }, {
+                "INPUT VALUE" : "[57, 58)"
+              }, {
+                "INPUT VALUE" : "[59, 60)"
+              }, {
+                "INPUT VALUE" : "[41, 42)"
+              }, {
+                "INPUT VALUE" : "[64, 65)"
+              }, {
+                "INPUT VALUE" : "[68, 69)"
+              }, {
+                "INPUT VALUE" : "[28, 29)"
+              }, {
+                "INPUT VALUE" : "[52, 53)"
+              }, {
+                "INPUT VALUE" : "[34, 35)"
+              }, {
+                "INPUT VALUE" : "[35, 36)"
+              }, {
+                "INPUT VALUE" : "[29, 30)"
+              }, {
+                "INPUT VALUE" : "[17, 18)"
+              }, {
+                "INPUT VALUE" : "[63, 64)"
+              }, {
+                "INPUT VALUE" : "[23, 24)"
+              }, {
+                "INPUT VALUE" : "[46, 47)"
+              }, {
+                "INPUT VALUE" : "[47, 48)"
+              }, {
+                "INPUT VALUE" : "[31, 32)"
+              }, {
+                "INPUT VALUE" : "[65, 66)"
+              }, {
+                "INPUT VALUE" : "[13, 14)"
+              }, {
+                "INPUT VALUE" : "[69, 70)"
+              }, {
+                "INPUT VALUE" : "[18, 19)"
+              }, {
+                "INPUT VALUE" : "[60, 61)"
+              }, {
+                "INPUT VALUE" : "[54, 55)"
+              }, {
+                "INPUT VALUE" : "[20, 21)"
+              }, {
+                "INPUT VALUE" : "[58, 59)"
+              }, {
+                "INPUT VALUE" : "[4, 5)"
+              }, {
+                "INPUT VALUE" : "[24, 25)"
+              }, {
+                "INPUT VALUE" : "[25, 26)"
+              }, {
+                "INPUT VALUE" : "[39, 40)"
+              }, {
+                "INPUT VALUE" : "[71, 72)"
+              }, {
+                "INPUT VALUE" : "[53, 54)"
+              }, {
+                "INPUT VALUE" : "[70, 71)"
+              }, {
+                "INPUT VALUE" : "[36, 37)"
+              }, {
+                "INPUT VALUE" : "[5, 6)"
+              }, {
+                "INPUT VALUE" : "[42, 43)"
+              }, {
+                "INPUT VALUE" : "[76, 77)"
+              } ],
+              "min" : 0,
+              "max" : 2147483647,
+              "rangeTemplate" : {
+                "numberMatcher" : "INT_POSITIF_MATCH",
+                "theoreticalMin" : 0,
+                "theoreticalMax" : 2147483647
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "[NaN, NaN)"
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "sex",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "male"
+              }, {
+                "INPUT VALUE" : "female"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "ENCODED VALUES" : null
+          }
+        } ],
+        "RECORDS" : [ {
+          "RECORD ATTRIBUTE" : {
+            "NAME" : "n",
+            "PROXY ATTRIBUTE TYPE" : "Integer",
+            "REFERENT ATTRIBUTE" : "false"
+          }
+        } ],
+        "SIZE ATTRIBUTE" : null,
+        "level" : 0,
+        "weightAttributeName" : null,
+        "identifierAttributeName" : null
+      }
+    } ]
+  }
+}

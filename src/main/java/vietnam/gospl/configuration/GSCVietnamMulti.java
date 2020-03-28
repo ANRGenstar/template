@@ -20,8 +20,8 @@ public class GSCVietnamMulti {
 	public static final String CONF_CLASS_PATH = "src/main/java/vietnam/gospl/data";
 	public static final String CONF_EXPORT = "vietnam_multi.gns";
 	
-	public static final String IPUMS_SAMPLE = "impumsi_vietnam_10002.csv";
-	public static final String IPUMS_DICTIONARY = "impums_hh_x_indiv_VND.txt";
+	public static final String IPUMS_SAMPLE = "ipumsi_vietnam_10002.csv";
+	public static final String IPUMS_DICTIONARY = "ipums_hh_x_indiv_VND.txt";
 
 	public static void main(String[] args) {
 
