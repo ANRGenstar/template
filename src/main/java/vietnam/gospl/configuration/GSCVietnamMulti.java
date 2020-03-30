@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Set;
 
 import core.configuration.GenstarConfigurationFile;
 import core.configuration.GenstarJsonUtil;
@@ -30,21 +31,31 @@ public class GSCVietnamMulti {
 		
 		GSSurveyWrapper sample = new GSSurveyWrapper(relativePath.resolve(IPUMS_SAMPLE), GSSurveyType.Sample, ',', 1, 1);
 		
-		IGenstarDictionary<Attribute<? extends IValue>> dd = null;
+		//IGenstarDictionary<Attribute<? extends IValue>> dd = null;
 		
 		ReadIPUMSDictionaryUtils ipumsReader = new ReadIPUMSDictionaryUtils();
+		/*
 		try {
 			dd = ipumsReader.readDictionaryFromRTF(relativePath.resolve(IPUMS_DICTIONARY).toFile());
 		} catch (GSIllegalRangedData e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
+		
+		Set<IGenstarDictionary<Attribute<? extends IValue>>> dds = null;
+		try {
+			dds = ipumsReader.readDictionariesFromIPUMSDescription(relativePath.resolve(IPUMS_DICTIONARY).toFile());
+		} catch (GSIllegalRangedData e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		GenstarConfigurationFile gcf = new GenstarConfigurationFile();
 		gcf.setBaseDirectory(baseDirectory);
 		//gcf.addSurveyWrapper(sample, gcf.getLayers().toArray(new Integer[gcf.getLevels()]));
 		gcf.addSurveyWrapper(sample, 0, 1);
-		gcf.setDictionary(dd);
+		gcf.setDictionaries(dds);
 
 		try {
 			new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);

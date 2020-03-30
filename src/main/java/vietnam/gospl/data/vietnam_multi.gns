@@ -13,86 +13,6 @@
       "DICTIONARY" : {
         "ATTRIBUTES" : [ {
           "ATTRIBUTE" : {
-            "NAME" : "HHTYPE",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "Unclassified subfamily"
-              }, {
-                "INPUT VALUE" : "Married cohab couple, no children"
-              }, {
-                "INPUT VALUE" : "Vacant household"
-              }, {
-                "INPUT VALUE" : "One-person household"
-              }, {
-                "INPUT VALUE" : "Polygamous family"
-              }, {
-                "INPUT VALUE" : "Married cohab couple with children"
-              }, {
-                "INPUT VALUE" : "Other relative or non-relative household"
-              }, {
-                "INPUT VALUE" : "Non-family household"
-              }, {
-                "INPUT VALUE" : "Unclassifiable"
-              }, {
-                "INPUT VALUE" : "Group quarters"
-              }, {
-                "INPUT VALUE" : "Composite household, family and non-relatives"
-              }, {
-                "INPUT VALUE" : "Single-parent family"
-              }, {
-                "INPUT VALUE" : "Extended family, relatives only"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "Unclassified subfamily : 09", "Married cohab couple, no children : 02", "Vacant household : 00", "One-person household : 01", "Polygamous family : 05", "Married cohab couple with children : 03", "Other relative or non-relative household : 10", "Non-family household : 08", "Unclassifiable : 99", "Group quarters : 11", "Composite household, family and non-relatives : 07", "Extended family, relatives only : 06", "Single-parent family : 04" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "NFATHERS",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "3 fathers"
-              }, {
-                "INPUT VALUE" : "6 fathers"
-              }, {
-                "INPUT VALUE" : "8 fathers"
-              }, {
-                "INPUT VALUE" : "5 fathers"
-              }, {
-                "INPUT VALUE" : "4 fathers"
-              }, {
-                "INPUT VALUE" : "9 or more fathers in household"
-              }, {
-                "INPUT VALUE" : "7 fathers"
-              }, {
-                "INPUT VALUE" : "No fathers in household"
-              }, {
-                "INPUT VALUE" : "2 fathers"
-              }, {
-                "INPUT VALUE" : "1 father"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "3 fathers : 3", "6 fathers : 6", "8 fathers : 8", "5 fathers : 5", "4 fathers : 4", "9 or more fathers in household : 9", "7 fathers : 7", "No fathers in household : 0", "2 fathers : 2", "1 father : 1" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
             "NAME" : "SEX",
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
@@ -110,45 +30,9 @@
                 "INPUT VALUE" : null
               }
             },
+            "emergent" : false,
             "ENCODED VALUES" : {
               "MAPPING" : [ "Unknown : 9", "Female : 2", "Male : 1" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "NMOTHERS",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "9 or more mothers in household"
-              }, {
-                "INPUT VALUE" : "No mothers in household"
-              }, {
-                "INPUT VALUE" : "8 mothers"
-              }, {
-                "INPUT VALUE" : "5 mothers"
-              }, {
-                "INPUT VALUE" : "3 mothers"
-              }, {
-                "INPUT VALUE" : "4 mothers"
-              }, {
-                "INPUT VALUE" : "7 mothers"
-              }, {
-                "INPUT VALUE" : "2 mothers"
-              }, {
-                "INPUT VALUE" : "6 mothers"
-              }, {
-                "INPUT VALUE" : "1 mother"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "9 or more mothers in household : 9", "8 mothers : 8", "No mothers in household : 0", "5 mothers : 5", "3 mothers : 3", "7 mothers : 7", "4 mothers : 4", "2 mothers : 2", "6 mothers : 6", "1 mother : 1" ]
             }
           }
         }, {
@@ -368,6 +252,7 @@
                 "INPUT VALUE" : null
               }
             },
+            "emergent" : false,
             "ENCODED VALUES" : {
               "MAPPING" : [ "17 : 017", "29 : 029", "2 years : 002", "6 : 006", "84 : 084", "96 : 096", "60 : 060", "72 : 072", "44 : 044", "56 : 056", "20 : 020", "32 : 032", "16 : 016", "68 : 068", "18 : 018", "7 : 007", "73 : 073", "85 : 085", "Less than 1 year : 000", "61 : 061", "33 : 033", "45 : 045", "97 : 097", "21 : 021", "57 : 057", "69 : 069", "39 : 039", "4 : 004", "70 : 070", "30 : 030", "82 : 082", "94 : 094", "66 : 066", "78 : 078", "42 : 042", "54 : 054", "26 : 026", "38 : 038", "14 : 014", "28 : 028", "5 : 005", "95 : 095", "71 : 071", "83 : 083", "55 : 055", "67 : 067", "31 : 031", "43 : 043", "15 : 015", "27 : 027", "79 : 079", "100+ : 100", "80 : 080", "92 : 092", "40 : 040", "52 : 052", "1 year : 001", "88 : 088", "12 : 012", "64 : 064", "76 : 076", "48 : 048", "24 : 024", "36 : 036", "3 : 003", "81 : 081", "41 : 041", "93 : 093", "77 : 077", "89 : 089", "53 : 053", "65 : 065", "37 : 037", "49 : 049", "13 : 013", "25 : 025", "19 : 019", "Not reported missing : 999", "8 : 008", "90 : 090", "62 : 062", "74 : 074", "50 : 050", "22 : 022", "34 : 034", "86 : 086", "10 : 010", "98 : 098", "46 : 046", "58 : 058", "9 : 009", "91 : 091", "51 : 051", "63 : 063", "11 : 011", "99 : 099", "23 : 023", "75 : 075", "87 : 087", "59 : 059", "35 : 035", "47 : 047" ]
             }
@@ -537,6 +422,7 @@
                 "INPUT VALUE" : null
               }
             },
+            "emergent" : false,
             "ENCODED VALUES" : {
               "MAPPING" : [ "Spouse : 2100", "Lodger : 5320", "Stepsibling : 4420", "Other relative with different family name : 4920", "Parent grandparent ascendant : 4600", "Sibling of sibling-in-law : 4830", "Group quarters : 5600", "Friend guest visitor partner : 5100", "Employee : 5200", "Great grandchild : 4120", "Child of unmarried partner : 3600", "Cousin : 4820", "Sibling : 4410", "Ex-spouse : 5130", "Child of servant : 5222", "Biological child : 3100", "Temporary resident, guest : 5520", "Spouse of servant : 5221", "Godchild : 5150", "Head : 1000", "Spouse partner : 2000", "Grandchild : 4100", "Boarder or guest : 5311", "Great-great grandchild : 4130", "Agregado : 5510", "Other relative : 4000", "Aunt uncle : 4700", "Sibling sibling-in-law : 4400", "Domestic employee : 5210", "Other specified relative : 4800", "Other relative of servant : 5223", "Parent-in-law : 4220", "Sibling of spouse partner : 4431", "Child-in-law : 4300", "Other relative, not specified (secondary family) : 4930", "Tutored child : 5350", "Partner roommate : 5112", "Stepchild : 3300", "Other relative with same family name : 4910", "Child child-in-law grandchild : 3500", "Partner friend : 5110", "Nephew niece : 4810", "Grandchild or great grandchild : 4110", "Other relative, not elsewhere classified : 4900", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative or non-relative : 6000", "Friend : 5111", "Foster child : 5330", "Grandparent : 4500", "Employee, boarder or guest : 5400", "Parent : 4210", "Institutional inmates : 5620", "Same-sex spouse partner : 2300", "Godparent : 5140", "Unknown : 9999", "Relative of employee, n.s. : 5220", "Unmarried partner of child : 4310", "Adopted child : 3200", "Group quarters, non-inmates : 5610", "Spouse partner of sibling : 4432", "Great grandparent : 4510", "Child child-in-law : 3400", "Non-relative : 5000", "Daughter-in-law : 4301", "Child : 3000", "Non-relative, n.e.c. : 5900", "Roomer boarder lodger foster child : 5300", "Other specified non-relative : 5500", "Visitor : 5120", "Stepparent : 4211", "Spouse partner of child : 4302", "Boarder : 5310", "Parent parent-in-law : 4200", "Housemate roommate : 5113", "Tutored foster child : 5340" ]
             }
@@ -620,6 +506,7 @@
                 "INPUT VALUE" : null
               }
             },
+            "emergent" : false,
             "ENCODED VALUES" : {
               "MAPPING" : [ "Married, spouse absent (historical samples) : 219", "Married, formally : 210", "Married, civil and religious : 213", "Married, civil : 211", "Widowed, divorced, or separated : 420", "Unknown missing : 999", "Annulled : 340", "Separated from consensual union : 334", "Married, religious : 212", "Widowed from consensual union or marriage : 411", "Married, polygamous : 217", "Married or consensual union : 200", "Separated from marriage : 333", "Widowed or divorced : 410", "Married, civil or religious : 214", "Widowed from consensual union : 413", "Separated legally : 331", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated : 330", "Separated de facto : 332", "Never married and never cohabited : 111", "Engaged : 110", "Separated or divorced : 310", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Married, monogamous : 216", "Widowed from marriage : 412", "Single never married : 100", "Separated or annulled : 320", "Widowed : 400", "Consensual union : 220", "Divorced : 350" ]
             }
@@ -651,6 +538,7 @@
                 "INPUT VALUE" : null
               }
             },
+            "emergent" : false,
             "REFERENT ATTRIBUTE" : {
               "ATTRIBUTE" : {
                 "NAME" : "RELATED",
@@ -816,6 +704,7 @@
                     "INPUT VALUE" : null
                   }
                 },
+                "emergent" : false,
                 "ENCODED VALUES" : {
                   "MAPPING" : [ "Spouse : 2100", "Lodger : 5320", "Stepsibling : 4420", "Other relative with different family name : 4920", "Parent grandparent ascendant : 4600", "Sibling of sibling-in-law : 4830", "Group quarters : 5600", "Friend guest visitor partner : 5100", "Employee : 5200", "Great grandchild : 4120", "Child of unmarried partner : 3600", "Cousin : 4820", "Sibling : 4410", "Ex-spouse : 5130", "Child of servant : 5222", "Biological child : 3100", "Temporary resident, guest : 5520", "Spouse of servant : 5221", "Godchild : 5150", "Head : 1000", "Spouse partner : 2000", "Grandchild : 4100", "Boarder or guest : 5311", "Great-great grandchild : 4130", "Agregado : 5510", "Other relative : 4000", "Aunt uncle : 4700", "Sibling sibling-in-law : 4400", "Domestic employee : 5210", "Other specified relative : 4800", "Other relative of servant : 5223", "Parent-in-law : 4220", "Sibling of spouse partner : 4431", "Child-in-law : 4300", "Other relative, not specified (secondary family) : 4930", "Tutored child : 5350", "Partner roommate : 5112", "Stepchild : 3300", "Other relative with same family name : 4910", "Child child-in-law grandchild : 3500", "Partner friend : 5110", "Nephew niece : 4810", "Grandchild or great grandchild : 4110", "Other relative, not elsewhere classified : 4900", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative or non-relative : 6000", "Friend : 5111", "Foster child : 5330", "Grandparent : 4500", "Employee, boarder or guest : 5400", "Parent : 4210", "Institutional inmates : 5620", "Same-sex spouse partner : 2300", "Godparent : 5140", "Unknown : 9999", "Relative of employee, n.s. : 5220", "Unmarried partner of child : 4310", "Adopted child : 3200", "Group quarters, non-inmates : 5610", "Spouse partner of sibling : 4432", "Great grandparent : 4510", "Child child-in-law : 3400", "Non-relative : 5000", "Daughter-in-law : 4301", "Child : 3000", "Non-relative, n.e.c. : 5900", "Roomer boarder lodger foster child : 5300", "Other specified non-relative : 5500", "Visitor : 5120", "Stepparent : 4211", "Spouse partner of child : 4302", "Boarder : 5310", "Parent parent-in-law : 4200", "Housemate roommate : 5113", "Tutored foster child : 5340" ]
                 }
@@ -854,6 +743,7 @@
                 "INPUT VALUE" : null
               }
             },
+            "emergent" : false,
             "REFERENT ATTRIBUTE" : {
               "ATTRIBUTE" : {
                 "NAME" : "MARSTD",
@@ -933,6 +823,7 @@
                     "INPUT VALUE" : null
                   }
                 },
+                "emergent" : false,
                 "ENCODED VALUES" : {
                   "MAPPING" : [ "Married, spouse absent (historical samples) : 219", "Married, formally : 210", "Married, civil and religious : 213", "Married, civil : 211", "Widowed, divorced, or separated : 420", "Unknown missing : 999", "Annulled : 340", "Separated from consensual union : 334", "Married, religious : 212", "Widowed from consensual union or marriage : 411", "Married, polygamous : 217", "Married or consensual union : 200", "Separated from marriage : 333", "Widowed or divorced : 410", "Married, civil or religious : 214", "Widowed from consensual union : 413", "Separated legally : 331", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated : 330", "Separated de facto : 332", "Never married and never cohabited : 111", "Engaged : 110", "Separated or divorced : 310", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Married, monogamous : 216", "Widowed from marriage : 412", "Single never married : 100", "Separated or annulled : 320", "Widowed : 400", "Consensual union : 220", "Divorced : 350" ]
                 }
@@ -950,8 +841,137 @@
         "RECORDS" : [ ],
         "SIZE ATTRIBUTE" : null,
         "level" : 0,
-        "weightAttributeName" : null,
-        "identifierAttributeName" : null
+        "identifierAttributeName" : "PERNUM",
+        "weightAttributeName" : "PERWT"
+      }
+    }, {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "ATTRIBUTE" : {
+            "NAME" : "HHTYPE",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Unclassified subfamily"
+              }, {
+                "INPUT VALUE" : "Married cohab couple, no children"
+              }, {
+                "INPUT VALUE" : "Vacant household"
+              }, {
+                "INPUT VALUE" : "One-person household"
+              }, {
+                "INPUT VALUE" : "Polygamous family"
+              }, {
+                "INPUT VALUE" : "Married cohab couple with children"
+              }, {
+                "INPUT VALUE" : "Other relative or non-relative household"
+              }, {
+                "INPUT VALUE" : "Non-family household"
+              }, {
+                "INPUT VALUE" : "Unclassifiable"
+              }, {
+                "INPUT VALUE" : "Group quarters"
+              }, {
+                "INPUT VALUE" : "Composite household, family and non-relatives"
+              }, {
+                "INPUT VALUE" : "Single-parent family"
+              }, {
+                "INPUT VALUE" : "Extended family, relatives only"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Unclassified subfamily : 09", "Married cohab couple, no children : 02", "Vacant household : 00", "One-person household : 01", "Polygamous family : 05", "Married cohab couple with children : 03", "Other relative or non-relative household : 10", "Non-family household : 08", "Unclassifiable : 99", "Group quarters : 11", "Composite household, family and non-relatives : 07", "Extended family, relatives only : 06", "Single-parent family : 04" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "NFATHERS",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "3 fathers"
+              }, {
+                "INPUT VALUE" : "6 fathers"
+              }, {
+                "INPUT VALUE" : "8 fathers"
+              }, {
+                "INPUT VALUE" : "5 fathers"
+              }, {
+                "INPUT VALUE" : "4 fathers"
+              }, {
+                "INPUT VALUE" : "9 or more fathers in household"
+              }, {
+                "INPUT VALUE" : "7 fathers"
+              }, {
+                "INPUT VALUE" : "No fathers in household"
+              }, {
+                "INPUT VALUE" : "2 fathers"
+              }, {
+                "INPUT VALUE" : "1 father"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "3 fathers : 3", "6 fathers : 6", "8 fathers : 8", "5 fathers : 5", "4 fathers : 4", "9 or more fathers in household : 9", "7 fathers : 7", "No fathers in household : 0", "2 fathers : 2", "1 father : 1" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "NMOTHERS",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "9 or more mothers in household"
+              }, {
+                "INPUT VALUE" : "No mothers in household"
+              }, {
+                "INPUT VALUE" : "8 mothers"
+              }, {
+                "INPUT VALUE" : "5 mothers"
+              }, {
+                "INPUT VALUE" : "3 mothers"
+              }, {
+                "INPUT VALUE" : "4 mothers"
+              }, {
+                "INPUT VALUE" : "7 mothers"
+              }, {
+                "INPUT VALUE" : "2 mothers"
+              }, {
+                "INPUT VALUE" : "6 mothers"
+              }, {
+                "INPUT VALUE" : "1 mother"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "9 or more mothers in household : 9", "8 mothers : 8", "No mothers in household : 0", "5 mothers : 5", "3 mothers : 3", "7 mothers : 7", "4 mothers : 4", "2 mothers : 2", "6 mothers : 6", "1 mother : 1" ]
+            }
+          }
+        } ],
+        "RECORDS" : [ ],
+        "SIZE ATTRIBUTE" : null,
+        "level" : 1,
+        "identifierAttributeName" : "SERIAL",
+        "weightAttributeName" : "HHWT"
       }
     } ]
   }

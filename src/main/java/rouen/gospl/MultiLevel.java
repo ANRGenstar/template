@@ -35,14 +35,45 @@ public class MultiLevel {
 	final static Path reportPath = Paths.get("src/main/java/rouen/gospl/output/MLPop_report.csv");
 	final static Path statPath = Paths.get("src/main/java/rouen/gospl/output/MLPop_stat.csv");
 	// Configuration file path
-	final static Path confHHFile = Paths.get("src/main/java/rouen/gospl/data/rouen_household.gns");
-	final static Path confIndivFile = Paths.get("src/main/java/rouen/gospl/data/rouen_individual.gns");
+	final static Path confHHFile = Paths.get("src/main/java/rouen/gospl/data/rouen_multi.gns");
+	final static Path confIndivFile = Paths.get("src/main/java/rouen/gospl/data/rouen_demographics.gns");
 
 	public static void main(String[] args) {
 
 		// THE POPULATION TO BE GENERATED
 		GosplPopulation population = null;
+		
+		// -----------------------------------
+		// BOTTOM LAYER POPULATION (Household)
+		// -----------------------------------
 
+		GosplInputDataManager indivdm = null;
+		try {
+			indivdm = new GosplInputDataManager(confIndivFile);
+		} catch (final IllegalArgumentException | IOException e) {
+			e.printStackTrace();
+		}
+		
+		// RETRIEV INFORMATION FROM DATA IN FORM OF A SET OF JOINT DISTRIBUTIONS
+		try {
+			indivdm.buildDataTables();
+		} catch (final RuntimeException | IOException | 
+				InvalidSurveyFormatException | InvalidFormatException e) {
+			e.printStackTrace();
+		}
+
+		// HERE IS A CHOICE TO MAKE BASED ON THE TYPE OF GENERATOR WE WANT:
+		// Choice is made here to use distribution based generator
+
+		// so we collapse all distribution build from the data
+		INDimensionalMatrix<Attribute<? extends IValue>, IValue, Double> iDistribution = null;
+		try {
+			iDistribution = indivdm.collapseDataTablesIntoDistribution();
+		} catch (final IllegalDistributionCreation | IllegalControlTotalException e1) {
+			e1.printStackTrace();
+		}
+		
+		
 		// -----------------------------------
 		// BOTTOM LAYER POPULATION (Household)
 		// -----------------------------------
@@ -80,36 +111,6 @@ public class MultiLevel {
 			e1.printStackTrace();
 		}
 		
-		// -----------------------------------
-		// BOTTOM LAYER POPULATION (Household)
-		// -----------------------------------
-
-		GosplInputDataManager indivdm = null;
-		try {
-			indivdm = new GosplInputDataManager(confIndivFile);
-		} catch (final IllegalArgumentException | IOException e) {
-			e.printStackTrace();
-		}
-
-		// RETRIEV INFORMATION FROM DATA IN FORM OF A SET OF JOINT DISTRIBUTIONS
-		try {
-			indivdm.buildDataTables();
-		} catch (final RuntimeException | IOException | 
-				InvalidSurveyFormatException | InvalidFormatException e) {
-			e.printStackTrace();
-		}
-
-		// HERE IS A CHOICE TO MAKE BASED ON THE TYPE OF GENERATOR WE WANT:
-		// Choice is made here to use distribution based generator
-
-		// so we collapse all distribution build from the data
-		INDimensionalMatrix<Attribute<? extends IValue>, IValue, Double> iDistribution = null;
-		try {
-			iDistribution = indivdm.collapseDataTablesIntoDistribution();
-		} catch (final IllegalDistributionCreation | IllegalControlTotalException e1) {
-			e1.printStackTrace();
-		}
-		
 		// ----------------------------------------------
 		// BUILD THE SAMPLER WITH THE INFERENCE ALGORITHM
 		// ----------------------------------------------
@@ -131,6 +132,10 @@ public class MultiLevel {
 		// BUILD THE GENERATOR
 		final ISyntheticGosplPopGenerator ispGenerator = new MultiLayerGenerator(sampler);
 
+		// TEST ON BUILDING ONE ENTITY
+		population = ispGenerator.generate(1);
+		System.exit(1);
+		
 		// BUILD THE POPULATION
 		try {
 			population = ispGenerator.generate(hhNb);
