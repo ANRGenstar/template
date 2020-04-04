@@ -19,6 +19,7 @@ import core.util.GSPerformanceUtil;
 import gospl.algo.co.SampleBasedAlgorithm;
 import gospl.algo.co.hillclimbing.HillClimbing;
 import gospl.algo.co.metamodel.IOptimizationAlgorithm;
+import gospl.algo.co.metamodel.solution.ISyntheticPopulationSolution;
 import gospl.algo.co.simannealing.SimulatedAnnealing;
 import gospl.algo.co.tabusearch.TabuList;
 import gospl.algo.co.tabusearch.TabuSearch;
@@ -92,7 +93,7 @@ public class CO {
 		
 		// Retrieve known objectives from input data
 		Set<AFullNDimensionalMatrix<Integer>> objectives = gdf.getContingencyTables();
-		CombinatorialOptimizationSampler<IOptimizationAlgorithm> samplerCO;
+		CombinatorialOptimizationSampler<IOptimizationAlgorithm<? extends ISyntheticPopulationSolution>> samplerCO;
 		
 		// TODO: make a colapseContingency(int total) method to use all info to setup contingency objectives
 				
@@ -112,7 +113,7 @@ public class CO {
 		}
 
 		objectives.stream().forEach(obj -> samplerCO.addObjectives(obj));
-		sampler = new SampleBasedAlgorithm().setupCOSampler(sample, samplerCO);
+		sampler = new SampleBasedAlgorithm().setupCOSampler(sample, false, samplerCO);
 
 		//----------------------------------------------//
 		//------- GENERATE POPULATION AND EXPORT -------//

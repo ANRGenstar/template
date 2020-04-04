@@ -23,7 +23,7 @@ import gospl.generator.MultiLayerGenerator;
 import gospl.io.GosplSurveyFactory;
 import gospl.io.exception.InvalidSurveyFormatException;
 import gospl.sampler.ISampler;
-import gospl.sampler.multilayer.GosplBiLayerSampler;
+import gospl.sampler.multilayer.sr.GosplBiLayerReconstructionSampler;
 
 public class MultiLevel {
 
@@ -117,10 +117,10 @@ public class MultiLevel {
 		
 		ISampler<GosplMultiLayerCoordinate> sampler = null;
 		
-		ISynthethicReconstructionMultiLayerAlgo<GosplBiLayerSampler> algo = new DirectSamplingMultiLayerAlgo();
+		ISynthethicReconstructionMultiLayerAlgo<GosplBiLayerReconstructionSampler> algo = new DirectSamplingMultiLayerAlgo();
 		
 		try {
-			sampler = algo.inferSRMLSampler(hhDistribution, iDistribution, new GosplBiLayerSampler());
+			sampler = algo.inferSRMLSampler(hhDistribution, iDistribution, new GosplBiLayerReconstructionSampler());
 		} catch (IllegalDistributionCreation e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();

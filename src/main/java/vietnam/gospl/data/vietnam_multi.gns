@@ -8,20 +8,47 @@
       "FRI" : "1",
       "FCI" : "1",
       "SHEET NB" : "0"
+    }, "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_VP.csv",
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ",",
+      "FRI" : "1",
+      "FCI" : "6",
+      "SHEET NB" : "0"
     } ],
     "DICTIONARIES" : [ {
       "DICTIONARY" : {
         "ATTRIBUTES" : [ {
           "ATTRIBUTE" : {
-            "NAME" : "SEX",
+            "NAME" : "HHTYPE",
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Unknown"
+                "INPUT VALUE" : "Group quarters"
               }, {
-                "INPUT VALUE" : "Female"
+                "INPUT VALUE" : "Unclassifiable"
               }, {
-                "INPUT VALUE" : "Male"
+                "INPUT VALUE" : "Composite household, family and non-relatives"
+              }, {
+                "INPUT VALUE" : "Polygamous family"
+              }, {
+                "INPUT VALUE" : "Married cohab couple with children"
+              }, {
+                "INPUT VALUE" : "Unclassified subfamily"
+              }, {
+                "INPUT VALUE" : "Single-parent family"
+              }, {
+                "INPUT VALUE" : "One-person household"
+              }, {
+                "INPUT VALUE" : "Extended family, relatives only"
+              }, {
+                "INPUT VALUE" : "Other relative or non-relative household"
+              }, {
+                "INPUT VALUE" : "Non-family household"
+              }, {
+                "INPUT VALUE" : "Vacant household"
+              }, {
+                "INPUT VALUE" : "Married cohab couple, no children"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -32,7 +59,116 @@
             },
             "emergent" : false,
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Unknown : 9", "Female : 2", "Male : 1" ]
+              "MAPPING" : [ "Group quarters : 11", "Unclassifiable : 99", "Composite household, family and non-relatives : 07", "Polygamous family : 05", "Married cohab couple with children : 03", "Unclassified subfamily : 09", "Single-parent family : 04", "One-person household : 01", "Extended family, relatives only : 06", "Other relative or non-relative household : 10", "Non-family household : 08", "Vacant household : 00", "Married cohab couple, no children : 02" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "NFATHERS",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "2 fathers"
+              }, {
+                "INPUT VALUE" : "1 father"
+              }, {
+                "INPUT VALUE" : "5 fathers"
+              }, {
+                "INPUT VALUE" : "4 fathers"
+              }, {
+                "INPUT VALUE" : "6 fathers"
+              }, {
+                "INPUT VALUE" : "8 fathers"
+              }, {
+                "INPUT VALUE" : "9 or more fathers in household"
+              }, {
+                "INPUT VALUE" : "No fathers in household"
+              }, {
+                "INPUT VALUE" : "3 fathers"
+              }, {
+                "INPUT VALUE" : "7 fathers"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "1 father : 1", "2 fathers : 2", "5 fathers : 5", "4 fathers : 4", "8 fathers : 8", "6 fathers : 6", "9 or more fathers in household : 9", "No fathers in household : 0", "3 fathers : 3", "7 fathers : 7" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "NMOTHERS",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "5 mothers"
+              }, {
+                "INPUT VALUE" : "2 mothers"
+              }, {
+                "INPUT VALUE" : "4 mothers"
+              }, {
+                "INPUT VALUE" : "8 mothers"
+              }, {
+                "INPUT VALUE" : "6 mothers"
+              }, {
+                "INPUT VALUE" : "3 mothers"
+              }, {
+                "INPUT VALUE" : "9 or more mothers in household"
+              }, {
+                "INPUT VALUE" : "1 mother"
+              }, {
+                "INPUT VALUE" : "7 mothers"
+              }, {
+                "INPUT VALUE" : "No mothers in household"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "5 mothers : 5", "2 mothers : 2", "4 mothers : 4", "8 mothers : 8", "6 mothers : 6", "3 mothers : 3", "1 mother : 1", "9 or more mothers in household : 9", "7 mothers : 7", "No mothers in household : 0" ]
+            }
+          }
+        } ],
+        "RECORDS" : [ ],
+        "SIZE ATTRIBUTE" : null,
+        "level" : 1,
+        "identifierAttributeName" : "SERIAL",
+        "weightAttributeName" : "HHWT"
+      }
+    }, {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "ATTRIBUTE" : {
+            "NAME" : "SEX",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Male"
+              }, {
+                "INPUT VALUE" : "Unknown"
+              }, {
+                "INPUT VALUE" : "Female"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Male : 1", "Unknown : 9", "Female : 2" ]
             }
           }
         }, {
@@ -41,209 +177,209 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "17"
-              }, {
-                "INPUT VALUE" : "29"
-              }, {
-                "INPUT VALUE" : "2 years"
-              }, {
-                "INPUT VALUE" : "6"
-              }, {
-                "INPUT VALUE" : "84"
-              }, {
-                "INPUT VALUE" : "96"
-              }, {
-                "INPUT VALUE" : "60"
-              }, {
-                "INPUT VALUE" : "72"
-              }, {
-                "INPUT VALUE" : "44"
-              }, {
-                "INPUT VALUE" : "56"
-              }, {
-                "INPUT VALUE" : "20"
-              }, {
-                "INPUT VALUE" : "32"
-              }, {
-                "INPUT VALUE" : "16"
-              }, {
-                "INPUT VALUE" : "68"
-              }, {
-                "INPUT VALUE" : "18"
-              }, {
-                "INPUT VALUE" : "7"
-              }, {
-                "INPUT VALUE" : "73"
-              }, {
-                "INPUT VALUE" : "85"
-              }, {
-                "INPUT VALUE" : "Less than 1 year"
-              }, {
-                "INPUT VALUE" : "61"
-              }, {
-                "INPUT VALUE" : "33"
-              }, {
-                "INPUT VALUE" : "45"
-              }, {
-                "INPUT VALUE" : "97"
-              }, {
-                "INPUT VALUE" : "21"
-              }, {
-                "INPUT VALUE" : "57"
-              }, {
-                "INPUT VALUE" : "69"
-              }, {
-                "INPUT VALUE" : "39"
-              }, {
-                "INPUT VALUE" : "4"
-              }, {
-                "INPUT VALUE" : "70"
-              }, {
                 "INPUT VALUE" : "30"
-              }, {
-                "INPUT VALUE" : "82"
               }, {
                 "INPUT VALUE" : "94"
               }, {
-                "INPUT VALUE" : "66"
+                "INPUT VALUE" : "82"
               }, {
                 "INPUT VALUE" : "78"
               }, {
-                "INPUT VALUE" : "42"
+                "INPUT VALUE" : "66"
               }, {
                 "INPUT VALUE" : "54"
               }, {
-                "INPUT VALUE" : "26"
+                "INPUT VALUE" : "42"
               }, {
                 "INPUT VALUE" : "38"
               }, {
+                "INPUT VALUE" : "26"
+              }, {
                 "INPUT VALUE" : "14"
               }, {
-                "INPUT VALUE" : "28"
+                "INPUT VALUE" : "70"
               }, {
-                "INPUT VALUE" : "5"
-              }, {
-                "INPUT VALUE" : "95"
-              }, {
-                "INPUT VALUE" : "71"
-              }, {
-                "INPUT VALUE" : "83"
-              }, {
-                "INPUT VALUE" : "55"
-              }, {
-                "INPUT VALUE" : "67"
-              }, {
-                "INPUT VALUE" : "31"
-              }, {
-                "INPUT VALUE" : "43"
-              }, {
-                "INPUT VALUE" : "15"
-              }, {
-                "INPUT VALUE" : "27"
-              }, {
-                "INPUT VALUE" : "79"
-              }, {
-                "INPUT VALUE" : "100+"
-              }, {
-                "INPUT VALUE" : "80"
-              }, {
-                "INPUT VALUE" : "92"
-              }, {
-                "INPUT VALUE" : "40"
-              }, {
-                "INPUT VALUE" : "52"
-              }, {
-                "INPUT VALUE" : "88"
-              }, {
-                "INPUT VALUE" : "1 year"
-              }, {
-                "INPUT VALUE" : "12"
-              }, {
-                "INPUT VALUE" : "64"
-              }, {
-                "INPUT VALUE" : "76"
-              }, {
-                "INPUT VALUE" : "48"
-              }, {
-                "INPUT VALUE" : "24"
-              }, {
-                "INPUT VALUE" : "36"
-              }, {
-                "INPUT VALUE" : "3"
-              }, {
-                "INPUT VALUE" : "81"
+                "INPUT VALUE" : "4"
               }, {
                 "INPUT VALUE" : "41"
               }, {
                 "INPUT VALUE" : "93"
               }, {
-                "INPUT VALUE" : "77"
+                "INPUT VALUE" : "Less than 1 year"
               }, {
                 "INPUT VALUE" : "89"
               }, {
-                "INPUT VALUE" : "53"
+                "INPUT VALUE" : "77"
               }, {
                 "INPUT VALUE" : "65"
               }, {
-                "INPUT VALUE" : "37"
+                "INPUT VALUE" : "53"
               }, {
                 "INPUT VALUE" : "49"
               }, {
-                "INPUT VALUE" : "13"
+                "INPUT VALUE" : "37"
               }, {
                 "INPUT VALUE" : "25"
               }, {
-                "INPUT VALUE" : "19"
+                "INPUT VALUE" : "13"
               }, {
-                "INPUT VALUE" : "Not reported missing"
+                "INPUT VALUE" : "1 year"
               }, {
-                "INPUT VALUE" : "8"
+                "INPUT VALUE" : "100+"
               }, {
-                "INPUT VALUE" : "90"
+                "INPUT VALUE" : "81"
               }, {
-                "INPUT VALUE" : "62"
+                "INPUT VALUE" : "3"
+              }, {
+                "INPUT VALUE" : "96"
+              }, {
+                "INPUT VALUE" : "84"
+              }, {
+                "INPUT VALUE" : "72"
+              }, {
+                "INPUT VALUE" : "60"
+              }, {
+                "INPUT VALUE" : "56"
+              }, {
+                "INPUT VALUE" : "44"
+              }, {
+                "INPUT VALUE" : "32"
+              }, {
+                "INPUT VALUE" : "20"
+              }, {
+                "INPUT VALUE" : "16"
+              }, {
+                "INPUT VALUE" : "68"
+              }, {
+                "INPUT VALUE" : "28"
+              }, {
+                "INPUT VALUE" : "6"
+              }, {
+                "INPUT VALUE" : "95"
+              }, {
+                "INPUT VALUE" : "83"
+              }, {
+                "INPUT VALUE" : "71"
+              }, {
+                "INPUT VALUE" : "67"
+              }, {
+                "INPUT VALUE" : "55"
+              }, {
+                "INPUT VALUE" : "43"
+              }, {
+                "INPUT VALUE" : "31"
+              }, {
+                "INPUT VALUE" : "27"
+              }, {
+                "INPUT VALUE" : "15"
+              }, {
+                "INPUT VALUE" : "79"
+              }, {
+                "INPUT VALUE" : "39"
+              }, {
+                "INPUT VALUE" : "5"
               }, {
                 "INPUT VALUE" : "74"
               }, {
-                "INPUT VALUE" : "50"
+                "INPUT VALUE" : "62"
               }, {
-                "INPUT VALUE" : "22"
+                "INPUT VALUE" : "50"
               }, {
                 "INPUT VALUE" : "34"
               }, {
-                "INPUT VALUE" : "86"
+                "INPUT VALUE" : "22"
               }, {
                 "INPUT VALUE" : "10"
               }, {
                 "INPUT VALUE" : "98"
               }, {
-                "INPUT VALUE" : "46"
+                "INPUT VALUE" : "86"
               }, {
                 "INPUT VALUE" : "58"
               }, {
-                "INPUT VALUE" : "91"
+                "INPUT VALUE" : "46"
               }, {
-                "INPUT VALUE" : "9"
+                "INPUT VALUE" : "18"
+              }, {
+                "INPUT VALUE" : "8"
+              }, {
+                "INPUT VALUE" : "90"
+              }, {
+                "INPUT VALUE" : "85"
+              }, {
+                "INPUT VALUE" : "73"
+              }, {
+                "INPUT VALUE" : "61"
+              }, {
+                "INPUT VALUE" : "2 years"
+              }, {
+                "INPUT VALUE" : "45"
+              }, {
+                "INPUT VALUE" : "33"
+              }, {
+                "INPUT VALUE" : "21"
+              }, {
+                "INPUT VALUE" : "97"
+              }, {
+                "INPUT VALUE" : "69"
+              }, {
+                "INPUT VALUE" : "57"
+              }, {
+                "INPUT VALUE" : "29"
+              }, {
+                "INPUT VALUE" : "17"
+              }, {
+                "INPUT VALUE" : "7"
+              }, {
+                "INPUT VALUE" : "52"
+              }, {
+                "INPUT VALUE" : "40"
+              }, {
+                "INPUT VALUE" : "12"
+              }, {
+                "INPUT VALUE" : "88"
+              }, {
+                "INPUT VALUE" : "76"
+              }, {
+                "INPUT VALUE" : "64"
+              }, {
+                "INPUT VALUE" : "48"
+              }, {
+                "INPUT VALUE" : "36"
+              }, {
+                "INPUT VALUE" : "24"
+              }, {
+                "INPUT VALUE" : "92"
+              }, {
+                "INPUT VALUE" : "Not reported missing"
+              }, {
+                "INPUT VALUE" : "80"
+              }, {
+                "INPUT VALUE" : "63"
               }, {
                 "INPUT VALUE" : "51"
               }, {
-                "INPUT VALUE" : "63"
+                "INPUT VALUE" : "23"
               }, {
                 "INPUT VALUE" : "11"
               }, {
                 "INPUT VALUE" : "99"
               }, {
-                "INPUT VALUE" : "23"
+                "INPUT VALUE" : "87"
               }, {
                 "INPUT VALUE" : "75"
               }, {
-                "INPUT VALUE" : "87"
-              }, {
                 "INPUT VALUE" : "59"
+              }, {
+                "INPUT VALUE" : "47"
               }, {
                 "INPUT VALUE" : "35"
               }, {
-                "INPUT VALUE" : "47"
+                "INPUT VALUE" : "19"
+              }, {
+                "INPUT VALUE" : "9"
+              }, {
+                "INPUT VALUE" : "91"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -254,7 +390,7 @@
             },
             "emergent" : false,
             "ENCODED VALUES" : {
-              "MAPPING" : [ "17 : 017", "29 : 029", "2 years : 002", "6 : 006", "84 : 084", "96 : 096", "60 : 060", "72 : 072", "44 : 044", "56 : 056", "20 : 020", "32 : 032", "16 : 016", "68 : 068", "18 : 018", "7 : 007", "73 : 073", "85 : 085", "Less than 1 year : 000", "61 : 061", "33 : 033", "45 : 045", "97 : 097", "21 : 021", "57 : 057", "69 : 069", "39 : 039", "4 : 004", "70 : 070", "30 : 030", "82 : 082", "94 : 094", "66 : 066", "78 : 078", "42 : 042", "54 : 054", "26 : 026", "38 : 038", "14 : 014", "28 : 028", "5 : 005", "95 : 095", "71 : 071", "83 : 083", "55 : 055", "67 : 067", "31 : 031", "43 : 043", "15 : 015", "27 : 027", "79 : 079", "100+ : 100", "80 : 080", "92 : 092", "40 : 040", "52 : 052", "1 year : 001", "88 : 088", "12 : 012", "64 : 064", "76 : 076", "48 : 048", "24 : 024", "36 : 036", "3 : 003", "81 : 081", "41 : 041", "93 : 093", "77 : 077", "89 : 089", "53 : 053", "65 : 065", "37 : 037", "49 : 049", "13 : 013", "25 : 025", "19 : 019", "Not reported missing : 999", "8 : 008", "90 : 090", "62 : 062", "74 : 074", "50 : 050", "22 : 022", "34 : 034", "86 : 086", "10 : 010", "98 : 098", "46 : 046", "58 : 058", "9 : 009", "91 : 091", "51 : 051", "63 : 063", "11 : 011", "99 : 099", "23 : 023", "75 : 075", "87 : 087", "59 : 059", "35 : 035", "47 : 047" ]
+              "MAPPING" : [ "30 : 030", "94 : 094", "82 : 082", "78 : 078", "66 : 066", "54 : 054", "42 : 042", "38 : 038", "26 : 026", "14 : 014", "70 : 070", "4 : 004", "41 : 041", "93 : 093", "Less than 1 year : 000", "89 : 089", "77 : 077", "65 : 065", "53 : 053", "49 : 049", "37 : 037", "25 : 025", "13 : 013", "1 year : 001", "100+ : 100", "81 : 081", "3 : 003", "96 : 096", "84 : 084", "72 : 072", "60 : 060", "56 : 056", "44 : 044", "32 : 032", "20 : 020", "16 : 016", "68 : 068", "28 : 028", "6 : 006", "95 : 095", "83 : 083", "71 : 071", "67 : 067", "55 : 055", "43 : 043", "31 : 031", "27 : 027", "15 : 015", "79 : 079", "39 : 039", "5 : 005", "74 : 074", "62 : 062", "50 : 050", "34 : 034", "22 : 022", "10 : 010", "98 : 098", "86 : 086", "58 : 058", "46 : 046", "18 : 018", "8 : 008", "90 : 090", "85 : 085", "73 : 073", "61 : 061", "2 years : 002", "45 : 045", "33 : 033", "21 : 021", "97 : 097", "69 : 069", "57 : 057", "29 : 029", "17 : 017", "7 : 007", "52 : 052", "40 : 040", "12 : 012", "88 : 088", "76 : 076", "64 : 064", "48 : 048", "36 : 036", "24 : 024", "Not reported missing : 999", "92 : 092", "80 : 080", "63 : 063", "51 : 051", "23 : 023", "11 : 011", "99 : 099", "87 : 087", "75 : 075", "59 : 059", "47 : 047", "35 : 035", "19 : 019", "9 : 009", "91 : 091" ]
             }
           }
         }, {
@@ -263,157 +399,157 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Spouse"
+                "INPUT VALUE" : "Parent-in-law"
               }, {
-                "INPUT VALUE" : "Lodger"
+                "INPUT VALUE" : "Stepparent"
               }, {
-                "INPUT VALUE" : "Stepsibling"
+                "INPUT VALUE" : "Godparent"
               }, {
-                "INPUT VALUE" : "Other relative with different family name"
+                "INPUT VALUE" : "Group quarters, non-inmates"
               }, {
-                "INPUT VALUE" : "Parent grandparent ascendant"
-              }, {
-                "INPUT VALUE" : "Sibling of sibling-in-law"
-              }, {
-                "INPUT VALUE" : "Group quarters"
-              }, {
-                "INPUT VALUE" : "Friend guest visitor partner"
-              }, {
-                "INPUT VALUE" : "Employee"
-              }, {
-                "INPUT VALUE" : "Great grandchild"
-              }, {
-                "INPUT VALUE" : "Child of unmarried partner"
-              }, {
-                "INPUT VALUE" : "Cousin"
-              }, {
-                "INPUT VALUE" : "Sibling"
-              }, {
-                "INPUT VALUE" : "Ex-spouse"
-              }, {
-                "INPUT VALUE" : "Child of servant"
-              }, {
-                "INPUT VALUE" : "Biological child"
-              }, {
-                "INPUT VALUE" : "Temporary resident, guest"
-              }, {
-                "INPUT VALUE" : "Godchild"
-              }, {
-                "INPUT VALUE" : "Spouse of servant"
-              }, {
-                "INPUT VALUE" : "Head"
-              }, {
-                "INPUT VALUE" : "Grandchild"
-              }, {
-                "INPUT VALUE" : "Spouse partner"
-              }, {
-                "INPUT VALUE" : "Boarder or guest"
+                "INPUT VALUE" : "Adopted child"
               }, {
                 "INPUT VALUE" : "Great-great grandchild"
               }, {
-                "INPUT VALUE" : "Agregado"
+                "INPUT VALUE" : "Daughter-in-law"
               }, {
-                "INPUT VALUE" : "Other relative"
+                "INPUT VALUE" : "Great grandparent"
+              }, {
+                "INPUT VALUE" : "Unknown"
+              }, {
+                "INPUT VALUE" : "Institutional inmates"
+              }, {
+                "INPUT VALUE" : "Tutored foster child"
+              }, {
+                "INPUT VALUE" : "Unmarried partner of child"
               }, {
                 "INPUT VALUE" : "Aunt uncle"
               }, {
-                "INPUT VALUE" : "Sibling sibling-in-law"
+                "INPUT VALUE" : "Employee, boarder or guest"
               }, {
-                "INPUT VALUE" : "Domestic employee"
+                "INPUT VALUE" : "Parent"
               }, {
-                "INPUT VALUE" : "Other specified relative"
-              }, {
-                "INPUT VALUE" : "Other relative of servant"
-              }, {
-                "INPUT VALUE" : "Parent-in-law"
-              }, {
-                "INPUT VALUE" : "Sibling of spouse partner"
-              }, {
-                "INPUT VALUE" : "Child-in-law"
-              }, {
-                "INPUT VALUE" : "Other relative, not specified (secondary family)"
+                "INPUT VALUE" : "Spouse of servant"
               }, {
                 "INPUT VALUE" : "Partner roommate"
               }, {
-                "INPUT VALUE" : "Tutored child"
-              }, {
-                "INPUT VALUE" : "Stepchild"
-              }, {
-                "INPUT VALUE" : "Other relative with same family name"
-              }, {
                 "INPUT VALUE" : "Child child-in-law grandchild"
+              }, {
+                "INPUT VALUE" : "Other relative, not specified (secondary family)"
+              }, {
+                "INPUT VALUE" : "Friend"
               }, {
                 "INPUT VALUE" : "Partner friend"
               }, {
-                "INPUT VALUE" : "Grandchild or great grandchild"
+                "INPUT VALUE" : "Other relative or non-relative"
               }, {
-                "INPUT VALUE" : "Nephew niece"
+                "INPUT VALUE" : "Domestic employee"
+              }, {
+                "INPUT VALUE" : "Grandparent"
               }, {
                 "INPUT VALUE" : "Sibling-in-law"
               }, {
                 "INPUT VALUE" : "Unmarried partner"
               }, {
-                "INPUT VALUE" : "Other relative, not elsewhere classified"
+                "INPUT VALUE" : "Other relative with same family name"
               }, {
-                "INPUT VALUE" : "Other relative or non-relative"
+                "INPUT VALUE" : "Head"
               }, {
-                "INPUT VALUE" : "Friend"
+                "INPUT VALUE" : "Other relative of servant"
               }, {
-                "INPUT VALUE" : "Foster child"
+                "INPUT VALUE" : "Godchild"
               }, {
-                "INPUT VALUE" : "Employee, boarder or guest"
+                "INPUT VALUE" : "Sibling of spouse partner"
               }, {
-                "INPUT VALUE" : "Grandparent"
+                "INPUT VALUE" : "Child of unmarried partner"
               }, {
-                "INPUT VALUE" : "Institutional inmates"
+                "INPUT VALUE" : "Spouse"
               }, {
-                "INPUT VALUE" : "Parent"
+                "INPUT VALUE" : "Biological child"
+              }, {
+                "INPUT VALUE" : "Stepchild"
+              }, {
+                "INPUT VALUE" : "Grandchild or great grandchild"
+              }, {
+                "INPUT VALUE" : "Sibling of sibling-in-law"
+              }, {
+                "INPUT VALUE" : "Nephew niece"
+              }, {
+                "INPUT VALUE" : "Other relative"
               }, {
                 "INPUT VALUE" : "Same-sex spouse partner"
               }, {
-                "INPUT VALUE" : "Unknown"
+                "INPUT VALUE" : "Sibling sibling-in-law"
               }, {
-                "INPUT VALUE" : "Godparent"
+                "INPUT VALUE" : "Agregado"
               }, {
-                "INPUT VALUE" : "Relative of employee, n.s."
+                "INPUT VALUE" : "Spouse partner"
               }, {
-                "INPUT VALUE" : "Unmarried partner of child"
+                "INPUT VALUE" : "Employee"
               }, {
-                "INPUT VALUE" : "Adopted child"
+                "INPUT VALUE" : "Child of servant"
               }, {
-                "INPUT VALUE" : "Group quarters, non-inmates"
+                "INPUT VALUE" : "Group quarters"
               }, {
-                "INPUT VALUE" : "Spouse partner of sibling"
-              }, {
-                "INPUT VALUE" : "Great grandparent"
-              }, {
-                "INPUT VALUE" : "Child child-in-law"
-              }, {
-                "INPUT VALUE" : "Non-relative"
-              }, {
-                "INPUT VALUE" : "Daughter-in-law"
-              }, {
-                "INPUT VALUE" : "Child"
-              }, {
-                "INPUT VALUE" : "Non-relative, n.e.c."
-              }, {
-                "INPUT VALUE" : "Other specified non-relative"
-              }, {
-                "INPUT VALUE" : "Roomer boarder lodger foster child"
-              }, {
-                "INPUT VALUE" : "Stepparent"
-              }, {
-                "INPUT VALUE" : "Visitor"
-              }, {
-                "INPUT VALUE" : "Spouse partner of child"
-              }, {
-                "INPUT VALUE" : "Boarder"
-              }, {
-                "INPUT VALUE" : "Parent parent-in-law"
+                "INPUT VALUE" : "Ex-spouse"
               }, {
                 "INPUT VALUE" : "Housemate roommate"
               }, {
-                "INPUT VALUE" : "Tutored foster child"
+                "INPUT VALUE" : "Child"
+              }, {
+                "INPUT VALUE" : "Spouse partner of child"
+              }, {
+                "INPUT VALUE" : "Roomer boarder lodger foster child"
+              }, {
+                "INPUT VALUE" : "Friend guest visitor partner"
+              }, {
+                "INPUT VALUE" : "Cousin"
+              }, {
+                "INPUT VALUE" : "Temporary resident, guest"
+              }, {
+                "INPUT VALUE" : "Stepsibling"
+              }, {
+                "INPUT VALUE" : "Child child-in-law"
+              }, {
+                "INPUT VALUE" : "Relative of employee, n.s."
+              }, {
+                "INPUT VALUE" : "Sibling"
+              }, {
+                "INPUT VALUE" : "Other specified relative"
+              }, {
+                "INPUT VALUE" : "Grandchild"
+              }, {
+                "INPUT VALUE" : "Parent grandparent ascendant"
+              }, {
+                "INPUT VALUE" : "Great grandchild"
+              }, {
+                "INPUT VALUE" : "Boarder or guest"
+              }, {
+                "INPUT VALUE" : "Foster child"
+              }, {
+                "INPUT VALUE" : "Visitor"
+              }, {
+                "INPUT VALUE" : "Other relative, not elsewhere classified"
+              }, {
+                "INPUT VALUE" : "Non-relative"
+              }, {
+                "INPUT VALUE" : "Other specified non-relative"
+              }, {
+                "INPUT VALUE" : "Lodger"
+              }, {
+                "INPUT VALUE" : "Parent parent-in-law"
+              }, {
+                "INPUT VALUE" : "Boarder"
+              }, {
+                "INPUT VALUE" : "Tutored child"
+              }, {
+                "INPUT VALUE" : "Spouse partner of sibling"
+              }, {
+                "INPUT VALUE" : "Other relative with different family name"
+              }, {
+                "INPUT VALUE" : "Child-in-law"
+              }, {
+                "INPUT VALUE" : "Non-relative, n.e.c."
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -424,7 +560,7 @@
             },
             "emergent" : false,
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Spouse : 2100", "Lodger : 5320", "Stepsibling : 4420", "Other relative with different family name : 4920", "Parent grandparent ascendant : 4600", "Sibling of sibling-in-law : 4830", "Group quarters : 5600", "Friend guest visitor partner : 5100", "Employee : 5200", "Great grandchild : 4120", "Child of unmarried partner : 3600", "Cousin : 4820", "Sibling : 4410", "Ex-spouse : 5130", "Child of servant : 5222", "Biological child : 3100", "Temporary resident, guest : 5520", "Spouse of servant : 5221", "Godchild : 5150", "Head : 1000", "Spouse partner : 2000", "Grandchild : 4100", "Boarder or guest : 5311", "Great-great grandchild : 4130", "Agregado : 5510", "Other relative : 4000", "Aunt uncle : 4700", "Sibling sibling-in-law : 4400", "Domestic employee : 5210", "Other specified relative : 4800", "Other relative of servant : 5223", "Parent-in-law : 4220", "Sibling of spouse partner : 4431", "Child-in-law : 4300", "Other relative, not specified (secondary family) : 4930", "Tutored child : 5350", "Partner roommate : 5112", "Stepchild : 3300", "Other relative with same family name : 4910", "Child child-in-law grandchild : 3500", "Partner friend : 5110", "Nephew niece : 4810", "Grandchild or great grandchild : 4110", "Other relative, not elsewhere classified : 4900", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative or non-relative : 6000", "Friend : 5111", "Foster child : 5330", "Grandparent : 4500", "Employee, boarder or guest : 5400", "Parent : 4210", "Institutional inmates : 5620", "Same-sex spouse partner : 2300", "Godparent : 5140", "Unknown : 9999", "Relative of employee, n.s. : 5220", "Unmarried partner of child : 4310", "Adopted child : 3200", "Group quarters, non-inmates : 5610", "Spouse partner of sibling : 4432", "Great grandparent : 4510", "Child child-in-law : 3400", "Non-relative : 5000", "Daughter-in-law : 4301", "Child : 3000", "Non-relative, n.e.c. : 5900", "Roomer boarder lodger foster child : 5300", "Other specified non-relative : 5500", "Visitor : 5120", "Stepparent : 4211", "Spouse partner of child : 4302", "Boarder : 5310", "Parent parent-in-law : 4200", "Housemate roommate : 5113", "Tutored foster child : 5340" ]
+              "MAPPING" : [ "Parent-in-law : 4220", "Stepparent : 4211", "Group quarters, non-inmates : 5610", "Godparent : 5140", "Adopted child : 3200", "Great-great grandchild : 4130", "Daughter-in-law : 4301", "Great grandparent : 4510", "Unknown : 9999", "Institutional inmates : 5620", "Aunt uncle : 4700", "Tutored foster child : 5340", "Unmarried partner of child : 4310", "Parent : 4210", "Employee, boarder or guest : 5400", "Spouse of servant : 5221", "Partner roommate : 5112", "Child child-in-law grandchild : 3500", "Other relative, not specified (secondary family) : 4930", "Friend : 5111", "Partner friend : 5110", "Other relative or non-relative : 6000", "Domestic employee : 5210", "Grandparent : 4500", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative with same family name : 4910", "Other relative of servant : 5223", "Head : 1000", "Godchild : 5150", "Sibling of spouse partner : 4431", "Child of unmarried partner : 3600", "Spouse : 2100", "Biological child : 3100", "Stepchild : 3300", "Grandchild or great grandchild : 4110", "Sibling of sibling-in-law : 4830", "Nephew niece : 4810", "Other relative : 4000", "Same-sex spouse partner : 2300", "Sibling sibling-in-law : 4400", "Agregado : 5510", "Spouse partner : 2000", "Child of servant : 5222", "Employee : 5200", "Group quarters : 5600", "Ex-spouse : 5130", "Housemate roommate : 5113", "Roomer boarder lodger foster child : 5300", "Spouse partner of child : 4302", "Child : 3000", "Friend guest visitor partner : 5100", "Cousin : 4820", "Stepsibling : 4420", "Temporary resident, guest : 5520", "Child child-in-law : 3400", "Relative of employee, n.s. : 5220", "Sibling : 4410", "Other specified relative : 4800", "Grandchild : 4100", "Parent grandparent ascendant : 4600", "Great grandchild : 4120", "Boarder or guest : 5311", "Foster child : 5330", "Visitor : 5120", "Other relative, not elsewhere classified : 4900", "Non-relative : 5000", "Other specified non-relative : 5500", "Lodger : 5320", "Parent parent-in-law : 4200", "Boarder : 5310", "Tutored child : 5350", "Spouse partner of sibling : 4432", "Other relative with different family name : 4920", "Child-in-law : 4300", "Non-relative, n.e.c. : 5900" ]
             }
           }
         }, {
@@ -433,71 +569,71 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Married, spouse absent (historical samples)"
+                "INPUT VALUE" : "Consensual union"
               }, {
-                "INPUT VALUE" : "Married, formally"
-              }, {
-                "INPUT VALUE" : "Married, civil and religious"
-              }, {
-                "INPUT VALUE" : "Married, civil"
-              }, {
-                "INPUT VALUE" : "Widowed, divorced, or separated"
-              }, {
-                "INPUT VALUE" : "Unknown missing"
-              }, {
-                "INPUT VALUE" : "Annulled"
-              }, {
-                "INPUT VALUE" : "Separated from consensual union"
-              }, {
-                "INPUT VALUE" : "Married, religious"
-              }, {
-                "INPUT VALUE" : "Widowed from consensual union or marriage"
-              }, {
-                "INPUT VALUE" : "Married, polygamous"
+                "INPUT VALUE" : "Widowed from marriage"
               }, {
                 "INPUT VALUE" : "Married or consensual union"
-              }, {
-                "INPUT VALUE" : "Separated from marriage"
-              }, {
-                "INPUT VALUE" : "Married, civil or religious"
-              }, {
-                "INPUT VALUE" : "Widowed or divorced"
-              }, {
-                "INPUT VALUE" : "Widowed from consensual union"
-              }, {
-                "INPUT VALUE" : "Separated legally"
-              }, {
-                "INPUT VALUE" : "Separated from consensual union or marriage"
-              }, {
-                "INPUT VALUE" : "Married, traditional customary"
-              }, {
-                "INPUT VALUE" : "Separated"
-              }, {
-                "INPUT VALUE" : "Never married and never cohabited"
-              }, {
-                "INPUT VALUE" : "Separated de facto"
-              }, {
-                "INPUT VALUE" : "Engaged"
-              }, {
-                "INPUT VALUE" : "Separated or divorced"
               }, {
                 "INPUT VALUE" : "Separated divorced spouse absent"
               }, {
                 "INPUT VALUE" : "NIU (not in universe)"
               }, {
-                "INPUT VALUE" : "Married, monogamous"
-              }, {
-                "INPUT VALUE" : "Widowed from marriage"
-              }, {
-                "INPUT VALUE" : "Single never married"
-              }, {
                 "INPUT VALUE" : "Separated or annulled"
+              }, {
+                "INPUT VALUE" : "Separated from marriage"
               }, {
                 "INPUT VALUE" : "Widowed"
               }, {
-                "INPUT VALUE" : "Consensual union"
+                "INPUT VALUE" : "Married, polygamous"
+              }, {
+                "INPUT VALUE" : "Never married and never cohabited"
+              }, {
+                "INPUT VALUE" : "Engaged"
+              }, {
+                "INPUT VALUE" : "Unknown missing"
+              }, {
+                "INPUT VALUE" : "Annulled"
+              }, {
+                "INPUT VALUE" : "Married, spouse absent (historical samples)"
+              }, {
+                "INPUT VALUE" : "Widowed from consensual union"
+              }, {
+                "INPUT VALUE" : "Widowed from consensual union or marriage"
+              }, {
+                "INPUT VALUE" : "Separated legally"
+              }, {
+                "INPUT VALUE" : "Widowed, divorced, or separated"
+              }, {
+                "INPUT VALUE" : "Widowed or divorced"
+              }, {
+                "INPUT VALUE" : "Separated from consensual union"
+              }, {
+                "INPUT VALUE" : "Separated de facto"
+              }, {
+                "INPUT VALUE" : "Separated"
+              }, {
+                "INPUT VALUE" : "Married, religious"
+              }, {
+                "INPUT VALUE" : "Married, civil and religious"
+              }, {
+                "INPUT VALUE" : "Single never married"
+              }, {
+                "INPUT VALUE" : "Married, monogamous"
+              }, {
+                "INPUT VALUE" : "Married, civil"
               }, {
                 "INPUT VALUE" : "Divorced"
+              }, {
+                "INPUT VALUE" : "Married, civil or religious"
+              }, {
+                "INPUT VALUE" : "Separated from consensual union or marriage"
+              }, {
+                "INPUT VALUE" : "Married, traditional customary"
+              }, {
+                "INPUT VALUE" : "Separated or divorced"
+              }, {
+                "INPUT VALUE" : "Married, formally"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -508,7 +644,7 @@
             },
             "emergent" : false,
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Married, spouse absent (historical samples) : 219", "Married, formally : 210", "Married, civil and religious : 213", "Married, civil : 211", "Widowed, divorced, or separated : 420", "Unknown missing : 999", "Annulled : 340", "Separated from consensual union : 334", "Married, religious : 212", "Widowed from consensual union or marriage : 411", "Married, polygamous : 217", "Married or consensual union : 200", "Separated from marriage : 333", "Widowed or divorced : 410", "Married, civil or religious : 214", "Widowed from consensual union : 413", "Separated legally : 331", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated : 330", "Separated de facto : 332", "Never married and never cohabited : 111", "Engaged : 110", "Separated or divorced : 310", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Married, monogamous : 216", "Widowed from marriage : 412", "Single never married : 100", "Separated or annulled : 320", "Widowed : 400", "Consensual union : 220", "Divorced : 350" ]
+              "MAPPING" : [ "Consensual union : 220", "Widowed from marriage : 412", "Married or consensual union : 200", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Separated or annulled : 320", "Separated from marriage : 333", "Widowed : 400", "Married, polygamous : 217", "Engaged : 110", "Never married and never cohabited : 111", "Unknown missing : 999", "Widowed from consensual union : 413", "Married, spouse absent (historical samples) : 219", "Annulled : 340", "Widowed from consensual union or marriage : 411", "Separated legally : 331", "Widowed, divorced, or separated : 420", "Widowed or divorced : 410", "Separated from consensual union : 334", "Separated de facto : 332", "Separated : 330", "Married, religious : 212", "Married, civil and religious : 213", "Single never married : 100", "Married, monogamous : 216", "Married, civil : 211", "Divorced : 350", "Married, civil or religious : 214", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated or divorced : 310", "Married, formally : 210" ]
             }
           }
         }, {
@@ -517,17 +653,17 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Other relative or non-relative"
-              }, {
-                "INPUT VALUE" : "Child"
-              }, {
                 "INPUT VALUE" : "Other relative"
+              }, {
+                "INPUT VALUE" : "Unknown"
               }, {
                 "INPUT VALUE" : "Head"
               }, {
+                "INPUT VALUE" : "Other relative or non-relative"
+              }, {
                 "INPUT VALUE" : "Spouse partner"
               }, {
-                "INPUT VALUE" : "Unknown"
+                "INPUT VALUE" : "Child"
               }, {
                 "INPUT VALUE" : "Non-relative"
               } ],
@@ -545,157 +681,157 @@
                 "VALUE SPACE" : {
                   "TYPE" : "Nominal",
                   "VALUES" : [ {
-                    "INPUT VALUE" : "Spouse"
+                    "INPUT VALUE" : "Parent-in-law"
                   }, {
-                    "INPUT VALUE" : "Lodger"
+                    "INPUT VALUE" : "Stepparent"
                   }, {
-                    "INPUT VALUE" : "Stepsibling"
+                    "INPUT VALUE" : "Godparent"
                   }, {
-                    "INPUT VALUE" : "Other relative with different family name"
+                    "INPUT VALUE" : "Group quarters, non-inmates"
                   }, {
-                    "INPUT VALUE" : "Parent grandparent ascendant"
-                  }, {
-                    "INPUT VALUE" : "Sibling of sibling-in-law"
-                  }, {
-                    "INPUT VALUE" : "Group quarters"
-                  }, {
-                    "INPUT VALUE" : "Friend guest visitor partner"
-                  }, {
-                    "INPUT VALUE" : "Employee"
-                  }, {
-                    "INPUT VALUE" : "Great grandchild"
-                  }, {
-                    "INPUT VALUE" : "Child of unmarried partner"
-                  }, {
-                    "INPUT VALUE" : "Cousin"
-                  }, {
-                    "INPUT VALUE" : "Sibling"
-                  }, {
-                    "INPUT VALUE" : "Ex-spouse"
-                  }, {
-                    "INPUT VALUE" : "Child of servant"
-                  }, {
-                    "INPUT VALUE" : "Biological child"
-                  }, {
-                    "INPUT VALUE" : "Temporary resident, guest"
-                  }, {
-                    "INPUT VALUE" : "Godchild"
-                  }, {
-                    "INPUT VALUE" : "Spouse of servant"
-                  }, {
-                    "INPUT VALUE" : "Head"
-                  }, {
-                    "INPUT VALUE" : "Grandchild"
-                  }, {
-                    "INPUT VALUE" : "Spouse partner"
-                  }, {
-                    "INPUT VALUE" : "Boarder or guest"
+                    "INPUT VALUE" : "Adopted child"
                   }, {
                     "INPUT VALUE" : "Great-great grandchild"
                   }, {
-                    "INPUT VALUE" : "Agregado"
+                    "INPUT VALUE" : "Daughter-in-law"
                   }, {
-                    "INPUT VALUE" : "Other relative"
+                    "INPUT VALUE" : "Great grandparent"
+                  }, {
+                    "INPUT VALUE" : "Unknown"
+                  }, {
+                    "INPUT VALUE" : "Institutional inmates"
+                  }, {
+                    "INPUT VALUE" : "Tutored foster child"
+                  }, {
+                    "INPUT VALUE" : "Unmarried partner of child"
                   }, {
                     "INPUT VALUE" : "Aunt uncle"
                   }, {
-                    "INPUT VALUE" : "Sibling sibling-in-law"
+                    "INPUT VALUE" : "Employee, boarder or guest"
                   }, {
-                    "INPUT VALUE" : "Domestic employee"
+                    "INPUT VALUE" : "Parent"
                   }, {
-                    "INPUT VALUE" : "Other specified relative"
-                  }, {
-                    "INPUT VALUE" : "Other relative of servant"
-                  }, {
-                    "INPUT VALUE" : "Parent-in-law"
-                  }, {
-                    "INPUT VALUE" : "Sibling of spouse partner"
-                  }, {
-                    "INPUT VALUE" : "Child-in-law"
-                  }, {
-                    "INPUT VALUE" : "Other relative, not specified (secondary family)"
+                    "INPUT VALUE" : "Spouse of servant"
                   }, {
                     "INPUT VALUE" : "Partner roommate"
                   }, {
-                    "INPUT VALUE" : "Tutored child"
-                  }, {
-                    "INPUT VALUE" : "Stepchild"
-                  }, {
-                    "INPUT VALUE" : "Other relative with same family name"
-                  }, {
                     "INPUT VALUE" : "Child child-in-law grandchild"
+                  }, {
+                    "INPUT VALUE" : "Other relative, not specified (secondary family)"
+                  }, {
+                    "INPUT VALUE" : "Friend"
                   }, {
                     "INPUT VALUE" : "Partner friend"
                   }, {
-                    "INPUT VALUE" : "Grandchild or great grandchild"
+                    "INPUT VALUE" : "Other relative or non-relative"
                   }, {
-                    "INPUT VALUE" : "Nephew niece"
+                    "INPUT VALUE" : "Domestic employee"
+                  }, {
+                    "INPUT VALUE" : "Grandparent"
                   }, {
                     "INPUT VALUE" : "Sibling-in-law"
                   }, {
                     "INPUT VALUE" : "Unmarried partner"
                   }, {
-                    "INPUT VALUE" : "Other relative, not elsewhere classified"
+                    "INPUT VALUE" : "Other relative with same family name"
                   }, {
-                    "INPUT VALUE" : "Other relative or non-relative"
+                    "INPUT VALUE" : "Head"
                   }, {
-                    "INPUT VALUE" : "Friend"
+                    "INPUT VALUE" : "Other relative of servant"
                   }, {
-                    "INPUT VALUE" : "Foster child"
+                    "INPUT VALUE" : "Godchild"
                   }, {
-                    "INPUT VALUE" : "Employee, boarder or guest"
+                    "INPUT VALUE" : "Sibling of spouse partner"
                   }, {
-                    "INPUT VALUE" : "Grandparent"
+                    "INPUT VALUE" : "Child of unmarried partner"
                   }, {
-                    "INPUT VALUE" : "Institutional inmates"
+                    "INPUT VALUE" : "Spouse"
                   }, {
-                    "INPUT VALUE" : "Parent"
+                    "INPUT VALUE" : "Biological child"
+                  }, {
+                    "INPUT VALUE" : "Stepchild"
+                  }, {
+                    "INPUT VALUE" : "Grandchild or great grandchild"
+                  }, {
+                    "INPUT VALUE" : "Sibling of sibling-in-law"
+                  }, {
+                    "INPUT VALUE" : "Nephew niece"
+                  }, {
+                    "INPUT VALUE" : "Other relative"
                   }, {
                     "INPUT VALUE" : "Same-sex spouse partner"
                   }, {
-                    "INPUT VALUE" : "Unknown"
+                    "INPUT VALUE" : "Sibling sibling-in-law"
                   }, {
-                    "INPUT VALUE" : "Godparent"
+                    "INPUT VALUE" : "Agregado"
                   }, {
-                    "INPUT VALUE" : "Relative of employee, n.s."
+                    "INPUT VALUE" : "Spouse partner"
                   }, {
-                    "INPUT VALUE" : "Unmarried partner of child"
+                    "INPUT VALUE" : "Employee"
                   }, {
-                    "INPUT VALUE" : "Adopted child"
+                    "INPUT VALUE" : "Child of servant"
                   }, {
-                    "INPUT VALUE" : "Group quarters, non-inmates"
+                    "INPUT VALUE" : "Group quarters"
                   }, {
-                    "INPUT VALUE" : "Spouse partner of sibling"
-                  }, {
-                    "INPUT VALUE" : "Great grandparent"
-                  }, {
-                    "INPUT VALUE" : "Child child-in-law"
-                  }, {
-                    "INPUT VALUE" : "Non-relative"
-                  }, {
-                    "INPUT VALUE" : "Daughter-in-law"
-                  }, {
-                    "INPUT VALUE" : "Child"
-                  }, {
-                    "INPUT VALUE" : "Non-relative, n.e.c."
-                  }, {
-                    "INPUT VALUE" : "Other specified non-relative"
-                  }, {
-                    "INPUT VALUE" : "Roomer boarder lodger foster child"
-                  }, {
-                    "INPUT VALUE" : "Stepparent"
-                  }, {
-                    "INPUT VALUE" : "Visitor"
-                  }, {
-                    "INPUT VALUE" : "Spouse partner of child"
-                  }, {
-                    "INPUT VALUE" : "Boarder"
-                  }, {
-                    "INPUT VALUE" : "Parent parent-in-law"
+                    "INPUT VALUE" : "Ex-spouse"
                   }, {
                     "INPUT VALUE" : "Housemate roommate"
                   }, {
-                    "INPUT VALUE" : "Tutored foster child"
+                    "INPUT VALUE" : "Child"
+                  }, {
+                    "INPUT VALUE" : "Spouse partner of child"
+                  }, {
+                    "INPUT VALUE" : "Roomer boarder lodger foster child"
+                  }, {
+                    "INPUT VALUE" : "Friend guest visitor partner"
+                  }, {
+                    "INPUT VALUE" : "Cousin"
+                  }, {
+                    "INPUT VALUE" : "Temporary resident, guest"
+                  }, {
+                    "INPUT VALUE" : "Stepsibling"
+                  }, {
+                    "INPUT VALUE" : "Child child-in-law"
+                  }, {
+                    "INPUT VALUE" : "Relative of employee, n.s."
+                  }, {
+                    "INPUT VALUE" : "Sibling"
+                  }, {
+                    "INPUT VALUE" : "Other specified relative"
+                  }, {
+                    "INPUT VALUE" : "Grandchild"
+                  }, {
+                    "INPUT VALUE" : "Parent grandparent ascendant"
+                  }, {
+                    "INPUT VALUE" : "Great grandchild"
+                  }, {
+                    "INPUT VALUE" : "Boarder or guest"
+                  }, {
+                    "INPUT VALUE" : "Foster child"
+                  }, {
+                    "INPUT VALUE" : "Visitor"
+                  }, {
+                    "INPUT VALUE" : "Other relative, not elsewhere classified"
+                  }, {
+                    "INPUT VALUE" : "Non-relative"
+                  }, {
+                    "INPUT VALUE" : "Other specified non-relative"
+                  }, {
+                    "INPUT VALUE" : "Lodger"
+                  }, {
+                    "INPUT VALUE" : "Parent parent-in-law"
+                  }, {
+                    "INPUT VALUE" : "Boarder"
+                  }, {
+                    "INPUT VALUE" : "Tutored child"
+                  }, {
+                    "INPUT VALUE" : "Spouse partner of sibling"
+                  }, {
+                    "INPUT VALUE" : "Other relative with different family name"
+                  }, {
+                    "INPUT VALUE" : "Child-in-law"
+                  }, {
+                    "INPUT VALUE" : "Non-relative, n.e.c."
                   } ],
                   "categoricTemplate" : {
                     "regex" : [ ]
@@ -706,16 +842,16 @@
                 },
                 "emergent" : false,
                 "ENCODED VALUES" : {
-                  "MAPPING" : [ "Spouse : 2100", "Lodger : 5320", "Stepsibling : 4420", "Other relative with different family name : 4920", "Parent grandparent ascendant : 4600", "Sibling of sibling-in-law : 4830", "Group quarters : 5600", "Friend guest visitor partner : 5100", "Employee : 5200", "Great grandchild : 4120", "Child of unmarried partner : 3600", "Cousin : 4820", "Sibling : 4410", "Ex-spouse : 5130", "Child of servant : 5222", "Biological child : 3100", "Temporary resident, guest : 5520", "Spouse of servant : 5221", "Godchild : 5150", "Head : 1000", "Spouse partner : 2000", "Grandchild : 4100", "Boarder or guest : 5311", "Great-great grandchild : 4130", "Agregado : 5510", "Other relative : 4000", "Aunt uncle : 4700", "Sibling sibling-in-law : 4400", "Domestic employee : 5210", "Other specified relative : 4800", "Other relative of servant : 5223", "Parent-in-law : 4220", "Sibling of spouse partner : 4431", "Child-in-law : 4300", "Other relative, not specified (secondary family) : 4930", "Tutored child : 5350", "Partner roommate : 5112", "Stepchild : 3300", "Other relative with same family name : 4910", "Child child-in-law grandchild : 3500", "Partner friend : 5110", "Nephew niece : 4810", "Grandchild or great grandchild : 4110", "Other relative, not elsewhere classified : 4900", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative or non-relative : 6000", "Friend : 5111", "Foster child : 5330", "Grandparent : 4500", "Employee, boarder or guest : 5400", "Parent : 4210", "Institutional inmates : 5620", "Same-sex spouse partner : 2300", "Godparent : 5140", "Unknown : 9999", "Relative of employee, n.s. : 5220", "Unmarried partner of child : 4310", "Adopted child : 3200", "Group quarters, non-inmates : 5610", "Spouse partner of sibling : 4432", "Great grandparent : 4510", "Child child-in-law : 3400", "Non-relative : 5000", "Daughter-in-law : 4301", "Child : 3000", "Non-relative, n.e.c. : 5900", "Roomer boarder lodger foster child : 5300", "Other specified non-relative : 5500", "Visitor : 5120", "Stepparent : 4211", "Spouse partner of child : 4302", "Boarder : 5310", "Parent parent-in-law : 4200", "Housemate roommate : 5113", "Tutored foster child : 5340" ]
+                  "MAPPING" : [ "Parent-in-law : 4220", "Stepparent : 4211", "Group quarters, non-inmates : 5610", "Godparent : 5140", "Adopted child : 3200", "Great-great grandchild : 4130", "Daughter-in-law : 4301", "Great grandparent : 4510", "Unknown : 9999", "Institutional inmates : 5620", "Aunt uncle : 4700", "Tutored foster child : 5340", "Unmarried partner of child : 4310", "Parent : 4210", "Employee, boarder or guest : 5400", "Spouse of servant : 5221", "Partner roommate : 5112", "Child child-in-law grandchild : 3500", "Other relative, not specified (secondary family) : 4930", "Friend : 5111", "Partner friend : 5110", "Other relative or non-relative : 6000", "Domestic employee : 5210", "Grandparent : 4500", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative with same family name : 4910", "Other relative of servant : 5223", "Head : 1000", "Godchild : 5150", "Sibling of spouse partner : 4431", "Child of unmarried partner : 3600", "Spouse : 2100", "Biological child : 3100", "Stepchild : 3300", "Grandchild or great grandchild : 4110", "Sibling of sibling-in-law : 4830", "Nephew niece : 4810", "Other relative : 4000", "Same-sex spouse partner : 2300", "Sibling sibling-in-law : 4400", "Agregado : 5510", "Spouse partner : 2000", "Child of servant : 5222", "Employee : 5200", "Group quarters : 5600", "Ex-spouse : 5130", "Housemate roommate : 5113", "Roomer boarder lodger foster child : 5300", "Spouse partner of child : 4302", "Child : 3000", "Friend guest visitor partner : 5100", "Cousin : 4820", "Stepsibling : 4420", "Temporary resident, guest : 5520", "Child child-in-law : 3400", "Relative of employee, n.s. : 5220", "Sibling : 4410", "Other specified relative : 4800", "Grandchild : 4100", "Parent grandparent ascendant : 4600", "Great grandchild : 4120", "Boarder or guest : 5311", "Foster child : 5330", "Visitor : 5120", "Other relative, not elsewhere classified : 4900", "Non-relative : 5000", "Other specified non-relative : 5500", "Lodger : 5320", "Parent parent-in-law : 4200", "Boarder : 5310", "Tutored child : 5350", "Spouse partner of sibling : 4432", "Other relative with different family name : 4920", "Child-in-law : 4300", "Non-relative, n.e.c. : 5900" ]
                 }
               }
             },
             "MAPPER" : {
               "TYPE" : "AGG",
-              "THE MAP" : [ "Other relative or non-relative : Other relative or non-relative", "Child : Adopted child;Child;Child of unmarried partner;Child child-in-law;Biological child;Child child-in-law grandchild;Stepchild", "Other relative : Great-great grandchild;Parent;Stepparent;Sibling;Sibling sibling-in-law;Parent grandparent ascendant;Other relative with different family name;Other specified relative;Parent-in-law;Grandchild;Stepsibling;Child-in-law;Other relative, not specified (secondary family);Nephew niece;Grandchild or great grandchild;Sibling-in-law;Unmarried partner of child;Sibling of spouse partner;Spouse partner of sibling;Daughter-in-law;Spouse partner of child;Grandparent;Cousin;Aunt uncle;Other relative, not elsewhere classified;Great grandchild;Other relative;Parent parent-in-law;Great grandparent;Sibling of sibling-in-law;Other relative with same family name", "Head : Head", "Spouse partner : Same-sex spouse partner;Spouse partner;Unmarried partner;Spouse", "Unknown : Unknown", "Non-relative : Godparent;Tutored foster child;Relative of employee, n.s.;Friend guest visitor partner;Spouse of servant;Child of servant;Other relative of servant;Roomer boarder lodger foster child;Institutional inmates;Group quarters, non-inmates;Tutored child;Partner friend;Friend;Partner roommate;Boarder;Housemate roommate;Boarder or guest;Agregado;Godchild;Other specified non-relative;Non-relative, n.e.c.;Visitor;Non-relative;Lodger;Employee;Temporary resident, guest;Employee, boarder or guest;Ex-spouse;Foster child;Domestic employee;Group quarters" ]
+              "THE MAP" : [ "Other relative : Great-great grandchild;Parent;Stepparent;Sibling;Sibling sibling-in-law;Parent grandparent ascendant;Other relative with different family name;Other specified relative;Parent-in-law;Grandchild;Stepsibling;Child-in-law;Other relative, not specified (secondary family);Nephew niece;Grandchild or great grandchild;Sibling-in-law;Unmarried partner of child;Sibling of spouse partner;Spouse partner of sibling;Daughter-in-law;Spouse partner of child;Grandparent;Cousin;Aunt uncle;Other relative, not elsewhere classified;Great grandchild;Other relative;Parent parent-in-law;Great grandparent;Sibling of sibling-in-law;Other relative with same family name", "Unknown : Unknown", "Head : Head", "Other relative or non-relative : Other relative or non-relative", "Spouse partner : Same-sex spouse partner;Spouse partner;Unmarried partner;Spouse", "Child : Adopted child;Child;Child of unmarried partner;Child child-in-law;Biological child;Child child-in-law grandchild;Stepchild", "Non-relative : Godparent;Tutored foster child;Relative of employee, n.s.;Friend guest visitor partner;Spouse of servant;Child of servant;Other relative of servant;Roomer boarder lodger foster child;Institutional inmates;Group quarters, non-inmates;Tutored child;Partner friend;Friend;Partner roommate;Boarder;Housemate roommate;Boarder or guest;Agregado;Godchild;Other specified non-relative;Non-relative, n.e.c.;Visitor;Non-relative;Lodger;Employee;Temporary resident, guest;Employee, boarder or guest;Ex-spouse;Foster child;Domestic employee;Group quarters" ]
             },
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Other relative or non-relative : 6", "Child : 3", "Other relative : 4", "Head : 1", "Spouse partner : 2", "Unknown : 9", "Non-relative : 5" ]
+              "MAPPING" : [ "Other relative : 4", "Unknown : 9", "Head : 1", "Other relative or non-relative : 6", "Spouse partner : 2", "Child : 3", "Non-relative : 5" ]
             }
           }
         }, {
@@ -724,17 +860,17 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Unknown missing"
-              }, {
-                "INPUT VALUE" : "Widowed"
-              }, {
-                "INPUT VALUE" : "Single never married"
-              }, {
                 "INPUT VALUE" : "Separated divorced spouse absent"
               }, {
                 "INPUT VALUE" : "NIU (not in universe)"
               }, {
                 "INPUT VALUE" : "Married in union"
+              }, {
+                "INPUT VALUE" : "Widowed"
+              }, {
+                "INPUT VALUE" : "Single never married"
+              }, {
+                "INPUT VALUE" : "Unknown missing"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -750,71 +886,71 @@
                 "VALUE SPACE" : {
                   "TYPE" : "Nominal",
                   "VALUES" : [ {
-                    "INPUT VALUE" : "Married, spouse absent (historical samples)"
+                    "INPUT VALUE" : "Consensual union"
                   }, {
-                    "INPUT VALUE" : "Married, formally"
-                  }, {
-                    "INPUT VALUE" : "Married, civil and religious"
-                  }, {
-                    "INPUT VALUE" : "Married, civil"
-                  }, {
-                    "INPUT VALUE" : "Widowed, divorced, or separated"
-                  }, {
-                    "INPUT VALUE" : "Unknown missing"
-                  }, {
-                    "INPUT VALUE" : "Annulled"
-                  }, {
-                    "INPUT VALUE" : "Separated from consensual union"
-                  }, {
-                    "INPUT VALUE" : "Married, religious"
-                  }, {
-                    "INPUT VALUE" : "Widowed from consensual union or marriage"
-                  }, {
-                    "INPUT VALUE" : "Married, polygamous"
+                    "INPUT VALUE" : "Widowed from marriage"
                   }, {
                     "INPUT VALUE" : "Married or consensual union"
-                  }, {
-                    "INPUT VALUE" : "Separated from marriage"
-                  }, {
-                    "INPUT VALUE" : "Married, civil or religious"
-                  }, {
-                    "INPUT VALUE" : "Widowed or divorced"
-                  }, {
-                    "INPUT VALUE" : "Widowed from consensual union"
-                  }, {
-                    "INPUT VALUE" : "Separated legally"
-                  }, {
-                    "INPUT VALUE" : "Separated from consensual union or marriage"
-                  }, {
-                    "INPUT VALUE" : "Married, traditional customary"
-                  }, {
-                    "INPUT VALUE" : "Separated"
-                  }, {
-                    "INPUT VALUE" : "Never married and never cohabited"
-                  }, {
-                    "INPUT VALUE" : "Separated de facto"
-                  }, {
-                    "INPUT VALUE" : "Engaged"
-                  }, {
-                    "INPUT VALUE" : "Separated or divorced"
                   }, {
                     "INPUT VALUE" : "Separated divorced spouse absent"
                   }, {
                     "INPUT VALUE" : "NIU (not in universe)"
                   }, {
-                    "INPUT VALUE" : "Married, monogamous"
-                  }, {
-                    "INPUT VALUE" : "Widowed from marriage"
-                  }, {
-                    "INPUT VALUE" : "Single never married"
-                  }, {
                     "INPUT VALUE" : "Separated or annulled"
+                  }, {
+                    "INPUT VALUE" : "Separated from marriage"
                   }, {
                     "INPUT VALUE" : "Widowed"
                   }, {
-                    "INPUT VALUE" : "Consensual union"
+                    "INPUT VALUE" : "Married, polygamous"
+                  }, {
+                    "INPUT VALUE" : "Never married and never cohabited"
+                  }, {
+                    "INPUT VALUE" : "Engaged"
+                  }, {
+                    "INPUT VALUE" : "Unknown missing"
+                  }, {
+                    "INPUT VALUE" : "Annulled"
+                  }, {
+                    "INPUT VALUE" : "Married, spouse absent (historical samples)"
+                  }, {
+                    "INPUT VALUE" : "Widowed from consensual union"
+                  }, {
+                    "INPUT VALUE" : "Widowed from consensual union or marriage"
+                  }, {
+                    "INPUT VALUE" : "Separated legally"
+                  }, {
+                    "INPUT VALUE" : "Widowed, divorced, or separated"
+                  }, {
+                    "INPUT VALUE" : "Widowed or divorced"
+                  }, {
+                    "INPUT VALUE" : "Separated from consensual union"
+                  }, {
+                    "INPUT VALUE" : "Separated de facto"
+                  }, {
+                    "INPUT VALUE" : "Separated"
+                  }, {
+                    "INPUT VALUE" : "Married, religious"
+                  }, {
+                    "INPUT VALUE" : "Married, civil and religious"
+                  }, {
+                    "INPUT VALUE" : "Single never married"
+                  }, {
+                    "INPUT VALUE" : "Married, monogamous"
+                  }, {
+                    "INPUT VALUE" : "Married, civil"
                   }, {
                     "INPUT VALUE" : "Divorced"
+                  }, {
+                    "INPUT VALUE" : "Married, civil or religious"
+                  }, {
+                    "INPUT VALUE" : "Separated from consensual union or marriage"
+                  }, {
+                    "INPUT VALUE" : "Married, traditional customary"
+                  }, {
+                    "INPUT VALUE" : "Separated or divorced"
+                  }, {
+                    "INPUT VALUE" : "Married, formally"
                   } ],
                   "categoricTemplate" : {
                     "regex" : [ ]
@@ -825,153 +961,950 @@
                 },
                 "emergent" : false,
                 "ENCODED VALUES" : {
-                  "MAPPING" : [ "Married, spouse absent (historical samples) : 219", "Married, formally : 210", "Married, civil and religious : 213", "Married, civil : 211", "Widowed, divorced, or separated : 420", "Unknown missing : 999", "Annulled : 340", "Separated from consensual union : 334", "Married, religious : 212", "Widowed from consensual union or marriage : 411", "Married, polygamous : 217", "Married or consensual union : 200", "Separated from marriage : 333", "Widowed or divorced : 410", "Married, civil or religious : 214", "Widowed from consensual union : 413", "Separated legally : 331", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated : 330", "Separated de facto : 332", "Never married and never cohabited : 111", "Engaged : 110", "Separated or divorced : 310", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Married, monogamous : 216", "Widowed from marriage : 412", "Single never married : 100", "Separated or annulled : 320", "Widowed : 400", "Consensual union : 220", "Divorced : 350" ]
+                  "MAPPING" : [ "Consensual union : 220", "Widowed from marriage : 412", "Married or consensual union : 200", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Separated or annulled : 320", "Separated from marriage : 333", "Widowed : 400", "Married, polygamous : 217", "Engaged : 110", "Never married and never cohabited : 111", "Unknown missing : 999", "Widowed from consensual union : 413", "Married, spouse absent (historical samples) : 219", "Annulled : 340", "Widowed from consensual union or marriage : 411", "Separated legally : 331", "Widowed, divorced, or separated : 420", "Widowed or divorced : 410", "Separated from consensual union : 334", "Separated de facto : 332", "Separated : 330", "Married, religious : 212", "Married, civil and religious : 213", "Single never married : 100", "Married, monogamous : 216", "Married, civil : 211", "Divorced : 350", "Married, civil or religious : 214", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated or divorced : 310", "Married, formally : 210" ]
                 }
               }
             },
             "MAPPER" : {
               "TYPE" : "AGG",
-              "THE MAP" : [ "Unknown missing : Unknown missing", "Widowed : Widowed or divorced;Widowed from consensual union or marriage;Widowed from marriage;Widowed from consensual union;Widowed, divorced, or separated;Widowed", "Single never married : Engaged;Never married and never cohabited;Single never married", "Separated divorced spouse absent : Divorced;Separated;Separated legally;Separated or divorced;Separated de facto;Separated from marriage;Separated from consensual union;Separated from consensual union or marriage;Annulled;Separated or annulled;Separated divorced spouse absent", "NIU (not in universe) : NIU (not in universe)", "Married in union : Married, formally;Married, civil;Married, religious;Married, civil and religious;Married, civil or religious;Married, traditional customary;Married, monogamous;Married, polygamous;Married, spouse absent (historical samples);Consensual union;Married or consensual union" ]
+              "THE MAP" : [ "Separated divorced spouse absent : Divorced;Separated;Separated legally;Separated or divorced;Separated de facto;Separated from marriage;Separated from consensual union;Separated from consensual union or marriage;Annulled;Separated or annulled;Separated divorced spouse absent", "NIU (not in universe) : NIU (not in universe)", "Married in union : Married, formally;Married, civil;Married, religious;Married, civil and religious;Married, civil or religious;Married, traditional customary;Married, monogamous;Married, polygamous;Married, spouse absent (historical samples);Consensual union;Married or consensual union", "Widowed : Widowed or divorced;Widowed from consensual union or marriage;Widowed from marriage;Widowed from consensual union;Widowed, divorced, or separated;Widowed", "Single never married : Engaged;Never married and never cohabited;Single never married", "Unknown missing : Unknown missing" ]
             },
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Unknown missing : 9", "Widowed : 4", "Single never married : 1", "Separated divorced spouse absent : 3", "NIU (not in universe) : 0", "Married in union : 2" ]
+              "MAPPING" : [ "Separated divorced spouse absent : 3", "NIU (not in universe) : 0", "Married in union : 2", "Single never married : 1", "Widowed : 4", "Unknown missing : 9" ]
             }
           }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "AGE_int",
+            "VALUE SPACE" : {
+              "TYPE" : "Integer",
+              "VALUES" : [ {
+                "INPUT VALUE" : "24"
+              }, {
+                "INPUT VALUE" : "12"
+              }, {
+                "INPUT VALUE" : "88"
+              }, {
+                "INPUT VALUE" : "76"
+              }, {
+                "INPUT VALUE" : "64"
+              }, {
+                "INPUT VALUE" : "52"
+              }, {
+                "INPUT VALUE" : "40"
+              }, {
+                "INPUT VALUE" : "48"
+              }, {
+                "INPUT VALUE" : "36"
+              }, {
+                "INPUT VALUE" : "9"
+              }, {
+                "INPUT VALUE" : "91"
+              }, {
+                "INPUT VALUE" : "1"
+              }, {
+                "INPUT VALUE" : "13"
+              }, {
+                "INPUT VALUE" : "89"
+              }, {
+                "INPUT VALUE" : "77"
+              }, {
+                "INPUT VALUE" : "65"
+              }, {
+                "INPUT VALUE" : "53"
+              }, {
+                "INPUT VALUE" : "41"
+              }, {
+                "INPUT VALUE" : "49"
+              }, {
+                "INPUT VALUE" : "37"
+              }, {
+                "INPUT VALUE" : "25"
+              }, {
+                "INPUT VALUE" : "92"
+              }, {
+                "INPUT VALUE" : "80"
+              }, {
+                "INPUT VALUE" : "2"
+              }, {
+                "INPUT VALUE" : "46"
+              }, {
+                "INPUT VALUE" : "34"
+              }, {
+                "INPUT VALUE" : "22"
+              }, {
+                "INPUT VALUE" : "10"
+              }, {
+                "INPUT VALUE" : "98"
+              }, {
+                "INPUT VALUE" : "86"
+              }, {
+                "INPUT VALUE" : "74"
+              }, {
+                "INPUT VALUE" : "62"
+              }, {
+                "INPUT VALUE" : "50"
+              }, {
+                "INPUT VALUE" : "18"
+              }, {
+                "INPUT VALUE" : "58"
+              }, {
+                "INPUT VALUE" : "7"
+              }, {
+                "INPUT VALUE" : "35"
+              }, {
+                "INPUT VALUE" : "23"
+              }, {
+                "INPUT VALUE" : "11"
+              }, {
+                "INPUT VALUE" : "99"
+              }, {
+                "INPUT VALUE" : "87"
+              }, {
+                "INPUT VALUE" : "75"
+              }, {
+                "INPUT VALUE" : "63"
+              }, {
+                "INPUT VALUE" : "51"
+              }, {
+                "INPUT VALUE" : "19"
+              }, {
+                "INPUT VALUE" : "59"
+              }, {
+                "INPUT VALUE" : "47"
+              }, {
+                "INPUT VALUE" : "8"
+              }, {
+                "INPUT VALUE" : "90"
+              }, {
+                "INPUT VALUE" : "0"
+              }, {
+                "INPUT VALUE" : "68"
+              }, {
+                "INPUT VALUE" : "56"
+              }, {
+                "INPUT VALUE" : "44"
+              }, {
+                "INPUT VALUE" : "32"
+              }, {
+                "INPUT VALUE" : "20"
+              }, {
+                "INPUT VALUE" : "96"
+              }, {
+                "INPUT VALUE" : "84"
+              }, {
+                "INPUT VALUE" : "72"
+              }, {
+                "INPUT VALUE" : "28"
+              }, {
+                "INPUT VALUE" : "16"
+              }, {
+                "INPUT VALUE" : "5"
+              }, {
+                "INPUT VALUE" : "71"
+              }, {
+                "INPUT VALUE" : "57"
+              }, {
+                "INPUT VALUE" : "45"
+              }, {
+                "INPUT VALUE" : "33"
+              }, {
+                "INPUT VALUE" : "21"
+              }, {
+                "INPUT VALUE" : "97"
+              }, {
+                "INPUT VALUE" : "85"
+              }, {
+                "INPUT VALUE" : "73"
+              }, {
+                "INPUT VALUE" : "61"
+              }, {
+                "INPUT VALUE" : "29"
+              }, {
+                "INPUT VALUE" : "17"
+              }, {
+                "INPUT VALUE" : "69"
+              }, {
+                "INPUT VALUE" : "6"
+              }, {
+                "INPUT VALUE" : "60"
+              }, {
+                "INPUT VALUE" : "78"
+              }, {
+                "INPUT VALUE" : "66"
+              }, {
+                "INPUT VALUE" : "54"
+              }, {
+                "INPUT VALUE" : "42"
+              }, {
+                "INPUT VALUE" : "30"
+              }, {
+                "INPUT VALUE" : "94"
+              }, {
+                "INPUT VALUE" : "38"
+              }, {
+                "INPUT VALUE" : "26"
+              }, {
+                "INPUT VALUE" : "14"
+              }, {
+                "INPUT VALUE" : "3"
+              }, {
+                "INPUT VALUE" : "93"
+              }, {
+                "INPUT VALUE" : "81"
+              }, {
+                "INPUT VALUE" : "79"
+              }, {
+                "INPUT VALUE" : "67"
+              }, {
+                "INPUT VALUE" : "55"
+              }, {
+                "INPUT VALUE" : "43"
+              }, {
+                "INPUT VALUE" : "31"
+              }, {
+                "INPUT VALUE" : "95"
+              }, {
+                "INPUT VALUE" : "83"
+              }, {
+                "INPUT VALUE" : "100"
+              }, {
+                "INPUT VALUE" : "39"
+              }, {
+                "INPUT VALUE" : "27"
+              }, {
+                "INPUT VALUE" : "15"
+              }, {
+                "INPUT VALUE" : "4"
+              }, {
+                "INPUT VALUE" : "82"
+              }, {
+                "INPUT VALUE" : "70"
+              } ],
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "null"
+              },
+              "min" : -2147483648,
+              "max" : 2147483647
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "AGE",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "30"
+                  }, {
+                    "INPUT VALUE" : "94"
+                  }, {
+                    "INPUT VALUE" : "82"
+                  }, {
+                    "INPUT VALUE" : "78"
+                  }, {
+                    "INPUT VALUE" : "66"
+                  }, {
+                    "INPUT VALUE" : "54"
+                  }, {
+                    "INPUT VALUE" : "42"
+                  }, {
+                    "INPUT VALUE" : "38"
+                  }, {
+                    "INPUT VALUE" : "26"
+                  }, {
+                    "INPUT VALUE" : "14"
+                  }, {
+                    "INPUT VALUE" : "70"
+                  }, {
+                    "INPUT VALUE" : "4"
+                  }, {
+                    "INPUT VALUE" : "41"
+                  }, {
+                    "INPUT VALUE" : "93"
+                  }, {
+                    "INPUT VALUE" : "Less than 1 year"
+                  }, {
+                    "INPUT VALUE" : "89"
+                  }, {
+                    "INPUT VALUE" : "77"
+                  }, {
+                    "INPUT VALUE" : "65"
+                  }, {
+                    "INPUT VALUE" : "53"
+                  }, {
+                    "INPUT VALUE" : "49"
+                  }, {
+                    "INPUT VALUE" : "37"
+                  }, {
+                    "INPUT VALUE" : "25"
+                  }, {
+                    "INPUT VALUE" : "13"
+                  }, {
+                    "INPUT VALUE" : "1 year"
+                  }, {
+                    "INPUT VALUE" : "100+"
+                  }, {
+                    "INPUT VALUE" : "81"
+                  }, {
+                    "INPUT VALUE" : "3"
+                  }, {
+                    "INPUT VALUE" : "96"
+                  }, {
+                    "INPUT VALUE" : "84"
+                  }, {
+                    "INPUT VALUE" : "72"
+                  }, {
+                    "INPUT VALUE" : "60"
+                  }, {
+                    "INPUT VALUE" : "56"
+                  }, {
+                    "INPUT VALUE" : "44"
+                  }, {
+                    "INPUT VALUE" : "32"
+                  }, {
+                    "INPUT VALUE" : "20"
+                  }, {
+                    "INPUT VALUE" : "16"
+                  }, {
+                    "INPUT VALUE" : "68"
+                  }, {
+                    "INPUT VALUE" : "28"
+                  }, {
+                    "INPUT VALUE" : "6"
+                  }, {
+                    "INPUT VALUE" : "95"
+                  }, {
+                    "INPUT VALUE" : "83"
+                  }, {
+                    "INPUT VALUE" : "71"
+                  }, {
+                    "INPUT VALUE" : "67"
+                  }, {
+                    "INPUT VALUE" : "55"
+                  }, {
+                    "INPUT VALUE" : "43"
+                  }, {
+                    "INPUT VALUE" : "31"
+                  }, {
+                    "INPUT VALUE" : "27"
+                  }, {
+                    "INPUT VALUE" : "15"
+                  }, {
+                    "INPUT VALUE" : "79"
+                  }, {
+                    "INPUT VALUE" : "39"
+                  }, {
+                    "INPUT VALUE" : "5"
+                  }, {
+                    "INPUT VALUE" : "74"
+                  }, {
+                    "INPUT VALUE" : "62"
+                  }, {
+                    "INPUT VALUE" : "50"
+                  }, {
+                    "INPUT VALUE" : "34"
+                  }, {
+                    "INPUT VALUE" : "22"
+                  }, {
+                    "INPUT VALUE" : "10"
+                  }, {
+                    "INPUT VALUE" : "98"
+                  }, {
+                    "INPUT VALUE" : "86"
+                  }, {
+                    "INPUT VALUE" : "58"
+                  }, {
+                    "INPUT VALUE" : "46"
+                  }, {
+                    "INPUT VALUE" : "18"
+                  }, {
+                    "INPUT VALUE" : "8"
+                  }, {
+                    "INPUT VALUE" : "90"
+                  }, {
+                    "INPUT VALUE" : "85"
+                  }, {
+                    "INPUT VALUE" : "73"
+                  }, {
+                    "INPUT VALUE" : "61"
+                  }, {
+                    "INPUT VALUE" : "2 years"
+                  }, {
+                    "INPUT VALUE" : "45"
+                  }, {
+                    "INPUT VALUE" : "33"
+                  }, {
+                    "INPUT VALUE" : "21"
+                  }, {
+                    "INPUT VALUE" : "97"
+                  }, {
+                    "INPUT VALUE" : "69"
+                  }, {
+                    "INPUT VALUE" : "57"
+                  }, {
+                    "INPUT VALUE" : "29"
+                  }, {
+                    "INPUT VALUE" : "17"
+                  }, {
+                    "INPUT VALUE" : "7"
+                  }, {
+                    "INPUT VALUE" : "52"
+                  }, {
+                    "INPUT VALUE" : "40"
+                  }, {
+                    "INPUT VALUE" : "12"
+                  }, {
+                    "INPUT VALUE" : "88"
+                  }, {
+                    "INPUT VALUE" : "76"
+                  }, {
+                    "INPUT VALUE" : "64"
+                  }, {
+                    "INPUT VALUE" : "48"
+                  }, {
+                    "INPUT VALUE" : "36"
+                  }, {
+                    "INPUT VALUE" : "24"
+                  }, {
+                    "INPUT VALUE" : "92"
+                  }, {
+                    "INPUT VALUE" : "Not reported missing"
+                  }, {
+                    "INPUT VALUE" : "80"
+                  }, {
+                    "INPUT VALUE" : "63"
+                  }, {
+                    "INPUT VALUE" : "51"
+                  }, {
+                    "INPUT VALUE" : "23"
+                  }, {
+                    "INPUT VALUE" : "11"
+                  }, {
+                    "INPUT VALUE" : "99"
+                  }, {
+                    "INPUT VALUE" : "87"
+                  }, {
+                    "INPUT VALUE" : "75"
+                  }, {
+                    "INPUT VALUE" : "59"
+                  }, {
+                    "INPUT VALUE" : "47"
+                  }, {
+                    "INPUT VALUE" : "35"
+                  }, {
+                    "INPUT VALUE" : "19"
+                  }, {
+                    "INPUT VALUE" : "9"
+                  }, {
+                    "INPUT VALUE" : "91"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "30 : 030", "94 : 094", "82 : 082", "78 : 078", "66 : 066", "54 : 054", "42 : 042", "38 : 038", "26 : 026", "14 : 014", "70 : 070", "4 : 004", "41 : 041", "93 : 093", "Less than 1 year : 000", "89 : 089", "77 : 077", "65 : 065", "53 : 053", "49 : 049", "37 : 037", "25 : 025", "13 : 013", "1 year : 001", "100+ : 100", "81 : 081", "3 : 003", "96 : 096", "84 : 084", "72 : 072", "60 : 060", "56 : 056", "44 : 044", "32 : 032", "20 : 020", "16 : 016", "68 : 068", "28 : 028", "6 : 006", "95 : 095", "83 : 083", "71 : 071", "67 : 067", "55 : 055", "43 : 043", "31 : 031", "27 : 027", "15 : 015", "79 : 079", "39 : 039", "5 : 005", "74 : 074", "62 : 062", "50 : 050", "34 : 034", "22 : 022", "10 : 010", "98 : 098", "86 : 086", "58 : 058", "46 : 046", "18 : 018", "8 : 008", "90 : 090", "85 : 085", "73 : 073", "61 : 061", "2 years : 002", "45 : 045", "33 : 033", "21 : 021", "97 : 097", "69 : 069", "57 : 057", "29 : 029", "17 : 017", "7 : 007", "52 : 052", "40 : 040", "12 : 012", "88 : 088", "76 : 076", "64 : 064", "48 : 048", "36 : 036", "24 : 024", "Not reported missing : 999", "92 : 092", "80 : 080", "63 : 063", "51 : 051", "23 : 023", "11 : 011", "99 : 099", "87 : 087", "75 : 075", "59 : 059", "47 : 047", "35 : 035", "19 : 019", "9 : 009", "91 : 091" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "REC",
+              "THE MAP" : [ "24 : 24", "12 : 12", "88 : 88", "76 : 76", "64 : 64", "52 : 52", "40 : 40", "48 : 48", "36 : 36", "9 : 9", "91 : 91", "1 : 1 year", "13 : 13", "89 : 89", "77 : 77", "65 : 65", "53 : 53", "41 : 41", "49 : 49", "37 : 37", "25 : 25", "92 : 92", "80 : 80", "2 : 2 years", "46 : 46", "34 : 34", "22 : 22", "10 : 10", "98 : 98", "86 : 86", "74 : 74", "62 : 62", "50 : 50", "18 : 18", "58 : 58", "7 : 7", "35 : 35", "23 : 23", "11 : 11", "99 : 99", "87 : 87", "75 : 75", "63 : 63", "51 : 51", "19 : 19", "59 : 59", "47 : 47", "8 : 8", "90 : 90", "0 : Less than 1 year", "68 : 68", "56 : 56", "44 : 44", "32 : 32", "20 : 20", "96 : 96", "84 : 84", "72 : 72", "28 : 28", "16 : 16", "5 : 5", "71 : 71", "57 : 57", "45 : 45", "33 : 33", "21 : 21", "97 : 97", "85 : 85", "73 : 73", "61 : 61", "29 : 29", "17 : 17", "69 : 69", "6 : 6", "60 : 60", "78 : 78", "66 : 66", "54 : 54", "42 : 42", "30 : 30", "94 : 94", "38 : 38", "26 : 26", "14 : 14", "3 : 3", "93 : 93", "81 : 81", "79 : 79", "67 : 67", "55 : 55", "43 : 43", "31 : 31", "95 : 95", "100 : 100+", "83 : 83", "39 : 39", "27 : 27", "15 : 15", "4 : 4", "82 : 82", "70 : 70" ]
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "commune",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Xã Sơn Lôi"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "age",
+            "VALUE SPACE" : {
+              "TYPE" : "Range",
+              "VALUES" : [ {
+                "INPUT VALUE" : "[54, 55)"
+              }, {
+                "INPUT VALUE" : "[18, 19)"
+              }, {
+                "INPUT VALUE" : "[36, 37)"
+              }, {
+                "INPUT VALUE" : "[3, 4)"
+              }, {
+                "INPUT VALUE" : "[6, 7)"
+              }, {
+                "INPUT VALUE" : "[65, 66)"
+              }, {
+                "INPUT VALUE" : "[25, 26)"
+              }, {
+                "INPUT VALUE" : "[0, 1)"
+              }, {
+                "INPUT VALUE" : "[72, 73)"
+              }, {
+                "INPUT VALUE" : "[58, 59)"
+              }, {
+                "INPUT VALUE" : "[19, 20)"
+              }, {
+                "INPUT VALUE" : "[76, 77)"
+              }, {
+                "INPUT VALUE" : "[13, 14)"
+              }, {
+                "INPUT VALUE" : "[61, 62)"
+              }, {
+                "INPUT VALUE" : "[47, 48)"
+              }, {
+                "INPUT VALUE" : "[24, 25)"
+              }, {
+                "INPUT VALUE" : "[50, 51)"
+              }, {
+                "INPUT VALUE" : "[79, 80)"
+              }, {
+                "INPUT VALUE" : "[8, 9)"
+              }, {
+                "INPUT VALUE" : "[17, 18)"
+              }, {
+                "INPUT VALUE" : "[35, 36)"
+              }, {
+                "INPUT VALUE" : "[2, 3)"
+              }, {
+                "INPUT VALUE" : "[73, 74)"
+              }, {
+                "INPUT VALUE" : "[12, 13)"
+              }, {
+                "INPUT VALUE" : "[46, 47)"
+              }, {
+                "INPUT VALUE" : "[62, 63)"
+              }, {
+                "INPUT VALUE" : "[23, 24)"
+              }, {
+                "INPUT VALUE" : "[1, 2)"
+              }, {
+                "INPUT VALUE" : "[57, 58)"
+              }, {
+                "INPUT VALUE" : "[51, 52)"
+              }, {
+                "INPUT VALUE" : "[34, 35)"
+              }, {
+                "INPUT VALUE" : "[74, 75)"
+              }, {
+                "INPUT VALUE" : "[28, 29)"
+              }, {
+                "INPUT VALUE" : "[68, 69)"
+              }, {
+                "INPUT VALUE" : "[7, 8)"
+              }, {
+                "INPUT VALUE" : "[49, 50)"
+              }, {
+                "INPUT VALUE" : "[40, 41)"
+              }, {
+                "INPUT VALUE" : "[45, 46)"
+              }, {
+                "INPUT VALUE" : "[63, 64)"
+              }, {
+                "INPUT VALUE" : "[27, 28)"
+              }, {
+                "INPUT VALUE" : "[11, 12)"
+              }, {
+                "INPUT VALUE" : "[80, Inf)"
+              }, {
+                "INPUT VALUE" : "[56, 57)"
+              }, {
+                "INPUT VALUE" : "[52, 53)"
+              }, {
+                "INPUT VALUE" : "[16, 17)"
+              }, {
+                "INPUT VALUE" : "[22, 23)"
+              }, {
+                "INPUT VALUE" : "[67, 68)"
+              }, {
+                "INPUT VALUE" : "[41, 42)"
+              }, {
+                "INPUT VALUE" : "[9, 10)"
+              }, {
+                "INPUT VALUE" : "[33, 34)"
+              }, {
+                "INPUT VALUE" : "[75, 76)"
+              }, {
+                "INPUT VALUE" : "[78, 79)"
+              }, {
+                "INPUT VALUE" : "[30, 31)"
+              }, {
+                "INPUT VALUE" : "[39, 40)"
+              }, {
+                "INPUT VALUE" : "[38, 39)"
+              }, {
+                "INPUT VALUE" : "[44, 45)"
+              }, {
+                "INPUT VALUE" : "[64, 65)"
+              }, {
+                "INPUT VALUE" : "[70, 71)"
+              }, {
+                "INPUT VALUE" : "[10, 11)"
+              }, {
+                "INPUT VALUE" : "[59, 60)"
+              }, {
+                "INPUT VALUE" : "[26, 27)"
+              }, {
+                "INPUT VALUE" : "[55, 56)"
+              }, {
+                "INPUT VALUE" : "[53, 54)"
+              }, {
+                "INPUT VALUE" : "[5, 6)"
+              }, {
+                "INPUT VALUE" : "[71, 72)"
+              }, {
+                "INPUT VALUE" : "[21, 22)"
+              }, {
+                "INPUT VALUE" : "[15, 16)"
+              }, {
+                "INPUT VALUE" : "[42, 43)"
+              }, {
+                "INPUT VALUE" : "[66, 67)"
+              }, {
+                "INPUT VALUE" : "[32, 33)"
+              }, {
+                "INPUT VALUE" : "[14, 15)"
+              }, {
+                "INPUT VALUE" : "[48, 49)"
+              }, {
+                "INPUT VALUE" : "[4, 5)"
+              }, {
+                "INPUT VALUE" : "[77, 78)"
+              }, {
+                "INPUT VALUE" : "[31, 32)"
+              }, {
+                "INPUT VALUE" : "[43, 44)"
+              }, {
+                "INPUT VALUE" : "[37, 38)"
+              }, {
+                "INPUT VALUE" : "[69, 70)"
+              }, {
+                "INPUT VALUE" : "[29, 30)"
+              }, {
+                "INPUT VALUE" : "[20, 21)"
+              }, {
+                "INPUT VALUE" : "[60, 61)"
+              } ],
+              "min" : 0,
+              "max" : 2147483647,
+              "rangeTemplate" : {
+                "numberMatcher" : "INT_POSITIF_MATCH",
+                "theoreticalMin" : 0,
+                "theoreticalMax" : 2147483647
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "[NaN, NaN)"
+              }
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "AGE",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "30"
+                  }, {
+                    "INPUT VALUE" : "94"
+                  }, {
+                    "INPUT VALUE" : "82"
+                  }, {
+                    "INPUT VALUE" : "78"
+                  }, {
+                    "INPUT VALUE" : "66"
+                  }, {
+                    "INPUT VALUE" : "54"
+                  }, {
+                    "INPUT VALUE" : "42"
+                  }, {
+                    "INPUT VALUE" : "38"
+                  }, {
+                    "INPUT VALUE" : "26"
+                  }, {
+                    "INPUT VALUE" : "14"
+                  }, {
+                    "INPUT VALUE" : "70"
+                  }, {
+                    "INPUT VALUE" : "4"
+                  }, {
+                    "INPUT VALUE" : "41"
+                  }, {
+                    "INPUT VALUE" : "93"
+                  }, {
+                    "INPUT VALUE" : "Less than 1 year"
+                  }, {
+                    "INPUT VALUE" : "89"
+                  }, {
+                    "INPUT VALUE" : "77"
+                  }, {
+                    "INPUT VALUE" : "65"
+                  }, {
+                    "INPUT VALUE" : "53"
+                  }, {
+                    "INPUT VALUE" : "49"
+                  }, {
+                    "INPUT VALUE" : "37"
+                  }, {
+                    "INPUT VALUE" : "25"
+                  }, {
+                    "INPUT VALUE" : "13"
+                  }, {
+                    "INPUT VALUE" : "1 year"
+                  }, {
+                    "INPUT VALUE" : "100+"
+                  }, {
+                    "INPUT VALUE" : "81"
+                  }, {
+                    "INPUT VALUE" : "3"
+                  }, {
+                    "INPUT VALUE" : "96"
+                  }, {
+                    "INPUT VALUE" : "84"
+                  }, {
+                    "INPUT VALUE" : "72"
+                  }, {
+                    "INPUT VALUE" : "60"
+                  }, {
+                    "INPUT VALUE" : "56"
+                  }, {
+                    "INPUT VALUE" : "44"
+                  }, {
+                    "INPUT VALUE" : "32"
+                  }, {
+                    "INPUT VALUE" : "20"
+                  }, {
+                    "INPUT VALUE" : "16"
+                  }, {
+                    "INPUT VALUE" : "68"
+                  }, {
+                    "INPUT VALUE" : "28"
+                  }, {
+                    "INPUT VALUE" : "6"
+                  }, {
+                    "INPUT VALUE" : "95"
+                  }, {
+                    "INPUT VALUE" : "83"
+                  }, {
+                    "INPUT VALUE" : "71"
+                  }, {
+                    "INPUT VALUE" : "67"
+                  }, {
+                    "INPUT VALUE" : "55"
+                  }, {
+                    "INPUT VALUE" : "43"
+                  }, {
+                    "INPUT VALUE" : "31"
+                  }, {
+                    "INPUT VALUE" : "27"
+                  }, {
+                    "INPUT VALUE" : "15"
+                  }, {
+                    "INPUT VALUE" : "79"
+                  }, {
+                    "INPUT VALUE" : "39"
+                  }, {
+                    "INPUT VALUE" : "5"
+                  }, {
+                    "INPUT VALUE" : "74"
+                  }, {
+                    "INPUT VALUE" : "62"
+                  }, {
+                    "INPUT VALUE" : "50"
+                  }, {
+                    "INPUT VALUE" : "34"
+                  }, {
+                    "INPUT VALUE" : "22"
+                  }, {
+                    "INPUT VALUE" : "10"
+                  }, {
+                    "INPUT VALUE" : "98"
+                  }, {
+                    "INPUT VALUE" : "86"
+                  }, {
+                    "INPUT VALUE" : "58"
+                  }, {
+                    "INPUT VALUE" : "46"
+                  }, {
+                    "INPUT VALUE" : "18"
+                  }, {
+                    "INPUT VALUE" : "8"
+                  }, {
+                    "INPUT VALUE" : "90"
+                  }, {
+                    "INPUT VALUE" : "85"
+                  }, {
+                    "INPUT VALUE" : "73"
+                  }, {
+                    "INPUT VALUE" : "61"
+                  }, {
+                    "INPUT VALUE" : "2 years"
+                  }, {
+                    "INPUT VALUE" : "45"
+                  }, {
+                    "INPUT VALUE" : "33"
+                  }, {
+                    "INPUT VALUE" : "21"
+                  }, {
+                    "INPUT VALUE" : "97"
+                  }, {
+                    "INPUT VALUE" : "69"
+                  }, {
+                    "INPUT VALUE" : "57"
+                  }, {
+                    "INPUT VALUE" : "29"
+                  }, {
+                    "INPUT VALUE" : "17"
+                  }, {
+                    "INPUT VALUE" : "7"
+                  }, {
+                    "INPUT VALUE" : "52"
+                  }, {
+                    "INPUT VALUE" : "40"
+                  }, {
+                    "INPUT VALUE" : "12"
+                  }, {
+                    "INPUT VALUE" : "88"
+                  }, {
+                    "INPUT VALUE" : "76"
+                  }, {
+                    "INPUT VALUE" : "64"
+                  }, {
+                    "INPUT VALUE" : "48"
+                  }, {
+                    "INPUT VALUE" : "36"
+                  }, {
+                    "INPUT VALUE" : "24"
+                  }, {
+                    "INPUT VALUE" : "92"
+                  }, {
+                    "INPUT VALUE" : "Not reported missing"
+                  }, {
+                    "INPUT VALUE" : "80"
+                  }, {
+                    "INPUT VALUE" : "63"
+                  }, {
+                    "INPUT VALUE" : "51"
+                  }, {
+                    "INPUT VALUE" : "23"
+                  }, {
+                    "INPUT VALUE" : "11"
+                  }, {
+                    "INPUT VALUE" : "99"
+                  }, {
+                    "INPUT VALUE" : "87"
+                  }, {
+                    "INPUT VALUE" : "75"
+                  }, {
+                    "INPUT VALUE" : "59"
+                  }, {
+                    "INPUT VALUE" : "47"
+                  }, {
+                    "INPUT VALUE" : "35"
+                  }, {
+                    "INPUT VALUE" : "19"
+                  }, {
+                    "INPUT VALUE" : "9"
+                  }, {
+                    "INPUT VALUE" : "91"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "30 : 030", "94 : 094", "82 : 082", "78 : 078", "66 : 066", "54 : 054", "42 : 042", "38 : 038", "26 : 026", "14 : 014", "70 : 070", "4 : 004", "41 : 041", "93 : 093", "Less than 1 year : 000", "89 : 089", "77 : 077", "65 : 065", "53 : 053", "49 : 049", "37 : 037", "25 : 025", "13 : 013", "1 year : 001", "100+ : 100", "81 : 081", "3 : 003", "96 : 096", "84 : 084", "72 : 072", "60 : 060", "56 : 056", "44 : 044", "32 : 032", "20 : 020", "16 : 016", "68 : 068", "28 : 028", "6 : 006", "95 : 095", "83 : 083", "71 : 071", "67 : 067", "55 : 055", "43 : 043", "31 : 031", "27 : 027", "15 : 015", "79 : 079", "39 : 039", "5 : 005", "74 : 074", "62 : 062", "50 : 050", "34 : 034", "22 : 022", "10 : 010", "98 : 098", "86 : 086", "58 : 058", "46 : 046", "18 : 018", "8 : 008", "90 : 090", "85 : 085", "73 : 073", "61 : 061", "2 years : 002", "45 : 045", "33 : 033", "21 : 021", "97 : 097", "69 : 069", "57 : 057", "29 : 029", "17 : 017", "7 : 007", "52 : 052", "40 : 040", "12 : 012", "88 : 088", "76 : 076", "64 : 064", "48 : 048", "36 : 036", "24 : 024", "Not reported missing : 999", "92 : 092", "80 : 080", "63 : 063", "51 : 051", "23 : 023", "11 : 011", "99 : 099", "87 : 087", "75 : 075", "59 : 059", "47 : 047", "35 : 035", "19 : 019", "9 : 009", "91 : 091" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "UND",
+              "THE MAP" : [ "[8, 9) : 8", "[17, 18) : 17", "[53, 54) : 53", "[2, 3) : 2 years", "[35, 36) : 35", "[71, 72) : 71", "[5, 6) : 5", "[12, 13) : 12", "[42, 43) : 42", "[46, 47) : 46", "[23, 24) : 23", "[31, 32) : 31", "[57, 58) : 57", "[34, 35) : 34", "[28, 29) : 28", "[20, 21) : 20", "[68, 69) : 68", "[29, 30) : 29", "[60, 61) : 60", "[54, 55) : 54", "[63, 64) : 63", "[36, 37) : 36", "[18, 19) : 18", "[65, 66) : 65", "[6, 7) : 6", "[52, 53) : 52", "[25, 26) : 25", "[0, 1) : Less than 1 year", "[76, 77) : 76", "[41, 42) : 41", "[58, 59) : 58", "[13, 14) : 13", "[75, 76) : 75", "[30, 31) : 30", "[79, 80) : 79", "[47, 48) : 47", "[64, 65) : 64", "[24, 25) : 24", "[39, 40) : 39", "[70, 71) : 70", "[10, 11) : 10", "[26, 27) : 26", "[55, 56) : 55", "[73, 74) : 73", "[21, 22) : 21", "[15, 16) : 15", "[66, 67) : 66", "[62, 63) : 62", "[32, 33) : 32", "[4, 5) : 4", "[48, 49) : 48", "[14, 15) : 14", "[1, 2) : 1 year", "[51, 52) : 51", "[77, 78) : 77", "[74, 75) : 74", "[43, 44) : 43", "[37, 38) : 37", "[40, 41) : 40", "[7, 8) : 7", "[49, 50) : 49", "[69, 70) : 69", "[45, 46) : 45", "[27, 28) : 27", "[11, 12) : 11", "[80, Inf) : 80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100+", "[56, 57) : 56", "[3, 4) : 3", "[16, 17) : 16", "[22, 23) : 22", "[72, 73) : 72", "[67, 68) : 67", "[9, 10) : 9", "[33, 34) : 33", "[61, 62) : 61", "[78, 79) : 78", "[38, 39) : 38", "[44, 45) : 44", "[19, 20) : 19", "[50, 51) : 50", "[59, 60) : 59" ]
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "sex",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "female"
+              }, {
+                "INPUT VALUE" : "male"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "SEX",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "Male"
+                  }, {
+                    "INPUT VALUE" : "Unknown"
+                  }, {
+                    "INPUT VALUE" : "Female"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "Male : 1", "Unknown : 9", "Female : 2" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "REC",
+              "THE MAP" : [ "female : Female", "male : Male" ]
+            },
+            "ENCODED VALUES" : null
+          }
         } ],
-        "RECORDS" : [ ],
+        "RECORDS" : [ {
+          "RECORD ATTRIBUTE" : {
+            "NAME" : "n",
+            "PROXY ATTRIBUTE TYPE" : "Integer",
+            "REFERENT ATTRIBUTE" : "false"
+          }
+        } ],
         "SIZE ATTRIBUTE" : null,
         "level" : 0,
         "identifierAttributeName" : "PERNUM",
         "weightAttributeName" : "PERWT"
-      }
-    }, {
-      "DICTIONARY" : {
-        "ATTRIBUTES" : [ {
-          "ATTRIBUTE" : {
-            "NAME" : "HHTYPE",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "Unclassified subfamily"
-              }, {
-                "INPUT VALUE" : "Married cohab couple, no children"
-              }, {
-                "INPUT VALUE" : "Vacant household"
-              }, {
-                "INPUT VALUE" : "One-person household"
-              }, {
-                "INPUT VALUE" : "Polygamous family"
-              }, {
-                "INPUT VALUE" : "Married cohab couple with children"
-              }, {
-                "INPUT VALUE" : "Other relative or non-relative household"
-              }, {
-                "INPUT VALUE" : "Non-family household"
-              }, {
-                "INPUT VALUE" : "Unclassifiable"
-              }, {
-                "INPUT VALUE" : "Group quarters"
-              }, {
-                "INPUT VALUE" : "Composite household, family and non-relatives"
-              }, {
-                "INPUT VALUE" : "Single-parent family"
-              }, {
-                "INPUT VALUE" : "Extended family, relatives only"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "Unclassified subfamily : 09", "Married cohab couple, no children : 02", "Vacant household : 00", "One-person household : 01", "Polygamous family : 05", "Married cohab couple with children : 03", "Other relative or non-relative household : 10", "Non-family household : 08", "Unclassifiable : 99", "Group quarters : 11", "Composite household, family and non-relatives : 07", "Extended family, relatives only : 06", "Single-parent family : 04" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "NFATHERS",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "3 fathers"
-              }, {
-                "INPUT VALUE" : "6 fathers"
-              }, {
-                "INPUT VALUE" : "8 fathers"
-              }, {
-                "INPUT VALUE" : "5 fathers"
-              }, {
-                "INPUT VALUE" : "4 fathers"
-              }, {
-                "INPUT VALUE" : "9 or more fathers in household"
-              }, {
-                "INPUT VALUE" : "7 fathers"
-              }, {
-                "INPUT VALUE" : "No fathers in household"
-              }, {
-                "INPUT VALUE" : "2 fathers"
-              }, {
-                "INPUT VALUE" : "1 father"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "3 fathers : 3", "6 fathers : 6", "8 fathers : 8", "5 fathers : 5", "4 fathers : 4", "9 or more fathers in household : 9", "7 fathers : 7", "No fathers in household : 0", "2 fathers : 2", "1 father : 1" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "NMOTHERS",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "9 or more mothers in household"
-              }, {
-                "INPUT VALUE" : "No mothers in household"
-              }, {
-                "INPUT VALUE" : "8 mothers"
-              }, {
-                "INPUT VALUE" : "5 mothers"
-              }, {
-                "INPUT VALUE" : "3 mothers"
-              }, {
-                "INPUT VALUE" : "4 mothers"
-              }, {
-                "INPUT VALUE" : "7 mothers"
-              }, {
-                "INPUT VALUE" : "2 mothers"
-              }, {
-                "INPUT VALUE" : "6 mothers"
-              }, {
-                "INPUT VALUE" : "1 mother"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "9 or more mothers in household : 9", "8 mothers : 8", "No mothers in household : 0", "5 mothers : 5", "3 mothers : 3", "7 mothers : 7", "4 mothers : 4", "2 mothers : 2", "6 mothers : 6", "1 mother : 1" ]
-            }
-          }
-        } ],
-        "RECORDS" : [ ],
-        "SIZE ATTRIBUTE" : null,
-        "level" : 1,
-        "identifierAttributeName" : "SERIAL",
-        "weightAttributeName" : "HHWT"
       }
     } ]
   }
