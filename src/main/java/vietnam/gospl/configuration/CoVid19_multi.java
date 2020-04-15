@@ -38,7 +38,9 @@ public class CoVid19_multi {
 	public static final String CONF_EXPORT_BT = "BT_demographics.gns";
 	public static final String CONF_EXPORT_VP = "VP_demographics.gns";
 	
-	public static final String IPUMS_SAMPLE = "ipumsi_vietnam_10002.csv";
+	public static final String IPUMS_SAMPLE = "ipumsi_00003.csv";
+	public static final String IPUMS_SAMPLE_SHORT_10K = "head10k_ipumsi_vietnam.csv";
+	public static final String IPUMS_SAMPLE_SHORT_140K = "head140k_ipumsi_vietnam.csv";
 	public static final String IPUMS_DICTIONARY = "ipums_hh_x_indiv_VND.txt";
 	
 	@SuppressWarnings({ "unused", "unchecked" })
@@ -54,7 +56,7 @@ public class CoVid19_multi {
 		// Setup the factory that build attribute
 		AttributeFactory attf = AttributeFactory.getFactory();
 		
-		GSSurveyWrapper sample = new GSSurveyWrapper(relativePath.resolve(IPUMS_SAMPLE), GSSurveyType.Sample, ',', 1, 1);
+		GSSurveyWrapper sample = new GSSurveyWrapper(relativePath.resolve(IPUMS_SAMPLE_SHORT_140K), false, GSSurveyType.Sample, ',', 1, 1);
 		
 		ReadIPUMSDictionaryUtils ipumsReader = new ReadIPUMSDictionaryUtils();
 		
@@ -93,13 +95,15 @@ public class CoVid19_multi {
 		String localitiesBT = "Xã Thừa Đức";
 		String Vinh_Phuc = "census2019_VP.csv";
 		String localitiesVP = "Xã Sơn Lôi";
+		String Me_Linh = "census2019_ML.csv";
+		String localitiesML = "Xã Mê Linh";
 		// Setup input files' configuration for individual aggregated data
-		GSSurveyWrapper census = new GSSurveyWrapper(Paths.get(CONF_CLASS_PATH_CENSUS).resolve(Vinh_Phuc), 
+		GSSurveyWrapper census = new GSSurveyWrapper(Paths.get(CONF_CLASS_PATH_CENSUS).resolve(Me_Linh), 
 				GSSurveyType.ContingencyTable, ',', 1, 6);
 		try {
 						
 			Attribute<? extends IValue> limitedAttDistrict = attf.createAttribute("commune", GSEnumDataType.Nominal, 
-					Arrays.asList(localitiesVP)); 
+					Arrays.asList(localitiesML)); 
 			multi_indiv_dico.addAttributes(limitedAttDistrict);
 			
 			List<String> ageVal =  IntStream.range(0, 80)

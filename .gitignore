@@ -5,3 +5,4 @@
 output/
 !output/package-info.java
 /target/
+ipumsi_*

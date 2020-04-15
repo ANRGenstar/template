@@ -2,14 +2,16 @@
   "CONFIGURATION FILE" : {
     "MAIN DIRECTORY" : ".",
     "INPUT FILES" : [ "LAYER LEVEL : 0;1", {
-      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/ipumsi_vietnam_10002.csv",
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/head140k_ipumsi_vietnam.csv",
+      "STORE DATA" : true,
       "SURVEY TYPE" : "Sample",
       "SEPARATOR" : ",",
       "FRI" : "1",
       "FCI" : "1",
       "SHEET NB" : "0"
     }, "LAYER LEVEL : 0", {
-      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_VP.csv",
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_ML.csv",
+      "STORE DATA" : true,
       "SURVEY TYPE" : "ContingencyTable",
       "SEPARATOR" : ",",
       "FRI" : "1",
@@ -1423,7 +1425,7 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Xã Sơn Lôi"
+                "INPUT VALUE" : "Xã Mê Linh"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]

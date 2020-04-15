@@ -16,6 +16,7 @@ import core.metamodel.entity.ADemoEntity;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
+import gospl.GosplPopulation;
 import gospl.algo.co.SampleBasedAlgorithm;
 import gospl.algo.co.hillclimbing.HillClimbing;
 import gospl.algo.co.metamodel.IOptimizationAlgorithm;
@@ -88,12 +89,11 @@ public class CO {
 		ISampler<ADemoEntity> sampler = null;
 		
 		// Retrieve sample to setup the CO sampler
-		IPopulation<ADemoEntity, Attribute<? extends IValue>> sample = 
-				gdf.getRawSamples().iterator().next();
+		GosplPopulation sample = new GosplPopulation(gdf.getRawSamples().iterator().next());
 		
 		// Retrieve known objectives from input data
 		Set<AFullNDimensionalMatrix<Integer>> objectives = gdf.getContingencyTables();
-		CombinatorialOptimizationSampler<IOptimizationAlgorithm<? extends ISyntheticPopulationSolution>> samplerCO;
+		CombinatorialOptimizationSampler<IOptimizationAlgorithm<GosplPopulation, ISyntheticPopulationSolution<GosplPopulation>>> samplerCO;
 		
 		// TODO: make a colapseContingency(int total) method to use all info to setup contingency objectives
 				

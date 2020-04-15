@@ -3,28 +3,28 @@ package vietnam.gospl;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
-import core.metamodel.IPopulation;
+import core.configuration.dictionary.IGenstarDictionary;
 import core.metamodel.attribute.Attribute;
 import core.metamodel.entity.ADemoEntity;
 import core.metamodel.io.GSSurveyType;
 import core.metamodel.value.IValue;
 import core.util.GSPerformanceUtil;
+import core.util.random.GenstarRandomUtils;
+import gospl.GosplMultitypePopulation;
 import gospl.GosplPopulation;
 import gospl.algo.co.MultiLayerSampleBasedAlgorithm;
 import gospl.algo.co.hillclimbing.MultiHillClimbing;
 import gospl.algo.co.metamodel.AMultiLayerOptimizationAlgorithm;
+import gospl.algo.co.metamodel.neighbor.MultiPopulationNeighborSearch;
 import gospl.algo.sr.ISyntheticReconstructionAlgo;
 import gospl.algo.sr.ds.DirectSamplingAlgo;
 import gospl.distribution.GosplInputDataManager;
@@ -57,7 +57,7 @@ public class CoVid19_mainSP {
 	// Parameter
 	final static boolean ONLY_INDIVIDUAL = false;
 	private static final double FITNESS_THRESHOLD_RATIO = 0.05;
-	private static final int MAX_ITER = 0;
+	private static final int MAX_ITER = 100;
 
 	private static final boolean SAVE_SAMPLE = false;
 	
@@ -110,48 +110,62 @@ public class CoVid19_mainSP {
 		
 		if (!ONLY_INDIVIDUAL) {
 			
+			// Name of layers
+			Map<Integer, String> layersID = df_hh.getConfiguration().getDictionaries().stream()
+					.collect(Collectors.toMap(
+							IGenstarDictionary::getLevel,
+							IGenstarDictionary::getIdentifierAttributeName
+							));
+			
 			// -----------------------------
 			// Samples and Marginals -------
 			// -----------------------------
 			
 			// Inidividual layer marginal data retrieval
-			int indiv_layer = df_hh.getConfiguration().getLayers().stream().min((l1,l2) -> l1 < l2 ? -1 : 1).orElse(0);
-			// TODO : should be transpose to distribution or only take into account expected individual
 			Set<AFullNDimensionalMatrix<Integer>> objectives = df_hh.getContingencyTables();
 			
-			int pop_size = -1;
-			for(AFullNDimensionalMatrix<Integer> objectif : objectives) {
-				int current_objectif_size = objectif.getVal().getValue();
-				if(pop_size == -1) {pop_size = current_objectif_size;}
-				else if(pop_size != current_objectif_size) {
-					throw new IllegalArgumentException("Contingency tables do not have same total: "+pop_size+" and "+current_objectif_size);
-				}
-			}
 			gspu.sysoStempMessage("There is "+objectives.size()+" marginal table at layer "
-					+indiv_layer+" to fit multi layer sample with "+objectives.stream().flatMap(obj -> obj.getDimensions().stream())
+					+layersID.get(0)+" to fit with "+objectives.stream().flatMap(obj -> obj.getDimensions().stream())
 					.map(Attribute::getAttributeName).collect(Collectors.joining("; ")));
+			
+			// Only take into account targeted attributes
+			Set<Attribute<? extends IValue>> marginalAttributes = Stream.of(
+					df_hh.getConfiguration().getDictionary(0).getAttribute("age"),
+					df_hh.getConfiguration().getDictionary(0).getAttribute("sex")
+					).collect(Collectors.toSet());
+			AFullNDimensionalMatrix<Integer> objectif = GosplNDimensionalMatrixFactory.getFactory()
+					.cloneContingency(marginalAttributes, objectives.iterator().next());
+					
+			int pop_size = objectif.getVal().getValue();
+			gspu.sysoStempMessage("Begin to setup the creation of CO sampler to draw a population of "+pop_size+" individuals");
 
 			// Retrieve sample to setup the CO sampler
-			List<IPopulation<ADemoEntity, Attribute<? extends IValue>>> samples = new ArrayList<>(df_hh.getRawSamples());
+			GosplMultitypePopulation<ADemoEntity> sample = df_hh.getMultiSamples().iterator().next();
 			
-			// ONLY TRUE IN THIS PARTICULAR CASE
-			// Sort sample according to the size : the largest one is individual, the smallest one is household
-			Collections.sort(samples, (s1,s2) ->  s1.size() > s2.size() ? -1 : 1);
-			Map<Integer, IPopulation<ADemoEntity, Attribute<? extends IValue>>> layered_samples = samples.stream()
-					.collect(Collectors.toMap(s -> samples.indexOf(s), Function.identity()));
+			Set<ADemoEntity> withoutSEX = sample.getSubPopulation(layersID.get(0)).stream()
+					.filter(e -> e.getValueForAttribute("SEX")==null).collect(Collectors.toSet());
+			if (!withoutSEX.isEmpty()) {
+				System.err.println("There is "+withoutSEX.size()+" individual with gender attribute equal to null");
+				System.err.println(GenstarRandomUtils.oneOf(withoutSEX).getValueForAttribute("SEX"));
+				System.exit(1);
+			}
 			
-			gspu.sysoStempMessage("There is "+samples.get(1).size()+" household in the sample");
-			gspu.sysoStempMessage("There is "+samples.get(0).size()+" individual in the sample");
+			gspu.sysoStempMessage("There is "+sample.getSubPopulation(layersID.get(1)).size()+" household in the sample");
+			gspu.sysoStempMessage("There is "+sample.getSubPopulation(layersID.get(0)).size()+" individual in the sample");
 			gspu.sysoStempMessage(objectives.stream().flatMap(mat -> mat.getAspects().stream())
 					.filter(val -> val.getValueSpace().getAttribute().getAttributeName().equals("commune"))
 					.findFirst().get().getStringValue()+" commune contains "+pop_size+" individuals");
 			
 			if(SAVE_SAMPLE) {
 				try {
-					sf.createSummary(outputPath.resolve("indiv_sample.csv").toFile(), GSSurveyType.Sample, samples.get(0));
-					sf.createSummary(outputPath.resolve("indiv_frequency.csv").toFile(), GSSurveyType.GlobalFrequencyTable, samples.get(0));
-					sf.createSummary(outputPath.resolve("hh_sample.csv").toFile(), GSSurveyType.Sample, samples.get(1));
-					sf.createSummary(outputPath.resolve("hh_frequency.csv").toFile(), GSSurveyType.GlobalFrequencyTable, samples.get(1));
+					sf.createSummary(outputPath.resolve("indiv_sample.csv").toFile(), GSSurveyType.Sample, 
+							sample.getSubPopulation(layersID.get(0)));
+					sf.createSummary(outputPath.resolve("indiv_frequency.csv").toFile(), GSSurveyType.GlobalFrequencyTable, 
+							sample.getSubPopulation(layersID.get(0)));
+					sf.createSummary(outputPath.resolve("hh_sample.csv").toFile(), GSSurveyType.Sample, 
+							sample.getSubPopulation(layersID.get(1)));
+					sf.createSummary(outputPath.resolve("hh_frequency.csv").toFile(), GSSurveyType.GlobalFrequencyTable, 
+							sample.getSubPopulation(layersID.get(1)));
 				} catch (InvalidFormatException | IOException | InvalidSurveyFormatException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -163,12 +177,13 @@ public class CoVid19_mainSP {
 			// ---------------
 			
 			GosplBiLayerOptimizationSampler<AMultiLayerOptimizationAlgorithm> samplerCO;
-			samplerCO = new GosplBiLayerOptimizationSampler<>(new MultiHillClimbing(MAX_ITER,0.05,pop_size*FITNESS_THRESHOLD_RATIO));
 			
-			for (AFullNDimensionalMatrix<Integer> objectif : objectives)
-				samplerCO.addObjectives(objectif, indiv_layer);
+			MultiPopulationNeighborSearch pvns = new MultiPopulationNeighborSearch();
+			
+			samplerCO = new GosplBiLayerOptimizationSampler<>(new MultiHillClimbing(pvns, MAX_ITER,0.05,pop_size*FITNESS_THRESHOLD_RATIO));
+			samplerCO.addObjectives(objectif,0);
 				
-			ISampler<ADemoEntity> sampler = new MultiLayerSampleBasedAlgorithm<>().setupCOSampler(1, layered_samples, true, samplerCO);
+			ISampler<ADemoEntity> sampler = new MultiLayerSampleBasedAlgorithm<>().setupCOSampler(1, sample, true, samplerCO);
 			
 			// -----------------
 			// Generator -------
@@ -187,7 +202,7 @@ public class CoVid19_mainSP {
 					.collect(Collectors.toList()));
 			
 			gspu.sysoStempPerformance(1, CO.class);
-			gspu.sysoStempMessage("Ends up with a synthetic population of "+population.size()+" households and "
+			gspu.sysoStempMessage("Ends up with a synthetic population of "+(population.size()-indiv_pop.size())+" households and "
 					+indiv_pop.size()+" individuals");
 			
 			// TODO make a simple report on objectives dimensions
@@ -200,14 +215,24 @@ public class CoVid19_mainSP {
 				int input = objectives.stream().filter(mat -> mat.getAspects().contains(v)).findFirst().get().getVal(v).getValue();
 				outputs.put(v,new int[] {input,output});
 			}
+			/*
 			gspu.sysoStempMessage("Main outputs: "+outputs.entrySet().stream()
-					.map(e -> e.getKey().getStringValue()+" : "+String.valueOf(e.getValue()[0] - e.getValue()[1]))
+					.map(e -> e.getKey().getStringValue()+" : "+String.valueOf(e.getValue()[0] - e.getValue()[1])
+					+" ("+String.valueOf(Math.abs(e.getValue()[1]-e.getValue()[0])*1d/e.getValue()[0])+")")
 					.collect(Collectors.joining("\n")));
+					*/
 			gspu.sysoStempMessage("Total Absolute Error should be : "+outputs.keySet().stream()
 					.mapToInt(k -> Math.abs(outputs.get(k)[1]-outputs.get(k)[0])).sum());
+			gspu.sysoStempMessage("Total Absolute Error should be : "+outputs.keySet().stream()
+					.mapToDouble(k -> Math.abs(outputs.get(k)[1]-outputs.get(k)[0])*1d/outputs.get(k)[0])
+					.average());
+			
 			
 			try {
 				sf.createSummary(outputPath.resolve("multi_pop.csv").toFile(), GSSurveyType.Sample, indiv_pop);
+				gif.saveReport(outputPath.resolve("multi_report.csv").toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
+						GosplNDimensionalMatrixFactory.getFactory().createDistribution(objectif), indiv_pop), 
+						"MultiLayer CO", indiv_pop.size());
 			} catch (InvalidFormatException | IOException | InvalidSurveyFormatException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
