@@ -49,7 +49,7 @@ import rouen.gospl.CO;
 
 public class CoVid19_mainSP {
 	
-	final static Path IPUMS_confFile = Paths.get("src/main/java/vietnam/gospl/data/vietnam_multi.gns");
+	final static Path IPUMS_confFile = Paths.get("src/main/java/vietnam/gospl/data/comokit_conf.gns");
 	
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/vietnam/gospl/data/cov/output");
@@ -57,7 +57,7 @@ public class CoVid19_mainSP {
 	// Parameter
 	final static boolean ONLY_INDIVIDUAL = false;
 	private static final double FITNESS_THRESHOLD_RATIO = 0.05;
-	private static final int MAX_ITER = 100;
+	private static final int MAX_ITER = 10;
 
 	private static final boolean SAVE_SAMPLE = false;
 	
@@ -95,6 +95,9 @@ public class CoVid19_mainSP {
 		} catch (final IllegalControlTotalException e1) {
 			e1.printStackTrace();
 		}
+		
+		gspu.sysoStempMessage("Marginals have been build");
+		gspu.sysoStempPerformance(0, CoVid19_mainSP.class);
 		
 		// RETRIEVE SAMPLE OF HOUSEHOLD
 		try {

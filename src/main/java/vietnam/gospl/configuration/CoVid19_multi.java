@@ -35,12 +35,15 @@ public class CoVid19_multi {
 	public static final String CONF_CLASS_PATH_CENSUS = "src/main/java/vietnam/gospl/data/cov";
 	
 	public static final String CONF_EXPORT = "vietnam_multi.gns";
+	public static final String COMOKIT_CONF_EXPORT = "comokit_conf.gns";
 	public static final String CONF_EXPORT_BT = "BT_demographics.gns";
 	public static final String CONF_EXPORT_VP = "VP_demographics.gns";
 	
 	public static final String IPUMS_SAMPLE = "ipumsi_00003.csv";
+	public static final String UPDATED_IPUMS_SAMPLE = "ipumsi_00004.csv";
+	public static final String UPDATED_IPUMS_DICO = "ipumsi_00004.cbk";
+	
 	public static final String IPUMS_SAMPLE_SHORT_10K = "head10k_ipumsi_vietnam.csv";
-	public static final String IPUMS_SAMPLE_SHORT_140K = "head140k_ipumsi_vietnam.csv";
 	public static final String IPUMS_DICTIONARY = "ipums_hh_x_indiv_VND.txt";
 	
 	@SuppressWarnings({ "unused", "unchecked" })
@@ -56,14 +59,14 @@ public class CoVid19_multi {
 		// Setup the factory that build attribute
 		AttributeFactory attf = AttributeFactory.getFactory();
 		
-		GSSurveyWrapper sample = new GSSurveyWrapper(relativePath.resolve(IPUMS_SAMPLE_SHORT_140K), false, GSSurveyType.Sample, ',', 1, 1);
+		GSSurveyWrapper sample = new GSSurveyWrapper(relativePath.resolve(UPDATED_IPUMS_SAMPLE), false, GSSurveyType.Sample, ',', 1, 1);
 		
 		ReadIPUMSDictionaryUtils ipumsReader = new ReadIPUMSDictionaryUtils();
 		
 		// Dictionaries from ipums
 		Set<IGenstarDictionary<Attribute<? extends IValue>>> dds = null;
 		try {
-			dds = ipumsReader.readDictionariesFromIPUMSDescription(relativePath.resolve(IPUMS_DICTIONARY).toFile());
+			dds = ipumsReader.readDictionariesFromIPUMSDescription(relativePath.resolve(UPDATED_IPUMS_DICO).toFile());
 		} catch (GSIllegalRangedData e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -159,7 +162,7 @@ public class CoVid19_multi {
 		gcf.addSurveyWrapper(census, 0);
 		gcf.setDictionaries(dds);
 		try {
-			new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(CONF_EXPORT), gcf, false);
+			new GenstarJsonUtil().marshalToGenstarJson(relativePath.resolve(COMOKIT_CONF_EXPORT), gcf, false);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

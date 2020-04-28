@@ -2,8 +2,8 @@
   "CONFIGURATION FILE" : {
     "MAIN DIRECTORY" : ".",
     "INPUT FILES" : [ "LAYER LEVEL : 0;1", {
-      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/head140k_ipumsi_vietnam.csv",
-      "STORE DATA" : true,
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/ipumsi_00004.csv",
+      "STORE DATA" : false,
       "SURVEY TYPE" : "Sample",
       "SEPARATOR" : ",",
       "FRI" : "1",
@@ -64,82 +64,6 @@
               "MAPPING" : [ "Group quarters : 11", "Unclassifiable : 99", "Composite household, family and non-relatives : 07", "Polygamous family : 05", "Married cohab couple with children : 03", "Unclassified subfamily : 09", "Single-parent family : 04", "One-person household : 01", "Extended family, relatives only : 06", "Other relative or non-relative household : 10", "Non-family household : 08", "Vacant household : 00", "Married cohab couple, no children : 02" ]
             }
           }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "NFATHERS",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "2 fathers"
-              }, {
-                "INPUT VALUE" : "1 father"
-              }, {
-                "INPUT VALUE" : "5 fathers"
-              }, {
-                "INPUT VALUE" : "4 fathers"
-              }, {
-                "INPUT VALUE" : "6 fathers"
-              }, {
-                "INPUT VALUE" : "8 fathers"
-              }, {
-                "INPUT VALUE" : "9 or more fathers in household"
-              }, {
-                "INPUT VALUE" : "No fathers in household"
-              }, {
-                "INPUT VALUE" : "3 fathers"
-              }, {
-                "INPUT VALUE" : "7 fathers"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "1 father : 1", "2 fathers : 2", "5 fathers : 5", "4 fathers : 4", "8 fathers : 8", "6 fathers : 6", "9 or more fathers in household : 9", "No fathers in household : 0", "3 fathers : 3", "7 fathers : 7" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "NMOTHERS",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "5 mothers"
-              }, {
-                "INPUT VALUE" : "2 mothers"
-              }, {
-                "INPUT VALUE" : "4 mothers"
-              }, {
-                "INPUT VALUE" : "8 mothers"
-              }, {
-                "INPUT VALUE" : "6 mothers"
-              }, {
-                "INPUT VALUE" : "3 mothers"
-              }, {
-                "INPUT VALUE" : "9 or more mothers in household"
-              }, {
-                "INPUT VALUE" : "1 mother"
-              }, {
-                "INPUT VALUE" : "7 mothers"
-              }, {
-                "INPUT VALUE" : "No mothers in household"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "5 mothers : 5", "2 mothers : 2", "4 mothers : 4", "8 mothers : 8", "6 mothers : 6", "3 mothers : 3", "1 mother : 1", "9 or more mothers in household : 9", "7 mothers : 7", "No mothers in household : 0" ]
-            }
-          }
         } ],
         "RECORDS" : [ ],
         "SIZE ATTRIBUTE" : null,
@@ -171,6 +95,64 @@
             "emergent" : false,
             "ENCODED VALUES" : {
               "MAPPING" : [ "Male : 1", "Unknown : 9", "Female : 2" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "INDGEN",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Electricity, gas, water and waste management"
+              }, {
+                "INPUT VALUE" : "Private household services"
+              }, {
+                "INPUT VALUE" : "Services, not specified"
+              }, {
+                "INPUT VALUE" : "Public administration and defense"
+              }, {
+                "INPUT VALUE" : "Hotels and restaurants"
+              }, {
+                "INPUT VALUE" : "NIU (not in universe)"
+              }, {
+                "INPUT VALUE" : "Education"
+              }, {
+                "INPUT VALUE" : "Agriculture, fishing, and forestry"
+              }, {
+                "INPUT VALUE" : "Manufacturing"
+              }, {
+                "INPUT VALUE" : "Wholesale and retail trade"
+              }, {
+                "INPUT VALUE" : "Response suppressed"
+              }, {
+                "INPUT VALUE" : "Other services"
+              }, {
+                "INPUT VALUE" : "Financial services and insurance"
+              }, {
+                "INPUT VALUE" : "Other industry, n.e.c."
+              }, {
+                "INPUT VALUE" : "Mining and extraction"
+              }, {
+                "INPUT VALUE" : "Construction"
+              }, {
+                "INPUT VALUE" : "Business services and real estate"
+              }, {
+                "INPUT VALUE" : "Health and social work"
+              }, {
+                "INPUT VALUE" : "Transportation, storage,  and communications"
+              }, {
+                "INPUT VALUE" : "Unknown"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Private household services : 120", "Electricity, gas, water and waste management : 040", "Public administration and defense : 100", "Services, not specified : 110", "Hotels and restaurants : 070", "NIU (not in universe) : 000", "Education : 112", "Agriculture, fishing, and forestry : 010", "Manufacturing : 030", "Wholesale and retail trade : 060", "Response suppressed : 998", "Other services : 114", "Financial services and insurance : 090", "Other industry, n.e.c. : 130", "Mining and extraction : 020", "Construction : 050", "Business services and real estate : 111", "Health and social work : 113", "Transportation, storage,  and communications : 080", "Unknown : 999" ]
             }
           }
         }, {
@@ -397,245 +379,117 @@
           }
         }, {
           "ATTRIBUTE" : {
-            "NAME" : "RELATED",
+            "NAME" : "EMPSTATD",
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Parent-in-law"
-              }, {
-                "INPUT VALUE" : "Stepparent"
-              }, {
-                "INPUT VALUE" : "Godparent"
-              }, {
-                "INPUT VALUE" : "Group quarters, non-inmates"
-              }, {
-                "INPUT VALUE" : "Adopted child"
-              }, {
-                "INPUT VALUE" : "Great-great grandchild"
-              }, {
-                "INPUT VALUE" : "Daughter-in-law"
-              }, {
-                "INPUT VALUE" : "Great grandparent"
-              }, {
-                "INPUT VALUE" : "Unknown"
-              }, {
-                "INPUT VALUE" : "Institutional inmates"
-              }, {
-                "INPUT VALUE" : "Tutored foster child"
-              }, {
-                "INPUT VALUE" : "Unmarried partner of child"
-              }, {
-                "INPUT VALUE" : "Aunt uncle"
-              }, {
-                "INPUT VALUE" : "Employee, boarder or guest"
-              }, {
-                "INPUT VALUE" : "Parent"
-              }, {
-                "INPUT VALUE" : "Spouse of servant"
-              }, {
-                "INPUT VALUE" : "Partner roommate"
-              }, {
-                "INPUT VALUE" : "Child child-in-law grandchild"
-              }, {
-                "INPUT VALUE" : "Other relative, not specified (secondary family)"
-              }, {
-                "INPUT VALUE" : "Friend"
-              }, {
-                "INPUT VALUE" : "Partner friend"
-              }, {
-                "INPUT VALUE" : "Other relative or non-relative"
-              }, {
-                "INPUT VALUE" : "Domestic employee"
-              }, {
-                "INPUT VALUE" : "Grandparent"
-              }, {
-                "INPUT VALUE" : "Sibling-in-law"
-              }, {
-                "INPUT VALUE" : "Unmarried partner"
-              }, {
-                "INPUT VALUE" : "Other relative with same family name"
-              }, {
-                "INPUT VALUE" : "Head"
-              }, {
-                "INPUT VALUE" : "Other relative of servant"
-              }, {
-                "INPUT VALUE" : "Godchild"
-              }, {
-                "INPUT VALUE" : "Sibling of spouse partner"
-              }, {
-                "INPUT VALUE" : "Child of unmarried partner"
-              }, {
-                "INPUT VALUE" : "Spouse"
-              }, {
-                "INPUT VALUE" : "Biological child"
-              }, {
-                "INPUT VALUE" : "Stepchild"
-              }, {
-                "INPUT VALUE" : "Grandchild or great grandchild"
-              }, {
-                "INPUT VALUE" : "Sibling of sibling-in-law"
-              }, {
-                "INPUT VALUE" : "Nephew niece"
-              }, {
-                "INPUT VALUE" : "Other relative"
-              }, {
-                "INPUT VALUE" : "Same-sex spouse partner"
-              }, {
-                "INPUT VALUE" : "Sibling sibling-in-law"
-              }, {
-                "INPUT VALUE" : "Agregado"
-              }, {
-                "INPUT VALUE" : "Spouse partner"
-              }, {
-                "INPUT VALUE" : "Employee"
-              }, {
-                "INPUT VALUE" : "Child of servant"
-              }, {
-                "INPUT VALUE" : "Group quarters"
-              }, {
-                "INPUT VALUE" : "Ex-spouse"
-              }, {
-                "INPUT VALUE" : "Housemate roommate"
-              }, {
-                "INPUT VALUE" : "Child"
-              }, {
-                "INPUT VALUE" : "Spouse partner of child"
-              }, {
-                "INPUT VALUE" : "Roomer boarder lodger foster child"
-              }, {
-                "INPUT VALUE" : "Friend guest visitor partner"
-              }, {
-                "INPUT VALUE" : "Cousin"
-              }, {
-                "INPUT VALUE" : "Temporary resident, guest"
-              }, {
-                "INPUT VALUE" : "Stepsibling"
-              }, {
-                "INPUT VALUE" : "Child child-in-law"
-              }, {
-                "INPUT VALUE" : "Relative of employee, n.s."
-              }, {
-                "INPUT VALUE" : "Sibling"
-              }, {
-                "INPUT VALUE" : "Other specified relative"
-              }, {
-                "INPUT VALUE" : "Grandchild"
-              }, {
-                "INPUT VALUE" : "Parent grandparent ascendant"
-              }, {
-                "INPUT VALUE" : "Great grandchild"
-              }, {
-                "INPUT VALUE" : "Boarder or guest"
-              }, {
-                "INPUT VALUE" : "Foster child"
-              }, {
-                "INPUT VALUE" : "Visitor"
-              }, {
-                "INPUT VALUE" : "Other relative, not elsewhere classified"
-              }, {
-                "INPUT VALUE" : "Non-relative"
-              }, {
-                "INPUT VALUE" : "Other specified non-relative"
-              }, {
-                "INPUT VALUE" : "Lodger"
-              }, {
-                "INPUT VALUE" : "Parent parent-in-law"
-              }, {
-                "INPUT VALUE" : "Boarder"
-              }, {
-                "INPUT VALUE" : "Tutored child"
-              }, {
-                "INPUT VALUE" : "Spouse partner of sibling"
-              }, {
-                "INPUT VALUE" : "Other relative with different family name"
-              }, {
-                "INPUT VALUE" : "Child-in-law"
-              }, {
-                "INPUT VALUE" : "Non-relative, n.e.c."
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "Parent-in-law : 4220", "Stepparent : 4211", "Group quarters, non-inmates : 5610", "Godparent : 5140", "Adopted child : 3200", "Great-great grandchild : 4130", "Daughter-in-law : 4301", "Great grandparent : 4510", "Unknown : 9999", "Institutional inmates : 5620", "Aunt uncle : 4700", "Tutored foster child : 5340", "Unmarried partner of child : 4310", "Parent : 4210", "Employee, boarder or guest : 5400", "Spouse of servant : 5221", "Partner roommate : 5112", "Child child-in-law grandchild : 3500", "Other relative, not specified (secondary family) : 4930", "Friend : 5111", "Partner friend : 5110", "Other relative or non-relative : 6000", "Domestic employee : 5210", "Grandparent : 4500", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative with same family name : 4910", "Other relative of servant : 5223", "Head : 1000", "Godchild : 5150", "Sibling of spouse partner : 4431", "Child of unmarried partner : 3600", "Spouse : 2100", "Biological child : 3100", "Stepchild : 3300", "Grandchild or great grandchild : 4110", "Sibling of sibling-in-law : 4830", "Nephew niece : 4810", "Other relative : 4000", "Same-sex spouse partner : 2300", "Sibling sibling-in-law : 4400", "Agregado : 5510", "Spouse partner : 2000", "Child of servant : 5222", "Employee : 5200", "Group quarters : 5600", "Ex-spouse : 5130", "Housemate roommate : 5113", "Roomer boarder lodger foster child : 5300", "Spouse partner of child : 4302", "Child : 3000", "Friend guest visitor partner : 5100", "Cousin : 4820", "Stepsibling : 4420", "Temporary resident, guest : 5520", "Child child-in-law : 3400", "Relative of employee, n.s. : 5220", "Sibling : 4410", "Other specified relative : 4800", "Grandchild : 4100", "Parent grandparent ascendant : 4600", "Great grandchild : 4120", "Boarder or guest : 5311", "Foster child : 5330", "Visitor : 5120", "Other relative, not elsewhere classified : 4900", "Non-relative : 5000", "Other specified non-relative : 5500", "Lodger : 5320", "Parent parent-in-law : 4200", "Boarder : 5310", "Tutored child : 5350", "Spouse partner of sibling : 4432", "Other relative with different family name : 4920", "Child-in-law : 4300", "Non-relative, n.e.c. : 5900" ]
-            }
-          }
-        }, {
-          "ATTRIBUTE" : {
-            "NAME" : "MARSTD",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "Consensual union"
-              }, {
-                "INPUT VALUE" : "Widowed from marriage"
-              }, {
-                "INPUT VALUE" : "Married or consensual union"
-              }, {
-                "INPUT VALUE" : "Separated divorced spouse absent"
-              }, {
-                "INPUT VALUE" : "NIU (not in universe)"
-              }, {
-                "INPUT VALUE" : "Separated or annulled"
-              }, {
-                "INPUT VALUE" : "Separated from marriage"
-              }, {
-                "INPUT VALUE" : "Widowed"
-              }, {
-                "INPUT VALUE" : "Married, polygamous"
-              }, {
-                "INPUT VALUE" : "Never married and never cohabited"
-              }, {
-                "INPUT VALUE" : "Engaged"
+                "INPUT VALUE" : "Disability pension"
               }, {
                 "INPUT VALUE" : "Unknown missing"
               }, {
-                "INPUT VALUE" : "Annulled"
+                "INPUT VALUE" : "Non-retirement pension"
               }, {
-                "INPUT VALUE" : "Married, spouse absent (historical samples)"
+                "INPUT VALUE" : "Employed, not specified"
               }, {
-                "INPUT VALUE" : "Widowed from consensual union"
+                "INPUT VALUE" : "Inactive, other reasons"
               }, {
-                "INPUT VALUE" : "Widowed from consensual union or marriage"
+                "INPUT VALUE" : "At work, family holding, not specified"
               }, {
-                "INPUT VALUE" : "Separated legally"
+                "INPUT VALUE" : "Inactive (not in labor force)"
               }, {
-                "INPUT VALUE" : "Widowed, divorced, or separated"
+                "INPUT VALUE" : "Housework"
               }, {
-                "INPUT VALUE" : "Widowed or divorced"
+                "INPUT VALUE" : "No work available"
               }, {
-                "INPUT VALUE" : "Separated from consensual union"
+                "INPUT VALUE" : "At work, family holding, agricultural"
               }, {
-                "INPUT VALUE" : "Separated de facto"
+                "INPUT VALUE" : "At work, and 'retired'"
               }, {
-                "INPUT VALUE" : "Separated"
+                "INPUT VALUE" : "Unemployed, not specified"
               }, {
-                "INPUT VALUE" : "Married, religious"
+                "INPUT VALUE" : "Pensioner"
               }, {
-                "INPUT VALUE" : "Married, civil and religious"
+                "INPUT VALUE" : "Unemployed 6 or more months"
               }, {
-                "INPUT VALUE" : "Single never married"
+                "INPUT VALUE" : "At work, and 'housework'"
               }, {
-                "INPUT VALUE" : "Married, monogamous"
+                "INPUT VALUE" : "Unemployed, experienced worker"
               }, {
-                "INPUT VALUE" : "Married, civil"
+                "INPUT VALUE" : "Disabled or imprisoned"
               }, {
-                "INPUT VALUE" : "Divorced"
+                "INPUT VALUE" : "Permanent disability"
               }, {
-                "INPUT VALUE" : "Married, civil or religious"
+                "INPUT VALUE" : "Not working, seasonal worker"
               }, {
-                "INPUT VALUE" : "Separated from consensual union or marriage"
+                "INPUT VALUE" : "At work, and 'seeking work'"
               }, {
-                "INPUT VALUE" : "Married, traditional customary"
+                "INPUT VALUE" : "Institutionalized"
               }, {
-                "INPUT VALUE" : "Separated or divorced"
+                "INPUT VALUE" : "At work, and 'no work'"
               }, {
-                "INPUT VALUE" : "Married, formally"
+                "INPUT VALUE" : "At work, and 'student'"
+              }, {
+                "INPUT VALUE" : "Have job, not at work in reference period"
+              }, {
+                "INPUT VALUE" : "Intermittent worker"
+              }, {
+                "INPUT VALUE" : "Inactive unemployed"
+              }, {
+                "INPUT VALUE" : "Worked fewer than 6 months, temporary job"
+              }, {
+                "INPUT VALUE" : "Armed forces, not at work in reference period"
+              }, {
+                "INPUT VALUE" : "Unable to work, disabled or health reasons"
+              }, {
+                "INPUT VALUE" : "Living on rents or pension"
+              }, {
+                "INPUT VALUE" : "Too young to work"
+              }, {
+                "INPUT VALUE" : "Dependent"
+              }, {
+                "INPUT VALUE" : "Not working, occasional worker"
+              }, {
+                "INPUT VALUE" : "Retirees pensioners"
+              }, {
+                "INPUT VALUE" : "Military trainee"
+              }, {
+                "INPUT VALUE" : "Armed forces"
+              }, {
+                "INPUT VALUE" : "At work, family holding, not agricultural"
+              }, {
+                "INPUT VALUE" : "Other income recipient"
+              }, {
+                "INPUT VALUE" : "Elderly"
+              }, {
+                "INPUT VALUE" : "Worked fewer than 6 months, permanent job"
+              }, {
+                "INPUT VALUE" : "At work"
+              }, {
+                "INPUT VALUE" : "At work, and other situation"
+              }, {
+                "INPUT VALUE" : "Prisoner"
+              }, {
+                "INPUT VALUE" : "NIU (not in universe)"
+              }, {
+                "INPUT VALUE" : "Unemployed, new worker"
+              }, {
+                "INPUT VALUE" : "Retired without benefits"
+              }, {
+                "INPUT VALUE" : "Retirees and living on rent"
+              }, {
+                "INPUT VALUE" : "In school"
+              }, {
+                "INPUT VALUE" : "Elderly or disabled"
+              }, {
+                "INPUT VALUE" : "Retired"
+              }, {
+                "INPUT VALUE" : "Living on rents"
+              }, {
+                "INPUT VALUE" : "Temporary illness"
+              }, {
+                "INPUT VALUE" : "Armed forces, at work"
+              }, {
+                "INPUT VALUE" : "Marginally employed"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -646,28 +500,24 @@
             },
             "emergent" : false,
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Consensual union : 220", "Widowed from marriage : 412", "Married or consensual union : 200", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Separated or annulled : 320", "Separated from marriage : 333", "Widowed : 400", "Married, polygamous : 217", "Engaged : 110", "Never married and never cohabited : 111", "Unknown missing : 999", "Widowed from consensual union : 413", "Married, spouse absent (historical samples) : 219", "Annulled : 340", "Widowed from consensual union or marriage : 411", "Separated legally : 331", "Widowed, divorced, or separated : 420", "Widowed or divorced : 410", "Separated from consensual union : 334", "Separated de facto : 332", "Separated : 330", "Married, religious : 212", "Married, civil and religious : 213", "Single never married : 100", "Married, monogamous : 216", "Married, civil : 211", "Divorced : 350", "Married, civil or religious : 214", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated or divorced : 310", "Married, formally : 210" ]
+              "MAPPING" : [ "Disability pension : 347", "Non-retirement pension : 346", "Unknown missing : 999", "Employed, not specified : 100", "Inactive, other reasons : 390", "At work, family holding, not specified : 117", "Inactive (not in labor force) : 300", "Housework : 310", "No work available : 230", "At work, family holding, agricultural : 119", "Unemployed, not specified : 200", "At work, and 'retired' : 114", "Pensioner : 345", "Unemployed 6 or more months : 201", "At work, and 'housework' : 112", "Unemployed, experienced worker : 210", "Disabled or imprisoned : 323", "Permanent disability : 321", "Not working, seasonal worker : 371", "Institutionalized : 360", "At work, and 'seeking work' : 113", "At work, and 'no work' : 115", "At work, and 'student' : 111", "Have job, not at work in reference period : 120", "Intermittent worker : 370", "Inactive unemployed : 240", "Armed forces, not at work in reference period : 132", "Worked fewer than 6 months, temporary job : 203", "Unable to work, disabled or health reasons : 320", "Living on rents or pension : 342", "Too young to work : 391", "Dependent : 392", "Not working, occasional worker : 372", "Retirees pensioners : 343", "Military trainee : 133", "Armed forces : 130", "At work, family holding, not agricultural : 118", "Other income recipient : 380", "Elderly : 350", "Worked fewer than 6 months, permanent job : 202", "At work : 110", "At work, and other situation : 116", "Prisoner : 361", "NIU (not in universe) : 000", "Unemployed, new worker : 220", "Retired without benefits : 348", "Retirees and living on rent : 340", "In school : 330", "Elderly or disabled : 351", "Retired : 344", "Living on rents : 341", "Temporary illness : 322", "Marginally employed : 140", "Armed forces, at work : 131" ]
             }
           }
         }, {
           "MAPPED ATTRIBUTE" : {
-            "NAME" : "RELATE",
+            "NAME" : "EMPSTAT",
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Other relative"
+                "INPUT VALUE" : "Inactive"
               }, {
-                "INPUT VALUE" : "Unknown"
+                "INPUT VALUE" : "NIU (not in universe)"
               }, {
-                "INPUT VALUE" : "Head"
+                "INPUT VALUE" : "Unknown missing"
               }, {
-                "INPUT VALUE" : "Other relative or non-relative"
+                "INPUT VALUE" : "Employed"
               }, {
-                "INPUT VALUE" : "Spouse partner"
-              }, {
-                "INPUT VALUE" : "Child"
-              }, {
-                "INPUT VALUE" : "Non-relative"
+                "INPUT VALUE" : "Unemployed"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -679,280 +529,117 @@
             "emergent" : false,
             "REFERENT ATTRIBUTE" : {
               "ATTRIBUTE" : {
-                "NAME" : "RELATED",
+                "NAME" : "EMPSTATD",
                 "VALUE SPACE" : {
                   "TYPE" : "Nominal",
                   "VALUES" : [ {
-                    "INPUT VALUE" : "Parent-in-law"
-                  }, {
-                    "INPUT VALUE" : "Stepparent"
-                  }, {
-                    "INPUT VALUE" : "Godparent"
-                  }, {
-                    "INPUT VALUE" : "Group quarters, non-inmates"
-                  }, {
-                    "INPUT VALUE" : "Adopted child"
-                  }, {
-                    "INPUT VALUE" : "Great-great grandchild"
-                  }, {
-                    "INPUT VALUE" : "Daughter-in-law"
-                  }, {
-                    "INPUT VALUE" : "Great grandparent"
-                  }, {
-                    "INPUT VALUE" : "Unknown"
-                  }, {
-                    "INPUT VALUE" : "Institutional inmates"
-                  }, {
-                    "INPUT VALUE" : "Tutored foster child"
-                  }, {
-                    "INPUT VALUE" : "Unmarried partner of child"
-                  }, {
-                    "INPUT VALUE" : "Aunt uncle"
-                  }, {
-                    "INPUT VALUE" : "Employee, boarder or guest"
-                  }, {
-                    "INPUT VALUE" : "Parent"
-                  }, {
-                    "INPUT VALUE" : "Spouse of servant"
-                  }, {
-                    "INPUT VALUE" : "Partner roommate"
-                  }, {
-                    "INPUT VALUE" : "Child child-in-law grandchild"
-                  }, {
-                    "INPUT VALUE" : "Other relative, not specified (secondary family)"
-                  }, {
-                    "INPUT VALUE" : "Friend"
-                  }, {
-                    "INPUT VALUE" : "Partner friend"
-                  }, {
-                    "INPUT VALUE" : "Other relative or non-relative"
-                  }, {
-                    "INPUT VALUE" : "Domestic employee"
-                  }, {
-                    "INPUT VALUE" : "Grandparent"
-                  }, {
-                    "INPUT VALUE" : "Sibling-in-law"
-                  }, {
-                    "INPUT VALUE" : "Unmarried partner"
-                  }, {
-                    "INPUT VALUE" : "Other relative with same family name"
-                  }, {
-                    "INPUT VALUE" : "Head"
-                  }, {
-                    "INPUT VALUE" : "Other relative of servant"
-                  }, {
-                    "INPUT VALUE" : "Godchild"
-                  }, {
-                    "INPUT VALUE" : "Sibling of spouse partner"
-                  }, {
-                    "INPUT VALUE" : "Child of unmarried partner"
-                  }, {
-                    "INPUT VALUE" : "Spouse"
-                  }, {
-                    "INPUT VALUE" : "Biological child"
-                  }, {
-                    "INPUT VALUE" : "Stepchild"
-                  }, {
-                    "INPUT VALUE" : "Grandchild or great grandchild"
-                  }, {
-                    "INPUT VALUE" : "Sibling of sibling-in-law"
-                  }, {
-                    "INPUT VALUE" : "Nephew niece"
-                  }, {
-                    "INPUT VALUE" : "Other relative"
-                  }, {
-                    "INPUT VALUE" : "Same-sex spouse partner"
-                  }, {
-                    "INPUT VALUE" : "Sibling sibling-in-law"
-                  }, {
-                    "INPUT VALUE" : "Agregado"
-                  }, {
-                    "INPUT VALUE" : "Spouse partner"
-                  }, {
-                    "INPUT VALUE" : "Employee"
-                  }, {
-                    "INPUT VALUE" : "Child of servant"
-                  }, {
-                    "INPUT VALUE" : "Group quarters"
-                  }, {
-                    "INPUT VALUE" : "Ex-spouse"
-                  }, {
-                    "INPUT VALUE" : "Housemate roommate"
-                  }, {
-                    "INPUT VALUE" : "Child"
-                  }, {
-                    "INPUT VALUE" : "Spouse partner of child"
-                  }, {
-                    "INPUT VALUE" : "Roomer boarder lodger foster child"
-                  }, {
-                    "INPUT VALUE" : "Friend guest visitor partner"
-                  }, {
-                    "INPUT VALUE" : "Cousin"
-                  }, {
-                    "INPUT VALUE" : "Temporary resident, guest"
-                  }, {
-                    "INPUT VALUE" : "Stepsibling"
-                  }, {
-                    "INPUT VALUE" : "Child child-in-law"
-                  }, {
-                    "INPUT VALUE" : "Relative of employee, n.s."
-                  }, {
-                    "INPUT VALUE" : "Sibling"
-                  }, {
-                    "INPUT VALUE" : "Other specified relative"
-                  }, {
-                    "INPUT VALUE" : "Grandchild"
-                  }, {
-                    "INPUT VALUE" : "Parent grandparent ascendant"
-                  }, {
-                    "INPUT VALUE" : "Great grandchild"
-                  }, {
-                    "INPUT VALUE" : "Boarder or guest"
-                  }, {
-                    "INPUT VALUE" : "Foster child"
-                  }, {
-                    "INPUT VALUE" : "Visitor"
-                  }, {
-                    "INPUT VALUE" : "Other relative, not elsewhere classified"
-                  }, {
-                    "INPUT VALUE" : "Non-relative"
-                  }, {
-                    "INPUT VALUE" : "Other specified non-relative"
-                  }, {
-                    "INPUT VALUE" : "Lodger"
-                  }, {
-                    "INPUT VALUE" : "Parent parent-in-law"
-                  }, {
-                    "INPUT VALUE" : "Boarder"
-                  }, {
-                    "INPUT VALUE" : "Tutored child"
-                  }, {
-                    "INPUT VALUE" : "Spouse partner of sibling"
-                  }, {
-                    "INPUT VALUE" : "Other relative with different family name"
-                  }, {
-                    "INPUT VALUE" : "Child-in-law"
-                  }, {
-                    "INPUT VALUE" : "Non-relative, n.e.c."
-                  } ],
-                  "categoricTemplate" : {
-                    "regex" : [ ]
-                  },
-                  "EMPTY VALUE" : {
-                    "INPUT VALUE" : null
-                  }
-                },
-                "emergent" : false,
-                "ENCODED VALUES" : {
-                  "MAPPING" : [ "Parent-in-law : 4220", "Stepparent : 4211", "Group quarters, non-inmates : 5610", "Godparent : 5140", "Adopted child : 3200", "Great-great grandchild : 4130", "Daughter-in-law : 4301", "Great grandparent : 4510", "Unknown : 9999", "Institutional inmates : 5620", "Aunt uncle : 4700", "Tutored foster child : 5340", "Unmarried partner of child : 4310", "Parent : 4210", "Employee, boarder or guest : 5400", "Spouse of servant : 5221", "Partner roommate : 5112", "Child child-in-law grandchild : 3500", "Other relative, not specified (secondary family) : 4930", "Friend : 5111", "Partner friend : 5110", "Other relative or non-relative : 6000", "Domestic employee : 5210", "Grandparent : 4500", "Unmarried partner : 2200", "Sibling-in-law : 4430", "Other relative with same family name : 4910", "Other relative of servant : 5223", "Head : 1000", "Godchild : 5150", "Sibling of spouse partner : 4431", "Child of unmarried partner : 3600", "Spouse : 2100", "Biological child : 3100", "Stepchild : 3300", "Grandchild or great grandchild : 4110", "Sibling of sibling-in-law : 4830", "Nephew niece : 4810", "Other relative : 4000", "Same-sex spouse partner : 2300", "Sibling sibling-in-law : 4400", "Agregado : 5510", "Spouse partner : 2000", "Child of servant : 5222", "Employee : 5200", "Group quarters : 5600", "Ex-spouse : 5130", "Housemate roommate : 5113", "Roomer boarder lodger foster child : 5300", "Spouse partner of child : 4302", "Child : 3000", "Friend guest visitor partner : 5100", "Cousin : 4820", "Stepsibling : 4420", "Temporary resident, guest : 5520", "Child child-in-law : 3400", "Relative of employee, n.s. : 5220", "Sibling : 4410", "Other specified relative : 4800", "Grandchild : 4100", "Parent grandparent ascendant : 4600", "Great grandchild : 4120", "Boarder or guest : 5311", "Foster child : 5330", "Visitor : 5120", "Other relative, not elsewhere classified : 4900", "Non-relative : 5000", "Other specified non-relative : 5500", "Lodger : 5320", "Parent parent-in-law : 4200", "Boarder : 5310", "Tutored child : 5350", "Spouse partner of sibling : 4432", "Other relative with different family name : 4920", "Child-in-law : 4300", "Non-relative, n.e.c. : 5900" ]
-                }
-              }
-            },
-            "MAPPER" : {
-              "TYPE" : "AGG",
-              "THE MAP" : [ "Other relative : Great-great grandchild;Parent;Stepparent;Sibling;Sibling sibling-in-law;Parent grandparent ascendant;Other relative with different family name;Other specified relative;Parent-in-law;Grandchild;Stepsibling;Child-in-law;Other relative, not specified (secondary family);Nephew niece;Grandchild or great grandchild;Sibling-in-law;Unmarried partner of child;Sibling of spouse partner;Spouse partner of sibling;Daughter-in-law;Spouse partner of child;Grandparent;Cousin;Aunt uncle;Other relative, not elsewhere classified;Great grandchild;Other relative;Parent parent-in-law;Great grandparent;Sibling of sibling-in-law;Other relative with same family name", "Unknown : Unknown", "Head : Head", "Other relative or non-relative : Other relative or non-relative", "Spouse partner : Same-sex spouse partner;Spouse partner;Unmarried partner;Spouse", "Child : Adopted child;Child;Child of unmarried partner;Child child-in-law;Biological child;Child child-in-law grandchild;Stepchild", "Non-relative : Godparent;Tutored foster child;Relative of employee, n.s.;Friend guest visitor partner;Spouse of servant;Child of servant;Other relative of servant;Roomer boarder lodger foster child;Institutional inmates;Group quarters, non-inmates;Tutored child;Partner friend;Friend;Partner roommate;Boarder;Housemate roommate;Boarder or guest;Agregado;Godchild;Other specified non-relative;Non-relative, n.e.c.;Visitor;Non-relative;Lodger;Employee;Temporary resident, guest;Employee, boarder or guest;Ex-spouse;Foster child;Domestic employee;Group quarters" ]
-            },
-            "ENCODED VALUES" : {
-              "MAPPING" : [ "Other relative : 4", "Unknown : 9", "Head : 1", "Other relative or non-relative : 6", "Spouse partner : 2", "Child : 3", "Non-relative : 5" ]
-            }
-          }
-        }, {
-          "MAPPED ATTRIBUTE" : {
-            "NAME" : "MARST",
-            "VALUE SPACE" : {
-              "TYPE" : "Nominal",
-              "VALUES" : [ {
-                "INPUT VALUE" : "Separated divorced spouse absent"
-              }, {
-                "INPUT VALUE" : "NIU (not in universe)"
-              }, {
-                "INPUT VALUE" : "Married in union"
-              }, {
-                "INPUT VALUE" : "Widowed"
-              }, {
-                "INPUT VALUE" : "Single never married"
-              }, {
-                "INPUT VALUE" : "Unknown missing"
-              } ],
-              "categoricTemplate" : {
-                "regex" : [ ]
-              },
-              "EMPTY VALUE" : {
-                "INPUT VALUE" : null
-              }
-            },
-            "emergent" : false,
-            "REFERENT ATTRIBUTE" : {
-              "ATTRIBUTE" : {
-                "NAME" : "MARSTD",
-                "VALUE SPACE" : {
-                  "TYPE" : "Nominal",
-                  "VALUES" : [ {
-                    "INPUT VALUE" : "Consensual union"
-                  }, {
-                    "INPUT VALUE" : "Widowed from marriage"
-                  }, {
-                    "INPUT VALUE" : "Married or consensual union"
-                  }, {
-                    "INPUT VALUE" : "Separated divorced spouse absent"
-                  }, {
-                    "INPUT VALUE" : "NIU (not in universe)"
-                  }, {
-                    "INPUT VALUE" : "Separated or annulled"
-                  }, {
-                    "INPUT VALUE" : "Separated from marriage"
-                  }, {
-                    "INPUT VALUE" : "Widowed"
-                  }, {
-                    "INPUT VALUE" : "Married, polygamous"
-                  }, {
-                    "INPUT VALUE" : "Never married and never cohabited"
-                  }, {
-                    "INPUT VALUE" : "Engaged"
+                    "INPUT VALUE" : "Disability pension"
                   }, {
                     "INPUT VALUE" : "Unknown missing"
                   }, {
-                    "INPUT VALUE" : "Annulled"
+                    "INPUT VALUE" : "Non-retirement pension"
                   }, {
-                    "INPUT VALUE" : "Married, spouse absent (historical samples)"
+                    "INPUT VALUE" : "Employed, not specified"
                   }, {
-                    "INPUT VALUE" : "Widowed from consensual union"
+                    "INPUT VALUE" : "Inactive, other reasons"
                   }, {
-                    "INPUT VALUE" : "Widowed from consensual union or marriage"
+                    "INPUT VALUE" : "At work, family holding, not specified"
                   }, {
-                    "INPUT VALUE" : "Separated legally"
+                    "INPUT VALUE" : "Inactive (not in labor force)"
                   }, {
-                    "INPUT VALUE" : "Widowed, divorced, or separated"
+                    "INPUT VALUE" : "Housework"
                   }, {
-                    "INPUT VALUE" : "Widowed or divorced"
+                    "INPUT VALUE" : "No work available"
                   }, {
-                    "INPUT VALUE" : "Separated from consensual union"
+                    "INPUT VALUE" : "At work, family holding, agricultural"
                   }, {
-                    "INPUT VALUE" : "Separated de facto"
+                    "INPUT VALUE" : "At work, and 'retired'"
                   }, {
-                    "INPUT VALUE" : "Separated"
+                    "INPUT VALUE" : "Unemployed, not specified"
                   }, {
-                    "INPUT VALUE" : "Married, religious"
+                    "INPUT VALUE" : "Pensioner"
                   }, {
-                    "INPUT VALUE" : "Married, civil and religious"
+                    "INPUT VALUE" : "Unemployed 6 or more months"
                   }, {
-                    "INPUT VALUE" : "Single never married"
+                    "INPUT VALUE" : "At work, and 'housework'"
                   }, {
-                    "INPUT VALUE" : "Married, monogamous"
+                    "INPUT VALUE" : "Unemployed, experienced worker"
                   }, {
-                    "INPUT VALUE" : "Married, civil"
+                    "INPUT VALUE" : "Disabled or imprisoned"
                   }, {
-                    "INPUT VALUE" : "Divorced"
+                    "INPUT VALUE" : "Permanent disability"
                   }, {
-                    "INPUT VALUE" : "Married, civil or religious"
+                    "INPUT VALUE" : "Not working, seasonal worker"
                   }, {
-                    "INPUT VALUE" : "Separated from consensual union or marriage"
+                    "INPUT VALUE" : "At work, and 'seeking work'"
                   }, {
-                    "INPUT VALUE" : "Married, traditional customary"
+                    "INPUT VALUE" : "Institutionalized"
                   }, {
-                    "INPUT VALUE" : "Separated or divorced"
+                    "INPUT VALUE" : "At work, and 'no work'"
                   }, {
-                    "INPUT VALUE" : "Married, formally"
+                    "INPUT VALUE" : "At work, and 'student'"
+                  }, {
+                    "INPUT VALUE" : "Have job, not at work in reference period"
+                  }, {
+                    "INPUT VALUE" : "Intermittent worker"
+                  }, {
+                    "INPUT VALUE" : "Inactive unemployed"
+                  }, {
+                    "INPUT VALUE" : "Worked fewer than 6 months, temporary job"
+                  }, {
+                    "INPUT VALUE" : "Armed forces, not at work in reference period"
+                  }, {
+                    "INPUT VALUE" : "Unable to work, disabled or health reasons"
+                  }, {
+                    "INPUT VALUE" : "Living on rents or pension"
+                  }, {
+                    "INPUT VALUE" : "Too young to work"
+                  }, {
+                    "INPUT VALUE" : "Dependent"
+                  }, {
+                    "INPUT VALUE" : "Not working, occasional worker"
+                  }, {
+                    "INPUT VALUE" : "Retirees pensioners"
+                  }, {
+                    "INPUT VALUE" : "Military trainee"
+                  }, {
+                    "INPUT VALUE" : "Armed forces"
+                  }, {
+                    "INPUT VALUE" : "At work, family holding, not agricultural"
+                  }, {
+                    "INPUT VALUE" : "Other income recipient"
+                  }, {
+                    "INPUT VALUE" : "Elderly"
+                  }, {
+                    "INPUT VALUE" : "Worked fewer than 6 months, permanent job"
+                  }, {
+                    "INPUT VALUE" : "At work"
+                  }, {
+                    "INPUT VALUE" : "At work, and other situation"
+                  }, {
+                    "INPUT VALUE" : "Prisoner"
+                  }, {
+                    "INPUT VALUE" : "NIU (not in universe)"
+                  }, {
+                    "INPUT VALUE" : "Unemployed, new worker"
+                  }, {
+                    "INPUT VALUE" : "Retired without benefits"
+                  }, {
+                    "INPUT VALUE" : "Retirees and living on rent"
+                  }, {
+                    "INPUT VALUE" : "In school"
+                  }, {
+                    "INPUT VALUE" : "Elderly or disabled"
+                  }, {
+                    "INPUT VALUE" : "Retired"
+                  }, {
+                    "INPUT VALUE" : "Living on rents"
+                  }, {
+                    "INPUT VALUE" : "Temporary illness"
+                  }, {
+                    "INPUT VALUE" : "Armed forces, at work"
+                  }, {
+                    "INPUT VALUE" : "Marginally employed"
                   } ],
                   "categoricTemplate" : {
                     "regex" : [ ]
@@ -963,16 +650,16 @@
                 },
                 "emergent" : false,
                 "ENCODED VALUES" : {
-                  "MAPPING" : [ "Consensual union : 220", "Widowed from marriage : 412", "Married or consensual union : 200", "Separated divorced spouse absent : 300", "NIU (not in universe) : 000", "Separated or annulled : 320", "Separated from marriage : 333", "Widowed : 400", "Married, polygamous : 217", "Engaged : 110", "Never married and never cohabited : 111", "Unknown missing : 999", "Widowed from consensual union : 413", "Married, spouse absent (historical samples) : 219", "Annulled : 340", "Widowed from consensual union or marriage : 411", "Separated legally : 331", "Widowed, divorced, or separated : 420", "Widowed or divorced : 410", "Separated from consensual union : 334", "Separated de facto : 332", "Separated : 330", "Married, religious : 212", "Married, civil and religious : 213", "Single never married : 100", "Married, monogamous : 216", "Married, civil : 211", "Divorced : 350", "Married, civil or religious : 214", "Separated from consensual union or marriage : 335", "Married, traditional customary : 215", "Separated or divorced : 310", "Married, formally : 210" ]
+                  "MAPPING" : [ "Disability pension : 347", "Non-retirement pension : 346", "Unknown missing : 999", "Employed, not specified : 100", "Inactive, other reasons : 390", "At work, family holding, not specified : 117", "Inactive (not in labor force) : 300", "Housework : 310", "No work available : 230", "At work, family holding, agricultural : 119", "Unemployed, not specified : 200", "At work, and 'retired' : 114", "Pensioner : 345", "Unemployed 6 or more months : 201", "At work, and 'housework' : 112", "Unemployed, experienced worker : 210", "Disabled or imprisoned : 323", "Permanent disability : 321", "Not working, seasonal worker : 371", "Institutionalized : 360", "At work, and 'seeking work' : 113", "At work, and 'no work' : 115", "At work, and 'student' : 111", "Have job, not at work in reference period : 120", "Intermittent worker : 370", "Inactive unemployed : 240", "Armed forces, not at work in reference period : 132", "Worked fewer than 6 months, temporary job : 203", "Unable to work, disabled or health reasons : 320", "Living on rents or pension : 342", "Too young to work : 391", "Dependent : 392", "Not working, occasional worker : 372", "Retirees pensioners : 343", "Military trainee : 133", "Armed forces : 130", "At work, family holding, not agricultural : 118", "Other income recipient : 380", "Elderly : 350", "Worked fewer than 6 months, permanent job : 202", "At work : 110", "At work, and other situation : 116", "Prisoner : 361", "NIU (not in universe) : 000", "Unemployed, new worker : 220", "Retired without benefits : 348", "Retirees and living on rent : 340", "In school : 330", "Elderly or disabled : 351", "Retired : 344", "Living on rents : 341", "Temporary illness : 322", "Marginally employed : 140", "Armed forces, at work : 131" ]
                 }
               }
             },
             "MAPPER" : {
               "TYPE" : "AGG",
-              "THE MAP" : [ "Separated divorced spouse absent : Divorced;Separated;Separated legally;Separated or divorced;Separated de facto;Separated from marriage;Separated from consensual union;Separated from consensual union or marriage;Annulled;Separated or annulled;Separated divorced spouse absent", "NIU (not in universe) : NIU (not in universe)", "Married in union : Married, formally;Married, civil;Married, religious;Married, civil and religious;Married, civil or religious;Married, traditional customary;Married, monogamous;Married, polygamous;Married, spouse absent (historical samples);Consensual union;Married or consensual union", "Widowed : Widowed or divorced;Widowed from consensual union or marriage;Widowed from marriage;Widowed from consensual union;Widowed, divorced, or separated;Widowed", "Single never married : Engaged;Never married and never cohabited;Single never married", "Unknown missing : Unknown missing" ]
+              "THE MAP" : [ "Inactive : Inactive, other reasons;Too young to work;Dependent;Elderly;Elderly or disabled;Housework;Institutionalized;Prisoner;Unable to work, disabled or health reasons;Permanent disability;Temporary illness;Disabled or imprisoned;Intermittent worker;Not working, seasonal worker;Not working, occasional worker;In school;Other income recipient;Retirees and living on rent;Living on rents;Living on rents or pension;Retirees pensioners;Inactive (not in labor force);Retired;Pensioner;Non-retirement pension;Disability pension;Retired without benefits", "NIU (not in universe) : NIU (not in universe)", "Unknown missing : Unknown missing", "Employed : At work;At work, and 'student';At work, and 'housework';At work, and 'seeking work';At work, and 'retired';At work, and 'no work';At work, and other situation;At work, family holding, not specified;At work, family holding, not agricultural;At work, family holding, agricultural;Have job, not at work in reference period;Armed forces;Armed forces, at work;Armed forces, not at work in reference period;Military trainee;Marginally employed;Employed, not specified", "Unemployed : No work available;Inactive unemployed;Unemployed, not specified;Unemployed 6 or more months;Worked fewer than 6 months, permanent job;Worked fewer than 6 months, temporary job;Unemployed, experienced worker;Unemployed, new worker" ]
             },
             "ENCODED VALUES" : {
-              "MAPPING" : [ "Separated divorced spouse absent : 3", "NIU (not in universe) : 0", "Married in union : 2", "Single never married : 1", "Widowed : 4", "Unknown missing : 9" ]
+              "MAPPING" : [ "Inactive : 3", "NIU (not in universe) : 0", "Unknown missing : 9", "Employed : 1", "Unemployed : 2" ]
             }
           }
         }, {

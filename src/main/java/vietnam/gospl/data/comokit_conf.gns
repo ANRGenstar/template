@@ -1,0 +1,1600 @@
+{
+  "CONFIGURATION FILE" : {
+    "MAIN DIRECTORY" : ".",
+    "INPUT FILES" : [ "LAYER LEVEL : 0;1", {
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/ipumsi_00004.csv",
+      "STORE DATA" : false,
+      "SURVEY TYPE" : "Sample",
+      "SEPARATOR" : ",",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_ML.csv",
+      "STORE DATA" : true,
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ",",
+      "FRI" : "1",
+      "FCI" : "6",
+      "SHEET NB" : "0"
+    } ],
+    "DICTIONARIES" : [ {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "ATTRIBUTE" : {
+            "NAME" : "HHTYPE",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Group quarters"
+              }, {
+                "INPUT VALUE" : "Unclassifiable"
+              }, {
+                "INPUT VALUE" : "Composite household, family and non-relatives"
+              }, {
+                "INPUT VALUE" : "Polygamous family"
+              }, {
+                "INPUT VALUE" : "Married cohab couple with children"
+              }, {
+                "INPUT VALUE" : "Unclassified subfamily"
+              }, {
+                "INPUT VALUE" : "Single-parent family"
+              }, {
+                "INPUT VALUE" : "One-person household"
+              }, {
+                "INPUT VALUE" : "Extended family, relatives only"
+              }, {
+                "INPUT VALUE" : "Other relative or non-relative household"
+              }, {
+                "INPUT VALUE" : "Non-family household"
+              }, {
+                "INPUT VALUE" : "Vacant household"
+              }, {
+                "INPUT VALUE" : "Married cohab couple, no children"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Group quarters : 11", "Unclassifiable : 99", "Composite household, family and non-relatives : 07", "Polygamous family : 05", "Married cohab couple with children : 03", "Unclassified subfamily : 09", "Single-parent family : 04", "One-person household : 01", "Extended family, relatives only : 06", "Other relative or non-relative household : 10", "Non-family household : 08", "Vacant household : 00", "Married cohab couple, no children : 02" ]
+            }
+          }
+        } ],
+        "RECORDS" : [ ],
+        "SIZE ATTRIBUTE" : null,
+        "level" : 1,
+        "identifierAttributeName" : "SERIAL",
+        "weightAttributeName" : "HHWT"
+      }
+    }, {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "ATTRIBUTE" : {
+            "NAME" : "SEX",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Male"
+              }, {
+                "INPUT VALUE" : "Unknown"
+              }, {
+                "INPUT VALUE" : "Female"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Male : 1", "Unknown : 9", "Female : 2" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "INDGEN",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Electricity, gas, water and waste management"
+              }, {
+                "INPUT VALUE" : "Private household services"
+              }, {
+                "INPUT VALUE" : "Services, not specified"
+              }, {
+                "INPUT VALUE" : "Public administration and defense"
+              }, {
+                "INPUT VALUE" : "Hotels and restaurants"
+              }, {
+                "INPUT VALUE" : "NIU (not in universe)"
+              }, {
+                "INPUT VALUE" : "Education"
+              }, {
+                "INPUT VALUE" : "Agriculture, fishing, and forestry"
+              }, {
+                "INPUT VALUE" : "Manufacturing"
+              }, {
+                "INPUT VALUE" : "Wholesale and retail trade"
+              }, {
+                "INPUT VALUE" : "Response suppressed"
+              }, {
+                "INPUT VALUE" : "Other services"
+              }, {
+                "INPUT VALUE" : "Financial services and insurance"
+              }, {
+                "INPUT VALUE" : "Other industry, n.e.c."
+              }, {
+                "INPUT VALUE" : "Mining and extraction"
+              }, {
+                "INPUT VALUE" : "Construction"
+              }, {
+                "INPUT VALUE" : "Business services and real estate"
+              }, {
+                "INPUT VALUE" : "Health and social work"
+              }, {
+                "INPUT VALUE" : "Transportation, storage,  and communications"
+              }, {
+                "INPUT VALUE" : "Unknown"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Private household services : 120", "Electricity, gas, water and waste management : 040", "Public administration and defense : 100", "Services, not specified : 110", "Hotels and restaurants : 070", "NIU (not in universe) : 000", "Education : 112", "Agriculture, fishing, and forestry : 010", "Manufacturing : 030", "Wholesale and retail trade : 060", "Response suppressed : 998", "Other services : 114", "Financial services and insurance : 090", "Other industry, n.e.c. : 130", "Mining and extraction : 020", "Construction : 050", "Business services and real estate : 111", "Health and social work : 113", "Transportation, storage,  and communications : 080", "Unknown : 999" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "AGE",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "30"
+              }, {
+                "INPUT VALUE" : "94"
+              }, {
+                "INPUT VALUE" : "82"
+              }, {
+                "INPUT VALUE" : "78"
+              }, {
+                "INPUT VALUE" : "66"
+              }, {
+                "INPUT VALUE" : "54"
+              }, {
+                "INPUT VALUE" : "42"
+              }, {
+                "INPUT VALUE" : "38"
+              }, {
+                "INPUT VALUE" : "26"
+              }, {
+                "INPUT VALUE" : "14"
+              }, {
+                "INPUT VALUE" : "70"
+              }, {
+                "INPUT VALUE" : "4"
+              }, {
+                "INPUT VALUE" : "41"
+              }, {
+                "INPUT VALUE" : "93"
+              }, {
+                "INPUT VALUE" : "Less than 1 year"
+              }, {
+                "INPUT VALUE" : "89"
+              }, {
+                "INPUT VALUE" : "77"
+              }, {
+                "INPUT VALUE" : "65"
+              }, {
+                "INPUT VALUE" : "53"
+              }, {
+                "INPUT VALUE" : "49"
+              }, {
+                "INPUT VALUE" : "37"
+              }, {
+                "INPUT VALUE" : "25"
+              }, {
+                "INPUT VALUE" : "13"
+              }, {
+                "INPUT VALUE" : "1 year"
+              }, {
+                "INPUT VALUE" : "100+"
+              }, {
+                "INPUT VALUE" : "81"
+              }, {
+                "INPUT VALUE" : "3"
+              }, {
+                "INPUT VALUE" : "96"
+              }, {
+                "INPUT VALUE" : "84"
+              }, {
+                "INPUT VALUE" : "72"
+              }, {
+                "INPUT VALUE" : "60"
+              }, {
+                "INPUT VALUE" : "56"
+              }, {
+                "INPUT VALUE" : "44"
+              }, {
+                "INPUT VALUE" : "32"
+              }, {
+                "INPUT VALUE" : "20"
+              }, {
+                "INPUT VALUE" : "16"
+              }, {
+                "INPUT VALUE" : "68"
+              }, {
+                "INPUT VALUE" : "28"
+              }, {
+                "INPUT VALUE" : "6"
+              }, {
+                "INPUT VALUE" : "95"
+              }, {
+                "INPUT VALUE" : "83"
+              }, {
+                "INPUT VALUE" : "71"
+              }, {
+                "INPUT VALUE" : "67"
+              }, {
+                "INPUT VALUE" : "55"
+              }, {
+                "INPUT VALUE" : "43"
+              }, {
+                "INPUT VALUE" : "31"
+              }, {
+                "INPUT VALUE" : "27"
+              }, {
+                "INPUT VALUE" : "15"
+              }, {
+                "INPUT VALUE" : "79"
+              }, {
+                "INPUT VALUE" : "39"
+              }, {
+                "INPUT VALUE" : "5"
+              }, {
+                "INPUT VALUE" : "74"
+              }, {
+                "INPUT VALUE" : "62"
+              }, {
+                "INPUT VALUE" : "50"
+              }, {
+                "INPUT VALUE" : "34"
+              }, {
+                "INPUT VALUE" : "22"
+              }, {
+                "INPUT VALUE" : "10"
+              }, {
+                "INPUT VALUE" : "98"
+              }, {
+                "INPUT VALUE" : "86"
+              }, {
+                "INPUT VALUE" : "58"
+              }, {
+                "INPUT VALUE" : "46"
+              }, {
+                "INPUT VALUE" : "18"
+              }, {
+                "INPUT VALUE" : "8"
+              }, {
+                "INPUT VALUE" : "90"
+              }, {
+                "INPUT VALUE" : "85"
+              }, {
+                "INPUT VALUE" : "73"
+              }, {
+                "INPUT VALUE" : "61"
+              }, {
+                "INPUT VALUE" : "2 years"
+              }, {
+                "INPUT VALUE" : "45"
+              }, {
+                "INPUT VALUE" : "33"
+              }, {
+                "INPUT VALUE" : "21"
+              }, {
+                "INPUT VALUE" : "97"
+              }, {
+                "INPUT VALUE" : "69"
+              }, {
+                "INPUT VALUE" : "57"
+              }, {
+                "INPUT VALUE" : "29"
+              }, {
+                "INPUT VALUE" : "17"
+              }, {
+                "INPUT VALUE" : "7"
+              }, {
+                "INPUT VALUE" : "52"
+              }, {
+                "INPUT VALUE" : "40"
+              }, {
+                "INPUT VALUE" : "12"
+              }, {
+                "INPUT VALUE" : "88"
+              }, {
+                "INPUT VALUE" : "76"
+              }, {
+                "INPUT VALUE" : "64"
+              }, {
+                "INPUT VALUE" : "48"
+              }, {
+                "INPUT VALUE" : "36"
+              }, {
+                "INPUT VALUE" : "24"
+              }, {
+                "INPUT VALUE" : "92"
+              }, {
+                "INPUT VALUE" : "Not reported missing"
+              }, {
+                "INPUT VALUE" : "80"
+              }, {
+                "INPUT VALUE" : "63"
+              }, {
+                "INPUT VALUE" : "51"
+              }, {
+                "INPUT VALUE" : "23"
+              }, {
+                "INPUT VALUE" : "11"
+              }, {
+                "INPUT VALUE" : "99"
+              }, {
+                "INPUT VALUE" : "87"
+              }, {
+                "INPUT VALUE" : "75"
+              }, {
+                "INPUT VALUE" : "59"
+              }, {
+                "INPUT VALUE" : "47"
+              }, {
+                "INPUT VALUE" : "35"
+              }, {
+                "INPUT VALUE" : "19"
+              }, {
+                "INPUT VALUE" : "9"
+              }, {
+                "INPUT VALUE" : "91"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "30 : 030", "94 : 094", "82 : 082", "78 : 078", "66 : 066", "54 : 054", "42 : 042", "38 : 038", "26 : 026", "14 : 014", "70 : 070", "4 : 004", "41 : 041", "93 : 093", "Less than 1 year : 000", "89 : 089", "77 : 077", "65 : 065", "53 : 053", "49 : 049", "37 : 037", "25 : 025", "13 : 013", "1 year : 001", "100+ : 100", "81 : 081", "3 : 003", "96 : 096", "84 : 084", "72 : 072", "60 : 060", "56 : 056", "44 : 044", "32 : 032", "20 : 020", "16 : 016", "68 : 068", "28 : 028", "6 : 006", "95 : 095", "83 : 083", "71 : 071", "67 : 067", "55 : 055", "43 : 043", "31 : 031", "27 : 027", "15 : 015", "79 : 079", "39 : 039", "5 : 005", "74 : 074", "62 : 062", "50 : 050", "34 : 034", "22 : 022", "10 : 010", "98 : 098", "86 : 086", "58 : 058", "46 : 046", "18 : 018", "8 : 008", "90 : 090", "85 : 085", "73 : 073", "61 : 061", "2 years : 002", "45 : 045", "33 : 033", "21 : 021", "97 : 097", "69 : 069", "57 : 057", "29 : 029", "17 : 017", "7 : 007", "52 : 052", "40 : 040", "12 : 012", "88 : 088", "76 : 076", "64 : 064", "48 : 048", "36 : 036", "24 : 024", "Not reported missing : 999", "92 : 092", "80 : 080", "63 : 063", "51 : 051", "23 : 023", "11 : 011", "99 : 099", "87 : 087", "75 : 075", "59 : 059", "47 : 047", "35 : 035", "19 : 019", "9 : 009", "91 : 091" ]
+            }
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "EMPSTATD",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Disability pension"
+              }, {
+                "INPUT VALUE" : "Unknown missing"
+              }, {
+                "INPUT VALUE" : "Non-retirement pension"
+              }, {
+                "INPUT VALUE" : "Employed, not specified"
+              }, {
+                "INPUT VALUE" : "Inactive, other reasons"
+              }, {
+                "INPUT VALUE" : "At work, family holding, not specified"
+              }, {
+                "INPUT VALUE" : "Inactive (not in labor force)"
+              }, {
+                "INPUT VALUE" : "Housework"
+              }, {
+                "INPUT VALUE" : "No work available"
+              }, {
+                "INPUT VALUE" : "At work, family holding, agricultural"
+              }, {
+                "INPUT VALUE" : "At work, and 'retired'"
+              }, {
+                "INPUT VALUE" : "Unemployed, not specified"
+              }, {
+                "INPUT VALUE" : "Pensioner"
+              }, {
+                "INPUT VALUE" : "Unemployed 6 or more months"
+              }, {
+                "INPUT VALUE" : "At work, and 'housework'"
+              }, {
+                "INPUT VALUE" : "Unemployed, experienced worker"
+              }, {
+                "INPUT VALUE" : "Disabled or imprisoned"
+              }, {
+                "INPUT VALUE" : "Permanent disability"
+              }, {
+                "INPUT VALUE" : "Not working, seasonal worker"
+              }, {
+                "INPUT VALUE" : "At work, and 'seeking work'"
+              }, {
+                "INPUT VALUE" : "Institutionalized"
+              }, {
+                "INPUT VALUE" : "At work, and 'no work'"
+              }, {
+                "INPUT VALUE" : "At work, and 'student'"
+              }, {
+                "INPUT VALUE" : "Have job, not at work in reference period"
+              }, {
+                "INPUT VALUE" : "Intermittent worker"
+              }, {
+                "INPUT VALUE" : "Inactive unemployed"
+              }, {
+                "INPUT VALUE" : "Worked fewer than 6 months, temporary job"
+              }, {
+                "INPUT VALUE" : "Armed forces, not at work in reference period"
+              }, {
+                "INPUT VALUE" : "Unable to work, disabled or health reasons"
+              }, {
+                "INPUT VALUE" : "Living on rents or pension"
+              }, {
+                "INPUT VALUE" : "Too young to work"
+              }, {
+                "INPUT VALUE" : "Dependent"
+              }, {
+                "INPUT VALUE" : "Not working, occasional worker"
+              }, {
+                "INPUT VALUE" : "Retirees pensioners"
+              }, {
+                "INPUT VALUE" : "Military trainee"
+              }, {
+                "INPUT VALUE" : "Armed forces"
+              }, {
+                "INPUT VALUE" : "At work, family holding, not agricultural"
+              }, {
+                "INPUT VALUE" : "Other income recipient"
+              }, {
+                "INPUT VALUE" : "Elderly"
+              }, {
+                "INPUT VALUE" : "Worked fewer than 6 months, permanent job"
+              }, {
+                "INPUT VALUE" : "At work"
+              }, {
+                "INPUT VALUE" : "At work, and other situation"
+              }, {
+                "INPUT VALUE" : "Prisoner"
+              }, {
+                "INPUT VALUE" : "NIU (not in universe)"
+              }, {
+                "INPUT VALUE" : "Unemployed, new worker"
+              }, {
+                "INPUT VALUE" : "Retired without benefits"
+              }, {
+                "INPUT VALUE" : "Retirees and living on rent"
+              }, {
+                "INPUT VALUE" : "In school"
+              }, {
+                "INPUT VALUE" : "Elderly or disabled"
+              }, {
+                "INPUT VALUE" : "Retired"
+              }, {
+                "INPUT VALUE" : "Living on rents"
+              }, {
+                "INPUT VALUE" : "Temporary illness"
+              }, {
+                "INPUT VALUE" : "Armed forces, at work"
+              }, {
+                "INPUT VALUE" : "Marginally employed"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Disability pension : 347", "Non-retirement pension : 346", "Unknown missing : 999", "Employed, not specified : 100", "Inactive, other reasons : 390", "At work, family holding, not specified : 117", "Inactive (not in labor force) : 300", "Housework : 310", "No work available : 230", "At work, family holding, agricultural : 119", "Unemployed, not specified : 200", "At work, and 'retired' : 114", "Pensioner : 345", "Unemployed 6 or more months : 201", "At work, and 'housework' : 112", "Unemployed, experienced worker : 210", "Disabled or imprisoned : 323", "Permanent disability : 321", "Not working, seasonal worker : 371", "Institutionalized : 360", "At work, and 'seeking work' : 113", "At work, and 'no work' : 115", "At work, and 'student' : 111", "Have job, not at work in reference period : 120", "Intermittent worker : 370", "Inactive unemployed : 240", "Armed forces, not at work in reference period : 132", "Worked fewer than 6 months, temporary job : 203", "Unable to work, disabled or health reasons : 320", "Living on rents or pension : 342", "Too young to work : 391", "Dependent : 392", "Not working, occasional worker : 372", "Retirees pensioners : 343", "Military trainee : 133", "Armed forces : 130", "At work, family holding, not agricultural : 118", "Other income recipient : 380", "Elderly : 350", "Worked fewer than 6 months, permanent job : 202", "At work : 110", "At work, and other situation : 116", "Prisoner : 361", "NIU (not in universe) : 000", "Unemployed, new worker : 220", "Retired without benefits : 348", "Retirees and living on rent : 340", "In school : 330", "Elderly or disabled : 351", "Retired : 344", "Living on rents : 341", "Temporary illness : 322", "Marginally employed : 140", "Armed forces, at work : 131" ]
+            }
+          }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "EMPSTAT",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Inactive"
+              }, {
+                "INPUT VALUE" : "NIU (not in universe)"
+              }, {
+                "INPUT VALUE" : "Unknown missing"
+              }, {
+                "INPUT VALUE" : "Employed"
+              }, {
+                "INPUT VALUE" : "Unemployed"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "EMPSTATD",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "Disability pension"
+                  }, {
+                    "INPUT VALUE" : "Unknown missing"
+                  }, {
+                    "INPUT VALUE" : "Non-retirement pension"
+                  }, {
+                    "INPUT VALUE" : "Employed, not specified"
+                  }, {
+                    "INPUT VALUE" : "Inactive, other reasons"
+                  }, {
+                    "INPUT VALUE" : "At work, family holding, not specified"
+                  }, {
+                    "INPUT VALUE" : "Inactive (not in labor force)"
+                  }, {
+                    "INPUT VALUE" : "Housework"
+                  }, {
+                    "INPUT VALUE" : "No work available"
+                  }, {
+                    "INPUT VALUE" : "At work, family holding, agricultural"
+                  }, {
+                    "INPUT VALUE" : "At work, and 'retired'"
+                  }, {
+                    "INPUT VALUE" : "Unemployed, not specified"
+                  }, {
+                    "INPUT VALUE" : "Pensioner"
+                  }, {
+                    "INPUT VALUE" : "Unemployed 6 or more months"
+                  }, {
+                    "INPUT VALUE" : "At work, and 'housework'"
+                  }, {
+                    "INPUT VALUE" : "Unemployed, experienced worker"
+                  }, {
+                    "INPUT VALUE" : "Disabled or imprisoned"
+                  }, {
+                    "INPUT VALUE" : "Permanent disability"
+                  }, {
+                    "INPUT VALUE" : "Not working, seasonal worker"
+                  }, {
+                    "INPUT VALUE" : "At work, and 'seeking work'"
+                  }, {
+                    "INPUT VALUE" : "Institutionalized"
+                  }, {
+                    "INPUT VALUE" : "At work, and 'no work'"
+                  }, {
+                    "INPUT VALUE" : "At work, and 'student'"
+                  }, {
+                    "INPUT VALUE" : "Have job, not at work in reference period"
+                  }, {
+                    "INPUT VALUE" : "Intermittent worker"
+                  }, {
+                    "INPUT VALUE" : "Inactive unemployed"
+                  }, {
+                    "INPUT VALUE" : "Worked fewer than 6 months, temporary job"
+                  }, {
+                    "INPUT VALUE" : "Armed forces, not at work in reference period"
+                  }, {
+                    "INPUT VALUE" : "Unable to work, disabled or health reasons"
+                  }, {
+                    "INPUT VALUE" : "Living on rents or pension"
+                  }, {
+                    "INPUT VALUE" : "Too young to work"
+                  }, {
+                    "INPUT VALUE" : "Dependent"
+                  }, {
+                    "INPUT VALUE" : "Not working, occasional worker"
+                  }, {
+                    "INPUT VALUE" : "Retirees pensioners"
+                  }, {
+                    "INPUT VALUE" : "Military trainee"
+                  }, {
+                    "INPUT VALUE" : "Armed forces"
+                  }, {
+                    "INPUT VALUE" : "At work, family holding, not agricultural"
+                  }, {
+                    "INPUT VALUE" : "Other income recipient"
+                  }, {
+                    "INPUT VALUE" : "Elderly"
+                  }, {
+                    "INPUT VALUE" : "Worked fewer than 6 months, permanent job"
+                  }, {
+                    "INPUT VALUE" : "At work"
+                  }, {
+                    "INPUT VALUE" : "At work, and other situation"
+                  }, {
+                    "INPUT VALUE" : "Prisoner"
+                  }, {
+                    "INPUT VALUE" : "NIU (not in universe)"
+                  }, {
+                    "INPUT VALUE" : "Unemployed, new worker"
+                  }, {
+                    "INPUT VALUE" : "Retired without benefits"
+                  }, {
+                    "INPUT VALUE" : "Retirees and living on rent"
+                  }, {
+                    "INPUT VALUE" : "In school"
+                  }, {
+                    "INPUT VALUE" : "Elderly or disabled"
+                  }, {
+                    "INPUT VALUE" : "Retired"
+                  }, {
+                    "INPUT VALUE" : "Living on rents"
+                  }, {
+                    "INPUT VALUE" : "Temporary illness"
+                  }, {
+                    "INPUT VALUE" : "Armed forces, at work"
+                  }, {
+                    "INPUT VALUE" : "Marginally employed"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "Disability pension : 347", "Non-retirement pension : 346", "Unknown missing : 999", "Employed, not specified : 100", "Inactive, other reasons : 390", "At work, family holding, not specified : 117", "Inactive (not in labor force) : 300", "Housework : 310", "No work available : 230", "At work, family holding, agricultural : 119", "Unemployed, not specified : 200", "At work, and 'retired' : 114", "Pensioner : 345", "Unemployed 6 or more months : 201", "At work, and 'housework' : 112", "Unemployed, experienced worker : 210", "Disabled or imprisoned : 323", "Permanent disability : 321", "Not working, seasonal worker : 371", "Institutionalized : 360", "At work, and 'seeking work' : 113", "At work, and 'no work' : 115", "At work, and 'student' : 111", "Have job, not at work in reference period : 120", "Intermittent worker : 370", "Inactive unemployed : 240", "Armed forces, not at work in reference period : 132", "Worked fewer than 6 months, temporary job : 203", "Unable to work, disabled or health reasons : 320", "Living on rents or pension : 342", "Too young to work : 391", "Dependent : 392", "Not working, occasional worker : 372", "Retirees pensioners : 343", "Military trainee : 133", "Armed forces : 130", "At work, family holding, not agricultural : 118", "Other income recipient : 380", "Elderly : 350", "Worked fewer than 6 months, permanent job : 202", "At work : 110", "At work, and other situation : 116", "Prisoner : 361", "NIU (not in universe) : 000", "Unemployed, new worker : 220", "Retired without benefits : 348", "Retirees and living on rent : 340", "In school : 330", "Elderly or disabled : 351", "Retired : 344", "Living on rents : 341", "Temporary illness : 322", "Marginally employed : 140", "Armed forces, at work : 131" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "AGG",
+              "THE MAP" : [ "Inactive : Inactive, other reasons;Too young to work;Dependent;Elderly;Elderly or disabled;Housework;Institutionalized;Prisoner;Unable to work, disabled or health reasons;Permanent disability;Temporary illness;Disabled or imprisoned;Intermittent worker;Not working, seasonal worker;Not working, occasional worker;In school;Other income recipient;Retirees and living on rent;Living on rents;Living on rents or pension;Retirees pensioners;Inactive (not in labor force);Retired;Pensioner;Non-retirement pension;Disability pension;Retired without benefits", "NIU (not in universe) : NIU (not in universe)", "Unknown missing : Unknown missing", "Employed : At work;At work, and 'student';At work, and 'housework';At work, and 'seeking work';At work, and 'retired';At work, and 'no work';At work, and other situation;At work, family holding, not specified;At work, family holding, not agricultural;At work, family holding, agricultural;Have job, not at work in reference period;Armed forces;Armed forces, at work;Armed forces, not at work in reference period;Military trainee;Marginally employed;Employed, not specified", "Unemployed : No work available;Inactive unemployed;Unemployed, not specified;Unemployed 6 or more months;Worked fewer than 6 months, permanent job;Worked fewer than 6 months, temporary job;Unemployed, experienced worker;Unemployed, new worker" ]
+            },
+            "ENCODED VALUES" : {
+              "MAPPING" : [ "Inactive : 3", "NIU (not in universe) : 0", "Unknown missing : 9", "Employed : 1", "Unemployed : 2" ]
+            }
+          }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "AGE_int",
+            "VALUE SPACE" : {
+              "TYPE" : "Integer",
+              "VALUES" : [ {
+                "INPUT VALUE" : "24"
+              }, {
+                "INPUT VALUE" : "12"
+              }, {
+                "INPUT VALUE" : "88"
+              }, {
+                "INPUT VALUE" : "76"
+              }, {
+                "INPUT VALUE" : "64"
+              }, {
+                "INPUT VALUE" : "52"
+              }, {
+                "INPUT VALUE" : "40"
+              }, {
+                "INPUT VALUE" : "48"
+              }, {
+                "INPUT VALUE" : "36"
+              }, {
+                "INPUT VALUE" : "9"
+              }, {
+                "INPUT VALUE" : "91"
+              }, {
+                "INPUT VALUE" : "1"
+              }, {
+                "INPUT VALUE" : "13"
+              }, {
+                "INPUT VALUE" : "89"
+              }, {
+                "INPUT VALUE" : "77"
+              }, {
+                "INPUT VALUE" : "65"
+              }, {
+                "INPUT VALUE" : "53"
+              }, {
+                "INPUT VALUE" : "41"
+              }, {
+                "INPUT VALUE" : "49"
+              }, {
+                "INPUT VALUE" : "37"
+              }, {
+                "INPUT VALUE" : "25"
+              }, {
+                "INPUT VALUE" : "92"
+              }, {
+                "INPUT VALUE" : "80"
+              }, {
+                "INPUT VALUE" : "2"
+              }, {
+                "INPUT VALUE" : "46"
+              }, {
+                "INPUT VALUE" : "34"
+              }, {
+                "INPUT VALUE" : "22"
+              }, {
+                "INPUT VALUE" : "10"
+              }, {
+                "INPUT VALUE" : "98"
+              }, {
+                "INPUT VALUE" : "86"
+              }, {
+                "INPUT VALUE" : "74"
+              }, {
+                "INPUT VALUE" : "62"
+              }, {
+                "INPUT VALUE" : "50"
+              }, {
+                "INPUT VALUE" : "18"
+              }, {
+                "INPUT VALUE" : "58"
+              }, {
+                "INPUT VALUE" : "7"
+              }, {
+                "INPUT VALUE" : "35"
+              }, {
+                "INPUT VALUE" : "23"
+              }, {
+                "INPUT VALUE" : "11"
+              }, {
+                "INPUT VALUE" : "99"
+              }, {
+                "INPUT VALUE" : "87"
+              }, {
+                "INPUT VALUE" : "75"
+              }, {
+                "INPUT VALUE" : "63"
+              }, {
+                "INPUT VALUE" : "51"
+              }, {
+                "INPUT VALUE" : "19"
+              }, {
+                "INPUT VALUE" : "59"
+              }, {
+                "INPUT VALUE" : "47"
+              }, {
+                "INPUT VALUE" : "8"
+              }, {
+                "INPUT VALUE" : "90"
+              }, {
+                "INPUT VALUE" : "0"
+              }, {
+                "INPUT VALUE" : "68"
+              }, {
+                "INPUT VALUE" : "56"
+              }, {
+                "INPUT VALUE" : "44"
+              }, {
+                "INPUT VALUE" : "32"
+              }, {
+                "INPUT VALUE" : "20"
+              }, {
+                "INPUT VALUE" : "96"
+              }, {
+                "INPUT VALUE" : "84"
+              }, {
+                "INPUT VALUE" : "72"
+              }, {
+                "INPUT VALUE" : "28"
+              }, {
+                "INPUT VALUE" : "16"
+              }, {
+                "INPUT VALUE" : "5"
+              }, {
+                "INPUT VALUE" : "71"
+              }, {
+                "INPUT VALUE" : "57"
+              }, {
+                "INPUT VALUE" : "45"
+              }, {
+                "INPUT VALUE" : "33"
+              }, {
+                "INPUT VALUE" : "21"
+              }, {
+                "INPUT VALUE" : "97"
+              }, {
+                "INPUT VALUE" : "85"
+              }, {
+                "INPUT VALUE" : "73"
+              }, {
+                "INPUT VALUE" : "61"
+              }, {
+                "INPUT VALUE" : "29"
+              }, {
+                "INPUT VALUE" : "17"
+              }, {
+                "INPUT VALUE" : "69"
+              }, {
+                "INPUT VALUE" : "6"
+              }, {
+                "INPUT VALUE" : "60"
+              }, {
+                "INPUT VALUE" : "78"
+              }, {
+                "INPUT VALUE" : "66"
+              }, {
+                "INPUT VALUE" : "54"
+              }, {
+                "INPUT VALUE" : "42"
+              }, {
+                "INPUT VALUE" : "30"
+              }, {
+                "INPUT VALUE" : "94"
+              }, {
+                "INPUT VALUE" : "38"
+              }, {
+                "INPUT VALUE" : "26"
+              }, {
+                "INPUT VALUE" : "14"
+              }, {
+                "INPUT VALUE" : "3"
+              }, {
+                "INPUT VALUE" : "93"
+              }, {
+                "INPUT VALUE" : "81"
+              }, {
+                "INPUT VALUE" : "79"
+              }, {
+                "INPUT VALUE" : "67"
+              }, {
+                "INPUT VALUE" : "55"
+              }, {
+                "INPUT VALUE" : "43"
+              }, {
+                "INPUT VALUE" : "31"
+              }, {
+                "INPUT VALUE" : "95"
+              }, {
+                "INPUT VALUE" : "83"
+              }, {
+                "INPUT VALUE" : "100"
+              }, {
+                "INPUT VALUE" : "39"
+              }, {
+                "INPUT VALUE" : "27"
+              }, {
+                "INPUT VALUE" : "15"
+              }, {
+                "INPUT VALUE" : "4"
+              }, {
+                "INPUT VALUE" : "82"
+              }, {
+                "INPUT VALUE" : "70"
+              } ],
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "null"
+              },
+              "min" : -2147483648,
+              "max" : 2147483647
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "AGE",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "30"
+                  }, {
+                    "INPUT VALUE" : "94"
+                  }, {
+                    "INPUT VALUE" : "82"
+                  }, {
+                    "INPUT VALUE" : "78"
+                  }, {
+                    "INPUT VALUE" : "66"
+                  }, {
+                    "INPUT VALUE" : "54"
+                  }, {
+                    "INPUT VALUE" : "42"
+                  }, {
+                    "INPUT VALUE" : "38"
+                  }, {
+                    "INPUT VALUE" : "26"
+                  }, {
+                    "INPUT VALUE" : "14"
+                  }, {
+                    "INPUT VALUE" : "70"
+                  }, {
+                    "INPUT VALUE" : "4"
+                  }, {
+                    "INPUT VALUE" : "41"
+                  }, {
+                    "INPUT VALUE" : "93"
+                  }, {
+                    "INPUT VALUE" : "Less than 1 year"
+                  }, {
+                    "INPUT VALUE" : "89"
+                  }, {
+                    "INPUT VALUE" : "77"
+                  }, {
+                    "INPUT VALUE" : "65"
+                  }, {
+                    "INPUT VALUE" : "53"
+                  }, {
+                    "INPUT VALUE" : "49"
+                  }, {
+                    "INPUT VALUE" : "37"
+                  }, {
+                    "INPUT VALUE" : "25"
+                  }, {
+                    "INPUT VALUE" : "13"
+                  }, {
+                    "INPUT VALUE" : "1 year"
+                  }, {
+                    "INPUT VALUE" : "100+"
+                  }, {
+                    "INPUT VALUE" : "81"
+                  }, {
+                    "INPUT VALUE" : "3"
+                  }, {
+                    "INPUT VALUE" : "96"
+                  }, {
+                    "INPUT VALUE" : "84"
+                  }, {
+                    "INPUT VALUE" : "72"
+                  }, {
+                    "INPUT VALUE" : "60"
+                  }, {
+                    "INPUT VALUE" : "56"
+                  }, {
+                    "INPUT VALUE" : "44"
+                  }, {
+                    "INPUT VALUE" : "32"
+                  }, {
+                    "INPUT VALUE" : "20"
+                  }, {
+                    "INPUT VALUE" : "16"
+                  }, {
+                    "INPUT VALUE" : "68"
+                  }, {
+                    "INPUT VALUE" : "28"
+                  }, {
+                    "INPUT VALUE" : "6"
+                  }, {
+                    "INPUT VALUE" : "95"
+                  }, {
+                    "INPUT VALUE" : "83"
+                  }, {
+                    "INPUT VALUE" : "71"
+                  }, {
+                    "INPUT VALUE" : "67"
+                  }, {
+                    "INPUT VALUE" : "55"
+                  }, {
+                    "INPUT VALUE" : "43"
+                  }, {
+                    "INPUT VALUE" : "31"
+                  }, {
+                    "INPUT VALUE" : "27"
+                  }, {
+                    "INPUT VALUE" : "15"
+                  }, {
+                    "INPUT VALUE" : "79"
+                  }, {
+                    "INPUT VALUE" : "39"
+                  }, {
+                    "INPUT VALUE" : "5"
+                  }, {
+                    "INPUT VALUE" : "74"
+                  }, {
+                    "INPUT VALUE" : "62"
+                  }, {
+                    "INPUT VALUE" : "50"
+                  }, {
+                    "INPUT VALUE" : "34"
+                  }, {
+                    "INPUT VALUE" : "22"
+                  }, {
+                    "INPUT VALUE" : "10"
+                  }, {
+                    "INPUT VALUE" : "98"
+                  }, {
+                    "INPUT VALUE" : "86"
+                  }, {
+                    "INPUT VALUE" : "58"
+                  }, {
+                    "INPUT VALUE" : "46"
+                  }, {
+                    "INPUT VALUE" : "18"
+                  }, {
+                    "INPUT VALUE" : "8"
+                  }, {
+                    "INPUT VALUE" : "90"
+                  }, {
+                    "INPUT VALUE" : "85"
+                  }, {
+                    "INPUT VALUE" : "73"
+                  }, {
+                    "INPUT VALUE" : "61"
+                  }, {
+                    "INPUT VALUE" : "2 years"
+                  }, {
+                    "INPUT VALUE" : "45"
+                  }, {
+                    "INPUT VALUE" : "33"
+                  }, {
+                    "INPUT VALUE" : "21"
+                  }, {
+                    "INPUT VALUE" : "97"
+                  }, {
+                    "INPUT VALUE" : "69"
+                  }, {
+                    "INPUT VALUE" : "57"
+                  }, {
+                    "INPUT VALUE" : "29"
+                  }, {
+                    "INPUT VALUE" : "17"
+                  }, {
+                    "INPUT VALUE" : "7"
+                  }, {
+                    "INPUT VALUE" : "52"
+                  }, {
+                    "INPUT VALUE" : "40"
+                  }, {
+                    "INPUT VALUE" : "12"
+                  }, {
+                    "INPUT VALUE" : "88"
+                  }, {
+                    "INPUT VALUE" : "76"
+                  }, {
+                    "INPUT VALUE" : "64"
+                  }, {
+                    "INPUT VALUE" : "48"
+                  }, {
+                    "INPUT VALUE" : "36"
+                  }, {
+                    "INPUT VALUE" : "24"
+                  }, {
+                    "INPUT VALUE" : "92"
+                  }, {
+                    "INPUT VALUE" : "Not reported missing"
+                  }, {
+                    "INPUT VALUE" : "80"
+                  }, {
+                    "INPUT VALUE" : "63"
+                  }, {
+                    "INPUT VALUE" : "51"
+                  }, {
+                    "INPUT VALUE" : "23"
+                  }, {
+                    "INPUT VALUE" : "11"
+                  }, {
+                    "INPUT VALUE" : "99"
+                  }, {
+                    "INPUT VALUE" : "87"
+                  }, {
+                    "INPUT VALUE" : "75"
+                  }, {
+                    "INPUT VALUE" : "59"
+                  }, {
+                    "INPUT VALUE" : "47"
+                  }, {
+                    "INPUT VALUE" : "35"
+                  }, {
+                    "INPUT VALUE" : "19"
+                  }, {
+                    "INPUT VALUE" : "9"
+                  }, {
+                    "INPUT VALUE" : "91"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "30 : 030", "94 : 094", "82 : 082", "78 : 078", "66 : 066", "54 : 054", "42 : 042", "38 : 038", "26 : 026", "14 : 014", "70 : 070", "4 : 004", "41 : 041", "93 : 093", "Less than 1 year : 000", "89 : 089", "77 : 077", "65 : 065", "53 : 053", "49 : 049", "37 : 037", "25 : 025", "13 : 013", "1 year : 001", "100+ : 100", "81 : 081", "3 : 003", "96 : 096", "84 : 084", "72 : 072", "60 : 060", "56 : 056", "44 : 044", "32 : 032", "20 : 020", "16 : 016", "68 : 068", "28 : 028", "6 : 006", "95 : 095", "83 : 083", "71 : 071", "67 : 067", "55 : 055", "43 : 043", "31 : 031", "27 : 027", "15 : 015", "79 : 079", "39 : 039", "5 : 005", "74 : 074", "62 : 062", "50 : 050", "34 : 034", "22 : 022", "10 : 010", "98 : 098", "86 : 086", "58 : 058", "46 : 046", "18 : 018", "8 : 008", "90 : 090", "85 : 085", "73 : 073", "61 : 061", "2 years : 002", "45 : 045", "33 : 033", "21 : 021", "97 : 097", "69 : 069", "57 : 057", "29 : 029", "17 : 017", "7 : 007", "52 : 052", "40 : 040", "12 : 012", "88 : 088", "76 : 076", "64 : 064", "48 : 048", "36 : 036", "24 : 024", "Not reported missing : 999", "92 : 092", "80 : 080", "63 : 063", "51 : 051", "23 : 023", "11 : 011", "99 : 099", "87 : 087", "75 : 075", "59 : 059", "47 : 047", "35 : 035", "19 : 019", "9 : 009", "91 : 091" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "REC",
+              "THE MAP" : [ "24 : 24", "12 : 12", "88 : 88", "76 : 76", "64 : 64", "52 : 52", "40 : 40", "48 : 48", "36 : 36", "9 : 9", "91 : 91", "1 : 1 year", "13 : 13", "89 : 89", "77 : 77", "65 : 65", "53 : 53", "41 : 41", "49 : 49", "37 : 37", "25 : 25", "92 : 92", "80 : 80", "2 : 2 years", "46 : 46", "34 : 34", "22 : 22", "10 : 10", "98 : 98", "86 : 86", "74 : 74", "62 : 62", "50 : 50", "18 : 18", "58 : 58", "7 : 7", "35 : 35", "23 : 23", "11 : 11", "99 : 99", "87 : 87", "75 : 75", "63 : 63", "51 : 51", "19 : 19", "59 : 59", "47 : 47", "8 : 8", "90 : 90", "0 : Less than 1 year", "68 : 68", "56 : 56", "44 : 44", "32 : 32", "20 : 20", "96 : 96", "84 : 84", "72 : 72", "28 : 28", "16 : 16", "5 : 5", "71 : 71", "57 : 57", "45 : 45", "33 : 33", "21 : 21", "97 : 97", "85 : 85", "73 : 73", "61 : 61", "29 : 29", "17 : 17", "69 : 69", "6 : 6", "60 : 60", "78 : 78", "66 : 66", "54 : 54", "42 : 42", "30 : 30", "94 : 94", "38 : 38", "26 : 26", "14 : 14", "3 : 3", "93 : 93", "81 : 81", "79 : 79", "67 : 67", "55 : 55", "43 : 43", "31 : 31", "95 : 95", "100 : 100+", "83 : 83", "39 : 39", "27 : 27", "15 : 15", "4 : 4", "82 : 82", "70 : 70" ]
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "commune",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Xã Mê Linh"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "age",
+            "VALUE SPACE" : {
+              "TYPE" : "Range",
+              "VALUES" : [ {
+                "INPUT VALUE" : "[54, 55)"
+              }, {
+                "INPUT VALUE" : "[18, 19)"
+              }, {
+                "INPUT VALUE" : "[36, 37)"
+              }, {
+                "INPUT VALUE" : "[3, 4)"
+              }, {
+                "INPUT VALUE" : "[6, 7)"
+              }, {
+                "INPUT VALUE" : "[65, 66)"
+              }, {
+                "INPUT VALUE" : "[25, 26)"
+              }, {
+                "INPUT VALUE" : "[0, 1)"
+              }, {
+                "INPUT VALUE" : "[72, 73)"
+              }, {
+                "INPUT VALUE" : "[58, 59)"
+              }, {
+                "INPUT VALUE" : "[19, 20)"
+              }, {
+                "INPUT VALUE" : "[76, 77)"
+              }, {
+                "INPUT VALUE" : "[13, 14)"
+              }, {
+                "INPUT VALUE" : "[61, 62)"
+              }, {
+                "INPUT VALUE" : "[47, 48)"
+              }, {
+                "INPUT VALUE" : "[24, 25)"
+              }, {
+                "INPUT VALUE" : "[50, 51)"
+              }, {
+                "INPUT VALUE" : "[79, 80)"
+              }, {
+                "INPUT VALUE" : "[8, 9)"
+              }, {
+                "INPUT VALUE" : "[17, 18)"
+              }, {
+                "INPUT VALUE" : "[35, 36)"
+              }, {
+                "INPUT VALUE" : "[2, 3)"
+              }, {
+                "INPUT VALUE" : "[73, 74)"
+              }, {
+                "INPUT VALUE" : "[12, 13)"
+              }, {
+                "INPUT VALUE" : "[46, 47)"
+              }, {
+                "INPUT VALUE" : "[62, 63)"
+              }, {
+                "INPUT VALUE" : "[23, 24)"
+              }, {
+                "INPUT VALUE" : "[1, 2)"
+              }, {
+                "INPUT VALUE" : "[57, 58)"
+              }, {
+                "INPUT VALUE" : "[51, 52)"
+              }, {
+                "INPUT VALUE" : "[34, 35)"
+              }, {
+                "INPUT VALUE" : "[74, 75)"
+              }, {
+                "INPUT VALUE" : "[28, 29)"
+              }, {
+                "INPUT VALUE" : "[68, 69)"
+              }, {
+                "INPUT VALUE" : "[7, 8)"
+              }, {
+                "INPUT VALUE" : "[49, 50)"
+              }, {
+                "INPUT VALUE" : "[40, 41)"
+              }, {
+                "INPUT VALUE" : "[45, 46)"
+              }, {
+                "INPUT VALUE" : "[63, 64)"
+              }, {
+                "INPUT VALUE" : "[27, 28)"
+              }, {
+                "INPUT VALUE" : "[11, 12)"
+              }, {
+                "INPUT VALUE" : "[80, Inf)"
+              }, {
+                "INPUT VALUE" : "[56, 57)"
+              }, {
+                "INPUT VALUE" : "[52, 53)"
+              }, {
+                "INPUT VALUE" : "[16, 17)"
+              }, {
+                "INPUT VALUE" : "[22, 23)"
+              }, {
+                "INPUT VALUE" : "[67, 68)"
+              }, {
+                "INPUT VALUE" : "[41, 42)"
+              }, {
+                "INPUT VALUE" : "[9, 10)"
+              }, {
+                "INPUT VALUE" : "[33, 34)"
+              }, {
+                "INPUT VALUE" : "[75, 76)"
+              }, {
+                "INPUT VALUE" : "[78, 79)"
+              }, {
+                "INPUT VALUE" : "[30, 31)"
+              }, {
+                "INPUT VALUE" : "[39, 40)"
+              }, {
+                "INPUT VALUE" : "[38, 39)"
+              }, {
+                "INPUT VALUE" : "[44, 45)"
+              }, {
+                "INPUT VALUE" : "[64, 65)"
+              }, {
+                "INPUT VALUE" : "[70, 71)"
+              }, {
+                "INPUT VALUE" : "[10, 11)"
+              }, {
+                "INPUT VALUE" : "[59, 60)"
+              }, {
+                "INPUT VALUE" : "[26, 27)"
+              }, {
+                "INPUT VALUE" : "[55, 56)"
+              }, {
+                "INPUT VALUE" : "[53, 54)"
+              }, {
+                "INPUT VALUE" : "[5, 6)"
+              }, {
+                "INPUT VALUE" : "[71, 72)"
+              }, {
+                "INPUT VALUE" : "[21, 22)"
+              }, {
+                "INPUT VALUE" : "[15, 16)"
+              }, {
+                "INPUT VALUE" : "[42, 43)"
+              }, {
+                "INPUT VALUE" : "[66, 67)"
+              }, {
+                "INPUT VALUE" : "[32, 33)"
+              }, {
+                "INPUT VALUE" : "[14, 15)"
+              }, {
+                "INPUT VALUE" : "[48, 49)"
+              }, {
+                "INPUT VALUE" : "[4, 5)"
+              }, {
+                "INPUT VALUE" : "[77, 78)"
+              }, {
+                "INPUT VALUE" : "[31, 32)"
+              }, {
+                "INPUT VALUE" : "[43, 44)"
+              }, {
+                "INPUT VALUE" : "[37, 38)"
+              }, {
+                "INPUT VALUE" : "[69, 70)"
+              }, {
+                "INPUT VALUE" : "[29, 30)"
+              }, {
+                "INPUT VALUE" : "[20, 21)"
+              }, {
+                "INPUT VALUE" : "[60, 61)"
+              } ],
+              "min" : 0,
+              "max" : 2147483647,
+              "rangeTemplate" : {
+                "numberMatcher" : "INT_POSITIF_MATCH",
+                "theoreticalMin" : 0,
+                "theoreticalMax" : 2147483647
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "[NaN, NaN)"
+              }
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "AGE",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "30"
+                  }, {
+                    "INPUT VALUE" : "94"
+                  }, {
+                    "INPUT VALUE" : "82"
+                  }, {
+                    "INPUT VALUE" : "78"
+                  }, {
+                    "INPUT VALUE" : "66"
+                  }, {
+                    "INPUT VALUE" : "54"
+                  }, {
+                    "INPUT VALUE" : "42"
+                  }, {
+                    "INPUT VALUE" : "38"
+                  }, {
+                    "INPUT VALUE" : "26"
+                  }, {
+                    "INPUT VALUE" : "14"
+                  }, {
+                    "INPUT VALUE" : "70"
+                  }, {
+                    "INPUT VALUE" : "4"
+                  }, {
+                    "INPUT VALUE" : "41"
+                  }, {
+                    "INPUT VALUE" : "93"
+                  }, {
+                    "INPUT VALUE" : "Less than 1 year"
+                  }, {
+                    "INPUT VALUE" : "89"
+                  }, {
+                    "INPUT VALUE" : "77"
+                  }, {
+                    "INPUT VALUE" : "65"
+                  }, {
+                    "INPUT VALUE" : "53"
+                  }, {
+                    "INPUT VALUE" : "49"
+                  }, {
+                    "INPUT VALUE" : "37"
+                  }, {
+                    "INPUT VALUE" : "25"
+                  }, {
+                    "INPUT VALUE" : "13"
+                  }, {
+                    "INPUT VALUE" : "1 year"
+                  }, {
+                    "INPUT VALUE" : "100+"
+                  }, {
+                    "INPUT VALUE" : "81"
+                  }, {
+                    "INPUT VALUE" : "3"
+                  }, {
+                    "INPUT VALUE" : "96"
+                  }, {
+                    "INPUT VALUE" : "84"
+                  }, {
+                    "INPUT VALUE" : "72"
+                  }, {
+                    "INPUT VALUE" : "60"
+                  }, {
+                    "INPUT VALUE" : "56"
+                  }, {
+                    "INPUT VALUE" : "44"
+                  }, {
+                    "INPUT VALUE" : "32"
+                  }, {
+                    "INPUT VALUE" : "20"
+                  }, {
+                    "INPUT VALUE" : "16"
+                  }, {
+                    "INPUT VALUE" : "68"
+                  }, {
+                    "INPUT VALUE" : "28"
+                  }, {
+                    "INPUT VALUE" : "6"
+                  }, {
+                    "INPUT VALUE" : "95"
+                  }, {
+                    "INPUT VALUE" : "83"
+                  }, {
+                    "INPUT VALUE" : "71"
+                  }, {
+                    "INPUT VALUE" : "67"
+                  }, {
+                    "INPUT VALUE" : "55"
+                  }, {
+                    "INPUT VALUE" : "43"
+                  }, {
+                    "INPUT VALUE" : "31"
+                  }, {
+                    "INPUT VALUE" : "27"
+                  }, {
+                    "INPUT VALUE" : "15"
+                  }, {
+                    "INPUT VALUE" : "79"
+                  }, {
+                    "INPUT VALUE" : "39"
+                  }, {
+                    "INPUT VALUE" : "5"
+                  }, {
+                    "INPUT VALUE" : "74"
+                  }, {
+                    "INPUT VALUE" : "62"
+                  }, {
+                    "INPUT VALUE" : "50"
+                  }, {
+                    "INPUT VALUE" : "34"
+                  }, {
+                    "INPUT VALUE" : "22"
+                  }, {
+                    "INPUT VALUE" : "10"
+                  }, {
+                    "INPUT VALUE" : "98"
+                  }, {
+                    "INPUT VALUE" : "86"
+                  }, {
+                    "INPUT VALUE" : "58"
+                  }, {
+                    "INPUT VALUE" : "46"
+                  }, {
+                    "INPUT VALUE" : "18"
+                  }, {
+                    "INPUT VALUE" : "8"
+                  }, {
+                    "INPUT VALUE" : "90"
+                  }, {
+                    "INPUT VALUE" : "85"
+                  }, {
+                    "INPUT VALUE" : "73"
+                  }, {
+                    "INPUT VALUE" : "61"
+                  }, {
+                    "INPUT VALUE" : "2 years"
+                  }, {
+                    "INPUT VALUE" : "45"
+                  }, {
+                    "INPUT VALUE" : "33"
+                  }, {
+                    "INPUT VALUE" : "21"
+                  }, {
+                    "INPUT VALUE" : "97"
+                  }, {
+                    "INPUT VALUE" : "69"
+                  }, {
+                    "INPUT VALUE" : "57"
+                  }, {
+                    "INPUT VALUE" : "29"
+                  }, {
+                    "INPUT VALUE" : "17"
+                  }, {
+                    "INPUT VALUE" : "7"
+                  }, {
+                    "INPUT VALUE" : "52"
+                  }, {
+                    "INPUT VALUE" : "40"
+                  }, {
+                    "INPUT VALUE" : "12"
+                  }, {
+                    "INPUT VALUE" : "88"
+                  }, {
+                    "INPUT VALUE" : "76"
+                  }, {
+                    "INPUT VALUE" : "64"
+                  }, {
+                    "INPUT VALUE" : "48"
+                  }, {
+                    "INPUT VALUE" : "36"
+                  }, {
+                    "INPUT VALUE" : "24"
+                  }, {
+                    "INPUT VALUE" : "92"
+                  }, {
+                    "INPUT VALUE" : "Not reported missing"
+                  }, {
+                    "INPUT VALUE" : "80"
+                  }, {
+                    "INPUT VALUE" : "63"
+                  }, {
+                    "INPUT VALUE" : "51"
+                  }, {
+                    "INPUT VALUE" : "23"
+                  }, {
+                    "INPUT VALUE" : "11"
+                  }, {
+                    "INPUT VALUE" : "99"
+                  }, {
+                    "INPUT VALUE" : "87"
+                  }, {
+                    "INPUT VALUE" : "75"
+                  }, {
+                    "INPUT VALUE" : "59"
+                  }, {
+                    "INPUT VALUE" : "47"
+                  }, {
+                    "INPUT VALUE" : "35"
+                  }, {
+                    "INPUT VALUE" : "19"
+                  }, {
+                    "INPUT VALUE" : "9"
+                  }, {
+                    "INPUT VALUE" : "91"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "30 : 030", "94 : 094", "82 : 082", "78 : 078", "66 : 066", "54 : 054", "42 : 042", "38 : 038", "26 : 026", "14 : 014", "70 : 070", "4 : 004", "41 : 041", "93 : 093", "Less than 1 year : 000", "89 : 089", "77 : 077", "65 : 065", "53 : 053", "49 : 049", "37 : 037", "25 : 025", "13 : 013", "1 year : 001", "100+ : 100", "81 : 081", "3 : 003", "96 : 096", "84 : 084", "72 : 072", "60 : 060", "56 : 056", "44 : 044", "32 : 032", "20 : 020", "16 : 016", "68 : 068", "28 : 028", "6 : 006", "95 : 095", "83 : 083", "71 : 071", "67 : 067", "55 : 055", "43 : 043", "31 : 031", "27 : 027", "15 : 015", "79 : 079", "39 : 039", "5 : 005", "74 : 074", "62 : 062", "50 : 050", "34 : 034", "22 : 022", "10 : 010", "98 : 098", "86 : 086", "58 : 058", "46 : 046", "18 : 018", "8 : 008", "90 : 090", "85 : 085", "73 : 073", "61 : 061", "2 years : 002", "45 : 045", "33 : 033", "21 : 021", "97 : 097", "69 : 069", "57 : 057", "29 : 029", "17 : 017", "7 : 007", "52 : 052", "40 : 040", "12 : 012", "88 : 088", "76 : 076", "64 : 064", "48 : 048", "36 : 036", "24 : 024", "Not reported missing : 999", "92 : 092", "80 : 080", "63 : 063", "51 : 051", "23 : 023", "11 : 011", "99 : 099", "87 : 087", "75 : 075", "59 : 059", "47 : 047", "35 : 035", "19 : 019", "9 : 009", "91 : 091" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "UND",
+              "THE MAP" : [ "[8, 9) : 8", "[17, 18) : 17", "[53, 54) : 53", "[2, 3) : 2 years", "[35, 36) : 35", "[71, 72) : 71", "[5, 6) : 5", "[12, 13) : 12", "[42, 43) : 42", "[46, 47) : 46", "[23, 24) : 23", "[31, 32) : 31", "[57, 58) : 57", "[34, 35) : 34", "[28, 29) : 28", "[20, 21) : 20", "[68, 69) : 68", "[29, 30) : 29", "[60, 61) : 60", "[54, 55) : 54", "[63, 64) : 63", "[36, 37) : 36", "[18, 19) : 18", "[65, 66) : 65", "[6, 7) : 6", "[52, 53) : 52", "[25, 26) : 25", "[0, 1) : Less than 1 year", "[76, 77) : 76", "[41, 42) : 41", "[58, 59) : 58", "[13, 14) : 13", "[75, 76) : 75", "[30, 31) : 30", "[79, 80) : 79", "[47, 48) : 47", "[64, 65) : 64", "[24, 25) : 24", "[39, 40) : 39", "[70, 71) : 70", "[10, 11) : 10", "[26, 27) : 26", "[55, 56) : 55", "[73, 74) : 73", "[21, 22) : 21", "[15, 16) : 15", "[66, 67) : 66", "[62, 63) : 62", "[32, 33) : 32", "[4, 5) : 4", "[48, 49) : 48", "[14, 15) : 14", "[1, 2) : 1 year", "[51, 52) : 51", "[77, 78) : 77", "[74, 75) : 74", "[43, 44) : 43", "[37, 38) : 37", "[40, 41) : 40", "[7, 8) : 7", "[49, 50) : 49", "[69, 70) : 69", "[45, 46) : 45", "[27, 28) : 27", "[11, 12) : 11", "[80, Inf) : 80;81;82;83;84;85;86;87;88;89;90;91;92;93;94;95;96;97;98;99;100+", "[56, 57) : 56", "[3, 4) : 3", "[16, 17) : 16", "[22, 23) : 22", "[72, 73) : 72", "[67, 68) : 67", "[9, 10) : 9", "[33, 34) : 33", "[61, 62) : 61", "[78, 79) : 78", "[38, 39) : 38", "[44, 45) : 44", "[19, 20) : 19", "[50, 51) : 50", "[59, 60) : 59" ]
+            },
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "MAPPED ATTRIBUTE" : {
+            "NAME" : "sex",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "female"
+              }, {
+                "INPUT VALUE" : "male"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "REFERENT ATTRIBUTE" : {
+              "ATTRIBUTE" : {
+                "NAME" : "SEX",
+                "VALUE SPACE" : {
+                  "TYPE" : "Nominal",
+                  "VALUES" : [ {
+                    "INPUT VALUE" : "Male"
+                  }, {
+                    "INPUT VALUE" : "Unknown"
+                  }, {
+                    "INPUT VALUE" : "Female"
+                  } ],
+                  "categoricTemplate" : {
+                    "regex" : [ ]
+                  },
+                  "EMPTY VALUE" : {
+                    "INPUT VALUE" : null
+                  }
+                },
+                "emergent" : false,
+                "ENCODED VALUES" : {
+                  "MAPPING" : [ "Male : 1", "Unknown : 9", "Female : 2" ]
+                }
+              }
+            },
+            "MAPPER" : {
+              "TYPE" : "REC",
+              "THE MAP" : [ "female : Female", "male : Male" ]
+            },
+            "ENCODED VALUES" : null
+          }
+        } ],
+        "RECORDS" : [ {
+          "RECORD ATTRIBUTE" : {
+            "NAME" : "n",
+            "PROXY ATTRIBUTE TYPE" : "Integer",
+            "REFERENT ATTRIBUTE" : "false"
+          }
+        } ],
+        "SIZE ATTRIBUTE" : null,
+        "level" : 0,
+        "identifierAttributeName" : "PERNUM",
+        "weightAttributeName" : "PERWT"
+      }
+    } ]
+  }
+}
