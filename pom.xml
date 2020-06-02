@@ -7,22 +7,22 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>io.github.anrgenstar</groupId>
+			<groupId>org.genstar</groupId>
 			<artifactId>genstar-core</artifactId>
 			<version>1.0.4</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.anrgenstar</groupId>
+			<groupId>org.genstar</groupId>
 			<artifactId>genstar-spll</artifactId>
 			<version>1.0.4</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.anrgenstar</groupId>
+			<groupId>org.genstar</groupId>
 			<artifactId>genstar-spin</artifactId>
 			<version>1.0.4</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.anrgenstar</groupId>
+			<groupId>org.genstar</groupId>
 			<artifactId>genstar-gospl</artifactId>
 			<version>1.0.4</version>
 		</dependency>

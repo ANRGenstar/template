@@ -1,8 +1,7 @@
-.classpath
-.project
 .settings/*
 .DS_Store
 output/
 !output/package-info.java
 /target/
 ipumsi_*
+/.settings/
