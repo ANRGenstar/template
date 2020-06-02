@@ -100,13 +100,16 @@ public class CoVid19_multi {
 		String localitiesVP = "Xã Sơn Lôi";
 		String Me_Linh = "census2019_ML.csv";
 		String localitiesML = "Xã Mê Linh";
+		
+		String[] caseStudy = new String[] {Vinh_Phuc,localitiesVP};
+		
 		// Setup input files' configuration for individual aggregated data
-		GSSurveyWrapper census = new GSSurveyWrapper(Paths.get(CONF_CLASS_PATH_CENSUS).resolve(Me_Linh), 
+		GSSurveyWrapper census = new GSSurveyWrapper(Paths.get(CONF_CLASS_PATH_CENSUS).resolve(caseStudy[0]), 
 				GSSurveyType.ContingencyTable, ',', 1, 6);
 		try {
 						
 			Attribute<? extends IValue> limitedAttDistrict = attf.createAttribute("commune", GSEnumDataType.Nominal, 
-					Arrays.asList(localitiesML)); 
+					Arrays.asList(caseStudy[1])); // Limit the number of commune attribute to the case study
 			multi_indiv_dico.addAttributes(limitedAttDistrict);
 			
 			List<String> ageVal =  IntStream.range(0, 80)

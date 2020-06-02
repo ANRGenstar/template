@@ -10,7 +10,7 @@
       "FCI" : "1",
       "SHEET NB" : "0"
     }, "LAYER LEVEL : 0", {
-      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_ML.csv",
+      "RELATIVE PATH" : "src/main/java/vietnam/gospl/data/cov/census2019_BT.csv",
       "STORE DATA" : true,
       "SURVEY TYPE" : "ContingencyTable",
       "SEPARATOR" : ",",
@@ -68,8 +68,8 @@
         "RECORDS" : [ ],
         "SIZE ATTRIBUTE" : null,
         "level" : 1,
-        "identifierAttributeName" : "SERIAL",
-        "weightAttributeName" : "HHWT"
+        "weightAttributeName" : "HHWT",
+        "identifierAttributeName" : "SERIAL"
       }
     }, {
       "DICTIONARY" : {
@@ -1112,7 +1112,7 @@
             "VALUE SPACE" : {
               "TYPE" : "Nominal",
               "VALUES" : [ {
-                "INPUT VALUE" : "Xã Mê Linh"
+                "INPUT VALUE" : "Xã Thừa Đức"
               } ],
               "categoricTemplate" : {
                 "regex" : [ ]
@@ -1592,8 +1592,8 @@
         } ],
         "SIZE ATTRIBUTE" : null,
         "level" : 0,
-        "identifierAttributeName" : "PERNUM",
-        "weightAttributeName" : "PERWT"
+        "weightAttributeName" : "PERWT",
+        "identifierAttributeName" : "PERNUM"
       }
     } ]
   }

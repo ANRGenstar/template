@@ -60,6 +60,7 @@ public class CoVid19_mainSP {
 	private static final int MAX_ITER = 10;
 
 	private static final boolean SAVE_SAMPLE = false;
+	private static final int MAX_SIZE_SAMPLE = (int) Math.pow(10, 6);
 	
 	public static void main(String[] args) {
 		
@@ -101,7 +102,7 @@ public class CoVid19_mainSP {
 		
 		// RETRIEVE SAMPLE OF HOUSEHOLD
 		try {
-			df_hh.buildMultiLayerSamples();
+			df_hh.buildMultiLayerSamples(MAX_SIZE_SAMPLE);
 		} catch (final IOException | InvalidFormatException | InvalidSurveyFormatException e) {
 			e.printStackTrace();
 		}
@@ -181,9 +182,10 @@ public class CoVid19_mainSP {
 			
 			GosplBiLayerOptimizationSampler<AMultiLayerOptimizationAlgorithm> samplerCO;
 			
+			//MultiPopulationNeighborSearch pvns = new MultiPopulationNeighborSearch(new PopulationVectorNeighborSearch());
 			MultiPopulationNeighborSearch pvns = new MultiPopulationNeighborSearch();
 			
-			samplerCO = new GosplBiLayerOptimizationSampler<>(new MultiHillClimbing(pvns, MAX_ITER,0.05,pop_size*FITNESS_THRESHOLD_RATIO));
+			samplerCO = new GosplBiLayerOptimizationSampler<>(new MultiHillClimbing(pvns, MAX_ITER,0.5,pop_size*FITNESS_THRESHOLD_RATIO));
 			samplerCO.addObjectives(objectif,0);
 				
 			ISampler<ADemoEntity> sampler = new MultiLayerSampleBasedAlgorithm<>().setupCOSampler(1, sample, true, samplerCO);
@@ -197,14 +199,14 @@ public class CoVid19_mainSP {
 			ISyntheticGosplPopGenerator generator = new SampleBasedGenerator(sampler);
 			
 			gspu.sysoStempMessage("Start generating synthetic population");
-			gspu.sysoStempPerformance(0, CO.class);
+			
 			// Generate the population
 			population = generator.generate(pop_size);
 			GosplPopulation indiv_pop = new GosplPopulation(population.stream()
 					.flatMap(e  -> e.getChildren().stream()).map(e -> (ADemoEntity)e)
 					.collect(Collectors.toList()));
 			
-			gspu.sysoStempPerformance(1, CO.class);
+			
 			gspu.sysoStempMessage("Ends up with a synthetic population of "+(population.size()-indiv_pop.size())+" households and "
 					+indiv_pop.size()+" individuals");
 			
