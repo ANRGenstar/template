@@ -15,6 +15,7 @@ import core.util.GSPerformanceUtil;
 import core.util.excpetion.GSIllegalRangedData;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
+import spll.SpllEntity;
 import spll.SpllPopulation;
 import spll.io.SPLGeofileBuilder;
 import spll.io.SPLVectorFile;
@@ -97,7 +98,6 @@ public class LocalisationRouenIJGIS_2 {
 			//localize the population
 			SpllPopulation localizedPop = localizer.localisePopulation();
 			
-
 			gspu.sysoStempPerformance("Population ("+population.size()+") have been localized", 
 					LocalisationRouenIJGIS_2.class.getSimpleName());
 

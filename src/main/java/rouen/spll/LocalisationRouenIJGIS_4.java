@@ -153,7 +153,6 @@ public class LocalisationRouenIJGIS_4 {
 				LocalisationRouenIJGIS_4.class.getSimpleName());
 		
 		GosplPopulation kids = new GosplPopulation(population);
-		kids.removeIf(e -> ! e.getValueForAttribute("CSP").toString().equals("?"));
 		
 		// SETUP THE LOCALIZER
 		SPLocalizer localizer = new SPLocalizer(kids, sfBuildings);

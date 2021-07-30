@@ -28,7 +28,8 @@ import gospl.sampler.multilayer.sr.GosplBiLayerReconstructionSampler;
 public class MultiLevel {
 
 	static int hhNb = -1;
-	static int iNb = 110755;
+	//static int iNb = 110755;
+	static int iNb = 11075;
 	
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/rouen/gospl/output/MLPop_export.csv"); 
@@ -133,8 +134,8 @@ public class MultiLevel {
 		final ISyntheticGosplPopGenerator ispGenerator = new MultiLayerGenerator(sampler);
 
 		// TEST ON BUILDING ONE ENTITY
-		population = ispGenerator.generate(1);
-		System.exit(1);
+		//population = ispGenerator.generate(1);
+		//System.exit(1);
 		
 		// BUILD THE POPULATION
 		try {
