@@ -136,7 +136,6 @@ public class SRnoSample {
 			gif.saveReport(statPath.toFile(), gif.getReport(Arrays.asList(GosplIndicator.values()), 
 					distribution, population), ALGO, population.size());
 		} catch (IOException | InvalidSurveyFormatException | InvalidFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

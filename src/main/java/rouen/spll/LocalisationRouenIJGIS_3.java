@@ -23,6 +23,7 @@ import core.util.GSPerformanceUtil;
 import core.util.excpetion.GSIllegalRangedData;
 import gospl.distribution.GosplInputDataManager;
 import gospl.io.exception.InvalidSurveyFormatException;
+import spll.SpllEntity;
 import spll.SpllPopulation;
 import spll.algo.LMRegressionOLS;
 import spll.algo.exception.IllegalRegressionException;
@@ -164,7 +165,10 @@ public class LocalisationRouenIJGIS_3 {
 				LocalisationRouenIJGIS_3.class.getSimpleName());
 
 		try {
-			new SPLGeofileBuilder().setFile(new File(stringPathToOutputFile)).setPopulation(localizedPop).buildShapeFile();
+			SPLGeofileBuilder builder = new SPLGeofileBuilder();
+
+			builder.setFile(new File(stringPathToOutputFile)).setPopulation(localizedPop);
+			builder.buildShapeFile();
 		} catch (IOException | SchemaException | InvalidGeoFormatException e) {
 			e.printStackTrace();
 		}

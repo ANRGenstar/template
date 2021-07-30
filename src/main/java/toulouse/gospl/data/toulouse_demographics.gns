@@ -1,0 +1,482 @@
+{
+  "CONFIGURATION FILE" : {
+    "MAIN DIRECTORY" : ".",
+    "INPUT FILES" : [ "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src\\main\\java\\toulouse\\gospl\\data\\iris_POP_toulouse2017.csv",
+      "STORE DATA" : true,
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src\\main\\java\\toulouse\\gospl\\data\\Sexe & CSP_Toulouse.csv",
+      "STORE DATA" : true,
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    }, "LAYER LEVEL : 0", {
+      "RELATIVE PATH" : "src\\main\\java\\toulouse\\gospl\\data\\Age & Sexe_Toulouse.csv",
+      "STORE DATA" : true,
+      "SURVEY TYPE" : "ContingencyTable",
+      "SEPARATOR" : ";",
+      "FRI" : "1",
+      "FCI" : "1",
+      "SHEET NB" : "0"
+    } ],
+    "DICTIONARIES" : [ {
+      "DICTIONARY" : {
+        "ATTRIBUTES" : [ {
+          "ATTRIBUTE" : {
+            "NAME" : "Age",
+            "VALUE SPACE" : {
+              "TYPE" : "Range",
+              "VALUES" : [ {
+                "INPUT VALUE" : "5 à 9 ans"
+              }, {
+                "INPUT VALUE" : "20 à 24 ans"
+              }, {
+                "INPUT VALUE" : "25 à 29 ans"
+              }, {
+                "INPUT VALUE" : "60 à 64 ans"
+              }, {
+                "INPUT VALUE" : "65 à 69 ans"
+              }, {
+                "INPUT VALUE" : "Moins de 5 ans"
+              }, {
+                "INPUT VALUE" : "30 à 34 ans"
+              }, {
+                "INPUT VALUE" : "35 à 39 ans"
+              }, {
+                "INPUT VALUE" : "70 à 74 ans"
+              }, {
+                "INPUT VALUE" : "75 à 79 ans"
+              }, {
+                "INPUT VALUE" : "40 à 44 ans"
+              }, {
+                "INPUT VALUE" : "45 à 49 ans"
+              }, {
+                "INPUT VALUE" : "80 à 84 ans"
+              }, {
+                "INPUT VALUE" : "85 à 89 ans"
+              }, {
+                "INPUT VALUE" : "100 ans ou plus"
+              }, {
+                "INPUT VALUE" : "10 à 14 ans"
+              }, {
+                "INPUT VALUE" : "15 à 19 ans"
+              }, {
+                "INPUT VALUE" : "50 à 54 ans"
+              }, {
+                "INPUT VALUE" : "55 à 59 ans"
+              }, {
+                "INPUT VALUE" : "90 à 94 ans"
+              }, {
+                "INPUT VALUE" : "95 à 99 ans"
+              } ],
+              "min" : 0,
+              "max" : 2147483647,
+              "rangeTemplate" : {
+                "numberMatcher" : "INT_POSITIF_MATCH",
+                "theoreticalMin" : 0,
+                "theoreticalMax" : 2147483647
+              },
+              "numbers" : [ 0, 5, 10, 14, 15, 19, 20, 24, 25, 29, 30, 34, 35, 39, 40, 44, 45, 49, 50, 54, 55, 59, 60, 64, 65, 69, 70, 74, 75, 79, 80, 84, 85, 89, 90, 94, 95, 99, 100, 2147483647, 6.0, 9 ],
+              "usualRange" : "NaN",
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "NaN à NaN ans"
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "Sexe",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Femmes"
+              }, {
+                "INPUT VALUE" : "Hommes"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "CSP",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "Artisans ou commerçants ou chefs d'entreprise"
+              }, {
+                "INPUT VALUE" : "Retraités"
+              }, {
+                "INPUT VALUE" : "Ouvriers"
+              }, {
+                "INPUT VALUE" : "Autres personnes sans activité professionnelle"
+              }, {
+                "INPUT VALUE" : "Professions intermédiaires"
+              }, {
+                "INPUT VALUE" : "Cadres et professions intellectuelles supérieures"
+              }, {
+                "INPUT VALUE" : "Agriculteurs exploitants"
+              }, {
+                "INPUT VALUE" : "Employés"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : "Autres personnes sans activité professionnelle"
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : null
+          }
+        }, {
+          "ATTRIBUTE" : {
+            "NAME" : "IRIS",
+            "VALUE SPACE" : {
+              "TYPE" : "Nominal",
+              "VALUES" : [ {
+                "INPUT VALUE" : "315555901"
+              }, {
+                "INPUT VALUE" : "315551002"
+              }, {
+                "INPUT VALUE" : "315550701"
+              }, {
+                "INPUT VALUE" : "315551301"
+              }, {
+                "INPUT VALUE" : "315552702"
+              }, {
+                "INPUT VALUE" : "315550402"
+              }, {
+                "INPUT VALUE" : "315554201"
+              }, {
+                "INPUT VALUE" : "315552403"
+              }, {
+                "INPUT VALUE" : "315554703"
+              }, {
+                "INPUT VALUE" : "315554007"
+              }, {
+                "INPUT VALUE" : "315552201"
+              }, {
+                "INPUT VALUE" : "315552104"
+              }, {
+                "INPUT VALUE" : "315553803"
+              }, {
+                "INPUT VALUE" : "315555101"
+              }, {
+                "INPUT VALUE" : "315553504"
+              }, {
+                "INPUT VALUE" : "315553601"
+              }, {
+                "INPUT VALUE" : "315551802"
+              }, {
+                "INPUT VALUE" : "315555303"
+              }, {
+                "INPUT VALUE" : "315551001"
+              }, {
+                "INPUT VALUE" : "315550902"
+              }, {
+                "INPUT VALUE" : "315553101"
+              }, {
+                "INPUT VALUE" : "315550401"
+              }, {
+                "INPUT VALUE" : "315552501"
+              }, {
+                "INPUT VALUE" : "315554202"
+              }, {
+                "INPUT VALUE" : "315552404"
+              }, {
+                "INPUT VALUE" : "315554702"
+              }, {
+                "INPUT VALUE" : "315554501"
+              }, {
+                "INPUT VALUE" : "315552202"
+              }, {
+                "INPUT VALUE" : "315550102"
+              }, {
+                "INPUT VALUE" : "315551502"
+              }, {
+                "INPUT VALUE" : "315551203"
+              }, {
+                "INPUT VALUE" : "315551801"
+              }, {
+                "INPUT VALUE" : "315555302"
+              }, {
+                "INPUT VALUE" : "315553901"
+              }, {
+                "INPUT VALUE" : "315555601"
+              }, {
+                "INPUT VALUE" : "315555802"
+              }, {
+                "INPUT VALUE" : "315553203"
+              }, {
+                "INPUT VALUE" : "315551101"
+              }, {
+                "INPUT VALUE" : "315550202"
+              }, {
+                "INPUT VALUE" : "315550501"
+              }, {
+                "INPUT VALUE" : "315552304"
+              }, {
+                "INPUT VALUE" : "315554401"
+              }, {
+                "INPUT VALUE" : "315552902"
+              }, {
+                "INPUT VALUE" : "315554701"
+              }, {
+                "INPUT VALUE" : "315554005"
+              }, {
+                "INPUT VALUE" : "315552005"
+              }, {
+                "INPUT VALUE" : "315552401"
+              }, {
+                "INPUT VALUE" : "315552102"
+              }, {
+                "INPUT VALUE" : "315555301"
+              }, {
+                "INPUT VALUE" : "315551602"
+              }, {
+                "INPUT VALUE" : "315551303"
+              }, {
+                "INPUT VALUE" : "315553001"
+              }, {
+                "INPUT VALUE" : "315551901"
+              }, {
+                "INPUT VALUE" : "315553502"
+              }, {
+                "INPUT VALUE" : "315555503"
+              }, {
+                "INPUT VALUE" : "315555204"
+              }, {
+                "INPUT VALUE" : "315551804"
+              }, {
+                "INPUT VALUE" : "315555801"
+              }, {
+                "INPUT VALUE" : "315553301"
+              }, {
+                "INPUT VALUE" : "315550702"
+              }, {
+                "INPUT VALUE" : "315552701"
+              }, {
+                "INPUT VALUE" : "315554805"
+              }, {
+                "INPUT VALUE" : "315552903"
+              }, {
+                "INPUT VALUE" : "315552402"
+              }, {
+                "INPUT VALUE" : "315554006"
+              }, {
+                "INPUT VALUE" : "315554603"
+              }, {
+                "INPUT VALUE" : "315554402"
+              }, {
+                "INPUT VALUE" : "315552103"
+              }, {
+                "INPUT VALUE" : "315550201"
+              }, {
+                "INPUT VALUE" : "315551601"
+              }, {
+                "INPUT VALUE" : "315551302"
+              }, {
+                "INPUT VALUE" : "315553002"
+              }, {
+                "INPUT VALUE" : "315555001"
+              }, {
+                "INPUT VALUE" : "315551803"
+              }, {
+                "INPUT VALUE" : "315553503"
+              }, {
+                "INPUT VALUE" : "315555502"
+              }, {
+                "INPUT VALUE" : "315555203"
+              }, {
+                "INPUT VALUE" : "315553802"
+              }, {
+                "INPUT VALUE" : "315550802"
+              }, {
+                "INPUT VALUE" : "315553201"
+              }, {
+                "INPUT VALUE" : "315551103"
+              }, {
+                "INPUT VALUE" : "315554003"
+              }, {
+                "INPUT VALUE" : "315550301"
+              }, {
+                "INPUT VALUE" : "315554804"
+              }, {
+                "INPUT VALUE" : "315552601"
+              }, {
+                "INPUT VALUE" : "315554901"
+              }, {
+                "INPUT VALUE" : "315554302"
+              }, {
+                "INPUT VALUE" : "315552803"
+              }, {
+                "INPUT VALUE" : "315554602"
+              }, {
+                "INPUT VALUE" : "315551806"
+              }, {
+                "INPUT VALUE" : "315552302"
+              }, {
+                "INPUT VALUE" : "315552003"
+              }, {
+                "INPUT VALUE" : "315555202"
+              }, {
+                "INPUT VALUE" : "315551701"
+              }, {
+                "INPUT VALUE" : "315553702"
+              }, {
+                "INPUT VALUE" : "315553501"
+              }, {
+                "INPUT VALUE" : "315555702"
+              }, {
+                "INPUT VALUE" : "315553202"
+              }, {
+                "INPUT VALUE" : "315551102"
+              }, {
+                "INPUT VALUE" : "315550801"
+              }, {
+                "INPUT VALUE" : "315550203"
+              }, {
+                "INPUT VALUE" : "315550502"
+              }, {
+                "INPUT VALUE" : "315554101"
+              }, {
+                "INPUT VALUE" : "315552303"
+              }, {
+                "INPUT VALUE" : "315554803"
+              }, {
+                "INPUT VALUE" : "315554303"
+              }, {
+                "INPUT VALUE" : "315552901"
+              }, {
+                "INPUT VALUE" : "315554004"
+              }, {
+                "INPUT VALUE" : "315554601"
+              }, {
+                "INPUT VALUE" : "315552004"
+              }, {
+                "INPUT VALUE" : "315551805"
+              }, {
+                "INPUT VALUE" : "315552101"
+              }, {
+                "INPUT VALUE" : "315555201"
+              }, {
+                "INPUT VALUE" : "315551401"
+              }, {
+                "INPUT VALUE" : "315551603"
+              }, {
+                "INPUT VALUE" : "315553703"
+              }, {
+                "INPUT VALUE" : "315551902"
+              }, {
+                "INPUT VALUE" : "315550901"
+              }, {
+                "INPUT VALUE" : "315553401"
+              }, {
+                "INPUT VALUE" : "315550602"
+              }, {
+                "INPUT VALUE" : "315551202"
+              }, {
+                "INPUT VALUE" : "315552801"
+              }, {
+                "INPUT VALUE" : "315554001"
+              }, {
+                "INPUT VALUE" : "315554203"
+              }, {
+                "INPUT VALUE" : "315554802"
+              }, {
+                "INPUT VALUE" : "315552502"
+              }, {
+                "INPUT VALUE" : "315556002"
+              }, {
+                "INPUT VALUE" : "315554502"
+              }, {
+                "INPUT VALUE" : "315552203"
+              }, {
+                "INPUT VALUE" : "315550101"
+              }, {
+                "INPUT VALUE" : "315552001"
+              }, {
+                "INPUT VALUE" : "315551501"
+              }, {
+                "INPUT VALUE" : "315555701"
+              }, {
+                "INPUT VALUE" : "315555402"
+              }, {
+                "INPUT VALUE" : "315553402"
+              }, {
+                "INPUT VALUE" : "315556001"
+              }, {
+                "INPUT VALUE" : "315555902"
+              }, {
+                "INPUT VALUE" : "315550601"
+              }, {
+                "INPUT VALUE" : "315551201"
+              }, {
+                "INPUT VALUE" : "315550302"
+              }, {
+                "INPUT VALUE" : "315554301"
+              }, {
+                "INPUT VALUE" : "315552204"
+              }, {
+                "INPUT VALUE" : "315552802"
+              }, {
+                "INPUT VALUE" : "315554801"
+              }, {
+                "INPUT VALUE" : "315554503"
+              }, {
+                "INPUT VALUE" : "315552002"
+              }, {
+                "INPUT VALUE" : "315551807"
+              }, {
+                "INPUT VALUE" : "315552301"
+              }, {
+                "INPUT VALUE" : "315555102"
+              }, {
+                "INPUT VALUE" : "315553701"
+              }, {
+                "INPUT VALUE" : "315551702"
+              }, {
+                "INPUT VALUE" : "315555401"
+              } ],
+              "categoricTemplate" : {
+                "regex" : [ ]
+              },
+              "EMPTY VALUE" : {
+                "INPUT VALUE" : null
+              }
+            },
+            "emergent" : false,
+            "ENCODED VALUES" : null
+          }
+        } ],
+        "RECORDS" : [ {
+          "RECORD ATTRIBUTE" : {
+            "NAME" : "P17_POP_RNDD",
+            "PROXY ATTRIBUTE TYPE" : "Integer",
+            "REFERENT ATTRIBUTE" : "IRIS"
+          }
+        } ],
+        "SIZE ATTRIBUTE" : null,
+        "level" : 0,
+        "identifierAttributeName" : null,
+        "weightAttributeName" : null
+      }
+    } ]
+  }
+}

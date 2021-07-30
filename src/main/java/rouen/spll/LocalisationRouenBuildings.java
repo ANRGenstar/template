@@ -35,6 +35,7 @@ import spll.io.SPLVectorFile;
 import spll.io.exception.InvalidGeoFormatException;
 import spll.localizer.SPLocalizer;
 import spll.localizer.constraint.SpatialConstraintMaxNumber;
+import java.nio.charset.StandardCharsets;
 
 public class LocalisationRouenBuildings {
 
@@ -105,9 +106,11 @@ public class LocalisationRouenBuildings {
 		try {
 			//building shapefile
 			
-			sfBuildings = SPLGeofileBuilder.getShapeFile(new File(stringPathToNestShapefile), Arrays.asList("name", "type"), null);
+			File file = new File(stringPathToNestShapefile);
+			
+			sfBuildings = SPLGeofileBuilder.getShapeFile(file, Arrays.asList("name", "type"), StandardCharsets.UTF_8);
 			//Iris shapefile
-			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), null);
+			sfAdmin = SPLGeofileBuilder.getShapeFile(new File(stringPathToCensusShapefile), StandardCharsets.UTF_8);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidGeoFormatException e) {
@@ -150,9 +153,14 @@ public class LocalisationRouenBuildings {
 		localizer.addConstraint(numberConstr);
 		
 		// SETUP REGRESSION
+		
+		
+			
 		try {
+			SPLUniformNormalizer testNormalizer = new SPLUniformNormalizer(0, SPLRasterFile.DEF_NODATA);
+			
 			localizer.setMapper(endogeneousVarFile, new ArrayList<>(), 
-					new LMRegressionOLS(), new SPLUniformNormalizer(0, SPLRasterFile.DEF_NODATA));
+					new LMRegressionOLS(), testNormalizer);
 		} catch (IndexOutOfBoundsException | IOException | TransformException | InterruptedException
 				| ExecutionException | IllegalRegressionException | GSMapperException | SchemaException 
 				| IllegalArgumentException | InvalidGeoFormatException e) {

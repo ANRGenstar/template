@@ -39,8 +39,9 @@ import gospl.validation.GosplIndicatorFactory;
 
 public class CO {
 
-	// Input nb of entity
-	static int popSize = 100000;
+	// Input nb of entity, initialy 100000
+	//static int popSize = 100000;
+	static int popSize = 10000;
 	// Output file path 
 	final static Path outputPath = Paths.get("src/main/java/rouen/gospl/output"); 
 	// Setup configuration file

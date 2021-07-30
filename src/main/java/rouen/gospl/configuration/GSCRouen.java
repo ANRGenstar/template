@@ -60,7 +60,7 @@ public class GSCRouen {
 			try {
 
 				// --------------------------
-				// Setupe "AGE" attribute: INDIVIDUAL
+				// Setup "AGE" attribute: INDIVIDUAL
 				// --------------------------
 
 				// Instantiate a referent attribute
